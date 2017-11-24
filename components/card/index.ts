@@ -1,5 +1,5 @@
 import './card.scss';
-import CardView from './CardView.html';
+import CardView from './CardView';
 
 /**
  * Usage:
@@ -19,6 +19,13 @@ import CardView from './CardView.html';
 let CardComponent = {
     template: CardView,
     controller: class {
+        collapsable: boolean;
+        collapsed: any;
+        itemTitle: boolean;
+        sparams: any;
+        sref: any;
+        $state: any;
+        
         constructor($state) {
             this.$state = $state;
         }

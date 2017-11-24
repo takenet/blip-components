@@ -1,4 +1,5 @@
 import template from './ContentTabsView.html';
+import { IScope } from 'angular';
 import './contentTabs.scss';
 
 /**
@@ -20,10 +21,11 @@ import './contentTabs.scss';
         </tab>
     </content-tabs>
  */
+
 export default {
     controller: class {
-        constructor($rootScope) {
-            this.$rootScope = $rootScope;
+        tabs: any[];
+        constructor(private $rootScope: IScope) {
             this.tabs = [];
         }
 

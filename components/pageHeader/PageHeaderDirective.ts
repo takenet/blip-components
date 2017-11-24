@@ -17,6 +17,11 @@ import './pageHeader.scss';
  *
  */
 export class PageHeaderDirective {
+    containerWidth: string;
+    title: any;
+    hasInfo: any;
+    container: string;
+
     //Directive properties
     restrict = 'E';
     template = template;
@@ -29,6 +34,7 @@ export class PageHeaderDirective {
         return {
             container: '@',
             pageTitle: '@',
+            backButton: '@',
         };
     }
 

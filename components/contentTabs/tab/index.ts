@@ -1,7 +1,12 @@
+import { IScope } from 'angular';
+
 export default {
     controller: class {
-        constructor($scope) {
-            this.$scope = $scope;
+        isActive: boolean;
+        showTab: boolean;
+        contentTabsCtrl: any;
+
+        constructor(private $scope: IScope) {
             this.showTab = false;
             this.isActive = false;
 
