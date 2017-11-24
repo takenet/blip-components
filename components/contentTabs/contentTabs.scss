@@ -1,0 +1,26 @@
+.content-tabs {
+    .content-tabs-items {
+        display: inline-block;
+        border-bottom: 2px solid #EBF0F4;
+        width: 100%;
+
+        li {
+            display: inline-block;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin-right: 10px;
+            margin-bottom: 0;
+
+            &.active {
+                border-bottom: 4px solid #2cc3d5;
+                color: #2cc3d5;
+
+                a { color: #2cc3d5; }
+            }
+
+            a { color: #546E7A; }
+        }
+    }
+}

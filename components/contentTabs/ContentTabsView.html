@@ -1,0 +1,13 @@
+<div class="content-tabs">
+    <ul class="content-tabs-items">
+        <li ng-repeat="tab in $ctrl.tabs" ng-class="{'active': tab.isActive}" ng-click="$ctrl.showTab(tab)">
+            <span ng-if="tab.tabHref">
+                <a href="{{tab.tabHref}}" target="_blank">{{tab.tabTitle}} <i class="icon-external-link"></i></a>
+            </span>
+            <span ng-if="!tab.tabHref">
+                {{tab.tabTitle}}
+            </span>
+        </li>
+    </ul>
+    <div ng-transclude></div>
+</div>

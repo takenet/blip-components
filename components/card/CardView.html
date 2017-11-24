@@ -1,0 +1,38 @@
+<div ng-switch="$ctrl.collapsable">
+    <div ng-switch-when="undefined">
+        <div class="card-header">
+            <!-- Has sref -->
+            <p class="card-title"
+                ng-if="$ctrl.hasTitle && $ctrl.sref">
+                <a ng-href="{{$ctrl.href}}">{{$ctrl.itemTitle}}</a>
+            </p>
+            <!-- Has no sref -->
+            <p class="card-title"
+                ng-if="$ctrl.hasTitle && !$ctrl.sref"
+                ng-bind-html="$ctrl.itemTitle"></p>
+            <div class="card-handleable-content" ng-if="$ctrl.onEdit || $ctrl.onExclude">
+                <icon title="{{'utils.forms.edit' | translate }}" ng-if="$ctrl.onEdit" ng-auth-write ng-click="$ctrl.onEdit()">&#xE254;</icon>
+                <icon title="{{'utils.forms.remove' | translate }}" ng-if="$ctrl.onExclude" ng-auth-write ng-click="$ctrl.onExclude()">&#xE872;</icon>
+            </div>
+            <div ng-if="$ctrl.itemTitleHtml" ng-bind-html="$ctrl.trustedHtml"></div>
+        </div>
+        <span class="card-divider" ng-if="$ctrl.itemTitle"></span>
+        <div class="card-content" ng-transclude></div>
+        <div ng-transclude="cardFooter"></div>
+    </div>
+    <div ng-switch-when="true">
+        <div class="card-header">
+            <p class="card-title" ng-if="$ctrl.hasTitle" ng-bind-html="$ctrl.itemTitle"></p>
+            <div class="card-handleable-content" ng-if="$ctrl.onEdit || $ctrl.onExclude">
+                <icon title="{{'utils.forms.edit' | translate }}" ng-if="$ctrl.onEdit" ng-auth-write ng-click="$ctrl.onEdit()">&#xE254;</icon>
+                <icon title="{{'utils.forms.remove' | translate }}" ng-if="$ctrl.onExclude" ng-auth-write ng-click="$ctrl.onExclude()">&#xE872;</icon>
+            </div>
+
+            <icon class="card-collapse-icon" ng-click="$ctrl.toggleCollapse()" ng-show="$ctrl.collapsed">&#xE313;</icon>
+            <icon class="card-collapse-icon" ng-click="$ctrl.toggleCollapse()" ng-show="!$ctrl.collapsed">&#xE316;</icon>
+            <span class="card-aditional-info" ng-show="$ctrl.aditionalInfo">{{$ctrl.aditionalInfo}}</span>
+        </div>
+        <span class="card-divider" ng-if="$ctrl.itemTitle"></span>
+        <div class="card-content" ng-show="$ctrl.showContent" ng-transclude></div>
+    </div>
+</div>
