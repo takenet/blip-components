@@ -1,16 +1,19 @@
 {
     "name": "blip-components",
     "version": "1.0.0",
-    "description": "",
+    "description": "Angularjs blip components",
     "main": "./dist/bundle.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "./node_modules/.bin/webpack-dev-server --port 8080"
+        "start": "./node_modules/.bin/webpack-dev-server --port 8080",
+        "build": "./node_modules/.bin/webpack"
     },
     "author": "Samuel Martins",
     "license": "ISC",
-    "devDependencies": {
+    "devDependencies": {},
+    "dependencies": {
         "@types/angular": "^1.6.17",
+        "@types/node": "^7.0.18",
         "babel-cli": "^6.18.0",
         "babel-core": "^6.21.0",
         "babel-loader": "^6.2.10",
@@ -32,9 +35,7 @@
         "tslib": "^1.6.0",
         "typescript": "^2.4.1",
         "webpack": "^2.3.3",
-        "webpack-dev-server": "^1.16.2"
-    },
-    "dependencies": {
+        "webpack-dev-server": "^1.16.2",
         "angular": "^1.6.6"
     }
 }

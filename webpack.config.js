@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const cssPlugin = new ExtractTextPlugin('[name].css');
+const cssPlugin = new ExtractTextPlugin('blip-components.css');
 
 module.exports = {
     entry: [ 'webpack/hot/dev-server', 'webpack-dev-server/client?http://localhost:8080', __dirname + '/index.js' ],
@@ -62,7 +62,10 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.webpack.js', '.web.js', '.js', '.html', '.ts']
+        extensions: ['.webpack.js', '.web.js', '.js', '.html', '.ts'],
+        modules: [
+            'node_modules'
+        ]
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
@@ -76,12 +79,6 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            pkg: require('./package.json'),
-            template: './index.html',
-            inject: 'body'
-        }),
         new webpack.LoaderOptionsPlugin({
             debug: true
         }),
