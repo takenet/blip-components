@@ -21,6 +21,13 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
+                test: /\.ts(x?)$/,
+                exclude: /node_modules/,
+                use: [
+                    { loader: 'ts-loader' }
+                ]
+            },
+            {
                 test: /\.scss$/,
                 use: cssPlugin.extract({
                     fallback: 'style-loader',
@@ -53,6 +60,9 @@ module.exports = {
                 }]
             }
         ]
+    },
+    resolve: {
+        extensions: ['.webpack.js', '.web.js', '.js', '.html', '.ts']
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
