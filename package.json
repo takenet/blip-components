@@ -2,13 +2,22 @@
     "name": "blip-components",
     "version": "1.0.0",
     "description": "Angularjs components used in blip.ai",
-    "main": "./dist/bundle.js",
+    "main": "./dist/blip-components.js",
     "scripts": {
         "start": "./node_modules/.bin/webpack-dev-server --port 8080",
         "build": "./node_modules/.bin/webpack"
     },
     "author": "Samuel Martins",
     "license": "ISC",
+    "files": [
+        "dist/blip-components.js",
+        "dist/blip-components.css"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/takenet/blip-components.git"
+    },
+    "homepage": "https://github.com/takenet/blip-components#readme",
     "devDependencies": {},
     "dependencies": {
         "@types/angular": "^1.6.17",

@@ -9,7 +9,7 @@ module.exports = {
     entry: [ 'webpack/hot/dev-server', 'webpack-dev-server/client?http://localhost:8080', __dirname + '/index.js' ],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'blip-components.js'
     },
     module: {
         rules: [
