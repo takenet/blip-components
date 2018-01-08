@@ -1,6 +1,6 @@
 <div ng-switch="$ctrl.collapsable">
     <div ng-switch-when="undefined">
-        <div class="card-header">
+        <div ng-if="$ctrl.onEdit || $ctrl.onExclude || $ctrl.hasTitle" class="card-header">
             <!-- Has sref -->
             <p class="card-title"
                 ng-if="$ctrl.hasTitle && $ctrl.sref">
@@ -14,7 +14,6 @@
                 <icon title="{{'utils.forms.edit' | translate }}" ng-if="$ctrl.onEdit" ng-auth-write ng-click="$ctrl.onEdit()">&#xE254;</icon>
                 <icon title="{{'utils.forms.remove' | translate }}" ng-if="$ctrl.onExclude" ng-auth-write ng-click="$ctrl.onExclude()">&#xE872;</icon>
             </div>
-            <div ng-if="$ctrl.itemTitleHtml" ng-bind-html="$ctrl.trustedHtml"></div>
         </div>
         <span class="card-divider" ng-if="$ctrl.itemTitle"></span>
         <div class="card-content" ng-transclude></div>
