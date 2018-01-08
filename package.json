@@ -4,7 +4,7 @@
     "description": "Angularjs components used in blip.ai",
     "main": "./dist/blip-components.js",
     "scripts": {
-        "start": "./node_modules/.bin/webpack-dev-server --port 8080",
+        "start": "./node_modules/.bin/webpack-dev-server --port 3000",
         "build": "./node_modules/.bin/webpack"
     },
     "author": "Samuel Martins",
@@ -18,10 +18,13 @@
         "url": "git+https://github.com/takenet/blip-components.git"
     },
     "homepage": "https://github.com/takenet/blip-components#readme",
-    "devDependencies": {},
+    "devDependencies": {
+        "webpack": "^3.10.0"
+    },
     "dependencies": {
         "@types/angular": "^1.6.17",
         "@types/node": "^7.0.18",
+        "angular": "^1.6.6",
         "babel-cli": "^6.18.0",
         "babel-core": "^6.21.0",
         "babel-loader": "^6.2.10",
@@ -42,8 +45,6 @@
         "ts-loader": "^2.2.1",
         "tslib": "^1.6.0",
         "typescript": "^2.4.1",
-        "webpack": "^2.3.3",
-        "webpack-dev-server": "^1.16.2",
-        "angular": "^1.6.6"
+        "webpack-dev-server": "^1.16.2"
     }
 }
