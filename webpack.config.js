@@ -9,7 +9,9 @@ module.exports = {
     entry: [ 'webpack/hot/dev-server', 'webpack-dev-server/client?http://localhost:8080', __dirname + '/index.js' ],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'blip-components.js'
+        filename: 'blip-components.js',
+        libraryTarget: 'umd',
+        umdNamedDefine: true
     },
     module: {
         rules: [
@@ -55,9 +57,10 @@ module.exports = {
                 use: [{
                     loader: 'html-loader',
                     options: {
-                        query: { minimize: true }
+                        minimize: false,
+                        exportAsEs6Default: true
                     }
-                }]
+                }],
             }
         ]
     },
