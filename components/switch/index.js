@@ -2,7 +2,7 @@ import './switch.scss';
 import controller from './SwitchController';
 import template from './SwitchView.html';
 
-export default {
+export const SwitchComponent = {
     template,
     controller,
     controllerAs: '$ctrl',

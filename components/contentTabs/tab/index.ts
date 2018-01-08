@@ -1,6 +1,6 @@
 import { IScope } from 'angular';
 
-export default {
+export const TabComponent = {
     controller: class {
         isActive: boolean;
         showTab: boolean;

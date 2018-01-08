@@ -1,15 +1,15 @@
-import cardComponent from './components/card';
-import switchComponent from './components/switch';
-import contentTabsComponent from './components/contentTabs';
-import tabComponent from './components/contentTabs/tab';
+import { CardComponent } from './components/card';
+import { SwitchComponent } from './components/switch';
+import { ContentTabsComponent } from './components/contentTabs';
+import { TabComponent } from './components/contentTabs/tab';
 import { PageHeaderDirective } from './components/pageHeader/PageHeaderDirective';
 
 (function(angular){
     angular
         .module('blip.components', [])
-        .component('card', cardComponent)
-        .component('switch', switchComponent)
-        .component('contentTabs', contentTabsComponent)
-        .component('tab', tabComponent)
+        .component('card', CardComponent)
+        .component('switch', SwitchComponent)
+        .component('contentTabs', ContentTabsComponent)
+        .component('tab', TabComponent)
         .directive('pageHeader', PageHeaderDirective.factory);
 })(angular);

@@ -22,7 +22,7 @@ import './contentTabs.scss';
     </content-tabs>
  */
 
-export default {
+export const ContentTabsComponent = {
     controller: class {
         tabs: any[];
         constructor(private $rootScope: IScope) {

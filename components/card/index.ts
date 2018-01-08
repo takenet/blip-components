@@ -1,5 +1,5 @@
 import './card.scss';
-import CardView from './CardView';
+import CardView from './CardView.html';
 
 /**
  * Usage:
@@ -16,7 +16,7 @@ import CardView from './CardView';
         </card-footer>
     </card>
  */
-let CardComponent = {
+export const CardComponent = {
     template: CardView,
     controller: class {
         collapsable: boolean;
@@ -64,5 +64,3 @@ let CardComponent = {
         sparams: '<?'
     },
 };
-
-export default CardComponent;
