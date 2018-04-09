@@ -1,5 +1,6 @@
 import './card.scss';
 import CardView from './CardView.html';
+import * as angular from 'angular';
 
 /**
  * Usage:
@@ -64,3 +65,8 @@ export const CardComponent = {
         sparams: '<?'
     },
 };
+
+export const CardModule = angular
+    .module('blip.components.card', [])
+    .component('card', CardComponent)
+    name;

@@ -1,6 +1,6 @@
 import template from './ContentTabsView.html';
-import { IScope } from 'angular';
 import './contentTabs.scss';
+import * as angular from 'angular';
 
 /**
  * Usage:
@@ -25,7 +25,7 @@ import './contentTabs.scss';
 export const ContentTabsComponent = {
     controller: class {
         tabs: any[];
-        constructor(private $rootScope: IScope) {
+        constructor(private $rootScope) {
             this.tabs = [];
         }
 
@@ -41,3 +41,9 @@ export const ContentTabsComponent = {
     template,
     transclude: true
 };
+
+export const ContentTabsModule = angular
+    .module('blip.components.contentTabs', [])
+    .component('contentTabs', ContentTabsComponent)
+    name;
+    

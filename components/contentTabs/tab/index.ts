@@ -1,4 +1,4 @@
-import { IScope } from 'angular';
+import * as angular from 'angular';
 
 export const TabComponent = {
     controller: class {
@@ -6,7 +6,7 @@ export const TabComponent = {
         showTab: boolean;
         contentTabsCtrl: any;
 
-        constructor(private $scope: IScope) {
+        constructor(private $scope) {
             this.showTab = false;
             this.isActive = false;
 
@@ -36,3 +36,8 @@ export const TabComponent = {
         tabHref: '@?',
     }
 };
+
+export const TabModule = angular
+    .module('blip.components.tab', [])
+    .component('tab', TabComponent)
+    .name;

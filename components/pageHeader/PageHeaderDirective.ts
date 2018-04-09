@@ -1,4 +1,5 @@
 import template from './PageHeaderView.html';
+import * as angular from 'angular';
 import './pageHeader.scss';
 
 /**
@@ -52,3 +53,9 @@ export class PageHeaderDirective {
         return new PageHeaderDirective();
     }
 }
+
+export const PageHeaderModule = angular
+    .module('blip.components.pageHeaderDirective', [])
+    .directive('pageHeader', PageHeaderDirective.factory)
+    .name;
+    

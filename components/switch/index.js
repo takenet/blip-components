@@ -1,6 +1,7 @@
 import './switch.scss';
 import controller from './SwitchController';
 import template from './SwitchView.html';
+import angular from 'angular';
 
 export const SwitchComponent = {
     template,
@@ -18,3 +19,8 @@ export const SwitchComponent = {
         onToggle: '&?'
     }
 };
+
+export const SwitchModule = angular
+    .module('blip.components.switch', [])
+    .component('switch', SwitchComponent)
+    name;
