@@ -1,0 +1,6 @@
+<select ng-model="$ctrl.selectedTime"
+    ng-options="option.value as option.label for option in $ctrl.timeOptions"
+    style="height: auto"
+    ng-auth-write="disable"
+    required
+    ></select>

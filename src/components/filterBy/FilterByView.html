@@ -1,0 +1,24 @@
+<div class="row">
+    <span class="mr3" translate>modules.ui.filterBy.filterBy</span>
+    <div ng-repeat="(key, value) in $ctrl.filters" class="dib">
+        <dropdown-item item-title="{{ key }}" close-on-click="false" class="dib mr2">
+            <form class="filter-form pl2 pr2" ng-submit="$ctrl.$addItem($ctrl.formFilters[key], key)">
+                <form-field>
+                    <autocomplete items="value"
+                        ng-model="$ctrl.formFilters[key]"
+                        search-for="text"
+                        show-text="text"
+                        search-length="0"
+                        ></autocomplete>
+                </form-field>
+                <div class="tr">
+                    <button class="button-primary waves-effect waves-light" type="submit" translate>utils.forms.apply</button>
+                </div>
+            </form>
+        </dropdown-item>
+    </div>
+</div>
+
+<div class="row">
+    <chips data="$ctrl.items" on-remove="$ctrl.$removeItem($data, $removedItem)"></chips>
+</div>

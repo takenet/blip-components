@@ -1,0 +1,17 @@
+<table class="matrix-table">
+    <thead>
+        <th></th>
+        <th class="col" ng-repeat="header in $ctrl.keys" ng-click="$ctrl.handleColumnClick($event, $index)">
+            <div>
+                <span>{{header}}</span>
+            </div>
+        </th>
+    </thead>
+    <tbody>
+        <tr class="row" ng-repeat="rows in $ctrl.matrix track by $index" ng-init="rowId = $index">
+            <td ng-click="$ctrl.select(rowId, $event, $index)" ng-repeat="cell in rows track by $index" ng-class="{ header: $index == 0, cell: $index != 0 }" opacity-color="{{cell.percent}}">
+                <span>{{cell.value}}</span>
+            </td>
+        </tr>
+    </tbody>
+</table>

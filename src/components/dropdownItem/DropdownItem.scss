@@ -1,0 +1,145 @@
+@import '~assets/scss/main';
+$dropdown-padding: 10px;
+
+/**
+*
+*
+*
+*
+*
+    !!!MUITO IMPORTANTE!!!
+    Esse arquivo de estilo deve se restringir apenas as propriedades das classes com sufixo .dropddown- e classes auxiliares para o funcionamento
+    do componente, ou seja, NÃO ESTILIZAR ELEMENTOS LI, UL, DIV, SPAN E ETC NESSE ARQUIVO, POIS A FINALIDADE DO DROPDOWN É SÓ ENCAPSULAR UM
+    CONTEÚDO GENÉRICO DENTRO DE UMA DIV QUE MOSTRA E ESCONDE.
+*
+*
+*
+*
+*
+**/
+
+.dropdown-item-content {
+    position: absolute;
+    min-width: 50px;
+    display: inline-block;
+    background: #fff;
+    border-radius: 2px;
+    padding: $dropdown-padding 0;
+    margin-top: 5px;
+    transition: 400ms;
+    opacity:0;
+    visibility: hidden;
+    @include box-shadow(0 1px 6px rgba(0, 60, 128, 0.14), 0 2px 32px rgba(70, 67, 103, 0.1));
+    @include scrollbar($color-gray-light);
+
+    &.hide-dropdown {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.show-dropdown {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    > span, span[ng-click] {
+        cursor:pointer;
+        display: inline-block;
+        text-align: center;
+
+        &:hover {
+            color: $color-text-dark-5;
+        }
+    }
+
+    li {
+        width: 100%;
+        display: inline-block;
+        text-align: start;
+
+        a {
+            display: block;
+        }
+
+        &:hover {
+            color: $color-text-dark-5;
+        }
+    }
+
+    &:before {
+        content: " ";
+        width: 15px; height: 15px;
+        position: absolute;
+        bottom: -8px;
+        background: #fff;
+        transform: rotate(45deg);
+    }
+
+    a:hover {
+        color: $color-text-dark-5;
+    }
+
+    .dropdown-item {
+        font-size: $bp-font-small-3;
+        font-weight: 300;
+        color: $color-text;
+
+        &:hover {
+            color: $color-text-dark-5;
+        }
+
+        &.delete {
+            color: $color-delete;
+
+            &:hover {
+                color: $color-danger;
+            }
+        }
+    }
+}
+
+.dropdown-align-right {
+    right: -$dropdown-padding;
+
+    &:before { right: $dropdown-padding; }
+}
+
+.dropdown-align-left {
+    left: -$dropdown-padding;
+
+    &:before { left: $dropdown-padding; }
+}
+
+.dropdown-item-content {
+    &.dropdown-align-center {
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+
+        &:before {
+            left: 50%;
+            top: -13px;
+            -webkit-transform: rotate(45deg) translateX(50%);
+                -ms-transform: rotate(45deg) translateX(50%);
+                    transform: rotate(45deg) translateX(50%);
+        }
+    }
+}
+
+.dropdown-direction-top {
+    bottom: 140%;
+}
+
+.dropdown-direction-bottom {
+    top: 130%;
+
+    &:before {
+        top: -8px;
+        bottom: 0;
+    }
+}
+
+.dropdown-hide-up-icon {
+    margin-top: 0;
+    &:before { display: none; }
+}

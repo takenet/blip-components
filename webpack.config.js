@@ -1,12 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const cssPlugin = new ExtractTextPlugin('blip-components.css');
 
 module.exports = {
-    entry: [ 'webpack/hot/dev-server', 'webpack-dev-server/client?http://localhost:8080', __dirname + '/index.js' ],
+    entry: [ 'webpack/hot/dev-server', 'webpack-dev-server/client?http://localhost:8080', __dirname + '/index' ],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'blip-components.js',
@@ -28,6 +28,17 @@ module.exports = {
                 use: [
                     { loader: 'ts-loader' }
                 ]
+            },
+
+            {
+                test: /\.css$/,
+                use: cssPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        { loader: 'css-loader' },
+                        { loader: 'resolve-url-loader' },
+                    ],
+                }),
             },
             {
                 test: /\.scss$/,
@@ -84,6 +95,12 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.LoaderOptionsPlugin({
             debug: true
+        }),
+        new ForkTsCheckerWebpackPlugin({
+            tslint: './tslint.json',
+            tsconfig: './tsconfig.json',
+            watch: './src/**/*.ts',
+            async: false,
         }),
         cssPlugin
     ]

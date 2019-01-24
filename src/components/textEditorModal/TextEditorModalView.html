@@ -1,0 +1,26 @@
+<div class="modal">
+    <div class="modal-overlay" ng-click="$ctrl.cancel()"></div>
+    <form ng-submit="$ctrl.confirm()" class="modal-dialog modal-medium layout-center-y">
+        <div class="modal-toolbar">
+            <button ng-click="$ctrl.cancel()" type="button" class="no-style">
+                    <i class="icon-close text-gray"></i>
+            </button>
+        </div>
+
+        <h5>Source</h5>
+        <div>
+            <textarea ng-model="$ctrl.source"
+                class="u-full-width textarea-code" 
+                ng-class="{ error: $ctrl.error }" 
+                style="max-height: 600px"                 
+                auto-expand="initial"
+            ></textarea>
+        </div>
+
+        <!-- two buttons -->
+        <div class="row fr">
+            <button type="reset" ng-click="$ctrl.cancel()" translate>utils.forms.cancel</button>            
+            <button type="submit" ng-disabled="$ctrl.error" class="button-primary waves-effect waves-light" translate>utils.forms.save</button>            
+        </div>
+    </form>
+</div>  

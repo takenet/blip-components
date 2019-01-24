@@ -1,0 +1,31 @@
+@import '~assets/scss/main';
+
+.icon-new {
+    position: absolute;
+    height: 30px;
+    right: -5px;
+    top: -10px;
+    animation: updown .8s linear infinite;
+}
+
+.sidenav li span.icon-beta {
+    display: inline-block;
+    border-radius: 7px;
+    line-height: 1;
+    padding: 2px 5px;
+    font-size: 1.1*$m;
+}
+
+@keyframes updown {
+  0% {
+    top: -15px;
+  }
+
+  50% {
+    top: -10px;
+  }
+
+  100% {
+    top: -15px;
+  }
+}

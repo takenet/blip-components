@@ -1,0 +1,27 @@
+<tooltip-button ng-if="!$ctrl.showSearch"
+    id="search-tooltip"
+    ng-click="$ctrl.toggleSearch()"
+    icon-class="search"
+    tooltip="{{ 'utils.misc.search' | translate }}">
+</tooltip-button>
+<tooltip-button ng-if="$ctrl.showSearch"
+    id="search-tooltip"
+    ng-click="$ctrl.toggleSearch()"
+    icon-class="close"
+    tooltip="{{ 'utils.misc.close' | translate }}">
+</tooltip-button>
+
+<div class="search-wrapper"
+    ng-class="{'show-search': $ctrl.showSearch}">
+    <input id="builder-search"
+        type="text"
+        placeholder="{{ 'utils.misc.search' | translate }}"
+        ng-model="$ctrl.inputText"
+        ng-blur="$ctrl.onBlur()" />
+    <i id="builder-search-tooltip"
+        class="icon icon-info bp-c-silver pr2"
+        tooltips
+        tooltip-template="{{'builderSearch.searchInfo' | translate}}"
+        tooltip-side="bottom"
+        tooltip-class="small"></i>
+</div>

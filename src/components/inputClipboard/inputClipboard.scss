@@ -1,0 +1,23 @@
+@import "~assets/scss/main";
+
+.input-clipboard-container {
+    background: $color-text-light-7;
+    color: $color-dark-blip;
+    padding: 5px 20px;
+    font-size: $bp-font-small-3;
+    border-radius: 100px;
+
+    @include flex-box;
+    justify-content: space-between;
+
+    input {
+        background: transparent;
+        border: 0;
+        color: $color-dark-blip;
+        font-weight: 700;
+        margin-right: 10px;
+        width: 80%;
+    }
+
+    .icon-copy {}
+}

@@ -1,0 +1,48 @@
+.avatar-array {
+    & > tooltip {
+        width: 55px;
+        height: 55px;
+        cursor: default;
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+        left: 0;
+        transition: left 1s linear;
+
+        & > tip-cont > span {
+            position: absolute;
+            padding: 2px;
+            width: 55px;
+            height: 55px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        img {
+            width: 55px;
+            height: 55px;
+        }
+    }
+    // & > span {
+    //     cursor: default;
+    //     padding: 2px;
+    //     height: 55px;
+    //     width: 55px;
+    //     // border: 1px solid red;
+    //     background: white;
+    //     border-radius: 50%;
+    //     position: absolute;
+    //     left: 0;
+    //     transition: left 1s linear;
+
+    //     img {
+    //         width: 55px;
+    //         height: 55px;
+    //     }
+    // }
+    letter-avatar {
+        margin: 0;
+        height: 50px;
+        width: 50px;
+    }
+}

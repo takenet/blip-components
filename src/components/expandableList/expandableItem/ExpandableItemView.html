@@ -1,0 +1,13 @@
+<div>
+    <div class="item-header" ng-click="$ctrl.open($event)">
+        <span class="w-10 flex flex-column items-center justify-center">
+            <i ng-if="$ctrl.hasArrow && !$ctrl.isActive" class="icon-arrowright color-text-light-5"></i>
+            <i ng-if="$ctrl.hasArrow && $ctrl.isActive" class="icon-arrowdown color-text-light-5"></i>
+        </span>
+        <span class="w-90 flex flex-row" ng-transclude="itemHeader"></span>
+    </div>
+    <div class="item-body" ng-transclude="itemBody" ng-class="{active: $ctrl.isActive, animated: $ctrl.isActive, fadeInDown: $ctrl.isActive}">
+        <span>{{extra.customerDomain}}</span>
+        <span>{{extra.date}}</span>
+    </div>
+</div>

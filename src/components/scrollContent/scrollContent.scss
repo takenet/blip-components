@@ -1,0 +1,8 @@
+@import "~assets/scss/main";
+
+.scroll-content {
+    overflow-y: auto;
+    padding: 0 5px;
+    margin-bottom: 20px;
+    @include scrollbar($color-gray-light);
+}

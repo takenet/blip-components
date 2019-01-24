@@ -1,0 +1,34 @@
+<form id="editOptionLink" name="$ctrl.editOptionLinkForm" ng-submit="$ctrl.save()">
+    <fieldset ng-disabled="$ctrl.isLoading">
+        <div class="modal-toolbar">
+            <button ng-click="$ctrl.close()" type="button" class="no-style">
+            <i class="icon icon-xs icon-material">&#xE14C;</i>
+        </button>
+        </div>
+        <div class="row row-compact">
+            <div class="twelve columns">
+                <div class="form-group">
+                    <label for="name" translate>utils.forms.name</label>
+                    <input type="text" id="optionText" name="optionText" ng-model="$ctrl.editOptionModel.label.value.header.value" placeholder="{{'utils.forms.itemName' | translate}}"
+                        class="u-full-width" required maxlength="30" />
+                    <error-messages form="$ctrl.editOptionLinkForm" field="optionText" error="$ctrl.error" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-compact">
+            <div class="one-half column">
+                <button type="button" ng-click="$ctrl.close()" class="u-full-width" translate>utils.forms.cancel</button>
+            </div>
+            <div class="one-half column">
+                <button type="submit" class="button-primary waves-effect waves-light u-full-width" ng-disabled="$ctrl.editOptionLinkForm.$invalid" translate>
+                    utils.forms.save
+                </button>
+            </div>
+        </div>
+
+        <div class="row row-compact" ng-show="!!$ctrl.error">
+            <error-messages form="$ctrl.editOptionLinkForm" error="$ctrl.error" />
+        </div>
+    </fieldset>
+</form>

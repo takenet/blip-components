@@ -1,0 +1,9 @@
+<div class="upload-button" ng-class="{'dashed-border': !file}">
+    <input id="uploadFile" name="uploadFile" type="file" ng-model="$ctrl.botImage">
+    <div ng-show="!showFile" class="upload-items">
+        <img ng-if="!file" src="/assets/img/Arrow.svg"></img>
+        <span ng-if="!file" class="bp-fs-7 color-white" translate>modules.ui.uploadButton.title</span>
+        <local-loading ng-if="file"></local-loading>
+    </div>
+    <img id="uploaded-img" class="uploaded-img" ng-show="showFile" ng-src-binary="file" alt="{{ 'modules.ui.uploadButton.alt' | translate }}">
+</div>

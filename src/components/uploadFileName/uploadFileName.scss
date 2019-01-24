@@ -1,0 +1,55 @@
+@import '~assets/scss/main';
+
+.upload-container {
+    position: relative;
+    background: none;
+    color: $color-primary;
+
+    input[type='file'] {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        cursor: pointer;
+
+        &:hover {
+            & ~ span {
+                opacity: 1;
+                background-color: rgba(66, 77, 95, 0.8);
+            }
+        }
+    }
+
+    .uploaded-file {
+        min-width: 13 * $m;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    & > span {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        opacity: 0;
+        border-color: black;
+        border-width: 2px;
+        border-style: dashed;
+        // transition: opacity 0.1s ease-in;
+
+        span {
+            font-size: 10px;
+            line-height: 1em;
+        }
+    }
+}

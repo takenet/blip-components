@@ -1,0 +1,46 @@
+@import "~assets/scss/main";
+
+icon-button {
+
+    width: auto;
+
+    .large {
+        width: 130px;
+    }
+
+    button,
+    button:hover,
+    button:focus {
+        background: none;
+        border: none;
+        padding: 0;
+        height: auto;
+        line-height: 1;
+        min-width: 0;
+
+        span {
+            line-height: 1;
+        }
+
+        &.button-primary { padding: 3px 4px; }
+
+        &.text-primary:hover { color: $color-primary-light; }
+        &.text-primary:focus { color: $color-primary; }
+
+        &.text-secondary:hover { color: $color-secondary-light; }
+        &.text-secondary:focus { color: $color-secondary; }
+
+        &.text-disabled:hover { color: $color-gray; }
+        &.text-disabled:focus { color: $color-disabled; }
+
+        &.text:hover { color: $color-text-dark; }
+        &.text:focus { color: $color-text; }
+
+        &.text-facebook:hover { color: $color-facebook-dark; }
+        &.text-facebook:focus { color: $color-facebook; }
+    }
+
+    + icon-button {
+        margin-left: 1.5*$u;
+    }
+}

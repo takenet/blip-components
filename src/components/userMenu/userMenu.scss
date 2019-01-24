@@ -1,0 +1,29 @@
+@import '~assets/scss/main';
+
+.author-details {
+    color: $color-text-light-6;
+    padding: 25px 0;
+    margin-left: 20px;
+
+    img { margin-right: 10px; }
+
+    dropdown-item {
+        .dropdown-item-content { z-index: 1005; }
+
+        li {
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            color: $color-secondary;
+
+            &:hover {
+                color: $color-primary;
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<li class="relative" ng-class="{ 'active': $ctrl.isChildrenActive }">
+    <a ng-href="{{$ctrl.href}}" ng-click="$ctrl.toggleExpand($event)">
+        <icon-dpr ng-if="$ctrl.hasIcon" size="xs">{{$ctrl.icon}}</icon-dpr>
+        <span class="sidebar-title" ng-style="$ctrl.spanStyle">
+            {{$ctrl.title}} <span ng-if="$ctrl.isBeta" class="background-light-blip text-white icon-beta">Beta</span>
+        </span>
+        <span class="sidebar-subtitle" ng-style="$ctrl.spanStyle" ng-bind="$ctrl.subtitle"></span>
+        <div style="position: absolute; right: 0; top: 0; margin: 0.9rem 0.6rem">
+            <i class="icon icon-xxs icon-circle" ng-if="$ctrl.active !== undefined" ng-class="{'active': $ctrl.active === 'true'}" style="margin-right: 0.9rem"></i>
+            <icon-dpr ng-if="$ctrl.hasChildren" size="xs" style="margin-right: 0.6rem">
+                {{$ctrl.chevronIcon}}
+            </icon-dpr>
+        </div>
+    </a>
+    <div ng-if="$ctrl.isNew"><img class="icon-new" src="/assets/img/New.svg"></div>
+</li>

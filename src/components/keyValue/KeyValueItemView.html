@@ -1,0 +1,28 @@
+<div ng-if="$ctrl.expandable" class="fl pt3 pr2 shift-tooltip">
+    <span tooltips tooltip-template="{{ 'utils.misc.expandTooltip' | translate }}" tooltip-side="top right" tooltip-class="small">
+        <i class="material-icons expand-toggled-open"
+            ng-class="{'bp-c-blip-dark': $ctrl.model.toggled, 'bp-c-silver': !$ctrl.model.toggled}"
+            ng-click="$ctrl.toggleExpandValue()">
+            open_in_new
+        </i>
+    </span>
+</div>
+<div ng-model-options="{ debounce: 500 }" class="flex flex-row justify-between">
+    <blip-input
+        ng-model="$ctrl.key"
+        label="{{ $ctrl.keyPlaceholder || 'Key' }}"
+        parent-form="$ctrl.formReference"
+        field-name="key"
+        type="text"
+        class="w-45"
+        required></blip-input>
+    <blip-input
+        ng-model="$ctrl.value"
+        label="{{ $ctrl.valuePlaceholder || 'Value' }}"
+        parent-form="$ctrl.formReference"
+        field-name="value"
+        type="text"
+        class="w-45"
+        required></blip-input>
+    <i ng-click="$ctrl.delete()" class="self-center icon-close lh-solid"></i>
+</div>

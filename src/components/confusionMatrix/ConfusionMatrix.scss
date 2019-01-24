@@ -1,0 +1,86 @@
+@import '~assets/scss/main';
+$row-color1: #e7ebf0;
+$row-color2: #f0f3f5;
+$white: #fff;
+$border-blue: #4cd7e6;
+
+.matrix-table {
+    height: 100%;
+    color: $color-text;
+    overflow: hidden;
+    border-collapse: inherit;
+
+    thead {
+        z-index: -2;
+        th {
+            z-index: -2;
+            position: relative;
+            color: $color-text;
+            border: none;
+            font-weight: 300;
+
+            &:nth-child(even) {
+                background-color: $row-color1;
+            }
+            &:nth-child(odd) {
+                background-color: $row-color2;
+            }
+
+            &.col {
+                height: 160px;
+                width: 60px;
+                z-index: -2;
+                > div {
+                    transform: translate(-5px, 49px) rotate(-90deg);
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    tbody {
+        background-color: $white;
+        tr {
+            &:nth-child(even) {
+                .header {
+                    background-color: $row-color2;
+                }
+            }
+            &:nth-child(odd) {
+                .header {
+                    background-color: $row-color1;
+                }
+            }
+
+            td {
+                padding: 5px;
+                width: 25px;
+                height: 25px;
+                position: relative;
+                border: none;
+                span {
+                    display: flex;
+                }
+
+                &.header {
+                    color: $color-text;
+                    width: 160px;
+                    padding-left: 20px;
+                }
+                &.cell {
+                    background-color: $white;
+                    transition: scale 0.2s ease-in-out;
+                    span {
+                        justify-content: center;
+                    }
+                }
+
+                &.cell:hover {
+                    background: $row-color1 !important;
+                    transform: scale(1.1) !important;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}

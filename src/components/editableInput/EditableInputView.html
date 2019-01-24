@@ -1,0 +1,29 @@
+<card>
+    <div class="table u-full-width">
+        <div class="column u-full-width" ng-click="$ctrl.editItem(item, $event)">
+            <!-- ¬editing -->
+            <span ng-if="$ctrl.editingItem.id !== item.id" ng-bind="item.value"></span>
+
+            <!-- editing -->
+            <input ng-model="$ctrl.editingItem.value"
+                id="input-item-{{$ctrl.editingItem.id}}"
+                ng-if="$ctrl.editingItem.id === item.id"
+                ng-focus="$ctrl.editingItem.id === item.id"
+                ng-edit-finished="$ctrl.finishEditItem($ctrl.editingItem)"
+                class="u-full-width"
+                type="text"
+                length="{{$ctrl.length}}"
+                ng-keypress="$event.stopPropagation()"
+                maxlength="{{$ctrl.length}}"
+                />
+        </div>
+
+        <icon-dpr title="{{'utils.forms.edit' | translate}}"
+            class="column column-auto padding-left text-disabled"
+            ng-click="$ctrl.editItem(item, $event)"
+            size="s"
+            >
+            &#xE254;
+        </icon-dpr>
+    </div>
+</card>

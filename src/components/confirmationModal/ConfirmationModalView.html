@@ -1,0 +1,28 @@
+<div class="modal">
+    <div class="modal-overlay" ng-click="$ctrl.cancel()"></div>
+    <form class="modal-dialog modal-{{$ctrl.size}} layout-center-y" ng-submit="$ctrl.confirm()">
+        <div class="modal-toolbar">
+            <button ng-click="$ctrl.cancel()" type="button" class="no-style">
+                <i class="icon-close text-gray"></i>
+            </button>
+        </div>
+
+        <div class="modal-body row">
+            <h1 class="mb5 mt4-1" ng-class="$ctrl.title.class" ng-bind="$ctrl.title.text"></h1>
+            <div class="mh6 ph4" ng-bind-html="$ctrl.body"></div>
+        </div>
+
+        <div class="modal-footer">
+            <!-- two buttons -->
+            <div ng-if="!$ctrl.isSingleButton">
+                <button type="reset" ng-click="$ctrl.cancel()" class="button-text" ng-bind="$ctrl.buttons.cancel.text"></button>
+                <button type="submit" ng-class="$ctrl.buttons.confirm.class ? $ctrl.buttons.confirm.class : 'button-primary waves-effect waves-light'" ng-bind="$ctrl.buttons.confirm.text"></button>
+            </div>
+
+            <!-- single button -->
+            <div ng-if="$ctrl.isSingleButton">
+                <button type="submit" ng-class="$ctrl.buttons.confirm.class ? $ctrl.buttons.confirm.class : ''" class="button-primary waves-effect waves-light" ng-bind="$ctrl.buttons.confirm.text"></button>
+            </div>
+        </div>
+    </form>
+</div>

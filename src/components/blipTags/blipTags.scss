@@ -1,0 +1,11 @@
+.blip-tags {
+    .blip-select.bp-input-wrapper {
+        background-color: transparent !important;
+    }
+
+    button {
+        &:hover {
+            color: #fff;
+        }
+    }
+}

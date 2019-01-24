@@ -1,0 +1,107 @@
+@import '~assets/scss/main';
+
+.content-boxes {
+    margin-top: 60px;
+
+    .content-boxes__list {
+        li {
+            background: lighten($color-gray, 20%);
+            display: block;
+            padding: 5px;
+            min-height: 60px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+
+            .add-option-box {
+                position: relative;
+                padding: 15px;
+                background: #e1e5e8;
+
+                &:hover {
+                    .content-boxes__list__options {
+                        opacity: 1;
+                    }
+
+                    .content-boxes-add {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        > li {
+            > card {
+                margin: 0;
+
+                ul {
+                    margin: 0;
+                    li {
+                        background: transparent;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        &__options {
+            @include flex-box;
+            justify-content: center;
+            opacity: 0;
+
+            > div {
+                margin-right: 30px;
+                &:focus { outline: none; }
+            }
+        }
+    }
+
+    .card-header {
+        p,
+        .card-aditional-info {
+            display: inline-block;
+        }
+
+        &:hover {
+            .card-handleable-content {
+                display: inline-block;
+            }
+        }
+
+        icon:focus { outline: none; }
+
+        .card-aditional-info,
+        .card-collapse-icon { float: right; }
+    }
+
+    .card-handleable-content {
+        margin-left: 40px;
+        display: none;
+    }
+
+    .card-title {
+        min-height: 27px;
+    }
+}
+
+.content-boxes-expandable-content {
+    input-list { margin-bottom: 0; }
+
+    card.content-boxes-expandable-content {
+        .card-divider { display: none; }
+    }
+}
+
+.content-boxes-add {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    display: block;
+    color: $color-gray;
+
+    i.icon-material {
+        font-size: $bp-font-large-1;
+        width: auto; height: auto;
+    }
+}

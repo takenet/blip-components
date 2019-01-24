@@ -1,0 +1,25 @@
+@import '~assets/scss/main';
+
+form-field {
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+    }
+
+    .field-label {
+        color: #2cc3d5;
+        font-weight: 600;
+        font-size: $bp-font-small-3;
+        text-align: left;
+    }
+
+    div.small {
+        input,
+        textarea,
+        select {
+            width: auto;
+        }
+    }
+}

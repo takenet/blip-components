@@ -1,0 +1,22 @@
+@import '~assets/scss/main';
+
+.bp-input-error-container {
+    height: 1.5*$m;
+    background: #eaeeee;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+// Needed to remove clear and reveal password icons from IE10 and Edge
+.bp-input-wrapper{
+    input::-ms-clear, input::-ms-reveal {
+        display: none;
+    }
+}
+
+// Needed to force padding despite icon class
+.bp-input-check {
+    padding-left: 5px !important;
+}

@@ -1,0 +1,21 @@
+<div class="custom-search-container relative has-click-action" ng-class="{'is-open' : $ctrl.isOpen, 'custom-select--disabled': $ctrl.isSelectDisabled}">
+    <div class="custom-search-view-value has-click-action"
+        ng-class="{'color-text': $ctrl.modelViewValue, 'color-text-light-5': !$ctrl.modelViewValue, 'disabled': $ctrl.isSelectDisabled }"
+        ng-click="$ctrl.toggleOpen($event)">
+        <span class="custom-select-view-value-container" ng-class="{'overflow-hidden': $ctrl.noWrap}">
+            <label ng-if="$ctrl.label">{{$ctrl.label}}</label>
+            <span ng-class="{'has-label': $ctrl.label, 'nowrap': $ctrl.noWrap}" class="custom-select-view-value">{{$ctrl.viewValue}}</span>
+        </span>
+        <i ng-class="{'icon-arrowdown': !$ctrl.isOpen, 'icon-arrowup': $ctrl.isOpen}" class="fr has-click-action"></i>
+    </div>
+    <div class="z-depth-4 custom-select-items" ng-show="$ctrl.isOpen">
+        <input type="text"
+            placeholder="{{$ctrl.$inputPLaceholder}}"
+            class="custom-select-search has-click-action"
+            ng-if="$ctrl.isSearchEnabled"
+            ng-model="$ctrl.userSearch"
+            ng-change="$ctrl.search()">
+        <div ng-transclude></div>
+        <div ng-show="$ctrl.hasNoItems" class="select-item" translate>utils.misc.noSearchResults</div>
+    </div>
+</div>

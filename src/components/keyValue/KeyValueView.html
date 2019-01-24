@@ -1,0 +1,28 @@
+<form name="$ctrl.keyValueForm" ng-show="$ctrl.keyValues.length > 0" novalidate>
+    <ul class="key-value-list">
+        <!-- Iteration -->
+        <li ng-if="!$ctrl.isModelEmpty()" ng-repeat="keyValue in $ctrl.keyValues track by $index">
+            <ng-form name="{{'form' + $index}}">
+                <key-value-item
+                    ng-model="keyValue"
+                    key="{{ keyValue.key }}"
+                    value="{{ keyValue.value }}"
+                    key-placeholder="$ctrl.keyPlaceholder"
+                    value-placeholder="$ctrl.valuePlaceholder"
+                    expandable="$ctrl.expandable"
+                    form-reference="$ctrl.keyValueForm['form' + $index]"
+                    on-key-changes="$ctrl.trySaveKey($newKey, $oldKey, $index)"
+                    on-value-changes="$ctrl.trySaveValue($newValue, $oldValue, $index)"
+                    on-delete="$ctrl.delete($index)"
+                    on-toggle-value="$ctrl.toggleExpandValue($event)"></key-value-item>
+            </ng-form>
+        </li>
+    </ul>
+</form>
+<!-- Add item form -->
+<div class="ph4 flex justify-center">
+    <button ng-click="$ctrl.addNewItem()" class="bp-btn bp-btn--bot bp-btn--dashed flex justify-center items-center h3-1 w-100 b"
+        translate>
+        {{ $ctrl.addButtonText }}
+    </button>
+</div>

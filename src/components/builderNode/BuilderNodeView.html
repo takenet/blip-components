@@ -1,0 +1,27 @@
+<span class="menumore-opt" ng-if="$ctrl.node.id !== 'onboarding' && $ctrl.node.id !== 'fallback'">
+    <span class="relative">
+        <dropdown-item item-title="<i class='icon-menumore'></i>" class="" hide-icon="true" align="right" min-width="100">
+            <div class="ph3 bp-fs-7 tc">
+                <span ng-click="$ctrl.$onDuplicate($ctrl.node.id)" translate>utils.forms.duplicate</span>
+            </div>
+            <div class="ph3 bp-fs-7 tc">
+                <span ng-click="$ctrl.$onDelete($ctrl.node.id)" translate>utils.forms.delete</span>
+            </div>
+            <div class="ph3 bp-fs-7 tc">
+                <span ng-click="$ctrl.$onCopyNodeId($ctrl.node.id)" translate>utils.forms.copyNodeId</span>
+            </div>
+        </dropdown-item>
+    </span>
+</span>
+<span class="builder-node-title">{{$ctrl._viewTitle}}</span>
+<img ng-if="$ctrl.node.id.startsWith('desk:')" class="desk-opt" src="/assets/img/desk.svg">
+<blip-tags ng-model="$ctrl.node.$tags"
+    mode="compact"
+    toggle-tags-mode="true"
+    can-remove-tags="false"
+    can-change-background="false"
+    on-tag-click="$ctrl.$onUpdateElement($ctrl.node.id)"
+    on-tag-list-updated="$ctrl.$onUpdateElement($ctrl.node.id)"
+    ></blip-tags>
+
+<div class="diagram-node-endpoint" action="begin"></div>

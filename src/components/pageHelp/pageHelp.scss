@@ -1,0 +1,51 @@
+@import '~assets/scss/main';
+
+.page-help-wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    card {
+        &:before {
+            content: ' ';
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            left: 15px;
+            top: 1px;
+            background: #fff;
+            transform: rotate(45deg);
+            z-index: 2;
+            box-shadow: -2px -2px 7px -3px #e1e7ee;
+        }
+
+        .title {
+            width: 30%;
+            font-size: $bp-font-medium-1;
+            font-weight: 500;
+            line-height: 27px;
+            margin-left: 60px;
+            padding-right: 25px;
+        }
+        .body {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            font-size: $bp-font-small-3;
+            font-weight: 500;
+            line-height: 19px;
+
+            a, strong {
+                font-size: $bp-font-small-3;
+                font-weight: 600;
+                line-height: 18px;
+                color: #2cc3d5;
+                text-decoration: none;
+            }
+        }
+        .image {
+            width: 20%;
+        }
+    }
+}

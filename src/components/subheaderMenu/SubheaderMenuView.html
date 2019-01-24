@@ -1,0 +1,18 @@
+<ul class="main-subheader ma0">
+    <sidenav-menu-item ng-repeat="menuItem in $ctrl.visibleMenus"
+        class="horizontal-menu-item"
+        title="{{ menuItem.title | translate }}" sref="{{ menuItem.sref }}" is-new="menuItem.isNew">
+    </sidenav-menu-item>
+
+    <li ng-if="$ctrl.dropdownMenus && $ctrl.dropdownMenus.length > 0" class="subheader-more-items">
+        <dropdown-item custom-icon="menumore" align="left" hide-icon="true">
+            <ul class="ma0">
+                <li ng-repeat="dropdownMenuItem in $ctrl.dropdownMenus">
+                    <a ui-sref="{{ dropdownMenuItem.sref }}">
+                        {{ dropdownMenuItem.title | translate }}
+                    </a>
+                </li>
+            </ul>
+        </dropdown-item>
+    </li>
+</ul>

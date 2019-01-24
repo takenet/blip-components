@@ -1,0 +1,21 @@
+<div>
+    <div ng-if="!circle" class="flex flex-row items-center">
+        <div class="upload-container">
+            <input id="uploadFile" name="uploadFile" type="file" ng-model="file">
+            <button ng-if="!file" class="button-text-primary" translate>utils.forms.addplus</button>
+            <div ng-if="file" class="uploaded-file">
+                <div class="icon icon-attach"></div>
+                <span class="bp-fs-6">{{file.name}}</span>
+            </div>
+        </div>
+        <div ng-if="file" class="icon icon-close ml2 color-danger" ng-click="resetIcon()"></div>
+    </div>
+
+    <div ng-if="circle" class="upload-container">
+        <input id="uploadFile" name="uploadFile" type="file" ng-model="file">
+        <span class="img-hover">
+            <img src="/assets/img/Arrow.svg" width="22" />
+            <span class="fw6 bp-c-breeze tc w-80 pt2">Upload Image</span>
+        </span>
+    </div>
+</div>

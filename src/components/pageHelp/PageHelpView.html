@@ -1,0 +1,21 @@
+<div class="flex w-100 flex-column items-center mb4">
+    <div class="page-help-wrapper">
+        <card class="w-100">
+            <div class="flex flex-row justify-between items-center">
+                <div class="title">
+                    {{$ctrl.title}}
+                </div>
+                <div class="body">
+                    <span>{{$ctrl.body}}</span>
+                    <div class="mt3 flex flex-row items-center">
+                        <a class="mr3" ng-click="$ctrl.close()">{{$ctrl.helpConfirm}}</a>
+                        <a href="{{$ctrl.docLink.link}}" target="blank">{{$ctrl.docLink.text}}  <i class='icon-external-link'></i></a>
+                    </div>
+                </div>
+                <div class="image ml3">
+                    <img src="/assets/img/ballons.svg"/>
+                </div>
+            </div>
+        </card>
+    </div>
+</div>

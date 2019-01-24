@@ -1,0 +1,38 @@
+<div class="content-boxes">
+    <ul class="content-boxes__list">
+        <li ng-repeat="option in $ctrl.ngModel.options track by $index" ng-init="slotIndex = $index" ng-if="$ctrl.shouldShowOption($index)">
+            <div ng-switch="option.label.type">
+                <div ng-switch-when="application/vnd.lime.document-select+json">
+                    <ng-include src="'box.html'"></ng-include>
+                </div>
+                <div ng-switch-when="text/plain">
+                    <ng-include src="'destiny.html'"></ng-include>
+                </div>
+                <div ng-switch-when="application/vnd.lime.web-link+json">
+                    <ng-include src="'link.html'"></ng-include>
+                </div>
+            </div>
+            <div ng-if="$ctrl.isSlotAvailable($index)" class="add-option-box">
+                <div class="content-boxes__list__options">
+                    <div ng-auth-write="disable" ng-click="$ctrl.addToList('box')">
+                        <icon-dpr>&#xE02E;</icon-dpr>
+                        <span translate>utils.misc.menu</span>
+                    </div>
+                    <div ng-auth-write="disable" ng-click="$ctrl.addToList('destiny')">
+                        <icon-dpr>&#xE89E;</icon-dpr>
+                        <span translate>utils.misc.text</span>
+                    </div>
+                    <div ng-auth-write="disable" ng-click="$ctrl.addToList('link')">
+                        <icon-dpr>&#xE157;</icon-dpr>
+                        <span translate>utils.misc.link</span>
+                    </div>
+                </div>
+                <icon-dpr class="content-boxes-add">&#xE147;</icon-dpr>
+            </div>
+        </li><!-- !finish ng-repeat options -->
+    </ul>
+</div>
+
+<div class="three columns offset-by-nine tr">
+    <button ng-auth-write ng-click="$ctrl.saveModel()" type="submit" class="button-primary waves-effect waves-light" translate>utils.forms.save</button>
+</div>

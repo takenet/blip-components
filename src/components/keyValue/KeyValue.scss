@@ -1,0 +1,26 @@
+@import '~assets/scss/main';
+
+.key-value-list {
+    list-style: none;
+
+    // remove when builder sidebar layout is updated to use blip-input
+    input {
+        padding: 0 !important;
+        border: none !important;
+    }
+
+    .expand-toggled-open {
+        transform: rotate(270deg);
+        cursor: pointer;
+
+        &:hover {
+            color: $bp-color-blip-dark;
+        }
+    }
+
+    .shift-tooltip {
+        tooltip._top._right tip {
+            left: -12px;
+        }
+    }
+}

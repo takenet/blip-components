@@ -1,0 +1,70 @@
+@import "~assets/scss/main";
+
+.upload-button {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #414D5E;
+
+    &.dashed-border {
+        border: 3px dashed #1F2735;
+    }
+
+    .upload-items {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            padding: 0 0 8px;
+            transition: all linear 0.1s;
+            &.ng-hide {
+                height: 0;
+            }
+        }
+
+
+
+        span {
+            padding: 8px 28px 0;
+            line-height: 1.5;
+            text-align: center;
+            color: $color-white;
+        }
+
+        local-loading {
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    input[type='file'] {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        top:0;
+        left:0;
+        opacity:0;
+        cursor:pointer;
+    }
+
+    .uploaded-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+}

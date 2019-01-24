@@ -1,0 +1,13 @@
+<div class="bp-textarea-wrapper" ng-class="{
+    'bp-textarea-wrapper--focus': focused,
+    'bp-textarea-wrapper--disabled': $ctrl.disabled,
+    'bp-textarea-wrapper--invalid': !$ctrl.disabled && !$ctrl.parentForm[$ctrl.fieldName].$pristine && $ctrl.parentForm[$ctrl.fieldName].$invalid }"
+    ng-click="$ctrl.focus()" id="{{$ctrl.elementId}}">
+    <label class="bp-label tl" ng-class="{
+       'bp-c-rooftop': !focused,
+       'bp-c-blip-dark': focused,
+       'bp-c-warning': !$ctrl.parentForm[$ctrl.fieldName].$pristine && $ctrl.parentForm[$ctrl.fieldName].$invalid } ">{{$ctrl.label}}</label>
+    <textarea class="bp-textarea bp-c-city " ng-model="$ctrl.model " name="{{$ctrl.fieldName}} " placeholder="{{$ctrl.placeholder}} "
+        ng-required="$ctrl.required " maxlength="{{$ctrl.maxlength}} " ng-disabled="$ctrl.disabled " ng-init="focused=false "
+        ng-change="$ctrl.onChange({ $val: $ctrl.model })" ng-focus=" focused=true " ng-blur="focused=false " rows="{{$ctrl.rows}} "></textarea>
+</div>

@@ -1,0 +1,39 @@
+<card item-title="<i class='icon icon-material'>queue</i> {{option.label.value.header.value}}"
+    aditional-info="{{$ctrl.maxItensOf(option)}}"
+    class="content-boxes-expandable-content"
+    collapsable="true"
+    on-edit="$ctrl.editOption(option)"
+    on-exclude="$ctrl.removeOption(option)">
+
+    <div ng-repeat="option in option.label.value.options">
+        <div ng-switch="option.label.type">
+            <div ng-switch-when="application/vnd.lime.document-select+json">
+                <ng-include src="'box.html'"></ng-include>
+            </div>
+            <div ng-switch-when="text/plain">
+                <ng-include src="'destiny.html'"></ng-include>
+            </div>
+            <div ng-switch-when="application/vnd.lime.web-link+json">
+                <ng-include src="'link.html'"></ng-include>
+            </div>
+        </div>
+    </div>
+
+    <div ng-auth-write ng-if="$ctrl.isSlotAvailable($index, option)" class="add-option-box">
+        <div class="content-boxes__list__options">
+            <div ng-auth-write="disable" ng-if="$ctrl.canAddDepth(option)" ng-click="$ctrl.addToList('box', option)">
+                <icon-dpr>&#xE02E;</icon-dpr>
+                <span translate>utils.misc.menu</span>
+            </div>
+            <div ng-auth-write="disable" ng-click="$ctrl.addToList('destiny', option)">
+                <icon-dpr>&#xE89E;</icon-dpr>
+                <span translate>utils.misc.text</span>
+            </div>
+            <div ng-auth-write="disable" ng-click="$ctrl.addToList('link', option)">
+                <icon-dpr>&#xE157;</icon-dpr>
+                <span translate>utils.misc.link</span>
+            </div>
+        </div>
+        <icon-dpr class="content-boxes-add">&#xE147;</icon-dpr>
+    </div>
+</card>

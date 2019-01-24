@@ -1,0 +1,30 @@
+@import '~assets/scss/main';
+
+.checkbox-wrapper {
+    display: inline;
+
+    label {
+        padding: 0;
+        margin: 0;
+    }
+
+    input[type='checkbox'] {
+        display: none;
+    }
+
+    i {
+        color: $color-primary;
+        font-size: $bp-font-medium-1;
+
+        &.disabled {
+            color: $color-text-light-4;
+        }
+    }
+
+    i:hover {
+        color: $color-primary-dark;
+        &.disabled {
+            color: $color-text-light-4;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+<button type="button"
+    ng-auth-write="disable"
+    ng-class="{ 'button-primary waves-effect waves-light': $ctrl.ngModel.$viewValue, 'button-disabled': !$ctrl.ngModel.$viewValue }"
+    ng-click="$ctrl.ngModel.$setViewValue(!$ctrl.ngModel.$viewValue)"
+    ng-transclude
+    ></button>

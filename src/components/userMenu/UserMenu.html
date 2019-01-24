@@ -1,0 +1,12 @@
+<div class="author-details">
+    <div class="flex items-center">
+        <!-- User image -->
+        <letter-avatar class="author-header-avatar" text="$ctrl.fullName"></letter-avatar>
+        <dropdown-item item-title="<div class='flex flex-row justify-center items-center pointer'>
+            <span class='bot-name fw3'>{{$ctrl.fullName}}</span>
+            <img src='{{$ctrl.arrowBPath}}' height='8' class='pl3' />
+        </div>" hide-icon="true" align="right" min-width="200" id="account-dropdown">
+        <div ng-transclude></div>
+        </dropdown-item>
+    </div>
+</div>

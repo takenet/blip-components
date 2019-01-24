@@ -1,0 +1,21 @@
+@import "~assets/scss/main";
+.saving-component {
+    margin-left: 10px;
+    display: inline;
+
+    div {
+        @include flex-box;
+        justify-items: center;
+    }
+
+    span {
+        margin-left: 5px;
+        font-size: $bp-font-small-3;
+        color: $color-text-light-6;
+        line-height: 1;
+    }
+    img {
+        height: 15px;
+        width: 15px;
+    }
+}

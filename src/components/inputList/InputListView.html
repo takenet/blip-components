@@ -1,0 +1,116 @@
+<card ng-auth-write ng-if="$ctrl.addItems" ng-class="{ 'bg-disabled': !$ctrl.canAddMoreItems }">
+    <div class="table">
+        <div class="column u-full-width">
+            <material-input initial-value="$ctrl.newItemText">
+                <input type="text"
+                    class="u-full-width input-list-input"
+                    ng-model="$ctrl.newItemText"
+                    length="{{$ctrl.length}}"
+                    maxlength="{{$ctrl.length}}"
+                    ng-disabled="!$ctrl.canAddMoreItems"
+                    ng-if="!$ctrl.allowMultipleLines"
+                    value="{{$ctrl.newItemText}}"
+                    />
+                <textarea auto-expand="initial"
+                    type="text"
+                    class="u-full-width input-list-textarea"
+                    ng-model="$ctrl.newItemText"
+                    length="{{$ctrl.length}}"
+                    maxlength="{{$ctrl.length}}"
+                    ng-disabled="!$ctrl.canAddMoreItems"
+                    ng-if="$ctrl.allowMultipleLines"
+                    ></textarea>
+                    <label for="entityName">{{$ctrl.placeholder}}</label>
+            </material-input>
+        </div>
+
+        <div class="column column-auto padding-left">
+            <button ng-click="$ctrl.addItem($ctrl.newItemText)"
+                class="button-secondary mt4"
+                ng-show="$ctrl.canAddMoreItems"
+                translate>
+                utils.forms.add
+            </button>
+        </div>
+    </div>
+</card>
+
+<scroll-content height="$ctrl.height">
+    <ul class="no-style" dnd-list="$ctrl.items" dnd-drop="$ctrl.moveItem(item, index)">
+        <li ng-repeat="item in $ctrl.items track by item.id">
+            <card>
+                <div class="table u-full-width">
+                    <div class="column u-full-width" ng-click="$ctrl.editItem(item, $event)">
+                        <!-- ¬editing -->
+                        <span ng-if="$ctrl.editingItem.id !== item.id" style="white-space: pre-line">{{item.value | limitContent: $ctrl.cardMaxChars : $ctrl.cardMaxLines}}</span>
+                        <input ng-model="$ctrl.editingItem.value"
+                            id="input-item-{{$ctrl.editingItem.id}}"
+                            ng-if="$ctrl.editingItem.id === item.id && !$ctrl.allowMultipleLines"
+                            ng-focus="$ctrl.editingItem.id === item.id"
+                            ng-edit-finished="$ctrl.finishEditItem($ctrl.editingItem)"
+                            class="u-full-width"
+                            type="text"
+                            placeholder="{{'utils.forms.removeItem' | translate}}"
+                            length="{{$ctrl.length}}"
+                            ng-keypress="$event.stopPropagation()"
+                            maxlength="{{$ctrl.length}}"
+                            ng-auth-write="disable"
+                            />
+                        <textarea ng-model="$ctrl.editingItem.value"
+                            id="input-item-{{$ctrl.editingItem.id}}"
+                            auto-expand="initial"
+                            ng-if="$ctrl.editingItem.id === item.id && $ctrl.allowMultipleLines"
+                            ng-focus="$ctrl.editingItem.id === item.id"
+                            class="u-full-width"
+                            type="text"
+                            placeholder="{{'utils.forms.removeItem' | translate}}"
+                            length="{{$ctrl.length}}"
+                            ng-keypress="$event.stopPropagation()"
+                            maxlength="{{$ctrl.length}}"
+                            ng-auth-write="disable"
+                            style="max-height: 130px"
+                            ></textarea>
+                    </div>
+
+                    <div class="column column-auto padding-left">
+                        <button ng-click="$ctrl.finishEditItem($ctrl.editingItem)"
+                            class="button-secondary"
+                            ng-show="$ctrl.editingItem.id === item.id"
+                            translate>
+                            utils.forms.save
+                        </button>
+                    </div>
+
+                    <icon-dpr title="{{'utils.misc.move' | translate}}"
+                      class="column column-auto padding-left handle text-disabled"
+                      ng-if="$ctrl.reorderable"
+                      dnd-handle
+                      size="s"
+                      >
+                      &#xE89F;
+                    </icon-dpr>
+
+                    <icon-dpr ng-if="$ctrl.editItems" title="{{'utils.forms.edit' | translate}}"
+                      class="column column-auto padding-left text-disabled"
+                      ng-click="$ctrl.editItem(item, $event)"
+                      ng-auth-write="disallow"
+                      size="s"
+                      ng-show="$ctrl.editingItem.id !== item.id"
+                      >
+                      &#xE254;
+                    </icon-dpr>
+
+                    <icon-dpr title="{{'utils.forms.remove' | translate}}"
+                      class="column column-auto padding-left text-disabled"
+                      ng-click="$ctrl.deleteItem(item)"
+                      ng-auth-write="disallow"
+                      size="s"
+                      ng-show="$ctrl.editingItem.id !== item.id"
+                      >
+                      &#xE872;
+                    </icon-dpr>
+                </div>
+            </card>
+        </li>
+    </ul>
+</scroll-content>

@@ -1,0 +1,21 @@
+@import '~assets/scss/main';
+
+.search-input-container {
+    @include flex-box;
+    align-items: center;
+
+    input[type=text] {
+        width: 0;
+        transition: width 400ms;
+
+        margin-left: 0;
+
+        &:focus { margin-left: 10px; width: 170px; }
+
+        //Workaround for bug on Safari
+        &.input-focused { margin-left: 10px; width: 170px; }
+
+        &::-ms-clear { display: none; }
+    }
+}
+

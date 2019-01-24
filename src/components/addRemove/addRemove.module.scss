@@ -1,0 +1,32 @@
+@import '~assets/scss/main';
+
+.button {
+    color: #fff;
+    width: 28px; height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 7px;
+    @include box-shadow(0 2px 4px 0 rgba(0,0,0,0.22));
+}
+
+:global {
+    .centered-add-remove {
+        &--top {
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        &--bottom {
+            bottom: -14px;
+        }
+    }
+
+    .add-remove-container {
+        add-remove { visibility: hidden; }
+        &:hover {
+            add-remove { visibility: visible; }
+        }
+    }
+}

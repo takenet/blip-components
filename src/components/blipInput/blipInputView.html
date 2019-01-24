@@ -1,0 +1,60 @@
+<div class="bp-input-wrapper relative"
+    ng-class="{
+    'bp-input-wrapper--focus': focused,
+    'bp-input-wrapper--valid': focused && $ctrl.parentForm[$ctrl.fieldName].$viewValue && $ctrl.parentForm[$ctrl.fieldName].$valid,
+    'bp-input-wrapper--invalid': !$ctrl.disabled && !$ctrl.parentForm[$ctrl.fieldName].$pristine && $ctrl.parentForm[$ctrl.fieldName].$invalid,
+    'bp-input-wrapper--disabled': $ctrl.disabled }"
+    ng-click="$ctrl.focus()"
+    id="{{$ctrl.elementId}}">
+    <label class="bp-label tl"
+        ng-class="{
+       'bp-c-rooftop': !focused,
+       'bp-c-blip-dark': focused,
+       'bp-c-true': focused && $ctrl.parentForm[$ctrl.fieldName].$viewValue && $ctrl.parentForm[$ctrl.fieldName].$valid,
+       'bp-c-warning': !$ctrl.parentForm[$ctrl.fieldName].$pristine && $ctrl.parentForm[$ctrl.fieldName].$invalid }">{{$ctrl.label}}</label>
+
+    <password-strength ng-if="$ctrl.showPasswordStrength && $ctrl.type === 'password'" ng-model="$ctrl.model"></password-strength>
+
+    <div class="w-100 relative flex flex-row justify-between">
+        <input class="w-100 bp-input bp-c-city"
+            name="{{$ctrl.fieldName}}"
+            ng-model="$ctrl.model"
+            ng-required="$ctrl.required"
+            type="{{$ctrl.type}}"
+            ng-min="{{$ctrl.min}}"
+            ng-max="{{$ctrl.max}}"
+            ng-minlength="{{$ctrl.minlength}}"
+            ng-maxlength="{{$ctrl.maxlength}}"
+            ng-disabled="$ctrl.disabled"
+            ng-init="focused = false"
+            ng-change="$ctrl.onChange({ $val: $ctrl.model })"
+            ng-focus="focused = true"
+            ng-blur="focused = false"
+            autocomplete="{{$ctrl.inputAutocomplete}}"
+            placeholder="{{$ctrl.placeholder}}"
+            id="{{$ctrl.fieldId}}" />
+        <i ng-if="!($ctrl.unmaskablePassword && $ctrl.type === 'password')"
+            class="dib fr mh2 icon icon-material bp-c-true-dark bp-input-check"
+            ng-class="{ 'invisible': $ctrl.disabled || focused || !$ctrl.parentForm[$ctrl.fieldName].$viewValue || !$ctrl.parentForm[$ctrl.fieldName].$valid }">
+            &#xE5CA;
+        </i>
+        <img
+            src="/assets/img/EyePassword.svg"
+            class="mh2 bp-input-check pb2"
+            ng-if="($ctrl.unmaskablePassword && $ctrl.type === 'password') && !$ctrl.passwordUnmasked"
+            ng-class="{ 'invisible': $ctrl.disabled || !$ctrl.model }"
+            ng-mousedown="$ctrl.showPassword()"
+            ng-mouseup="$ctrl.hidePassword()"
+            ng-mouseleave="$ctrl.hidePassword()"
+            alt="">
+        <img
+            src="/assets/img/EyePasswordActive.svg"
+            class="mh2 bp-input-check pb2"
+            ng-if="($ctrl.unmaskablePassword && $ctrl.type === 'password') && $ctrl.passwordUnmasked"
+            ng-class="{ 'invisible': $ctrl.disabled || !$ctrl.model }"
+            ng-mousedown="$ctrl.showPassword()"
+            ng-mouseup="$ctrl.hidePassword()"
+            ng-mouseleave="$ctrl.hidePassword()"
+            alt="">
+    </div>
+</div>

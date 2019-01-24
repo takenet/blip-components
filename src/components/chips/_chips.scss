@@ -1,0 +1,16 @@
+@import '~assets/scss/main';
+
+.custom-chips {
+    background: $color-text-light-7;
+    color: $color-primary-dark;
+    border-radius: 30px;
+    padding: 3px 13px;
+    margin: 0 5px 5px;
+    display: inline-block;
+    min-width: 65px;
+    word-break: break-word;
+
+    .remove-chip {
+        margin-left: 10px;
+    }
+}
