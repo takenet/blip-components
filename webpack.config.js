@@ -64,6 +64,16 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
+                test: /\.css$/,
+                use: cssPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        { loader: 'css-loader' },
+                        { loader: 'resolve-url-loader' },
+                    ],
+                }),
+            },
+            {
                 test: /\.html$/,
                 use: [{
                     loader: 'html-loader',
