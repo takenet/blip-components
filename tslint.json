@@ -50,7 +50,7 @@
         "arrow-return-shorthand": true,
         "prefer-object-spread": true,
         "use-isnan": true,
-        "only-arrow-functions": true,
+        "only-arrow-functions": false,
         "promise-function-async": false,
         "object-literal-sort-keys": false,
         "newline-before-return": false,

@@ -1,12 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const cssPlugin = new ExtractTextPlugin('blip-components.css');
 
 module.exports = {
-    entry: [ 'webpack/hot/dev-server', 'webpack-dev-server/client?http://localhost:8080', __dirname + '/index' ],
+    entry: [ 'webpack/hot/dev-server', 'webpack-dev-server/client?http://localhost:8080', __dirname + '/src/index' ],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'blip-components.js',
@@ -29,7 +30,19 @@ module.exports = {
                     { loader: 'ts-loader' }
                 ]
             },
-
+            {
+                test: /\.(jpe?g|gif|png|cur)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192,
+                            name: 'img/[name].[ext]?[hash]',
+                        },
+                    },
+                ],
+                exclude: /node_modules/,
+            },
             {
                 test: /\.css$/,
                 use: cssPlugin.extract({
@@ -41,27 +54,28 @@ module.exports = {
                 }),
             },
             {
-                test: /\.scss$/,
-                use: cssPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                sourceMap: true
-                            }
+                test: /^((?!\.module).)*scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader',
+                ],
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.module.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            localIdentName: '[name]__[local]__[hash:base64:5]',
                         },
-                        { loader: 'resolve-url-loader' },
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                sourceMap: false, /* Disabled due to a bug in saas: https://github.com/sass/libsass/issues/2312 */
-                                root: path.resolve(__dirname, './')
-                            }
-                        }
-                    ]
-                }),
-                exclude: /node_modules/
+                    },
+                    'sass-loader',
+                ],
+                exclude: /node_modules/,
             },
             {
                 test: /\.css$/,
@@ -88,6 +102,7 @@ module.exports = {
     resolve: {
         extensions: ['.webpack.js', '.web.js', '.js', '.html', '.ts'],
         modules: [
+            path.resolve(__dirname, 'src'),
             'node_modules'
         ]
     },
