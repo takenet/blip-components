@@ -84,7 +84,7 @@ export default (function(ng) {
     .component('expandable', expandable)
     .component('formField', formField)
     .component('iconDpr', iconDpr)
-    .component('icon', IconComponent)
+    // .component('icon', IconComponent)
     .component('iconButton', iconButton)
     .component('infoHeader', InfoHeader)
     .component('inputList', inputList)
