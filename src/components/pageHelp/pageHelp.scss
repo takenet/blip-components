@@ -1,4 +1,4 @@
-@import '~assets/scss/main';
+@import '../../assets/scss/variables';
 
 .page-help-wrapper {
     display: flex;
@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     width: 80%;
+
     card {
         &:before {
             content: ' ';

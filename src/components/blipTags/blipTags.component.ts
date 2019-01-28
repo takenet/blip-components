@@ -8,7 +8,7 @@ import {
     ITimeoutService,
     IOnChangesObject,
 } from 'angular';
-import { EventEmitter } from 'modules/shared/EventEmitter';
+import { EventEmitter } from 'shared/EventEmitter';
 import './blipTags.scss';
 
 const BLIP_TAGS_PREFIX = 'blip-tags';

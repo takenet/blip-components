@@ -1,0 +1,219 @@
+//Variable for scale that permits the use of base 16px with the logic of 10px
+//For example, if you want 18px, instead of writing 1.125rem, you can write 1.8*$m, which is easier to understand
+$m: 0.625rem;
+
+$u: 0.6*$m;
+
+$size-xxs: 1.333*$u;
+$size-xss: 2*$u;
+$size-xs: 2.666*$u;
+$size-ss: 3.333*$u;
+$size-s: 4*$u;
+$size-sm: 6*$u;
+$size-m: 8*$u;
+$size-l: 12*$u;
+
+//Primary
+$color-primary: #2CC3D5;
+$color-primary-light: #0CC8CC;
+$color-primary-dark: #15AFB2;
+
+//Secondary
+$color-secondary: #546E7A;
+$color-secondary-light: lighten($color-secondary, 12%);
+$color-secondary-dark: darken($color-secondary, 12%);
+
+//Tertiary
+$color-tertiary: #2E3542;
+$color-tertiary-light: lighten($color-tertiary, 6%);
+$color-tertiary-dark: darken($color-tertiary, 6%);
+
+//Misc
+$color-success: #4DCB7B;
+$color-success-dark: darken($color-success, 9%);
+$color-success-2: #D7FFE6;
+$color-delete: #FB7A6D;
+$color-delete-dark: darken($color-delete, 9%);
+$color-info: #73D0FF;
+$color-info-light: #d0feff;
+$color-danger: #F76556;
+$color-danger-light: #fee2df;
+$color-danger-dark: darken($color-danger, 9%);
+$color-warning: #d6c808;
+$color-warning-light: #FFFCDD;
+$color-warning-dark: #D2A51A;
+$color-disabled: #BEBEBE;
+$color-accent: #B2DFDB;
+$color-white: #FFFFFF;
+$color-white-dark: #ECEFF0;
+$color-wa: #50C079;
+
+//Gray
+$color-gray: $color-disabled;
+$color-gray-light: #D3D3D3;
+$color-gray-light-2: #E9EDF3;
+$color-gray-light-3: #EAEEEE;
+$color-gray-light-4: #e3f1e9;
+$color-gray-light-5: #919c9e;
+$color-gray-dark: #999999;
+
+//Color palette: City
+$color-text: #52636C;
+
+//Color palette: Rooftop
+$color-text-light: #738192;
+
+//Color palette: Desk
+$color-text-light-2: #607B99;
+
+//Color palette: Cloud
+$color-text-light-3: #8CAABA;
+
+//Color palette: Silver
+$color-text-light-4: #94A3AB;
+
+//Color palette: Time
+$color-text-light-5: #A8BFC4;
+
+//Color palette: Breeze
+$color-text-light-6: #C9DFE4;
+
+//Color palette: Sky
+$color-text-light-7: #DAF2F4;
+
+// Color pallete: Light BLiP
+$color-light-blip: #0CC8CC;
+$color-light-blip-2: #e3f5f6;
+
+// Color pallete: Dark BLiP
+$color-dark-blip: #15AFB2;
+$color-text-dark: #4A4A4A;
+$color-text-dark-5: #334962;
+$color-gray-dark-2: #363F4E;
+$color-gray-dark-3: #222834;
+$color-gray-dark-4: #475D72;
+$color-text-disabled: #c5c5c5;
+$color-input-disabled: #EAECEC;
+
+//Background
+$color-background: linear-gradient(180deg, #F9FBFC 0%, #ECF1F3 100%);
+
+//Login
+$color-blip-blue-1: #1BD6E7;
+$color-blip-blue-2: #0FC3F8;
+$color-blip-blue-3: #0ABCFF;
+
+//3rd-party
+$color-facebook: #3C5A99;
+$color-facebook-dark: darken($color-facebook, 9%);
+$border-color-1: #d3d3d3;
+
+
+/*
+    BLiP Toolkit
+
+    Color variables
+
+*/
+
+$bp-color-bot: #2cc3d5;
+$bp-color-blip-light: #0cc8cc;
+$bp-color-blip-dark: #15afb2;
+
+$bp-color-warning: #f76556;
+$bp-color-warning-light: #fbeaea;
+$bp-color-warning-yellow: #ffcf33;
+$bp-color-delete: #fb7a6d;
+
+$bp-color-true: #4dcb7b;
+
+$bp-color-onix: #242B36;
+$bp-color-city: #52636c;
+$bp-color-rooftop: #738192;
+$bp-color-desk: #607B99;
+$bp-color-cloud: #8ca0b3;
+$bp-color-silver: #94a3ab;
+$bp-color-time: #a8bfc4;
+$bp-color-breeze: #c9dfe4;
+$bp-color-sky: #daf2f4;
+$bp-color-offwhite: #eaeeee;
+
+// Duplicated to follow BLiP Toolkit standards and keep legacy
+// Delete both when import sass file from BLiP Toolkit
+$bp-c-bot: #2cc3d5;
+$bp-c-blip-light: #0cc8cc;
+$bp-c-blip-dark: #15afb2;
+
+$bp-c-warning: #f76556;
+$bp-c-warning-light: #fbeaea;
+$bp-c-warning-yellow: #ffcf33;
+$bp-c-delete: #fb7a6d;
+
+$bp-c-true: #4dcb7b;
+
+$bp-c-onix: #242B36;
+$bp-c-suit: #3d4554;
+$bp-c-city: #52636c;
+$bp-c-rooftop: #738192;
+$bp-c-desk: #607B99;
+$bp-c-cloud: #8ca0b3;
+$bp-c-silver: #94a3ab;
+$bp-c-time: #a8bfc4;
+$bp-c-breeze: #c9dfe4;
+$bp-c-sky: #daf2f4;
+$bp-c-offwhite: #eaeeee;
+
+/*
+  BLiP Toolkit
+
+  Font Variables
+
+*/
+
+/*
+
+  Font family is Nunito. Its fallback is Helvetica
+
+*/
+
+$bp-font-family: 'Nunito', 'Helvetica', sans-serif;
+
+/*
+
+  Font sizes have been converted to rem considering a base size of 16px.
+  For more information, check the calculator at https://offroadcode.com/rem-calculator/
+
+*/
+
+$bp-base-font-size: 16px;
+
+//4 small fonts (for normal text, minor titles and subtitles)
+$bp-font-small-1: 0.625rem; //10px
+$bp-font-small-2: 0.75rem; //12px
+$bp-font-small-3: 0.875rem; //14px
+$bp-font-small-4: 1rem; //16px (base)
+
+//2 medium fonts (for headline text, major titles and subtitles)
+$bp-font-medium-1: 1.25rem; //20px
+$bp-font-medium-2: 1.5rem; //24px
+
+//2 large fonts (for major numbers or things with really high emphasis)
+$bp-font-large-1: 2rem; //32px
+$bp-font-large-2: 3rem; //48px
+
+// Typography
+$regular: 300;
+$medium: 400;
+$bold: 700;
+
+$base-font-family: 'Nunito', 'Helvetica', 'Arial', sans-serif;
+$base-font-weight: $regular;
+$base-font-size: $bp-font-small-4;
+$regular-font-size: $bp-font-small-3;
+$base-letter-spacing: -0.04em;
+
+$small-font-size: $bp-font-small-2;
+
+$serif-font-family: 'Merriweather', serif;
+
+$monospace-font-family: 'Consolas', monospace;

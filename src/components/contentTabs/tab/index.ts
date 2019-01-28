@@ -1,5 +1,3 @@
-import * as angular from 'angular';
-
 export const TabComponent = {
     controller: class {
         isActive: boolean;
@@ -36,8 +34,3 @@ export const TabComponent = {
         tabHref: '@?',
     }
 };
-
-export const TabModule = angular
-    .module('blip.components.tab', [])
-    .component('tab', TabComponent)
-    .name;

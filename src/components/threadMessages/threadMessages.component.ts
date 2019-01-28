@@ -1,6 +1,6 @@
 import template from './ThreadMessagesView.html';
 import { debounce } from 'data/function';
-import { EventEmitter } from 'modules/shared/EventEmitter';
+import { EventEmitter } from 'shared/EventEmitter';
 import { IComponentController, IOnChangesObject } from 'angular';
 
 class ThreadMessages implements IComponentController {

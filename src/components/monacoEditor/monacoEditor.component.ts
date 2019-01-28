@@ -1,5 +1,5 @@
 import { IComponentController } from 'angular';
-import { EventEmitter } from 'modules/shared/EventEmitter';
+import { EventEmitter } from 'shared/EventEmitter';
 
 export const LOAD_EDITOR = 'LOAD_EDITOR';
 interface IMonacoEditorComponentBindings extends IComponentController {

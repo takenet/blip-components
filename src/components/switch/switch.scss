@@ -9,7 +9,7 @@ switch {
 
         + label {
             position: relative;
-            background: #C9DFE4;
+            background: $color-text-light-6;
             transition: background-color 0.33s ease;
             padding: 0;
             width: 43px;
@@ -17,7 +17,7 @@ switch {
             line-height: 1.5em;
             vertical-align: top;
             border-radius: 36px;
-            margin: 0 0 -0.3rem 0;
+            margin: 0 0 -0.3*$m 0;
             cursor: pointer;
             display: inline-block;
 
@@ -28,20 +28,20 @@ switch {
                 position: absolute;
                 top: 2px;
                 left: 2px;
-                background: #fff;
+                background: $color-white;
                 border-radius: 50%;
                 transition: left 0.33s ease;
             }
         }
 
         &:checked + label {
-            background: #2CC3D5;
+            background: $color-primary;
             > span {
                 left: 19px;
             }
         }
         &:disabled + label {
-            background: #52636C;
+            background: $color-text;
         }
     }
 }

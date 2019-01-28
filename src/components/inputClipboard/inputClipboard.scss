@@ -1,4 +1,5 @@
-@import "~assets/scss/main";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
 
 .input-clipboard-container {
     background: $color-text-light-7;
@@ -18,6 +19,4 @@
         margin-right: 10px;
         width: 80%;
     }
-
-    .icon-copy {}
 }

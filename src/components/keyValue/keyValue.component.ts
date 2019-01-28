@@ -1,8 +1,8 @@
 import template from './KeyValueView.html';
 import './KeyValue.scss';
 import { IFormController } from 'angular';
-import { EventEmitter } from 'modules/shared/EventEmitter';
-import { ChangeTabEvent } from 'modules/ui/contentTabs';
+import { EventEmitter } from 'shared/EventEmitter';
+import { ChangeTabEvent } from 'components/contentTabs';
 
 class KeyValueController {
     onError: () => {};

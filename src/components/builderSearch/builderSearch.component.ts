@@ -1,6 +1,6 @@
 import './BuilderSearch.scss';
 import template from './BuilderSearchView.html';
-import { EventEmitter } from 'modules/shared/EventEmitter';
+import { EventEmitter } from 'shared/EventEmitter';
 export const TOGGLE_SEARCH = 'TOGGLE_SEARCH';
 class BuilderSearchController {
     showSearch: boolean = false;

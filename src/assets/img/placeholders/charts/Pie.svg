@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="213px" height="213px" viewBox="0 0 213 213" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Pie Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pie-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M26.3509107,176.944283 L103,107.929133 L103,1.03701697 C45.8450521,2.62537604 0,49.4575737 0,106.99769 C0,133.800005 9.94707958,158.279004 26.3509107,176.944283 Z M29.0474139,179.898872 C48.3657764,200.284862 75.6980307,213 106,213 C163.53811,213 210.368814,167.155149 211.958302,110.000011 L106.677976,110 L29.0474139,179.898872 Z M107,1 L107,106.273267 L211.995426,106.002596 C211.464346,48.250367 164.750343,1.53371832 107,1 Z M213.002375,106 L213.002375,110 L213,213 L0,213 L0,0 L213,0 L213,106.000006 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+    </g>
+</svg>

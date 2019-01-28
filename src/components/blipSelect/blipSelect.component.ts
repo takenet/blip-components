@@ -2,7 +2,7 @@ import { BlipSelect } from 'blip-toolkit';
 import * as uuid from 'uuid';
 import { IComponentController, IOnChangesObject } from 'angular';
 import { ComponentController } from '../base';
-import { EventEmitter } from 'modules/shared/EventEmitter';
+import { EventEmitter } from 'shared/EventEmitter';
 const BLIP_SELECT_PREFIX = 'blip-select-';
 
 export const ClearInputEvent = 'blip-select:clearInput';

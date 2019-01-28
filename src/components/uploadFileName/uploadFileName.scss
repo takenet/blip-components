@@ -1,4 +1,4 @@
-@import '~assets/scss/main';
+@import '../../assets/scss/variables';
 
 .upload-container {
     position: relative;
@@ -45,7 +45,6 @@
         border-color: black;
         border-width: 2px;
         border-style: dashed;
-        // transition: opacity 0.1s ease-in;
 
         span {
             font-size: 10px;

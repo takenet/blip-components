@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1467px" height="213px" viewBox="0 0 1467 213" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>Wave</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Criar-chatbot" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.0607518116">
+        <g id="Wave" fill="#6B95A5" fill-rule="nonzero">
+            <path d="M-20,91 L-33,91 L-33,40.948172 C12.7818182,24.7882684 52.8545455,0 98.4545455,0 L101.872727,0 L105.309091,0 C171.2,0 225.490909,51.7884693 302.163636,54.4391322 C378.854545,51.7884693 433.145455,0 499.018182,0 L502.454545,0 L505.890909,0 C571.763636,0 626.054545,51.7884693 702.745455,54.4391322 C779.418182,51.7884693 833.709091,0 899.581818,0 L903.018182,0 L906.454545,0 C972.327273,0 1026.61818,51.7884693 1103.36364,54.4391322 C1180,51.7884693 1234.27273,0 1300.12727,0.0731217356 L1303.56364,0.0731217356 L1307,0.0731217356 C1361.83636,0.0731217356 1408.65455,35.8296505 1467,49.4302933 L1467,91 L1467,213 L-20,213 L-20,91 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

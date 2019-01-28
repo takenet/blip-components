@@ -1,5 +1,5 @@
 import template from './KeyValueItemView.html';
-import { EventEmitter } from 'modules/shared/EventEmitter';
+import { EventEmitter } from 'shared/EventEmitter';
 import { IRootScopeService, IScope, IController } from 'angular';
 
 class KeyValueItemController implements IController {

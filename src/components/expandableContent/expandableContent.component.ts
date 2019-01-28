@@ -1,7 +1,7 @@
 import './expandableContent.scss';
 import template from './ExpandableContentView.html';
 import { IScope } from 'angular';
-import { EventEmitter } from 'modules/shared/EventEmitter';
+import { EventEmitter } from 'shared/EventEmitter';
 
 export class ExpandableContentComponent {
     isActive: boolean = false;

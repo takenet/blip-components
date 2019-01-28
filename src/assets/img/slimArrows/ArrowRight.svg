@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="17px" viewBox="0 0 7 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ArrowRight</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ArrowRight" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Arrow-Copy" transform="translate(4.000000, 5.500000) scale(1, -1) rotate(-90.000000) translate(-4.000000, -5.500000) translate(-2.000000, 2.000000)" fill="#A8BFC4">
+            <path d="M8.77769767,3.76784513 L4.25939535,8.28100996 C3.97197674,8.56825 3.50597674,8.56825 3.21869767,8.28100996 C2.93139535,7.99402544 2.93139535,7.52856416 3.21869767,7.24160288 L7.21669767,3.24814159 L3.21881395,-0.74518031 C2.93151163,-1.03228097 2.93151163,-1.4976958 3.21881395,-1.78468031 C3.50611628,-2.07178097 3.97209302,-2.07178097 4.25951163,-1.78468031 L8.77781395,2.7285542 C8.92146512,2.87211615 8.9932093,3.0600708 8.9932093,3.24811836 C8.9932093,3.43625885 8.92132558,3.62435288 8.77769767,3.76784513 L8.77769767,3.76784513 Z" id="Shape-Copy" transform="translate(5.998215, 3.248217) rotate(-270.000000) translate(-5.998215, -3.248217) "></path>
+        </g>
+    </g>
+</svg>

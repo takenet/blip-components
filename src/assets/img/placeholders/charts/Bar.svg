@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="667px" height="155px" viewBox="0 0 667 155" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>BarB</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="BarB" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,128 L0,118 L-5,118 L-5,96 L0,96 L0,86 L-5,86 L-5,64 L0,64 L0,54 L-5,54 L-5,32 L0,32 L0,22 L-5,22 L-5,0 L0,0 L0,22 L471,22 L471,0 L667,0 L667,32 L0,32 L0,54 L667,54 L667,155 L0,155 L0,150 L-5,150 L-5,128 L0,128 Z M0,64 L0,86 L542,86 L542,64 L0,64 Z M0,118 L392,118 L392,96 L0,96 L0,118 Z M0,128 L0,150 L616,150 L616,128 L0,128 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+    </g>
+</svg>

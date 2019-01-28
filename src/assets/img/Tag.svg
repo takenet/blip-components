@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>tAG</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="tAG" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-9-Copy" fill="#0CC8CC" fill-rule="nonzero">
+            <g id="tag">
+                <path d="M15.403129,0 L10.6125479,0 C9.73420186,0 8.50752647,0.508087818 7.88650691,1.12914071 L0.465764668,8.54986847 C-0.155254889,9.17088948 -0.155254889,10.1871926 0.465764668,10.8082136 L6.1918117,16.5342103 C6.81283126,17.1552632 7.82906826,17.1552632 8.4501197,16.5342103 L15.8708619,9.11348257 C16.4918815,8.49242968 17,7.26571954 17,6.38746712 L17,1.59687475 C16.9999681,0.718590449 16.2814112,0 15.403129,0 Z M13.5,5 C12.67158,5 12,4.32845 12,3.5 C12,2.67158 12.67158,2 13.5,2 C14.32842,2 15,2.67158 15,3.5 C15,4.32842 14.32842,5 13.5,5 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="86px" viewBox="0 0 86 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>Manual</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Criar-chatbot" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Manual" fill="#47C5D3">
+            <g id="user-copy" transform="translate(16.000000, 13.000000)">
+                <path d="M40.9571429,14.8142857 C40.9571429,22.995475 34.3240464,29.6285714 26.1428571,29.6285714 C17.9616679,29.6285714 11.3285714,22.995475 11.3285714,14.8142857 C11.3285714,6.63309643 17.9616679,0 26.1428571,0 C34.3240464,0 40.9571429,6.63309643 40.9571429,14.8142857 Z" id="Fill-1"></path>
+                <path d="M0,60.1285714 L54.0285714,60.1285714 L54.0285714,60.1285714 C54.0285714,60.6098481 53.6384196,61 53.1571429,61 L0.871428571,61 C0.390151861,61 5.89393983e-17,60.6098481 0,60.1285714 Z" id="Rectangle"></path>
+                <path d="M27.0142857,33.1142857 C12.0952583,33.1142857 0,45.209544 0,60.1285714 L54.0285714,60.1285714 C54.0285714,45.209544 41.9333131,33.1142857 27.0142857,33.1142857 Z" id="Fill-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

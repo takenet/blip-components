@@ -1,17 +1,11 @@
 import template from './ContentTabsView.html';
+import { IScope } from 'angular';
 import './contentTabs.scss';
-import * as angular from 'angular';
+export const ChangeTabEvent = 'contentTabs:changeTab';
+import { EventEmitter } from 'shared/EventEmitter';
 
 /**
  * Usage:
- * import contentTabs from './contentTabs';
- * import tab from './contentTabs/tab';
- *
- * angular.module('x', [])
- *  .component('contentTabs', contentTabs)
-    .component('tab', tab);
- *
- * Ex.:
  * <content-tabs>
         <tab tab-title="Tab title here">
             Content of tab here
@@ -21,28 +15,32 @@ import * as angular from 'angular';
         </tab>
     </content-tabs>
  */
-
-export const ContentTabsComponent = {
+export default {
     controller: class {
         tabs: any[];
-        constructor(private $rootScope) {
+        onChangeTab: ($event) => void;
+        constructor(private $rootScope: IScope) {
             this.tabs = [];
         }
 
         showTab(tab) {
-            if (!tab.tabHref) {
-                this.$rootScope.$broadcast('ChangeTab');
+            if (!tab.disabled && !tab.tabHref) {
+                this.$rootScope.$broadcast(ChangeTabEvent);
                 tab.showTab = true;
                 tab.isActive = true;
+                if (this.onChangeTab) {
+                    const pos = this.tabs.findIndex(
+                        (t) => t.tabTitle === tab.tabTitle,
+                    );
+                    this.onChangeTab(EventEmitter({ pos }));
+                }
             }
         }
     },
     controllerAs: '$ctrl',
     template,
-    transclude: true
+    bindings: {
+        onChangeTab: '&?',
+    },
+    transclude: true,
 };
-
-export const ContentTabsModule = angular
-    .module('blip.components.contentTabs', [])
-    .component('contentTabs', ContentTabsComponent)
-    .name;

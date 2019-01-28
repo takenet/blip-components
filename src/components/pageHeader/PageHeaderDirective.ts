@@ -1,5 +1,4 @@
 import template from './PageHeaderView.html';
-import * as angular from 'angular';
 import './pageHeader.scss';
 
 /**
@@ -22,20 +21,27 @@ export class PageHeaderDirective {
     title: any;
     hasInfo: any;
     container: string;
+    isShow: boolean = false;
 
     //Directive properties
     restrict = 'E';
     template = template;
     transclude = {
-        'info': '?additionalInfo',
-        'customContent': '?customContent'
+        description: '?description',
+        info: '?additionalInfo',
+        customContent: '?customContent',
+        customTitle: '?customTitle',
     };
 
     get scope() {
         return {
             container: '@',
             pageTitle: '@',
-            backButton: '@',
+            backButton: '@?',
+            goBack: '@?',
+            helperTitle: '@?',
+            helperBody: '@?',
+            helperDoc: '<?',
         };
     }
 
@@ -44,17 +50,50 @@ export class PageHeaderDirective {
     }
 
     link(scope, element, attrs, controller, transcludeFn) {
-        const transcludedElement = transcludeFn(scope, undefined, undefined, 'info');
-        scope.containerWidth = scope.container ? `container-${scope.container}` : 'container-full';
-        scope.hasInfo = transcludedElement || false;
+        const hasTranscludedElement = (slot) => transcludeFn(
+            scope,
+            undefined,
+            undefined,
+            slot,
+        );
+        this.isShow = false;
+
+        scope.containerWidth = scope.container
+            ? `container-${scope.container}`
+            : 'container-full';
+        scope.hasInfo = hasTranscludedElement('info') || false;
+        scope.hasCustomTitle = hasTranscludedElement('customTitle') || false;
+
+        scope.goToPrevious = () => window.history.back();
+        scope.toggleHelper = () =>
+            this.isShow ? this.hideHelper() : this.showHelper();
+    }
+
+    hideHelper() {
+        const icon = document.getElementById('info-icon');
+        const helper = document.getElementById('helper');
+        icon.classList.toggle('fadeIn');
+        icon.classList.toggle('fadeOut');
+        helper.classList.toggle('fadeIn');
+        helper.classList.toggle('fadeOut');
+        // icon.style.display = 'flex';
+        helper.style.display = 'none';
+        this.isShow = false;
+    }
+
+    showHelper() {
+        const icon = document.getElementById('info-icon');
+        const helper = document.getElementById('helper');
+        icon.classList.toggle('fadeIn');
+        icon.classList.toggle('fadeOut');
+        helper.style.display = 'flex';
+        helper.classList.toggle('fadeOut');
+        helper.classList.toggle('fadeIn');
+        // icon.style.display = 'none';
+        this.isShow = true;
     }
 
     static factory() {
         return new PageHeaderDirective();
     }
 }
-
-export const PageHeaderModule = angular
-    .module('blip.components.pageHeaderDirective', [])
-    .directive('pageHeader', PageHeaderDirective.factory)
-    .name;

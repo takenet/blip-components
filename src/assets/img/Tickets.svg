@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="305px" viewBox="0 0 400 305" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Tickets</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Tickets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2-Copy" transform="translate(6.000000, 12.000000)" fill="#F5F8F9">
+            <rect id="Rectangle-12-Copy-13" x="0" y="0" width="113" height="34"></rect>
+            <rect id="Rectangle-12-Copy-21" x="0" y="150" width="113" height="34"></rect>
+            <rect id="Rectangle-12-Copy-18" x="138" y="0" width="248" height="34"></rect>
+            <rect id="Rectangle-12-Copy-22" x="138" y="150" width="248" height="34"></rect>
+            <rect id="Rectangle-12-Copy-15" x="0" y="100" width="113" height="34"></rect>
+            <rect id="Rectangle-12-Copy-23" x="0" y="250" width="113" height="34"></rect>
+            <rect id="Rectangle-12-Copy-19" x="138" y="100" width="248" height="34"></rect>
+            <rect id="Rectangle-12-Copy-24" x="138" y="250" width="248" height="34"></rect>
+            <rect id="Rectangle-12-Copy-14" x="0" y="51" width="113" height="34"></rect>
+            <rect id="Rectangle-12-Copy-25" x="0" y="201" width="113" height="34"></rect>
+            <rect id="Rectangle-12-Copy-20" x="138" y="51" width="248" height="34"></rect>
+            <rect id="Rectangle-12-Copy-26" x="138" y="201" width="248" height="34"></rect>
+        </g>
+    </g>
+</svg>
