@@ -1,6 +1,6 @@
 import './ConfusionMatrix.scss';
 import template from './ConfusionMatrixView.html';
-import IndexByFilter from '../../shared/IndexByFilter';
+
 export class ConfusionMatrixComponent {
     public titles: Array<string>;
     public values: any;

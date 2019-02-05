@@ -1,5 +1,3 @@
-import 'data/array';
-
 class ListItem {
     listItemsCtrl: any;
     isChecked: boolean = false;

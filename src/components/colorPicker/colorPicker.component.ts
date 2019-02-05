@@ -1,7 +1,4 @@
 import './colorPicker.scss';
-import * as angular from 'angular';
-import { Context } from 'vm';
-import { RenderContext } from 'vue/types/options';
 
 export class ColorPickerComponent {
     colorBlock: HTMLCanvasElement;

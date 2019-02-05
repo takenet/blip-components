@@ -1,5 +1,4 @@
 import './ContentBoxes.scss';
-import 'data/array';
 
 import EditOptionController from './editors/EditOptionController';
 import Modal from './editors/Modal.html';
