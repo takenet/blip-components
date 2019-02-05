@@ -1,0 +1,2328 @@
+{
+    "utils": {
+        "errorMsg": {
+            "1": "An error has occurred while loading the page",
+            "2": "An error has occurred while changing the page",
+            "3": "An error has occurred while loading the data",
+            "4": "An error has occurred while changing the data",
+            "5": "Error while activating account",
+            "6": "An error has occurred, please try again",
+            "8": "An error has occurred while loading the account information",
+            "9": "Error while updating password.",
+            "10": "Error while saving settings",
+            "11": "An error has occurred while listing the accounts. Try again later",
+            "12": "An error has occurred while trying to deleting the chatbot",
+            "13": "An error has occurred while loading the chatbot",
+            "14": "An error has occurred while publishing the chatbot",
+            "15": "An error has occurred while loading the questions",
+            "16": "An error has occurred while updating the knowledge base",
+            "17": " An error has occurred while deleting one item from the knowledge base",
+            "18": "Check if there is a repeated question",
+            "19": "Error while loading the context",
+            "20": "Error while publishing FAQ",
+            "21": "An error has occurred while loading the knowledge base",
+            "22": "An error has occurred while loading unidentified questions",
+            "23": "Error while starting training",
+            "24": "Error while loading the questions",
+            "25": "Error while associating question to answer",
+            "26": "Error while removing question",
+            "27": " An error has occurred while loading the list of agents",
+            "28": "Invalid hour",
+            "30": "Incorrect current password",
+            "31": "Invalid or non-existent E-mail",
+            "32": "The e-mail is not registered",
+            "33": "Invalid token for this e-mail",
+            "34": "Your e-mail address has not been checked yet. Do this before {{localExpirationDate}}",
+            "35": "Unavailable data",
+            "36": "Your session has expired",
+            "37": "Invalid login and/or password",
+            "38": "Recipient not found",
+            "39": "Saving is not possible, empty menu items",
+            "40": "This field is mandatory",
+            "41": "Value very short",
+            "42": "Value very long",
+            "43": "This must be a valid e-mail",
+            "44": "It is not a valid value",
+            "45": "Invalid resolution",
+            "46": "Invalid format",
+            "47": "A problem has occurred while saving changes.",
+            "48": "The account is already in use. Choose another one and try again.",
+            "49": "Invalid key access. Check your key access and try again.",
+            "50": "Invalid token",
+            "51": "Error while loading the context",
+            "52": "FAQ still in training",
+            "53": "Your credentials are invalid!",
+            "54": "No unidentified question",
+            "55": "Unidentified Question(s)",
+            "56": " Your credentials are invalid",
+            "57": "No items found",
+            "58": "An error has occurred while loading unidentified questions",
+            "59": "No answer chosen",
+            "60": "This question has already been previously inserted",
+            "61": "Check if all fields are filled",
+            "62": "Check if there is any repeated question",
+            "63": "Insufficient data",
+            "64": "Confirm your credentials and try again.",
+            "65": "An error has occurred while saving changes.",
+            "66": "A problem has occurred",
+            "67": "Unauthorized access",
+            "68": "An error has occurred while loading this chatbot",
+            "69": "An error occurred while saving the resource. Please try again.",
+            "70": "An error occurred while deleting the resource. Please try again.",
+            "71": "A service with this name already exists",
+            "72": "You have no permissions to edit this sub-bot",
+            "73": "You need at least one main chatbot",
+            "74": "You have no required permissions for this action",
+            "75": "This email is not part of the team",
+            "76": "You can not change your own permissions",
+            "77": "Check if there is any repeated item",
+            "78": "Error while removing intent",
+            "79": "An intent with this name already exists",
+            "80": "The phrase '{{question}}' is already registered in intent '{{intent}}'",
+            "81": "Error while saving entity",
+            "82": "Error while loading entity",
+            "83": "Error while removing entity",
+            "84": "An entity with this name already exists",
+            "85": "No entity value or synonymous was found =(",
+            "86": "Please configure your Artificial intelligence provider",
+            "87": "An error has occurred while publishing",
+            "88": "No intents with questions found",
+            "89": "An error has occurred while training",
+            "90": "Error while removing phrase",
+            "91": "Error while send feedback to analysis",
+            "92": "Error while approve analysis",
+            "93": "Error while delete analysis",
+            "94": "Error while loading analysis",
+            "95": "Please set another provider as the default before deactivating current provider",
+            "96": "Watson error: intent name can only contain word, underscore, hyphen or dot characters, and must not start with a prefix of \"sys\"",
+            "97": "Watson error: the workspace limit has exceeded. Remove at least 3 workspaces and try again",
+            "98": "Watson error: check your configurations and try again",
+            "99": "Invalid period",
+            "100": "We did not find results for your filter",
+            "101": "Your intelligence provider has not identified suggestions for your chatbot yet.",
+            "102": "Error while loading fluxogram",
+            "103": "Error while saving fluxogram",
+            "104": "It's no possible detele this state",
+            "105": "Error while publishing flow: One or more blocks are invalid. Please check the blocks tagged in red and try again.",
+            "106": "Error while updating whitelist",
+            "107": "Error while publishing flow",
+            "108": "Action not permitted",
+            "109": "This is already your main provider",
+            "110": "Error while deleting agent{{plural}}",
+            "111": "There is a loop in the flow starting in the block '{{state}}' that does not requires user input.<br/>Please add user inputs in the blocks connected to it.",
+            "112": "Error while adding or updating rule",
+            "113": "Error while deleting rule",
+            "114": "Cannot publish the flow while the Builder is inactive. Please check the connection configurations of your chatbot to activate it.",
+            "115": "Error while uploading media",
+            "116": "Check if all fields are valid",
+            "117": "Remove the special characters from the intent name",
+            "118": "You don't have enough examples",
+            "119": "You need to activate the welcome screen before you set a persistent menu",
+            "120": "You need to remove the persistent menu before you disable the welcome screen",
+            "121": "Invalid number of samples",
+            "122": "The Messenger channel is temporaly unavailable to publish chatbots. <a target='_blank' href='https://messenger.fb.com/newsroom/messenger-platform-changes-in-development/'>See more</a>.",
+            "123": "Invalid header! Add NAME and SAMPLE to its respective columns",
+            "124": "Invalid header! Add NAME, VALUE and SYNONYMOUS to its respective columns",
+            "125": "Agent{{plural}} must belong to at least one team",
+            "126": "Add at least one value to your entity",
+            "127": "Error while deleting the report",
+            "128": "The entity name is longer than 30 characters",
+            "129": "At least one of the entity values is longer than 50 characters",
+            "130": "At least one of the entity synonyms is longer than 64 characters",
+            "131": "The training is in progress on the AI provider",
+            "132": "Invalid content: There are custom replies with repeated titles",
+            "133": "Is not possible to leave the bot at the moment",
+            "134": "Entity name is required",
+            "135": "Entity value is required",
+            "136": "Error while adding agent to the team",
+            "137": "Error while sending email",
+            "138": "<b>Oops! You have not finished setting up your account...</b><br>Complete setup to enable the WhatsApp channel.",
+            "140": "Invalid hostname",
+            "141": "Invalid country code",
+            "142": "Invalid phone number",
+            "143": "Enter a status message",
+            "144": "Enter a description",
+            "145": "Invalid PIN",
+            "146": "Invalid registration code",
+            "147": "There's an invalid information in Enterprise data or Number registration. Check your data and try again!",
+            "148": "Error while loading settings",
+            "149": "Oops! The file has more than 5000 rows and cannot be downloaded!",
+            "150": "Error while activating channel",
+            "151": "Error while setting PIN. Please, try again",
+            "152": "This number has two-step verification enabled. Please, enter its PIN.",
+            "153": "Please, enter a PIN for your account.",
+            "154": "Your account profile is still being loaded. Please, reload the page in a few seconds.",
+            "155": "There was a problem sending the spreadsheet by email.",
+            "156": "Error while transferring ticket #{{sequentialId}}. Please, try again.",
+            "157": "Number of slots cannot be less than 0.",
+            "158": "Ticket has already been transferred or closed",
+            "159": "Value too small",
+            "160": "Value too big",
+            "161": "Error while updating agent{{plural}}",
+            "162": "Tags must have less than 30 characters.",
+            "163": "A team tag is still pending. Complete or erase it.",
+            "164": "This distribution list already exists. Please, choose another name",
+            "165": "It seems that your intents file isn't UTF-8 encoded, therefore, some special characters (e.g., ç, ã, etc.) won't be properly rendered. Please configure your text editor to save as UTF-8, save your file as UTF-8, and try to import your file again.",
+            "166": "Error while closing ticket #{{sequentialId}}. Please try again",
+            "167": "Number of slots cannot be null.",
+            "168": "Invalid URL. It must follow the example.",
+            "169": "<strong>Oops! You did not finish setting up the account...</strong><br>Finish the set up to activate channel Infobip SMS"
+        },
+        "successMsg": {
+            "1": "Data changed successfully!",
+            "2": "Account activated!",
+            "3": "Password changed successfully!",
+            "4": "Password registered successfully!",
+            "5": "Message deleted successfully!",
+            "6": "Message scheduled successfully!",
+            "7": "Updated successfully!",
+            "8": "Settings saved!",
+            "9": "FAQ published!",
+            "10": "Training started!",
+            "11": "Question deleted!",
+            "12": "Resource saved successfully!",
+            "13": "Resource deleted successfully!",
+            "14": "Contact has been updated!",
+            "15": "intent deleted!",
+            "16": "Record saved!",
+            "17": "Entity saved!",
+            "18": "Entity deleted!",
+            "19": "intent saved!",
+            "20": "Published successfully!",
+            "21": "Trained successfully!",
+            "22": "Phrase removed!",
+            "23": "Analysis submitted to approval!",
+            "24": "Analysis approved!",
+            "25": "Analysis deleted!",
+            "26": "Item classified!",
+            "27": "Domain whitelist updated!",
+            "28": "The flow is published!",
+            "29": "Agent{{plural}} removed successfully!",
+            "30": "Copied to the clipboard!",
+            "31": "Forwarding rule deleted successfully!",
+            "32": "Report deleted!",
+            "33": "Value removed!",
+            "34": "User permissions updated successfully!",
+            "35": "Custom replies saved sucessfully!",
+            "36": "You have left the chatbot",
+            "37": "Agent added successfully!",
+            "38": "Agent{{plural}} updated successfully!",
+            "39": "Email sent successfully!",
+            "40": "<b>Success!</b><br>You are connected to WhatsApp.",
+            "41": "Profile updated successfully!",
+            "42": "Attendance transferred to team {{team}}. Generated ticket number: {{sequentialId}}",
+            "43": "Ticket #{{sequentialId}} closed successfully.",
+            "44": "<b>Success!</b><br>You are connected to Infobip SMS"
+        },
+        "forms": {
+            "oops": "Oops!",
+            "fullName": "Full name",
+            "name": "Name",
+            "displayName": "Display name",
+            "itemName": "Item name",
+            "removeItem": "Remove item",
+            "tellYourName": "Inform your name",
+            "phoneNumber": "Phone number",
+            "countryCode": "Country code",
+            "identity": "User ID",
+            "city": "City",
+            "yourNumber": "Your number",
+            "writeContactPhone": "Type your contact phone",
+            "address": "Address",
+            "smtpServer": "SMTP server",
+            "hostname": "Hostname",
+            "smtpPort": "SMTP Port",
+            "imapServer": "IMAP server",
+            "imapPort": "IMAP Port",
+            "enableTls": "Enable encryption (TLS)",
+            "writeOrganization": "Type responsible company name",
+            "email": "E-mail",
+            "userName": "User name",
+            "user": "User",
+            "password": "Password",
+            "createAccount": "Register for free",
+            "completeRegister": "Complete registration",
+            "forgotPass": "Forgot your password?",
+            "writeMessage": "Type your message",
+            "search": "Search",
+            "searchName": "Search by name",
+            "searching": "Searching",
+            "send": "Send",
+            "add": "Add",
+            "addplus": "+ Add",
+            "save": "Save",
+            "saveAdvance": "Save and advance",
+            "advance": "Advance",
+            "getCode": "Get code and advance",
+            "enter": "Enter",
+            "create": "Create",
+            "finish": "Finish",
+            "complete": "Complete",
+            "publish": "Publish",
+            "select": "Select",
+            "confirm": "Confirm",
+            "cancel": "Cancel",
+            "continue": "Continue",
+            "test": "Test",
+            "next": "Next",
+            "back": "Back",
+            "exit": "Exit",
+            "edit": "Edit",
+            "delete": "Delete",
+            "schedule": "Schedule",
+            "remove": "Delete",
+            "duplicate": "Duplicate",
+            "copyNodeId": "Copy Id",
+            "activate": "Activate",
+            "activated": "Activated",
+            "disabled": "Disabled",
+            "recover": "Recover",
+            "chatbotName": "Chatbot name",
+            "routerName": "Router name",
+            "description": "Description",
+            "chatbotDescription": "Chatbot description",
+            "avatarImage": "Avatar image",
+            "dropFile": "Drag and drop your file or",
+            "dropFile2": "Drop your file here",
+            "basicInformation": "Basic information",
+            "serviceName": "Service name",
+            "message": "Message",
+            "insert": "Insert",
+            "moreOptions": "More options",
+            "agree": "Agree",
+            "disagree": "Disagree",
+            "cleanFilters": "Clean filters",
+            "apply": "Apply",
+            "close": "Close",
+            "connect": "Connect",
+            "connected": "Connected",
+            "createReport": "Create report",
+            "newConfiguration": "New Configuration",
+            "filter": "Filter by:",
+            "team": "Team",
+            "extras": "Extras",
+            "import": "Import",
+            "export": "Export",
+            "download": "Download",
+            "refresh": "Refresh",
+            "reset": "Reset",
+            "member": "Member",
+            "gender": "Gender",
+            "choose": "Choose",
+            "port": "Port",
+            "request": "Request",
+            "done": "Done!",
+            "transfer": "Transfer",
+            "closeTicket": "Finish"
+        },
+        "misc": {
+            "to": "to",
+            "to2": "From:",
+            "until": "Until:",
+            "copyCode": "Copy code",
+            "optional": "Optional",
+            "processing": "Processing...",
+            "channelAvailable": "Available on channel",
+            "list": "List",
+            "line": "Line",
+            "pie": "Pizza",
+            "bars": "Bar",
+            "column": "Column",
+            "counter": "Counter",
+            "table": "Table",
+            "chart": "Chart",
+            "yes": "Yes",
+            "no": "No",
+            "ok": "OK",
+            "or": "Or",
+            "menu": "Menu",
+            "text": "Text",
+            "link": "Link",
+            "move": "Move",
+            "linkRecomendation": "Insert the url with http://. Ex.: http://blip.ai",
+            "termsOfService": "Terms of Service",
+            "privacyPolicy": "Privacy Policy",
+            "help": "Help",
+            "overview": "Overview",
+            "configs": "Configuration",
+            "docs": "Documentation",
+            "varLibrary": "Variables library",
+            "userVariables": "My variables",
+            "print": "print",
+            "others": "others",
+            "period": "Period",
+            "periodDelimiter": " up to",
+            "datePickerPlacehold": "Choose date",
+            "seconds": "seconds",
+            "gender": "Gender",
+            "male": "Male",
+            "female": "Female",
+            "notSupplied": "Not informed",
+            "messages": "Messages",
+            "messagesReceived": "Received Messages",
+            "messagesSent": "Sent Messages",
+            "numberAccumulated": "Number accumulated since bot's creation",
+            "date": "Date",
+            "createChatbot": "Create chatbot",
+            "hour": "Hour",
+            "emailPlaceholder": "Ex: name@email.com",
+            "hostnamePlaceholder": "Ex: hostname.com",
+            "portPlaceholder": "Ex: 8081",
+            "userNamePlaceholder": "Enter your user name",
+            "passwordPlaceholder": "Enter your password",
+            "start": "Start",
+            "end": "End",
+            "close": "Close",
+            "category": "Category",
+            "domain": "Domain",
+            "key": "Key",
+            "value": "Value",
+            "selectAll": "Select all",
+            "warning": "Warning",
+            "noSearchResults": "No items found",
+            "savingMsg": "Saving...",
+            "savedMsg": "Saved",
+            "variable": "Variable",
+            "search": "Search",
+            "genderType": {
+                "notInformed": "<b>Gender:</b> Not Informed",
+                "male": "<b>Gender:</b> Male",
+                "female": "<b>Gender:</b> Female"
+            },
+            "filterBy": "Filter by",
+            "visualization": "Visualization",
+            "untitled": "Untitled",
+            "rename": "Rename",
+            "day": "Day",
+            "days": "Days",
+            "helperConfirm": "OK. I understood",
+            "users": "Users",
+            "publishedAt": "Published at",
+            "createdAt": "Created at",
+            "seeAll": "See all",
+            "language": "Language",
+            "culture": "Culture",
+            "leaveChatbot": "Leave chatbot",
+            "actions": "Actions",
+            "image": "Image",
+            "addButtonDefault": "+ Add extra information",
+            "property": "Property",
+            "odata": {
+                "equals": "Equals",
+                "notEqual": "Not equal",
+                "contains": "Contains",
+                "notContain": "Not contain",
+                "startsWith": "Starts with",
+                "endsWith": "Ends with",
+                "greaterThan": "Greater than",
+                "lessThan": "Less than",
+                "greaterThanOrEquals": "Greater than or equals",
+                "lessThanOrEquals": "Less than or equals"
+            },
+            "discover": "Discover",
+            "new": "New!",
+            "copyText": "Copy",
+            "copiedText": "Copied!",
+            "learnMore": "Learn more!",
+            "expandTooltip": "Expand"
+        },
+        "locale": {
+            "days": {
+                "sun": "sun",
+                "mon": "mon",
+                "tues": "tues",
+                "wed": "wed",
+                "thurs": "thu",
+                "fri": "fri",
+                "sat": "sat"
+            },
+            "months": {
+                "jan": "Jan",
+                "feb": "Feb",
+                "mar": "Mar",
+                "apr": "Apr",
+                "may": "May",
+                "jun": "Jun",
+                "jul": "Jul",
+                "aug": "Aug",
+                "sep": "Sep",
+                "oct": "Oct",
+                "nov": "Nov",
+                "dec": "Dec"
+            },
+            "fullMonths": {
+                "jan": "January",
+                "feb": "February",
+                "mar": "March",
+                "apr": "April",
+                "may": "May",
+                "jun": "June",
+                "jul": "July",
+                "aug": "August",
+                "sep": "September",
+                "oct": "October",
+                "nov": "November",
+                "dec": "December"
+            }
+        }
+    },
+    "terms": {
+        "heading1": "BLiP Terms of Service and Privacy Policy",
+        "heading2": "Welcome to BLiP. We are a platform owned by TAKE that provides the use of applications for chatbots and other activities, and this term governs its use. According to this Term, \"BLiP platform,\" or \"Solution\" means the features provided by BLiP, as well as all functionality associated with the use of the platform.",
+        "heading3": "ACCEPTANCE OF THIS TERM",
+        "heading4": "AMENDMENT",
+        "heading5": "PRIVACY",
+        "heading6": "COMMUNICATION PREFERENCES",
+        "heading7": "INTELLECTUAL PROPERTY OF BLiP",
+        "heading8": "USER CONTENT",
+        "heading9": "ACCEPTABLE USES",
+        "heading10": "ACCOUNT MANAGEMENT",
+        "heading11": "SUSPENSION AND TERMINATION OF SERVICE",
+        "heading12": "CHANGES IN THE SERVICE",
+        "heading13": "DISCLAIMERS AND LIMITATIONS OF RESPONSIBILITY",
+        "heading14": "ADDITIONAL PROVISIONS",
+        "subheading1": "Register",
+        "subheading2": "User Content",
+        "subheading3": "Content analysis",
+        "subheading4": "Legal Notice",
+        "subheading5": "Responsibilities",
+        "subheading6": "Keep Your Password Safe",
+        "subheading7": "Back-ups",
+        "subheading8": "By BLiP",
+        "subheading9": "Additional measures",
+        "subheading10": "Waiver",
+        "subheading11": "Exclusion of Liability",
+        "lastModified": "Last modified: September 21, 2018",
+        "p1": "By clicking the button indicating your acceptance, you agree that complies with these Terms and with the use of the platform. If you are an employee/ representative of Client, you declares that you has been authorized by Client to agree to this Agreement on behalf of that Client or organization. In this case, \"you\" and \"your\" will refer to that Client or organization.",
+        "p2": "BLiP may amend or update this Agreement at any time to reflect changes in applicable law or service updates, or to incorporate new service or functionality.  If you do not agree to any changes made in this Agreement, you should discontinue using it. By continuing to use the platform, you express your agreement to be bound by the updated terms. Please review this Term from time to time.",
+        "p3": "You may be asked to provide personal data, however before you start using the platform you will be asked to declare whether you agree to provide such data, as well as the treatment we will give to your information.<br>Our data retention policy is under constantly implementation in order to comply with the provisions of Brazilian data protection legislation, including Law 12.965/14 (Marco Civil da Internet). Personal data is collected to enable the use of BLiP and to direct improvements and evolutions in the platform, as well as to perform communications authorized by you on the platform, and are not shared with third parties.",
+        "p4": "As part of your relationship with us by using BLiP, you consent to receiving electronic communications relating to your account. These communications may involve sending emails to the email address provided in the registration or communications about BLiP on the \"My Account\" page and include notifications about your account (for example, payment authorizations, password changes or payment, confirmation emails and other information about the progress of chatbots projects). You agree that any notices, consents, disclosures or other communications sent by BLiP to you electronically satisfy the legal communications requirements. You must keep physical or electronic copies of electronic communications. You also agree to receive other communications, including communications about new features, special offers, promotional announcements, or other methods. If you no longer wish to receive communications, you may unsubscribe from the link in the emails sent to you by BLiP.",
+        "p5": "Neither this Term nor the use of the platform transfers to you the intellectual property of the platform or the content that you access through the service (in addition to its Content). This Agreement does not grant you any right to use the trademarks or other distinctive features of BLiP. The improper and unauthorized use of trademarks or other distinctive features of the BLiP may result in the suspension or termination of your use or the service and causes a duty to indemnify TAKE for moral and loss damages.",
+        "p6": "You represent and warrant that all information provided for the registration and use of the service is true, accurate and complete, and you must notify BLiP of any changes in such data within 24 (twenty four) hours.",
+        "p7": "You are responsible for your own content and must ensure that you have all rights and authorizations required to use the Content in relation to the platform. TAKE nor BLiP are responsible for any action you may take regarding your Content, including public sharing. Do not use any content on the platform unless you have obtained prior and legitimate authorization or if you have been authorized by law to do so. We do not allow certain types of content to be addressed on the platform. By using our service, you agree to our Content Policy.",
+        "p8": "You acknowledge that in order to ensure compliance with legal obligations, BLiP may need to review certain submitted content to determine if they are illegal or infringe this Agreement (as in the case of reporting illegal content to us). We may also change, block access, delete, or refuse to display content that we believe violates the law or this Agreement. Notwithstanding the foregoing, BLiP has no obligation to monitor or analyze any content submitted to the service.",
+        "p9": "You must use the service solely in compliance with applicable law.",
+        "p10": "You are responsible for your conduct, your Content and your communications with others while using the service. By using the service, you must comply with the following requirements:<br>(a) You may not misuse our service by interfering with its normal operation or attempting to access it by any method other than the interfaces and instructions we provide;<br>(b) You may not evade any limitation imposed on your account by BLiP (such as opening a new account to conduct a search we have terminated for breach of the Terms.);<br>(c) You may not investigate, scan or test the vulnerability of any BliP system or network;<br>(d) You may not reverse engineer the service or attempt to do so;<br>(e) You may not transmit any viruses, malware, or other types of illegal software, or links to such software, through the service;<br>(f) You may not use the service to infringe the intellectual property rights of TAKE, BLIP, or a third party, nor to engage in illicit activity.",
+        "p11": "You must create an account to use BLiP. You are responsible for keeping your password secure, as well as any other credentials used to access that account. <strong>You, not BLiP, are responsible for any activity performed on your account (other than the activities for which BLiP is directly responsible)</strong> whether or not you have authorized such activities. If you become aware of any unauthorized access to your account, you must notify BLiP immediately. Accounts cannot be shared, each account must be used by only the authorized person. ",
+        "p12": "You are responsible for maintaining, protecting, and backing up your Content. BLiP shall not be liable for any failure to store, for the loss or corruption of your Content.",
+        "p13": "BLiP may limit, suspend or cease to provide you the service if you fail to comply with this Agreement or if use the service in order to generate legal liability. TAKE or BLiP may also suspend the provision of the service if you are suspected of misconduct. If we suspend or terminate the service provided to you, we will do our best to notify you in advance so that you can export a copy of your Service Content.",
+        "p14": "If this Agreement is infringed in a continuous and offensive manner, BLiP may take measures to prevent you from continuing to use the service including, blocking your IP address.",
+        "p15": "BLiP makes constant changes and improvements in the service. We may add, change or remove the functionality of the service at any time without notice. BLiP may also limit, suspend or discontinue the service in its sole discretion. If BLiP discontinues the service, we will send you reasonable advance notice to allow you to export a copy of your Service Content.",
+        "p16": "Although the platform is always online, it is possible that there is periodic unavailability for several reasons. EXCEPT AS EXPRESSLY PROVIDED IN THIS TERM AND TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE SERVICE IS PROVIDED ON AN \"AS IS\" BASIS, AND NEITHER BLIP NOR TAKE MAKES NO WARRANTY OF ANY KIND, EITHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING MERCHANTABILITY, ADEQUACY FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT, AND RELATING TO THE AVAILABILITY, RELIABILITY OR ACCURACY OF THE SERVICE.",
+        "p17": "TO THE EXTENT PERMITTED BY APPLICABLE LAW, BLIP, ITS OFFICERS, EMPLOYEES, AGENTS, SUPPLIERS, AND LICENSORS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, INCIDENTAL, PUNITIVE, OR EXEMPLARY DAMAGES OF ANY KIND, INCLUDING DAMAGES FOR LOSS OF PROFITS, AND LOSS OF DATA, RESULTING FROM OR RELATED TO THE SERVICE AND THIS TERM, ARE SUCH DAMAGES BASED ON CONTRACT, STRICT LIABILITY, OR ANY OTHER LEGAL THEORY, EVEN IF BLiP HAS BEEN ADVISED OF POSSIBILITY OF SUCH DAMAGES AND EVEN IF AN APPEAL DOES NOT FULFILL ITS ESSENTIAL PURPOSE.",
+        "p18": "<b>Integral Agreement.</b> This Agreement (including any Additional Terms) constitutes the entire agreement between you and BLiP and supersedes any other prior or contemporaneous agreements, terms and conditions, whether written or oral, relating to the subject matter. Any terms and conditions other than the present, are not applicable to the service, do not prevail over this Term, are not part of it and are void.",
+        "p19": "<b>Contracting Parties.</b> The relationship between you and TAKE (the owner of BLiP) is of independent contracting parties, not legal partners, employees or agents of the other party.",
+        "p20": "<b>No waiver.</b> If a party fails to execute a provision set forth in this Agreement or to delay in doing so shall not be construed as a waiver by that party to its right to do so at a later date.",
+        "p21": "<b>Prevalence.</b> If any conflict arises, the Additional Terms shall prevail over this Agreement in relation to the service to which the Additional Terms applies.",
+        "p22": "<b>Individuality.</b> If any provision of this Term is considered unenforceable by a court of competent jurisdiction the said provision shall be considered individually, and the other provisions shall remain in full force and effect.",
+        "p23": "<b>Governing Law and Venue:</b> The laws of  Brazil govern this term and any disputes that may arise between BLiP (Take) and You, without regard to conflict of law provisions.<br>It shall be elected by the PARTIES, with express waiver of any other, for more privileged that is, the forum of Belo Horizonte / MG, as the only one competent to resolve any doubts or controversy arising from this Term."
+    },
+    "modules": {
+        "navbar": {
+            "chatbots": "Chatbots",
+            "myAccount": "My account",
+            "docs": "API Reference",
+            "forum": "Forum",
+            "blog": "Blog",
+            "helpCenter": "Help Center",
+            "logout": "Logout",
+            "login": "Login",
+            "createAccount": "Create account"
+        },
+        "analytics": {
+            "analyticsChart": {
+                "selectContext": "Select context...",
+                "displayType": "Display Type",
+                "newChart": "New chart"
+            },
+            "userDimension": {
+                "users": "Users",
+                "allUsers": "All users",
+                "activeUsers": "Active users",
+                "recurrentUsers": "Recurrent users",
+                "addFilters": "Add filters"
+            },
+            "eventDimension": {
+                "category": "Category",
+                "action": "Action"
+            },
+            "dimensionFilter": {
+                "condition": "Condition",
+                "value": "Value"
+            },
+            "grouping": {
+                "total": "Total",
+                "action": "Action",
+                "eventExtra": "Event extra",
+                "userExtra": "User extra",
+                "userProperty": "User property",
+                "extra": "Extra",
+                "type": "Type"
+            }
+        },
+        "docs": {
+            "helpUs": "Help to improve this document on",
+            "home": "Home",
+            "concepts": "Concepts",
+            "address": "Address",
+            "messages": "Messages",
+            "notifications": "Notifications",
+            "commands": "Commands",
+            "contentTypes": "Content Types",
+            "text": "Text",
+            "chatState": "Chat State",
+            "mediaLink": "Media Link",
+            "webLink": "web Link",
+            "menu": "Menu",
+            "mediaMenu": "Multimedia Menu",
+            "collection": "Collection",
+            "list": "List",
+            "container": "Container",
+            "localization": "Location",
+            "paymentRequest": "Payment Request",
+            "paymentStatus": "Payment Status",
+            "paymentReceipt": "Payment Receipt",
+            "userInput": "User Input",
+            "confidentialInformation": "Confidential Information",
+            "resource": "Resource",
+            "redirect": "Redirect",
+            "nativeContent": "Native Content",
+            "channels": "Channels",
+            "payments": "Payments",
+            "extensions": "Extensions",
+            "delegation": "Delegation",
+            "scheduler": "Scheduler",
+            "broadcast": "Broadcast",
+            "bucket": "Storage",
+            "directory": "Directory",
+            "eventAnalysis": "Events Analysis",
+            "chatHistory": "Chats Thread",
+            "chatbotProfile": "Chatbot Profile",
+            "artificialIntelligence": "Artificial Intelligence",
+            "resources": "Resources",
+            "contacts": "Contacts",
+            "tunnel": "Tunnel",
+            "templates": "Templates",
+            "operator": "Manual Service",
+            "installation": "Installation",
+            "migrating": "Migrating",
+            "configuration": "Configuration",
+            "receive": "Receive",
+            "send": "Send",
+            "messageTypes": "Message Types",
+            "attendanceTransfer": "Agent transfer",
+            "executing": "Executing",
+            "hosting": "Hosting",
+            "navigationTutorial": "Tutorial: Navigation",
+            "examples": "Examples",
+            "instantiatingClient": "Instantiating the client"
+        },
+        "login": {
+            "greeting": "Welcome :)",
+            "greetingMorning": "Good morning :)",
+            "greetingAfternoon": "Good afternoon :)",
+            "greetingEvening": "Good evening :)",
+            "greetingDefault": "Hello :)",
+            "doLogin": "To start, log in to your account."
+        },
+        "message": {
+            "confidentialMessage": "Confidential Message",
+            "messageScheduler": {
+                "writeMessage": "Write message...",
+                "sendDate": "Send Date",
+                "sendHour": "Send Hour",
+                "destination": "Distribution list"
+            }
+        },
+        "ui": {
+            "uploadButton": {
+                "title": "Set image",
+                "alt": "Image"
+            },
+            "filterBy": {
+                "filterBy": "Filter by",
+                "channels": "Channels"
+            }
+        },
+        "templates": {
+            "attendance": {
+                "title": "Human Service",
+                "description": "Answer your customers with human agents"
+            },
+            "faq": {
+                "title": "FAQ",
+                "description": "Create a FAQ to automatically answers your customers"
+            },
+            "faq2": {
+                "title": "FAQ"
+            },
+            "sdk": {
+                "title": "SDK"
+            },
+            "undefined": {
+                "title": "SDK"
+            },
+            "builder": {
+                "title": "Builder"
+            },
+            "master": {
+                "title": "Router"
+            },
+            "webhook": {
+                "title": "Webhook"
+            }
+        },
+        "marketplace": {
+            "test": {
+                "title": "Test template"
+            },
+            "customerService": {
+                "title": "Customer Service",
+                "description": "Answer your customers with human agents",
+                "details": {
+                    "title": "Customer Service Bot",
+                    "description": "With Customer Service Bot, it is possible to answer customers using the BLiP Desk tool. <br> The bot considers working hours and availability of agents, in addition to making reports that keep track of individual performance.<br><br> <b>Goal:</b> Facilitating a company's customer service on its main messaging channels."
+                }
+            },
+            "delivery": {
+                "title": "Pizza Delivery",
+                "description": "Sample of a pizzeria customer service"
+            }
+        },
+        "application": {
+            "create": {
+                "title": "Create chatbot",
+                "chooseTemplate": "Choose the type of your chatbot",
+                "getStarted": "Get started",
+                "provideAName": "Provide a name for your chatbot",
+                "needHelp": "Need help to create your company chatbot? <a href='https://blip.ai/criesuaconversa/' target='_blank'><strong>Request a quote</strong></a>",
+                "poweredByProfessionals": "All templates are designed, built and trained by professionals",
+                "createTemplate": "If you prefer to use a static model to create a chatbot, <a>click here</a>.",
+                "fromScratch": {
+                    "title": "Create from scratch",
+                    "description": "Use the BLiP <strong>Builder</strong> to easily create a chatbot"
+                },
+                "template": {
+                    "title": "Template",
+                    "description": "Use one of our templates to create your chatbot in minutes",
+                    "select": "Select a template",
+                    "selectTemplate": "Select the chatbot template",
+                    "provideAName": "Provide a name for your",
+                    "create": "Create"
+                },
+                "router": {
+                    "title": "Create router",
+                    "howWorks": "How a router works",
+                    "description": "The router allows the encapsulation of multiple chatbots into one bot. That way, you can conduct the conversation according to each bot's speciality.",
+                    "knowMore": "<a href='https://docs.blip.ai/' target='blank'><strong>Know more</strong></a>",
+                    "provideAName": "Provide a name for your router"
+                }
+            },
+            "detail": {
+                "teamTitle": "Team",
+                "test": "Test",
+                "testTitle": "Test your chatbot",
+                "config": "Configuration",
+                "panel": "Panel",
+                "publications": "Channels",
+                "logMessages": "Log",
+                "scheduler": "Scheduler",
+                "overview": "Overview",
+                "dataAnalysis": "Analytics",
+                "interactionsTitle": "Interactions",
+                "setup": "Setup",
+                "leaveBot": {
+                    "title": "You are exiting the chatbot",
+                    "body": "Are you sure you want to exit this chatbot?"
+                },
+                "configs": {
+                    "title": "Configurations",
+                    "basic": "Basic configurations",
+                    "basicSubtitle": "Set name, description and the image of your chatbot",
+                    "apiKey": "Connection information",
+                    "apiKeySubtitle": "Retrieve and set the chatbot connection information",
+                    "welcome": {
+                        "title": "Welcome Screen",
+                        "subtitle": "Setting the Greeting Text and the Get Started Button",
+                        "welcomeMessage": "Greeting Text",
+                        "welcomeMessageDescription": "Describe what your bot does or offers, helping the users understand why they should use it!",
+                        "welcomeMessagePlaceholder": "Type the greeting text",
+                        "buttonLabel": "Get Started Button Text",
+                        "buttonLabelDescription": "Set the Get Started Button Text. (Available only on BLiP Chat channel)",
+                        "buttonLabelPlaceholder": "Type the get started button text",
+                        "callbackMessage": "Get Started Button Postback",
+                        "callbackMessageDescription": "Set the first message that your bot will receive when the user clicks on the Get Started Button.",
+                        "callbackMessagePlaceholder": "Type the get started button postback",
+                        "confirmationMessage": "You have unsaved changes on the page. Do you really want to exit?"
+                    }
+                },
+                "resources": {
+                    "title": "Resources",
+                    "description": "Add and change resources of your chatbot which . The resources can be used as content for the messages sent by the chatbot.",
+                    "helpTitle": "More information",
+                    "help": "<p><strong>Key</strong>: The resource key for retrieving the value in the server when sending a resource message.</p><p><strong>Type</strong>: The content MIME type which is used in the message 'type' property. Please check our <a href=\"https://docs.blip.ai/#content-types\" target=\"_blank\">documentation</a> to get to know the supported content types.</p><p><strong>Content</strong>:  Text or JSON value of the resource which will replace the 'content' message property. </p><p>Please check our <a href=\"https://docs.blip.ai/#resource\" target=\"_blank\">documentation</a> to see usage examples.</p>",
+                    "filterPlaceholder": "Search for a resource",
+                    "invalidDocumentFilter": "The query value must have 2 or more characters",
+                    "key": "Key",
+                    "content": "Content",
+                    "type": "Type",
+                    "newResource": "New resource",
+                    "duplicatedKeyModalTitle": "Duplicated key",
+                    "duplicatedKeyModalBody": "There's already a resource with the specified key. Do you want to replace it?",
+                    "selectResourceType": "Select type"
+                },
+                "home": {
+                    "avgAnswerTime": "Average time of reply",
+                    "timezone": "Timezone",
+                    "team": "Team",
+                    "flowPublishedAt": "Flow published at ",
+                    "teamMessage": "You haven't invite anybody to be a part of your bot project yet",
+                    "teamLink": "How about start it now? :)"
+                },
+                "attendance": {
+                    "title": "Helpdesks",
+                    "team": {
+                        "add": "+ Add agent",
+                        "pageTitle": "Agents",
+                        "title": "Agents",
+                        "subtitle": "Select and configure your customer service channel",
+                        "description": "",
+                        "searchFilter": "Search by e-mail or name",
+                        "member": "Member",
+                        "email": "E-mail",
+                        "warning": "Error on changing team",
+                        "team": "Team",
+                        "selected": "selected",
+                        "modal": {
+                            "addAgent": "Add member",
+                            "editAgent": "Edit member",
+                            "subtitle": "Add and set permissions for the new member of your team.",
+                            "teamsPlaceholder": "Add teams",
+                            "defaultSlotsNumber": "Default number"
+                        },
+                        "editDropdown": {
+                            "title": "Edit <span class='bp-c-blip-light'>{{number}}</span> agent{{plural}}",
+                            "selectionSubtitle": "To edit the selected agent{{plural}}, fill at least one of the fields below.",
+                            "selectionApply": "Apply to selection",
+                            "teamLabel": "Teams",
+                            "teamPlaceholder": "Choose team(s)",
+                            "ticketsPlaceholder": "Enter number of tickets"
+                        },
+                        "deleteDropdown": {
+                            "title": "Delete <span class='bp-c-blip-light'>{{number}}</span> agent{{plural}}",
+                            "agentMessage": "Do you really want to delete this agent?",
+                            "selectionMessage": "Do you really want to delete the selected agent{{plural}}?"
+                        },
+                        "tableTitleAgent": "Agent",
+                        "tableTitleEmail": "Email",
+                        "tableTitleTeam": "Team",
+                        "tableTitleSlots": "Simultaneous tickets",
+                        "sortByFieldTitle": "Click to order"
+                    },
+                    "generalsettings": {
+                        "pageTitle": "General settings",
+                        "title": "General settings",
+                        "subtitle": "Customize other BLiP Desk service options",
+                        "tags": "Manage tags",
+                        "tagsDescription": "Define tags available for agents when closing a ticket on Desk",
+                        "isRequired": "Make tags mandatory when finish a ticket",
+                        "tagsPlaceholder": "Type your tags and press \"Return\" to add them",
+                        "autoDistribution": {
+                            "title": "Automatic distribution",
+                            "description": "Define the maximum number of tickets to be automatically distributed to each active agent.",
+                            "agentSlots": "Tickets per agent",
+                            "tip": "To enable this feature, use a value greater than 0."
+                        }
+                    },
+                    "history": {
+                        "pageTitle": "Tickets history",
+                        "title": "Tickets history",
+                        "subtitle": "Analyze the tickets generated for each performed service",
+                        "user": "User",
+                        "tickets": "Tickets",
+                        "agent": "Agent",
+                        "agentPlaceholder": "Select the agent",
+                        "filterBy": "Filter by",
+                        "team": "Team",
+                        "status": "Status",
+                        "ClosedAttendant": "Solved",
+                        "Dropped": "Dropped",
+                        "Missed": "Missed",
+                        "Transferred": "Transferred",
+                        "InAttendance": "In attendance",
+                        "WaitingResponse": "Waiting first response",
+                        "Waiting": "In queue",
+                        "teamPlaceholder": "Select the team",
+                        "notFound": "No tickets found =(",
+                        "tag": "Tags",
+                        "tagPlaceholder": "Select the tag",
+                        "customer": "Customer",
+                        "customerPlaceholder": "Type the name or email of the user",
+                        "rating": "Rating",
+                        "id": "Ticket",
+                        "agentEmail": "Agent's email",
+                        "number": "Number",
+                        "information": "Information",
+                        "tags": "Tags",
+                        "conversationHistory": "Conversation history",
+                        "noMessages": "There is no conversation history ):",
+                        "testeUser": "Test user",
+                        "noTickets": "There is no BLiP Desk tickets open for this user",
+                        "avgResponseTicketTime": {
+                            "title": "Average response time"
+                        },
+                        "seeMore": "See more",
+                        "helperTitle": "What is the tickets history?",
+                        "helperBody": "BLiP Desk will generate a ticket with all the info about the performed service, such as conversation transcription, ticket number and agent name. Use the filters and make you analysis.",
+                        "sendCSVByEmail": "Send spreadsheet by email",
+                        "sendCSVTitle": "Send spreadsheet",
+                        "sendCSVSubtitle": "Enter the email to send attendance history:",
+                        "sendCSVEmail": "Email",
+                        "sendCSVEmailPlaceholder": "Enter the email",
+                        "sendCSVButtonText": "Send",
+                        "sendCSVSendingMessage": "We will send the data to {{email}} as soon as it is processed."
+                    },
+                    "rules": {
+                        "add": "+ Add rule",
+                        "pageTitle": "Rules",
+                        "forwardTo": {
+                            "label": "Forward to team",
+                            "placeholder": "Select a team",
+                            "searchPlaceholder": "Pesquise por uma equipe"
+                        },
+                        "filterBy": "Filter by",
+                        "ruleLabel": "Rule title",
+                        "teamLabel": "Team",
+                        "confirmDeleteTitle": "Confirm deletion",
+                        "confirmDeleteBody": "<p>Do you really want to delete this rule?</p>",
+                        "warning": "Error saving/updating rule",
+                        "property": {
+                            "message": "Message",
+                            "contact": {
+                                "name": "Contact Name",
+                                "email": "Contact Email",
+                                "extras": "Contact Extras"
+                            }
+                        },
+                        "relation": {
+                            "contains": "Contains",
+                            "notContains": "Does not contain",
+                            "equals": "Equals",
+                            "notEquals": "Does not equal"
+                        },
+                        "modal": {
+                            "if": "If",
+                            "condition": "Condition",
+                            "addRule": "Add rule",
+                            "editRule": "Edit rule",
+                            "then": "Forward to team"
+                        },
+                        "title": "Rules",
+                        "subtitle": "Configure forward rules of your customer service channel",
+                        "description": ""
+                    },
+                    "channels": {
+                        "pageTitle": "Customer service tool",
+                        "title": "Customer service tool",
+                        "subtitle": "Select and configure your customer service tool",
+                        "description": "",
+                        "blipAgent": {
+                            "title": "BLiP Desk",
+                            "description": "BLiP's service channel",
+                            "overview": {
+                                "description": "To use the BLIP Desk simply activate the channel and access our service interface."
+                            },
+                            "configuration": {},
+                            "documentation": {}
+                        }
+                    },
+                    "analytics": {
+                        "title": "Monitoring",
+                        "subtitle": "Track BLiP Desk data in real-time",
+                        "page": {
+                            "title": "Monitoring",
+                            "dashboard": {
+                                "noTickets": "There is no BLiP Desk tickets open",
+                                "tickets": {
+                                    "title": "Tickets",
+                                    "waiting": "In queue",
+                                    "waitingTooltip": "Tickets in queue waiting for an attendance at the moment.",
+                                    "maxQueueTime": "Maximum queue time",
+                                    "maxQueueTimeTooltip": "Maximum time a user is waiting in queue to be assigned to an agent",
+                                    "maxFirstResponseTime": "Maximum first response time",
+                                    "maxFirstResponseTimeTooltip": "Maximum time an agent is spending to give the first response to the user, after being assigned.",
+                                    "inAttendance": "In attendance",
+                                    "inAttendanceTooltip": "Open tickets that have already received the first response from the agent.",
+                                    "ticketPerAgent": "Tickets per agent",
+                                    "ticketPerAgentTooltip": "Average tickets per agent at the moment"
+                                },
+                                "agentsStatus": {
+                                    "title": "Agents status",
+                                    "online": "Online",
+                                    "pause": "Pause",
+                                    "invisible": "Invisible",
+                                    "offline": "Offline"
+                                },
+                                "today": {
+                                    "title": "Today",
+                                    "avgWaitTime": "Average wait time",
+                                    "avgWaitTimeTooltip": "Average time the user waits to be answered. Queue time + First response time",
+                                    "avgResponseTime": "Average time of response",
+                                    "avgResponseTimeTooltip": "Average time it takes the agent to respond to a customer's message.",
+                                    "avgAttendanceTime": "Average time of service",
+                                    "avgAttendanceTimeTooltip": "Average length of service in the period.",
+                                    "lost": "Missed",
+                                    "lostTooltip": "Tickets canceled by the user before being assigned to an agent.",
+                                    "abandoned": "Dropped",
+                                    "abandonedTooltip": "Tickets canceled by the user after being assigned to an agent.",
+                                    "attended": "Solved",
+                                    "attendedTooltip": "Tickets finalized or transferred by the agent",
+                                    "closed": "Closed",
+                                    "closedTooltip": "Total tickets closed by BLiP Desk in the period. Corresponds to the sum of the abandoned and attended."
+                                }
+                            },
+                            "thread": {
+                                "title": "Chat with {{user}}",
+                                "team": "Team",
+                                "agent": "Agent",
+                                "status": {
+                                    "title": "Status",
+                                    "queued": "In Queue",
+                                    "assigned": "Assigned",
+                                    "inAttendance": "In attendance",
+                                    "transferred": "Transferred",
+                                    "closed": "Closed"
+                                }
+                            },
+                            "userProfile": {
+                                "tooltip": "User Profile"
+                            },
+                            "list": {
+                                "openTickets": {
+                                    "title": "Assigned / In attendance",
+                                    "queueTime": "Queue time",
+                                    "firstResponseTime": "First response",
+                                    "user": "User",
+                                    "agent": "Agent",
+                                    "attendanceTime": "Attendance time",
+                                    "ticket": "Ticket",
+                                    "waiting": "Waiting..."
+                                },
+                                "waitingTickets": {
+                                    "title": "In queue",
+                                    "queueTime": "Queue time",
+                                    "user": "User",
+                                    "ticket": "Ticket",
+                                    "team": "Team"
+                                },
+                                "agents": {
+                                    "title": "Agents",
+                                    "agent": "Agent",
+                                    "inAttendanceTickets": "Tickets in service",
+                                    "averageAttendance": "Average service time"
+                                },
+                                "teams": {
+                                    "title": "Teams",
+                                    "team": "Team",
+                                    "waitingTickets": "Tickets waiting",
+                                    "inAttendanceTickets": "Ticket in service",
+                                    "averageWait": "Average waiting time",
+                                    "averageAttendance": "Average service time"
+                                },
+                                "tags": {
+                                    "title": "Tags",
+                                    "tag": "Tag",
+                                    "closedTickets": "Tickets closed",
+                                    "averageAttendance": "Average service time"
+                                }
+                            }
+                        }
+                    },
+                    "report": {
+                        "title": "Reports",
+                        "subtitle": "Analyze BLiP Desk data",
+                        "filterBy": "Filter by:",
+                        "channels": "Channels",
+                        "dashboard": {
+                            "tickets": {
+                                "chart": {
+                                    "title": "Tickets per day",
+                                    "tooltip": "Total of open and closed tickets per day"
+                                },
+                                "title": "Tickets",
+                                "open": "Open",
+                                "closed": "Closed",
+                                "tooltip": "Total of open and closed tickets in the given time period"
+                            },
+                            "time": {
+                                "title": "Average time of",
+                                "wait": "Wait",
+                                "waitTooltip": "Average time that a user waits to be served in the given time period",
+                                "response": "Response",
+                                "responseTooltip": "Average time of agent's response to costumer in the given time period",
+                                "service": "Service",
+                                "serviceTooltip": "Average service time in the given time period"
+                            },
+                            "noAttendances": "Insufficient data"
+                        },
+                        "list": {
+                            "agents": {
+                                "title": "Agents",
+                                "agent": "Agent"
+                            },
+                            "teams": {
+                                "title": "Teams",
+                                "team": "Team"
+                            },
+                            "tags": {
+                                "title": "Tags",
+                                "tag": "Tag"
+                            },
+                            "common": {
+                                "closedTickets": "Tickets closed",
+                                "averageWaitTime": "Average waiting time",
+                                "averageAttendance": "Average service time",
+                                "averageResponse": "Average response time"
+                            }
+                        }
+                    },
+                    "replies": {
+                        "title": "Custom replies",
+                        "subtitle": "Define custom replies to improve agility during service",
+                        "pageTitle": "Custom replies",
+                        "searchFilter": "search by category",
+                        "add": "Add category",
+                        "noRepliesFound": {
+                            "title": "You haven't created any replies yet",
+                            "subTitle": "Create replies to accelerate your operations"
+                        },
+                        "category": {
+                            "title": "Category",
+                            "invalid": "There are invalid replies in this category",
+                            "addContent": "Add reply",
+                            "reply": {
+                                "defaultTitle": "Untitled",
+                                "noContentFoundTitle": "You haven't added any replies yet",
+                                "noContentFoundSubTitle": "Start adding content to your replies",
+                                "content": {
+                                    "titleHeader": "Title",
+                                    "noContentFound": {
+                                        "title": "You haven't added content yet",
+                                        "subTitle": "Start adding content to your custom replies"
+                                    }
+                                }
+                            },
+                            "delete": {
+                                "title": "Delete category",
+                                "body": "Do you want to delete this category?"
+                            }
+                        }
+                    }
+                },
+                "users": {
+                    "title": "Users",
+                    "titleSingular": "User",
+                    "filtersTitle": "Filters",
+                    "description": "Check the users that interacted with your chatbot",
+                    "photo": "Photo",
+                    "name": "Name",
+                    "channel": "Channel",
+                    "test": "Test",
+                    "testContact": "Test user",
+                    "details": "Details",
+                    "address": "Address",
+                    "city": "City",
+                    "email": "Email",
+                    "phoneNumber": "Phone number",
+                    "gender": "Gender",
+                    "extras": "Extras",
+                    "searchContact": "Search for user",
+                    "notFound": "No users found",
+                    "testEnable": "Enable as a test",
+                    "testDisable": "Disable as a test",
+                    "seeMore": "SEE MORE",
+                    "cpf": "CPF",
+                    "origin": "Channel: ",
+                    "extraInfo": "Extra Info: ",
+                    "editContact": "Edit User",
+                    "filter": "Filter by:",
+                    "import": {
+                        "invalidCsv": "Invalid CSV file",
+                        "title": "Import users",
+                        "description": "Choose the distribution list that you want to add the {{usersLength}} users in the file.",
+                        "listName": "List name",
+                        "importingFile": "Importing file...",
+                        "importFinished": "Import finished",
+                        "importFinishedDescription": "{{usersLength}} users has been added to the {{listName}} list.",
+                        "importFailed": "Import failed",
+                        "importFailedDescription": "The import process failed. Please check the provided file and try again later."
+                    }
+                },
+                "ai": {
+                    "title": "Artificial Intelligence",
+                    "provider": {
+                        "title": "AI Providers",
+                        "subtitle": "Choose and configure your artificial intelligence provider",
+                        "description": "",
+                        "activate": "Activate",
+                        "mainProvider": "Main provider",
+                        "setMainProvider": "Set as main provider",
+                        "watson": {
+                            "title": "IBM Watson",
+                            "cardDescription": "",
+                            "overview": "Overview",
+                            "description": "<p>Go to the <a target='_blank' href='https://www.ibm.com/cloud-computing/bluemix/'>Bluemix panel</a> and log in with your account. If you do not have one, <a target='_blank' href='https://console.bluemix.net/registration/'>sign up</a>.</p>",
+                            "configurations": "Configurations",
+                            "userName": "User Name",
+                            "password": "Password",
+                            "apiKey": "Api Key",
+                            "url": "Url",
+                            "documentation": "Documentation",
+                            "instructions": {
+                                "bluemixTitle": "Bluemix account",
+                                "bluemix": "<p>Go to the <a target='_blank' href='https://www.ibm.com/cloud-computing/bluemix/'>Bluemix panel</a> and log in with your account. If you do not have one, <a target='_blank' href='https://console.bluemix.net/registration/'>sign up</a>.</p>",
+                                "conversationTitle": "Conversation service",
+                                "conversation": "<p>In the Bluemix dashboard, <a target='_blank' href='https://console.bluemix.net/dashboard/watson'>choose the Watson option</a> and create a <strong>Conversation</strong> service.</p><p>It may have some <a target='_blank' href='https://console.bluemix.net/docs/services/conversation/plan-upgrade.html#limits-by-artifact'>API usage limits accordingly to the selected plan</a> that can affect the usage of the service. It is required to have at least 3 available workspaces in your account to use the Conversation service on BLiP.</p>",
+                                "credentialsTitle": "Watson credentials",
+                                "credentials": "<p>In the details page of the created service, choose the <strong>Service credentials</strong> options on the side menu.</p><p>In the listed credentials, select the <strong>View credentials</strong> option, copy the <strong>username</strong> and <strong>password</strong> properties of the credentials JSON and paste in the fields bellow.</p>"
+                            }
+                        },
+                        "luis": {
+                            "title": "Microsoft LUIS",
+                            "cardDescription": "",
+                            "overview": "Overview",
+                            "description": "<p>Access the <a target='_blank' href='https://www.luis.ai'>Luis panel</a> and log in with your account. If you don't have an account yet, create one.</p>",
+                            "configurations": "Configurations",
+                            "authoringKey": "Authoring Key",
+                            "endpointKey": "Endpoint Key or Azure Language Understanding Key",
+                            "documentation": "Documentation",
+                            "instructions": {
+                                "descriptionTitle": "1 - Accessing your Luis account",
+                                "description": "<p>Access the <a target='_blank' href='https://www.luis.ai'>Luis panel</a> and log in with your account. If you don't have an account yet, create one.</p>",
+                                "authoringKeyTitle": "2 - How to get your Authoring Key",
+                                "authoringKey": "<p>The Authoring Key is created automatically by LUIS account. This key allows you to create and edit your application using the LUIS APIs.<br>To find it, log in to <a target='_blank' href='https://www.luis.ai'>https://www.luis.ai</a> and click on the account name in the upper-right navigation bar to open <strong>Account Settings</strong>, which display the Authoring Key.</p>",
+                                "endpointKeyTitle": "3 - Creating your endpoint Key",
+                                "endpointKey": "<p>If you need more than 1000 requests per month, you can purchase a Microsoft Azure Language Understanding (LUIS) Key. You can use an authoring key, but it has a limit of 1000 requests per month. These keys are used to publish your applications to the Web.<p> To learn how to manage your keys go to this <a href='https://docs.microsoft.com/en-us/azure/cognitive-services/luis/manage-keys'>link</a>. If you use an Endpoint Key purchased in Microsoft Azure you need to associate this key with your application in the <a target='_blank'href='https://www.luis.ai'> Luis panel </a>, without this association it is not possible to analyze the user's sentences in BLiP.</p> "
+                            }
+                        },
+                        "dialogflow": {
+                            "title": "DialogFlow",
+                            "overview": "Overview",
+                            "description": "Give users new ways to interact with your product by building engaging voice and text-based coversational interfaces, such as voice apps and chatsbots, powered by AI.",
+                            "config": {
+                                "title": "Configure Dialogflow",
+                                "activation": "To activate the integration you have to <a href='https://dialogflow.com/' target='blank'>create an account at DialogFlow</a>",
+                                "postAction": "After you create the account, create a new agent and then click on the gear icon to access the configurations. Clicking at the Service Account link, you will be redirect to the Google Cloud Platform.",
+                                "adminSet": "Create an service account then select Admin at the Dialogflow API as a project role and check \"Supply a new private key\" as a JSOn. Now, you only have to complete the fields below and finish it."
+                            }
+                        }
+                    },
+                    "publication": {
+                        "title": "Publish AI model",
+                        "subtitle": "Train and publish your AI model",
+                        "publishedVersion": "Published version",
+                        "trainedVersion": "Training version",
+                        "instructions": "Before you upgrade your AI model, resolve:",
+                        "aiProvider": "Artificial Intelligence provider active",
+                        "userIntentions": "User intents",
+                        "config": "Resolve",
+                        "createIntention": "Resolve",
+                        "chatbotReady": "All set to upgrade your AI model",
+                        "chatbotReady2": "Remeber this action is subject to charges of your AI provider.",
+                        "versions": "Versions",
+                        "checkList": "Checklist",
+                        "numIntentions": "Number of intents",
+                        "minimum": "Minimum number of examples",
+                        "balancing": "Balancing",
+                        "lessThanTenSingular": "intent from your model has less than 10 examples",
+                        "lessThanTenPlural": "intents from your model have less than 10 examples",
+                        "moreThanTen": "Congratulations! Your intents have at least 10 examples",
+                        "belowAvg": "below average",
+                        "onAvg": "on average",
+                        "aboveAvg": "above average",
+                        "median": "Try balancing your intents to aprox.",
+                        "medianFinal": "examples",
+                        "congrats": "Congrats! The intents from your model are balanced",
+                        "lastModification": "Last modification",
+                        "modelVersions": "AI model versions"
+                    },
+                    "intentions": {
+                        "title": "Intents",
+                        "subtitle": "Define how your bot should interpret and respond to the user",
+                        "description": "intents are the possible user requests to realize actions on your application.",
+                        "searchIntentions": "Search for an intent",
+                        "newIntention": "<i class='icon-add' style='font-size: 10px;'></i> Add intent",
+                        "noneIntentionName": "Default fallback intent",
+                        "noneAnswers": "[{\"type\": \"text/plain\", \"value\": \"I'm sorry but I did not understand\"},{\"type\": \"text/plain\", \"value\": \"Unfortunately, I could not understand\"},{\"type\": \"text/plain\", \"value\": \"I could not understand, sorry\"}]",
+                        "modal": {
+                            "title": "Confirm exclusion",
+                            "body": "<p>Do you really want to delete this intent?</p>"
+                        },
+                        "intentionsToChange": "Is recommended that you review the intents below",
+                        "intentionName": "Intent name",
+                        "changedAt": "Changed at",
+                        "numberOfExamples": "Examples",
+                        "noIntentionsFound": "No intents found =(",
+                        "helperTitle": "What are intents?",
+                        "helperBody": "It is the intents that make the connection between what the user says and how your chatbot should understand and responde. Create and configure your interactions here.",
+                        "helperLink": {
+                            "title": "See docs",
+                            "link": "https://help.blip.ai/hc/pt-br/articles/360000662551-O-que-%C3%A9-inten%C3%A7%C3%A3o-"
+                        },
+                        "intentionNameCSV": "name",
+                        "intentionExampleCSV": "sample",
+                        "importIntentions": "Import intents",
+                        "exportIntentions": "Export intents",
+                        "invalidFlow": "The specified file doesn't contains a valid flow for importing"
+                    },
+                    "enhancement": {
+                        "title": "Enhancement",
+                        "subtitle": "Use the user conversations history to improve your AI model",
+                        "description": "See suggestions given by artificial inteligence provider to user phrases",
+                        "export": "Export",
+                        "update": "Update",
+                        "reliability": "Reliability",
+                        "morethan": "Greater than or equal to",
+                        "lessthan": "Less than or equal to",
+                        "equalsto": "Equal to",
+                        "operator": "Operator",
+                        "percentage": "Percentage",
+                        "searchFilter": "Search by intent to filter",
+                        "filterBy": "Filter by",
+                        "resultsFound": "results found",
+                        "deletePhrase": "Delete phrase",
+                        "modal": {
+                            "title": "Confirm exclusion",
+                            "body": "<p>Do you really want to delete this phrase?</p>"
+                        }
+                    },
+                    "approval": {
+                        "title": "Approval",
+                        "subtitle": "Identify bot successes and errors before training the model of AI",
+                        "description": "Check and post new intents and user phrases to enhance your chatbot",
+                        "searchFilter": "Search",
+                        "suggestedIntention": "Enhancement",
+                        "intention": "Identified intent",
+                        "approve": "Approve",
+                        "reject": "Reject",
+                        "modal": {
+                            "title": "Confirm exclusion",
+                            "body": "<p>Do you really want to delete this analysis?</p>"
+                        }
+                    },
+                    "analysis": {
+                        "title": "AI model analysis",
+                        "subtitle": "Get an overview of your model from an full review",
+                        "button": "Get insights",
+                        "searchPlaceholder": "Search for a model",
+                        "noModelsFound": "No models found =(",
+                        "helperTitle": "How does the AI analysis work?",
+                        "helperBody": "BLiP will generate the confusion matrix using the saved intents to present you the main insights in order to improve your model.",
+                        "versionName": "Version name",
+                        "reliability": "Reliability",
+                        "lastUpdate": "Updated on",
+                        "confirmationModalTitle": "This action may generate costs for your AI provider",
+                        "confirmationModalBody": "With each analysis we create queries in your AI provider to validate examples of users collected randomly from previous interactions.",
+                        "confirmationModalContinue": "Do you wish to continue?",
+                        "analysisConfigTitle": "Configure your analysis",
+                        "analysisConfigBody": "Name and define the number of examples",
+                        "reportName": "Report name",
+                        "reportQuantity": "Number of examples",
+                        "validating": "Validating...",
+                        "matrixName": "Confusion matrix",
+                        "helperLink": {
+                            "title": "See docs",
+                            "link": "https://docs.blip.ai/#artificial-intelligence"
+                        },
+                        "modal": {
+                            "title": "Confirm exclusion",
+                            "body": "<p>Do you really want to delete this insight?</p>"
+                        },
+                        "analysisToast": "Your analysis is being generated. Soon you will be able to check the results.",
+                        "analysisTooltip": "This analysis may take a few minutes to complete."
+                    },
+                    "analysisDetail": {
+                        "avgReliability": "Average reliability",
+                        "matrix": "Confusion matrix",
+                        "tooltips": {
+                            "avgReliability": "Average reliability identified among tested user samples",
+                            "accuracy": "Indicates how frequently the classifier is correct",
+                            "precision": "Indicates if the bot is not mistaking intents",
+                            "recall": "Indicates of ythe bot is not letting pass intents",
+                            "f1": "Combines precision and recall bringing a unique number that indicates the models's general quality",
+                            "totalExamples": "Total of user examples tested"
+                        },
+                        "metrics": {
+                            "name": "Name",
+                            "accuracy": "Accuracy",
+                            "precision": "Precision",
+                            "recall": "Recall",
+                            "f1score": "F1 Score"
+                        },
+                        "stats": {
+                            "total": "Total",
+                            "correct": "Classified as correct",
+                            "incorrect": "Classified as incorrect"
+                        },
+                        "tabs": {
+                            "list": "Intents list",
+                            "falsePos": "Top False Positives",
+                            "falseNeg": "Top False Negatives",
+                            "userExamples": "Click for user examples"
+                        },
+                        "userExamplesModal": {
+                            "title": "User Examples",
+                            "sentence": "Sentence",
+                            "intention": "Expected intent",
+                            "predictedIntention": "Identified intent",
+                            "score": "Score"
+                        }
+                    },
+                    "intention": {
+                        "title": "Intent",
+                        "subtitle": "subtitulo subtitulo subtitulo",
+                        "inputNameTitle": "intent name",
+                        "reliability": "Reliability",
+                        "usersPhrases": "User phrases",
+                        "userPhrase": "User phrase",
+                        "usersPhrasesPlaceHolder": "Add user phrase",
+                        "answerPhrases": "Variable answers",
+                        "answerPhrasesPlaceHolder": "Add Answers",
+                        "intentionReliability": "intent / Reliability",
+                        "fullData": "See full data",
+                        "information": "Information",
+                        "userExamples": "User examples",
+                        "newIntention": "New intent",
+                        "addPhrase": "Add phrase",
+                        "insertExample": "Insert an example",
+                        "insertAnswer": "Insert an answer",
+                        "variableAnswers": "Variable answers",
+                        "insertPhrase": "Insert the phrase",
+                        "exampleTooltip": "Examples of questions from the user.<br>A variety of examples may be added to train the AI model",
+                        "answerTooltip": "Possible answers to send to the user. (Only for SDK/Webhook bots)",
+                        "noExamples": "You haven't added any examples yet",
+                        "noAnswers": "You haven't added any answers yet",
+                        "noSimilarPhrases": "You haven't added a similar example yet",
+                        "noSimilarAnswers": "You haven't added a similar answer yet"
+                    },
+                    "entities": {
+                        "title": "Entities",
+                        "name": "Entity name",
+                        "values": "Values",
+                        "lastUpdate": "Last update",
+                        "subtitle": "Define the entities present in user phrases",
+                        "description": "The entities has a category list that its application works. For example, an entity can be a list of pizza flavors available on your delivery app or the artists who are in your music service.",
+                        "noEntitiesFound": "No entities found",
+                        "newEntity": "<i class='icon-add' style='font-size: 10px;'></i> Add Entity",
+                        "searchEntities": "Search for entity",
+                        "modalBody": "<p>Do you really want to delete this entity?</p>",
+                        "importEntities": "Import Entities",
+                        "exportEntities": "Export Entities",
+                        "noSimilarValueOrSynonymous": "You haven't added a similar value or synonymous yet",
+                        "helperTitle": "What are entities?",
+                        "helperBody": "The entities has a category list that its application works. For example, an entity can be a list of pizza flavors available on your delivery app or the artists who are in your music service.",
+                        "helperLink": {
+                            "title": "See docs",
+                            "link": "https://help.blip.ai/hc/pt-br/articles/360000662451-O-que-%C3%A9-uma-entidade-"
+                        },
+                        "invalidFlow": "The specified file doesn't contains a valid flow for importing"
+                    },
+                    "entity": {
+                        "title": "Entity",
+                        "subtitle": "subtitulo subtitulo subtitulo",
+                        "inputNameTitle": "Entity name",
+                        "newEntity": "New Entity",
+                        "searchForValue": "Search for a value or synonym",
+                        "value": "Value",
+                        "synonyms": "Synonyms",
+                        "newValue": "New value",
+                        "newSynonym": "Synonymous",
+                        "balancedIntention": "Close to X examples<br>",
+                        "above10": "Above 10 examples",
+                        "mergeValues": "The synonyms of the values were merged"
+                    }
+                },
+                "channels": {
+                    "availableOnChannel": "Available on channel",
+                    "keyAccess": "Access key",
+                    "chooseAccount": "Choose Account",
+                    "listAccounts": "List Accounts",
+                    "pageTitle": "Customer channels",
+                    "blipchat": {
+                        "title": "BLiP Chat (deprecated)",
+                        "cardDescription": "",
+                        "description": "BLiP Chat gets you closer to your customers, making your embedded chatbot available on your site or on your Android or iOS apps.",
+                        "apiKeyTitle": "API KEY",
+                        "apiKeyDescription": "Use the API KEY to integrate your application to BLiP Chat:",
+                        "urlTitle": "BLiP Chat URL",
+                        "urlDescription": "Your chatbot is  <a target=\"_blank\" href=\"{{baseUrl}}/{{apiKey}}\">available here.</a>",
+                        "domainTitle": "Domains",
+                        "domainDescription": "Add domains where you will make available your chatbot. Type ENTER to separate them.",
+                        "webConfigTitle": "Web Configuration",
+                        "webConfigDescription": "Add this script on your web page body. For advanced configurations access the <a target=\"_blank\" href=\"https://github.com/takenet/blip-chat-widget\">documentation</a>. <b>Remember to add a valid domain.</b>",
+                        "mobileTitle": "Mobile Configuration",
+                        "mobileDescription": "For the integration on mobile apps, access our documents <a href=\"https://github.com/takenet/blip-sdk-android\" target=\"_blank\">Android</a> e <a href=\"https://github.com/takenet/blip-sdk-ios\" target=\"_blank\">iOS</a>.",
+                        "registerDomain": "Register at least 1 domain",
+                        "copiedToClip": "Copied to the clipboard",
+                        "displayName": "Display name",
+                        "displayNameDescription": "This name will be displayed to your users when they open BLiP Chat",
+                        "displayNamePlaceholder": "Type the display name",
+                        "displayNameDetails": "Display name is an optional BLiP Chat configuration. It will be displayed to your users as follow:"
+                    },
+                    "blipchat2": {
+                        "title": "BLiP Chat",
+                        "cardDescription": "",
+                        "apiKeyTitle": "API KEY",
+                        "apiKeyDescription": "Use the API KEY to integrate your application to BLiP Chat:",
+                        "registerDomain": "Register at least 1 domain",
+                        "copiedToClip": "Copied to the clipboard",
+                        "overview": {
+                            "title": "Overview",
+                            "description": "BLiP Chat gets you closer to your customers, making your embedded chatbot available on your site or on your Android or iOS apps."
+                        },
+                        "configs": {
+                            "title": "Configurations",
+                            "chatbotDomain": "Chatbot domains",
+                            "displayName": "Display name",
+                            "displayNameTip": "This name will be displayed to your users when they open BLiP Chat",
+                            "domainsPlaceholder": "E.g.: https://www.blip.ai",
+                            "domainsTip": "Add domains where you will make available your chatbot. Type ENTER to separate them.",
+                            "receiveFiles": "Receive files",
+                            "receiveFilesTip": "When this option is selected the user will have the option to send a file to the bot",
+                            "colors": "Colors",
+                            "components": "Components",
+                            "chatBubble": "Chat bubble",
+                            "background": "Background",
+                            "icon": "Icon",
+                            "acceptedFormats": "Accepted formats: .png, .jpg, .jpeg",
+                            "iconTip": "To update the icon in your BLiP Chat copy the automatic generated script in the Setup tab",
+                            "dimensionsTip": "Recommended dimensions: 85x85",
+                            "palette": "Reset"
+                        },
+                        "setup": {
+                            "title": "Setup",
+                            "webConfigDescription": "Add this script on your web page body. For advanced configurations access the <a target=\"_blank\" href=\"https://github.com/takenet/blip-chat-widget\">documentation</a>. Remember to add a valid domain.",
+                            "urlTitle": "BLiP Chat URL",
+                            "urlDescription": "Your chatbot is  <a target=\"_blank\" href=\"{{baseUrl}}?appKey={{appKey}}\">available here.</a>",
+                            "mobileTitle": "Mobile Configuration",
+                            "mobileDescription": "For the integration on mobile apps, access our documents <a href=\"https://github.com/takenet/blip-sdk-android\" target=\"_blank\">Android</a> e <a href=\"https://github.com/takenet/blip-sdk-ios\" target=\"_blank\">iOS</a>."
+                        },
+                        "docs": {
+                            "title": "Documentation",
+                            "externalLink": "https://github.com/takenet/blip-chat-widget"
+                        }
+                    },
+                    "email": {
+                        "cardDescription": "",
+                        "tutorial": "It is necessary to configure an account for your chatbot to send and receive e-mails, with IMAP protocol support. The ideal is to have this exclusive account, that is, that it is not used for other purposes than messages exchange of your chatbot. We recommend to use the <strong>Gmail</strong> for this purpose. <a href='https://accounts.google.com/signup' target='_blank'>Create a free account now.</a>"
+                    },
+                    "facebook": {
+                        "title": "Messenger",
+                        "cardDescription": "",
+                        "description": "Your chatbot will be accessed through a Facebook page. For this reason, it is important that you <a href=\"https://www.facebook.com/pages/create\" target=\"_blank\" analytics-on=\"click\" analytics-event=\"Create Facebook page\">create a page</a> for your company on Facebook. If your company has a page already, you may use it.",
+                        "loginButton": "Login with Facebook",
+                        "loggedAs": "You are accessing as",
+                        "sendToMessengerPlugin": "Send-to-Messenger",
+                        "messageUsPlugin": "Message-Us",
+                        "choosePage": "Choose a page",
+                        "createPage": "Create a new page on Facebook",
+                        "alreadyPublishedTitle": "Page on use",
+                        "alreadyPublishedBody": "<p>The selected page is already published on another application.</p><p> Unpublish  before publishing again, or use another page for this app.</p>",
+                        "deactivateAlienPageTitle": "Confirm deactivation",
+                        "deactivateAlienPageBody": "<p>The active page belongs to other Facebook’s user. Thus, when deactivating it, it will no longer be visible on your pages list.</p><p>Are you sure you want to deactivate it?</p>",
+                        "page": {
+                            "overview": "Overview",
+                            "configurations": "Configurations",
+                            "customerchatplugin": "Customer Chat Plugin",
+                            "tabs": {
+                                "chat": {
+                                    "description": "To use the customer chat plugin, you must: <br /> <br /> <ul><li>Whitelist the domain of your website</li><li>Include the Facebook JavaScript SDK in the page</li><li>Include the plugin on your webpage</li></ul>",
+                                    "script": "<p>The following snippet of code will give the basic version of the SDK where the options are set to their most common defaults. You should insert it directly after the opening <body> tag on each page you want to load it:</p>",
+                                    "plugin": "<p>To add the plugin to your webpage, include a div with the following attributes in your HTML:</p>"
+                                }
+                            }
+                        }
+                    },
+                    "infobip": {
+                        "title": "Infobip SMS",
+                        "cardDescription": "",
+                        "overview": {
+                            "title": "Overview",
+                            "description": "Scale and deliver in a confidential way your<br>corporate SMS messages in the whole world."
+                        },
+                        "configs": {
+                            "title": "Settings",
+                            "step1": {
+                                "title": "Connecting with Infobip",
+                                "indicator": "Infobip information",
+                                "description": "To activate Infobip integration, you need to be registered<br>in the <a target='_blank' href='https://dev.infobip.com/getting-started/base-url'>platform</a> and fill the information bellow:",
+                                "baseUrl": "URL",
+                                "baseUrlPlaceholder": "https://suaurl.api.infobip.com"
+                            },
+                            "step2": {
+                                "indicator": "Settings",
+                                "title": "Numbers that will receive SMS<br>as <strong>chatbot {{botName}}</strong>",
+                                "description": "Activate the numbers that will receive messages and select the number to answer your clients by default:",
+                                "tableTitle": {
+                                    "numbers": "Numbers",
+                                    "default": "Default"
+                                },
+                                "noResults": "Your account does not have purchased numbers. <a target='_blank' href='https://dev.infobip.com/receive-sms#step-1-purchase-phone-number-for-receiving-message'>Buy</a> a number directly with Infobip."
+                            }
+                        },
+                        "modal": {
+                            "deleteTitle": "Attention",
+                            "deleteText": "When you disable Infobip channel, you will <b>lose<br>all</b> credentials already set up.",
+                            "canContinue": "Continue?",
+                            "deleteContinue": "Disable Infobip"
+                        }
+                    },
+                    "mailgun": {
+                        "title": "E-mail",
+                        "cardDescription": "",
+                        "description": "Your chatbot has a standard e-mail address. Your customers may interact through this address.",
+                        "label": "E-mail"
+                    },
+                    "skype": {
+                        "title": "Skype",
+                        "cardDescription": "",
+                        "applicationId": "Application ID",
+                        "callbackUrl": "Callback URL",
+                        "acquireApplicationIdTitle": "Acquiring Application ID",
+                        "acquireApplicationIdDescription": "<p>Access the  <a target=\"_blank\" href=\"https://apps.dev.microsoft.com/\">Application Registration Portal</a> Microsoft and create a new app. Inform the name of your chatbot. </p><p>Fill the BLiP field <strong>Application ID</strong> with <em>Application ID</em> informed on the portal,according to the image below:</p>",
+                        "acquirePasswordTitle": "Acquiring Password",
+                        "acquirePasswordDescriptionP1": "<p>On the same registration screen of the app, click on <strong>Generate Password</strong>.</p>",
+                        "acquirePasswordDescriptionP2": "<p>On BLiP, activate the channel and click on <strong>Save</strong>. A callback URL will be generated.</p>",
+                        "createChatbotTitle": "Creating your chatbot on Skype",
+                        "createChatbotDescriptionP1": "<p>Access the <a target=\"_blank\" href=\"https://dev.botframework.com/bots/new\">BotFramework Portal</a> using your Microsoft account, and create a new bot using your <em>Application ID</em>.</p>",
+                        "createChatbotDescriptionP2": "<p>Copy the <em> callback Url</em> generated by BLiP and paste it in the field <strong>Messaging endpoint</strong> of BotFramework, according to the above image. Fill in the rest of the form and make the registration.</p>",
+                        "testingTitle": "Testing your chatbot",
+                        "testingDescriptionP1": "<p>After making the registration, a page will be displayed, it contains some information about the bot. In order to test it you need to add it to your contacts on Skype by clicking on <strong>Skype</strong> under Channels and start a conversation through Skype application. <strong>Do not</strong> test it using the Test button on the right upper corner.</p>",
+                        "testingDescriptionP2": "<p>In order for your bot to operate on Skype, their team needs to approve it first.</p>",
+                        "testingDescriptionP3": "<p>So, you must go to <a target=\"_blank\" href=\"https://dev.botframework.com/bots/new\">BotFramework Portal</a> using your Microsoft account and click on <strong>My Bots</strong>. The existent bots will be listed on this screen. Select the bot want to make available on Skype and click on <strong>Edit</strong> in Skype channel. Then click on <strong>Publish</strong>, fill in all the required data and click <strong>Submit for Review</strong>. Your bot will then be analized by Skype team.</p>",
+                        "testingDescriptionP4": "<p>If your bot is not approved you may only be able test it with the same Skype account that you created the bot.</p>"
+                    },
+                    "sms": {
+                        "cardDescription": "",
+                        "description": "Activate this channel and get a telephone number for your chatbot. Your customers will be able to interact with you through this number."
+                    },
+                    "takeio": {
+                        "title": "SMS",
+                        "cardDescription": "",
+                        "description": "<p>O parameter below belongs to your user of <a href='https://broker.take.io/' target='_blank'>TakeIo</a>. It is available on tab <strong>Development</strong>, on the menu <strong>Key Access</strong>.</p><p>After fulfilling the field, list your available accounts and choose one to use the SMS channel.</p><p><strong> We recommend to use an exclusive account for your chatbot.</strong></p>"
+                    },
+                    "telegram": {
+                        "title": "Telegram",
+                        "cardDescription": "",
+                        "gettingReady": "Preparing Telegram",
+                        "installTelegram": "<p>Install the Telegram and access the <a target='_blank' href='https://telegram.me/botfather'>@botfather</a>.</p><p> To create your Telegram Bot, send the command /newbot.</p>",
+                        "giveName": "Name your Telegram Bot.",
+                        "giveUniqueName": "An unique name for your Telegram Bot.",
+                        "telegramToken": "Acquiring Telegram access token",
+                        "afterToken": "After following the steps above, Telegram will make token available, according to the message below:"
+                    },
+                    "workplace": {
+                        "title": "Workplace Chat",
+                        "cardDescription": "",
+                        "description": "<p>Your chatbot will be accessed through your company Workplace, so make sure it is deployed (see more information <a href='https://developers.facebook.com/docs/workplace'> here</a>).</p> <p>Remember only System Administrators of a Workplace community can create apps and generate access tokens in that community.",
+                        "introduction": "<p>Your chatbot will be accessed through your company Workplace, so make sure it is deployed (see more information <a href='https://developers.facebook.com/docs/workplace'> here</a>).</p> <p>Remember only System Administrators of a Workplace community can create apps and generate access tokens in that community.",
+                        "createAppTitle": "Create an App for Workplace",
+                        "configureApp": "Configure the app",
+                        "getAppId": "Get your App Id",
+                        "blipConnect": "Connect the app to BLiP",
+                        "goToIntegration": "Go to <strong>Integrations</strong> in the company's Dashboard.",
+                        "customIntegration": "On the bottom of the page click on <strong>Create Custom Integration</strong>",
+                        "describeApp": "Inform a name and a description for the app, click on <strong>Create</strong>",
+                        "copyToken": "The <em>Edit Custom Integration</em> dialog will open after creating the app. The <em>Page Access Token</em> will be needed for later. Generate it clicking on the <strong>Access Token</strong> button. Copy the token and paste it in a temporary location (this token will be shared with you only once). Copy also the <em>App Secret</em> you will need set this informations on BLiP.",
+                        "permissions": "In the <em>Permissions</em> section select <em>Read content</em> and <em>Message any member</em>.",
+                        "webhook": "In <em>Configure Webhooks</em> specify the callback URL and the <em>Verify Token</em> with bellow values</p>",
+                        "enableEvents": "<p>Check <em>message_deliveries, messages, messaging_postbacks and message_reads</em> on <strong>Subscription Fields</strong>, then click <strong>Save</strong>.",
+                        "seeWork": "Click on <em>Messages</em> then click on <em>See All In Work Chat</em> on the bottom of the dialog.",
+                        "nameApp": "Type the name of your App in the search field of <em>Work Chat</em>.",
+                        "appId": "Click on your App in the search result list and copy your App ID from the URL.",
+                        "blipConnection": "After creating the Workplace App provide in the fields below the <em>App Id</em> from chat URL and the <em>Access Token</em>  and <em>App Secret</em> you copied earlier from the <em>Edit Custom Integration</em> dialog. </p> <p>Once you save the form your app will be published on Workplace."
+                    },
+                    "whatsapp": {
+                        "title": "Whatsapp",
+                        "description": "Activate this channel and read the QRCODE.",
+                        "cardDescription": "",
+                        "overview": {
+                            "title": "Overview",
+                            "description": "Make customer service on the most used channel in the world.<br>With WhatsApp, your messages are faster, simpler and valuable*.",
+                            "button": "Get official contact",
+                            "manual": "I already have an official contact/<br>I want to activate it manually",
+                            "detail": "*Customer support messages are free of charge, but informational notifications will be charged. Contact us to know more!"
+                        },
+                        "configs": {
+                            "title": "Settings",
+                            "step1": {
+                                "title": "BLiP WhatsApp",
+                                "indicator": "Enterprise data",
+                                "description": "To activate WhatsApp integration, you need to be signed up on <a target='_blank' href='https://developers.facebook.com/'>Facebook for Developers</a> and create an official contact."
+                            },
+                            "step2": {
+                                "indicator": "Number registration",
+                                "description": "Enter the phone number and verified name (VName) certificate from your WhatsApp Business Account.",
+                                "pincode": "PIN",
+                                "pincodeQuestion": "Does your number have a PIN?",
+                                "pincodeWarning": "If you have already set up a PIN, enter it below. Ignoring this step can cause errors during account activation.",
+                                "pincodeSetUp": "Set up a PIN",
+                                "pincodePlaceholder": "A PIN must have 6 digits",
+                                "getCode": "Receive registration code",
+                                "sms": "Via SMS",
+                                "smsObs": "(mobile only)",
+                                "voice": "Via voice call",
+                                "voiceObs": "(in English)",
+                                "regTitle": "WhatsApp will send the registration code to the number you signed up!",
+                                "regDescription": "Please, wait until WhatsApp sends the registration code to your number via the chosen method. This process can take some time because it needs authorization from WhatsApp.",
+                                "code": "Registration code",
+                                "codePlaceholder": "Enter the code sent by WhatsApp",
+                                "countryCodePlaceholder": "Enter your phone's country code",
+                                "phoneNumberPlaceholder": "Enter your phone number",
+                                "VNameCertificate": "VName Certificate",
+                                "VNameCertificatePlaceholder": "Enter the VName certificate",
+                                "payAttentionOnCode": "Don't forget to write the number. If you want to generate a new code, wait until next code is available."
+                            },
+                            "step3": {
+                                "indicator": "Profile information",
+                                "user": "Official contact on WhatsApp",
+                                "status": "Status message",
+                                "statusPlaceholder": "Ex: BLiP is now on WhatsApp :)",
+                                "descPlaceholder": "Ex: BLiP is the best platform to create, manage and evolve smart contacts.",
+                                "address": "Address (optional)",
+                                "addressPlaceholder": "Enter your business address",
+                                "email": "Email (optional)",
+                                "emailPlaceholder": "Enter your business email",
+                                "website": "Website (optional)",
+                                "websitePlaceholder": "Enter your business website"
+                            },
+                            "example": {
+                                "officialContact": "Official contact",
+                                "contactName": "Contact name",
+                                "companyDetails": "Company details",
+                                "address": "Address",
+                                "website": "Website"
+                            }
+                        },
+                        "modal": {
+                            "deleteTitle": "Attention",
+                            "deleteText": "When you disable WhatsApp channel, you will <b>lose all credentials</b> already set up.",
+                            "canContinue": "Continue?",
+                            "deleteContinue": "Disable WhatsApp",
+                            "pincodeTitle": "Enter your PIN",
+                            "pincodeText": "This phone has two-step verification enabled. Please, enter its PIN to advance."
+                        }
+                    }
+                },
+                "dashboard": {
+                    "general": {
+                        "title": "Dashboard",
+                        "subtitle": "Review the overall results of your chatbot",
+                        "usersPerDay": "Users per day (total)",
+                        "usersPerDayTooltip": "Daily amount of users",
+                        "newUsers": "New users",
+                        "newUsersTooltip": "Users who had the first interaction with the bot in the analyzed period",
+                        "recurrentUsers": "Recurrent users",
+                        "recurrentUsersTooltip": "Users who returned to the chatbot in the analyzed period",
+                        "activeClientsPerDay": "Active Users per day",
+                        "clientsPerDay": "Users per day",
+                        "averageResponseTime": "Average Response Time",
+                        "averageResponseTimeSuffix": "General (last 3 days)",
+                        "averageResponseTimeSuffixNoData": "(Last 3 days)",
+                        "totalMessages": "On Traffic",
+                        "sentMessages": "Sent",
+                        "receivedMessages": "Received",
+                        "messagesPerDay": "Messages per day",
+                        "averageInteractionsPerUser": "Average Interactions per User",
+                        "receivedMessagesCSV": "Received Messages",
+                        "sentMessagesCSV": "Sent Messages",
+                        "activeClientsCSV": "Active Users",
+                        "usersPerDayCSV": "Active Users",
+                        "messagesPerUserTag": "Average",
+                        "wordCount": "Received word cloud",
+                        "noEnoughData": "There's no enough available data to show this graph"
+                    },
+                    "analytics": {
+                        "title": "Analysis",
+                        "subtitle": "subtitulo subtitulo subtitulo",
+                        "startDate": "Start Date:",
+                        "endDate": "End Date:",
+                        "newGraph": "New chart",
+                        "noGraphMessage": "No charts found",
+                        "noGraphDescription": "Here you will be able to see and analyze data and statistics about your chatbot use. You can use these data in order to obtain information about how to better serve your customers.",
+                        "footer": "Check how you can create a new context to analyze",
+                        "downloadNotAvailable": "Download not available yet",
+                        "noContext": "Non context was found for your chatbot"
+                    }
+                },
+                "payments": {
+                    "title": "Payments",
+                    "pagSeguro": {
+                        "pagSeguroPainelTitle": "Accessing the PagSeguro panel",
+                        "pagSeguroPainel": "<p>Access the <a target='_blank' href='https://pagseguro.uol.com.br/login.jhtml'>Pagseguro panel</a> with your e-mail address. </p><p><a target='_blank' href='https://pagseguro.uol.com.br/registration/registration.jhtml?tipo=registration#!seller'>Create a seller account</a> in case you do not have yet and login.</p>",
+                        "pagseguroTokenTitle": "Acquiring token",
+                        "pagseguroToken": "<p>After login, access the menu Panel > My account > Preferences > Integrations.</p><p>Choose the option <em>Generate token</em>, copy the value and insert it on the form below, together with your e-mail of your Pagseguro account.</p>"
+                    }
+                },
+                "templates": {
+                    "api": {
+                        "credentials": "Credentials",
+                        "pageTitle": "Connection information",
+                        "pageDescription": "Set the configurations for sending and receiving messages and notifications for your chatbot",
+                        "howToStart": "How to start?",
+                        "instructions": "Use your IDENTIFIER and the ACCESS KEY in order to connect to BLiP. For a quick start, access the complete <a href=\"https://docs.blip.ai/\" target=\"_blank\">documentation</a> and learn how to use.",
+                        "identifier": "Identifier",
+                        "usingBuilder": "Connect using the builder",
+                        "usingBuilderDescription": "Build your bot using the BLiP bot builder",
+                        "usingSdk": "Connect using SDK",
+                        "usingSdkTitleDesc": "for C# and JS",
+                        "usingSdkDescription": "Receive your access credentials",
+                        "usingHttp": "Connect using HTTP",
+                        "usingHttpTitleDesc": "for any language",
+                        "usingHttpDesc": "Set your URLs to receive messages and notifications",
+                        "httpEndpoints": "HTTP Endpoints",
+                        "headerAuthentication": "Header authentication (Authorization)",
+                        "sendMessagesUrl": "Url to send messages",
+                        "sendNotificationsUrl": "Url to send notifications",
+                        "sendCommandsUrl": "Url to send commands",
+                        "warning": "Warning",
+                        "changeConnectionDisclaimer": "<p>You must choose between Builder, SDK or HTTP connections.</p><p>Changing a connection automatically disconnect the other.</p><p>Do you want proceed?</p>"
+                    },
+                    "faq": {
+                        "oneQuestion": "Question",
+                        "multipleQuestions": "Questions",
+                        "knowledgeBase": "Knowledge Base",
+                        "instructions": "For information about how to configure and use the FAQ template, <a href=\"https://portal.blip.ai/#/docs/templates/faq\" target=\"_blank\">consult our documentation</a>.",
+                        "addNewResponse": "New answer",
+                        "startTrain": "Train AI model",
+                        "newResponses": "New questions/answers",
+                        "training": "On training...",
+                        "configAi": "Configure artificial intelligence",
+                        "question": "Question",
+                        "response": "Answer",
+                        "unknownQuestions": "Unidentified Questions",
+                        "unknownQuestions2": "Unidentified Question(s)",
+                        "noUnknownQuestions": "You do not have unidentified questions",
+                        "assignToResponse": "Associate an answer",
+                        "assignedToResponse": "Question associated to an answer",
+                        "errorOnAssignToResponse": "Error while associating question to answer",
+                        "undoExclusion": "Undo Delete",
+                        "multipleInsert": "Multiple insert",
+                        "bulkInsert": "Insert one question per line",
+                        "addQuestion": "Add question",
+                        "addResponse": "Add answer",
+                        "modalTitle": "Confirm delete",
+                        "modalBody": "<p>This item will be <strong>permanently</strong> deleted from the knowledge base.</p><p> Are you sure you want to delete this item?</p>",
+                        "existingQuestion": "The question already exists on the knowledge base",
+                        "errorUpdateBase": "An error has occurred when using the knowledge base"
+                    },
+                    "faq2": {
+                        "scoreTitle": "Reliability",
+                        "scoreSubtitle": "Set the accuracy level of your bot's responses",
+                        "instructions": "<p>Configure how your chatbot will behave to the received questions. After that, train and publish your model through the <strong>Artificial intelligence</strong> menu.</p><p>For information about how to configure and use the FAQ template, <a href=\"https://portal.blip.ai/#/docs/templates/faq\" target=\"_blank\">consult our documentation</a>.</p>",
+                        "scoreThreshold": "Reliability threshold: ",
+                        "scoreThresholdDescription": "Mininal intent score percentage to consider it as an valid answer for a question",
+                        "feedbackTitle": "Feedback",
+                        "feedbackSubtitle": "Configure your bot to ask for feedback",
+                        "askFeedback": "Ask feedback",
+                        "askFeedbackDescription": "Ask customer feedback for each sent aswer.",
+                        "positiveFeedback": "Positive feedback text",
+                        "positiveFeedbackDescription": "Text of the button which is sent to the user to inform that the provided answer is valid for the question",
+                        "negativeFeedback": "Negative feedback text",
+                        "negativeFeedbackDescription": "Text of the button which is sent to the user to inform that the provided answer is not valid for the question",
+                        "thanksForFeedback": "Thanks for feedback text",
+                        "thanksForFeedbackDescription": "Optional thank-you message to be sent to every feedback received from the user",
+                        "usefulFeedback": "👍 Useful",
+                        "notUsefulFeedback": "👎 Not useful"
+                    },
+                    "master": {
+                        "title": "Router",
+                        "services": "Services",
+                        "description": "Add sub-bots as services in your main chatbot.",
+                        "instructions": "For information about how to configure and use the Router template, <a href=\"https://portal.blip.ai/#/docs/templates/master\" target=\"_blank\">consult our documentation</a>.",
+                        "addService": "Add a service",
+                        "createServiceName": "Give a name for your service",
+                        "usedFor": "Its used for referer your service when bot changes",
+                        "assignBot": "Assign a chatbot for this service",
+                        "defaultBot": "Its my default chatbot",
+                        "service": "Service",
+                        "chatbot": "Chatbot",
+                        "defaultBotTitle": "Main Chatbot",
+                        "chatbotNotFound": "Not chatbot found",
+                        "operator": "Manual Service",
+                        "redirectTimeoutPlaceholder": "Redirect timeout (seconds)",
+                        "redirectTimeoutDescription": "Time threshould in seconds that this bot should be active in the conversation since the last interaction of the client"
+                    },
+                    "attendance": {
+                        "outOfOfficeMessage": "Hello, thanks for getting in contact! I’m away at the moment, but I’ll get in contact at my opening hours.",
+                        "attendanceChannels": "Service Channels",
+                        "automaticResponse": "Automatic Answer",
+                        "name": "Manual Service",
+                        "blipAttendance": "BLiP Agent",
+                        "instructions": "<p>In order to serve your clients, access <a href='https://web.blip.ai' target='_blank'>web.blip.ai</a>.</p>",
+                        "instructions2": "Your attendance will receive your customers’ messages on this channel",
+                        "blipEmail": "BLiP Agent’s e-mail",
+                        "blipPhone": "BLiP Agent’s telephone",
+                        "attendanceType": "Agent type",
+                        "blipExclusive": "* Exclusive for BLiP Web",
+                        "blipTeamMember": "Select a team member",
+                        "attendanceName": "Agent's name",
+                        "notShow": "This name will not be displayed to your customers",
+                        "zendesk": "ZenDesk Agent",
+                        "zendeskInstructions": "Your chatbot will be accessed through an account on <a target='_blank' href='https://www.zendesk.com/'>Zendesk</a>. For this reason it is important <a target='_blank' href='https://www.zendesk.com/register/'> to create an account</a>. In case your company already has one, you can use it.",
+                        "apiTokenInstructions": "Access the page Admin > Channels > API and add a new token or use an existent one.",
+                        "zendeskUrl": "Zendesk URL",
+                        "emailExample": "agent@email.com",
+                        "zendeskEmail": "E-mail used to get in the Zendesk",
+                        "apiToken": "API Token",
+                        "emailAttendance": "Agent E-mail",
+                        "emailAttendance2": "Agent's E-mail",
+                        "emailInstructions": "<p>Your agent will use an e-mail address to receive messages from customers and to answer them.</p><p>When answering, it is important to <strong>not change the e-mail subject</strong> so we know to which customer the agent is answering.</p><p>It is necessary to publish your chatbot on the channel <strong>E-mail</strong>. For this, on the side menu, choose <strong>Channels -> E-mail</strong> informing the requested data.</p>",
+                        "emailInstructions2": "Your agent will receive messages from your customers on this e-mail",
+                        "workTime": "Working Time",
+                        "weekDays": "Week days",
+                        "firstMessageInstructions": "Write a message to your customers that will get in contact out of the working time.",
+                        "firstMessageDesc": "Choose a message your customers will receive for the first time they interact with your chatbot.",
+                        "answerYourClients": "How will I answer the customers?",
+                        "enableZendesk": "Creating an account on Zendesk",
+                        "attendanceUnavailable": "Attendance Unavailable",
+                        "attendanceUnavailableDesc": "Choose a message for your customer to receive when there is no available atendance.",
+                        "zendeskToken": "How to acquire the API Token"
+                    },
+                    "webhook": {
+                        "howToStart": "How to start?",
+                        "instructions": "In order to send messages use the <a href='http://docs.blip.ai/#webhook' target='_blank'>Webhook API</a>.",
+                        "authHeader": "Authentication Header (Authorization)",
+                        "urlMessages": "Url to send messages",
+                        "urlNotifications": "Url to send notifications",
+                        "urlCommands": "Url to send commands",
+                        "urlReceiveMessages": "Url to receive messages",
+                        "urlReceiveNotifications": "Url to receive notifications"
+                    },
+                    "builder": {
+                        "displayName": "Builder",
+                        "description": "Build your chatbot flow visually"
+                    }
+                },
+                "edit": {
+                    "title": "Edit Chatbot",
+                    "deleteChatbot": "Delete chatbot",
+                    "deleteChatbotDescription": "After deleting your chatbot, it will no longer be visible on your BLiP chatbots’ list nor be available to your customers.",
+                    "deleteChatbotPermissionDenied": "Only the payment account can delete a chatbot",
+                    "deleteChatbotPermissionDeniedPaymentAccount": "Payment account: {{paymentAccount}}",
+                    "deleteSuccessMessage": "Chatbot deleted",
+                    "deleteErrorMessage": "An error has occurred while trying to delete the chatbot",
+                    "confirmDeleteTitle": "Confirm delete",
+                    "confirmDeleteBody": "<p>This chatbot will be <strong>permanently</strong> deleted from BLiP and unpublished on all channels.</p><p><strong>Are you sure you want to delete this chatbot?</strong></p>",
+                    "advancedConfigurationLink": "Click <a href ng-click=\"$ctrl.openAdvancedSettingsModal($event)\">here</a> for advanced settings",
+                    "advancedConfigurationModal": "<p>Changes on this page can make your bot offline.</p> <p><strong>Are you sure you want to continue?</strong></p>",
+                    "advancedConfiguration": "Advanced Configurations",
+                    "onAdvancedConfigurationSaved": "Configuration saved",
+                    "onAdvancedConfigurationError": "A problem has occurred saving your configuration"
+                },
+                "persistentMenu": {
+                    "title": "Persistent Menu",
+                    "subtitle": "Set up the persistent menu of your chatbot",
+                    "persistentMenu": "Persistent menu",
+                    "persistentMenuDescription": "The persistent menu will always be available to your customer. It must contain commands that may be used at any flow time. You may add up to 5 words that triggers a command.",
+                    "persistentMenuRequirement": "In order to define the persistent menu, it is necessary to define the action button",
+                    "confirmationMessage": "You have unsaved changes on the page. Do you really want to exit?"
+                },
+                "messages": {
+                    "title": "Log",
+                    "subtitle": "Check logs from messages exchanged through your bot",
+                    "history": {
+                        "notificationsTitle": "Notifications",
+                        "noNotifications": "No message notifications found",
+                        "messagesTitle": "Debug",
+                        "filterPlaceholder": "Search for any term in order to filter the messages...",
+                        "newMessages": "New messages",
+                        "noMessages": "Waiting for the first message",
+                        "noMessagesDescription": "Here you will be able to see all the sent and received messages, as well as information of who has sent them. Take this time to be available on other channels and to reach more customers.",
+                        "channelsEnabled": "Published channels"
+                    }
+                },
+                "growth": {
+                    "title": "Growth",
+                    "scheduler": {
+                        "title": "Scheduler",
+                        "subtitle": "Schedule and manage your broadcasts",
+                        "description": "Broadcast submissions are subject to moderation according to the <a target='_blank' href='https://portal.blip.ai/#/terms'>Platform Policy</a>.",
+                        "noSchedulesFound": "No scheduled messages found =(",
+                        "requestPermissionDescription": "To use the <b>Scheduler</b> feature, request your authorization and wait for your authorization email.",
+                        "scheduleMessage": "Schedule message",
+                        "broadcast": "Broadcast",
+                        "dateAndTime": "Date And Time",
+                        "usedBudget": "Used Budget",
+                        "status": "Status",
+                        "statusScheduled": "Scheduled",
+                        "statusMessage": "Data related only to Facebook Messenger and WhatsApp channels",
+                        "showOldMessages": "Show previous messages",
+                        "errorLoadingMessageInformation": "Impossible to load information of one or more messages.",
+                        "errorLoadingScheduledMessages": "A problem has occurred while loading scheduled messages.",
+                        "messageScheduled": "Message scheduled successfully!",
+                        "errorSchedulingMessage": "A problem has occurred while scheduling the message.",
+                        "messageDeleted": "Message deleted successfully!",
+                        "errorDeletingMessage": "A problem has occurred when deleting the message.",
+                        "errorModalTile": "Error details",
+                        "occurrencesColumn": "Occurrences",
+                        "descriptionColumn": "Description",
+                        "noContacts": "It is not possible to schedule a message, because there are no recipients in your contact list.",
+                        "allContacts": "All contacts",
+                        "keyPlaceholder": "Variable",
+                        "valuePlaceholder": "Value",
+                        "requestAuth": {
+                            "action": "Request authorization",
+                            "description": "Select the reason for your request and provide more information, if necessary.",
+                            "reason": "Reason",
+                            "reasonPlaceholder": "Select the reason for your request",
+                            "engagement": "I want to engage my clients",
+                            "advertisement": "I want to create advertisement",
+                            "info": "Information (required)",
+                            "infoPlaceholder": "Enter any additional information",
+                            "sent": "Request sent{{punctuation}}",
+                            "sentDescription": "We will send you an email as soon as the <b>Scheduler</b> is available to you."
+                        },
+                        "delete": {
+                            "title": "Confirm exclusion",
+                            "body": "Do you really want to delete this schedule?"
+                        },
+                        "icons": {
+                            "sent": "Sent",
+                            "delivered": "Delivered",
+                            "visualized": "Visualized",
+                            "failed": "Failed"
+                        },
+                        "wizard": {
+                            "defaultTitle": "Broadcast name",
+                            "description": "Broadcast messages are subject to moderation according to the <a>Platform's Policy</a>",
+                            "scheduleCreated": "Schedule completed!",
+                            "rawContent": {
+                                "addType": "Add new type",
+                                "type": "Type",
+                                "content": "Content"
+                            },
+                            "errors": {
+                                "noPurpose": "Choose a reason to send the broadcast",
+                                "noDistList": "Choose a distribution list",
+                                "datePassed": "Scheduled date has already passed",
+                                "invalidContent": "Invalid content. It must be a valid JSON object"
+                            },
+                            "step1": {
+                                "title": "Content",
+                                "subtitle": "Create the content to be broadcasted",
+                                "description": "Only <b>text</b> cards are accepted in all channels.",
+                                "warning": "Channels that accept <span class='bp-fw-bold bp-c-warning-yellow'>{{card}}</span>:",
+                                "asTextChannels": "For the channels below, the card will be shown as text",
+                                "asLinkChannels": "For the channels below, the card will be shown as a link"
+                            },
+                            "step2": {
+                                "title": "Audience",
+                                "subtitle": "Define your audience",
+                                "userList": {
+                                    "title": "User Distribution List",
+                                    "description": "Select which distribution list will receive your broadcast.",
+                                    "label": "Select list",
+                                    "placeholder": "Select the targeted distribution list"
+                                },
+                                "impact": {
+                                    "title": "Impact estimation",
+                                    "users": "users",
+                                    "totalCost": "Total fee estimation:",
+                                    "userCost": "Per-user fee estimation:"
+                                }
+                            },
+                            "step3": {
+                                "title": "Schedule",
+                                "subtitle": "Message type",
+                                "description": "Message tags offer the possibility of sending messages to users outside the usually allowed 24-hour timespan. These messages are only for a limited number of purposes, which either require notifications or frequent updates.",
+                                "purposeLabel": "Select the purpose",
+                                "purposePlaceholder": "Select the purpose for the broadcast",
+                                "send": {
+                                    "title": "Send",
+                                    "options": {
+                                        "now": "Send now",
+                                        "schedule": "Schedule"
+                                    },
+                                    "date": "Date",
+                                    "hour": "Hour"
+                                }
+                            },
+                            "purposes": {
+                                "communityAlert": "Emergency notification",
+                                "confirmedEventReminder": "Event reminder",
+                                "nonPromotionalSubscription": "Non promotional message",
+                                "pairingUpdate": "Pairing update",
+                                "applicationUpdate": "Application update",
+                                "accountUpdate": "Account update",
+                                "paymentUpdate": "Payment update",
+                                "personalFinanceUpdate": "Personal finance update",
+                                "shippingUpdate": "Shipping update",
+                                "reservationUpdate": "Reservation update",
+                                "issueResolution": "Issue resolution",
+                                "appointmentUpdate": "Appointment update",
+                                "gameEvent": "Game event",
+                                "transportationUpdate": "Transportation update",
+                                "featureFunctionalityUpdate": "Feature update",
+                                "ticketUpdate": "Ticket update"
+                            }
+                        }
+                    },
+                    "sugarAds": {
+                        "title": "Facebook Ads",
+                        "subtitle": "Create advertisements of your chatbot on Facebook Ads",
+                        "scheduler": "Schedule messages to broadcast",
+                        "noPagesFound": "No pages found",
+                        "noPagesFoundDesc": "To create a Facebook Ads campaign to your chatbot,",
+                        "activateMessengerPage": "activate a Messenger page"
+                    }
+                },
+                "team": {
+                    "title": "Team",
+                    "description": "Add people to your team and give permissions for them to change the Chatbot.",
+                    "addButton": "<i class='icon-add' style='font-size: 10px;'></i> Add Member",
+                    "emailPlaceholder": "Type the e-mail of whom will be invited",
+                    "sentEmail": "An e-mail was sent to your invitee.",
+                    "resentInvite": "Invitation resent",
+                    "pendingInvite": "Pending Invitation",
+                    "userCannotRemoved": "User cannot be removed",
+                    "invitedOn": "Invited on",
+                    "confirmExclusion": "Confirm delete",
+                    "modalBody": "<p>Do you really want to delete {{email}} of your chatbot?</p>",
+                    "invitedRemoved": "Invitee deleted",
+                    "addTitle": "Add member",
+                    "editTitle": "Edit member",
+                    "botOwner": "Bot owner",
+                    "noMemberFound": "No member found =(",
+                    "addUserModal": {
+                        "title": "Add member",
+                        "subtitle": "Add and define permission to a new member of your team",
+                        "slider": {
+                            "visualize": "Visualize",
+                            "custom": "Custom",
+                            "edit": "Visualize and edit",
+                            "admin": "Admin"
+                        }
+                    }
+                },
+                "permissions": {
+                    "payments": {
+                        "title": "Integrations"
+                    },
+                    "iaProviders": {
+                        "title": "AI Providers"
+                    },
+                    "iaModel": {
+                        "title": "AI Model"
+                    },
+                    "iaEnhancement": {
+                        "title": "Enhancement"
+                    },
+                    "channels": {
+                        "title": "Channels"
+                    },
+                    "desk": {
+                        "title": "Help Desk"
+                    },
+                    "users": {
+                        "title": "Bot users"
+                    },
+                    "growth": {
+                        "title": "Growth"
+                    },
+                    "basicConfigurations": {
+                        "title": "Basic Configurations"
+                    },
+                    "connectionInformations": {
+                        "title": "Connection Informations"
+                    },
+                    "resources": {
+                        "title": "Resources"
+                    },
+                    "team": {
+                        "title": "Team"
+                    },
+                    "logMessages": {
+                        "title": "Log Messages"
+                    },
+                    "builder": {
+                        "title": "Builder"
+                    },
+                    "analysis": {
+                        "title": "Analysis"
+                    },
+                    "ai": {
+                        "title": "Artificial Inteligence",
+                        "team": {
+                            "title": "Team"
+                        },
+                        "logMessages": {
+                            "title": "Log Messages"
+                        },
+                        "builder": {
+                            "title": "Builder"
+                        },
+                        "analysis": {
+                            "title": "Analysis"
+                        }
+                    },
+                    "configurations": {
+                        "title": "Settings"
+                    },
+                    "permission": "Permission",
+                    "none": "No permissions",
+                    "read": "Read",
+                    "readWrite": "Read and write",
+                    "features": "Features",
+                    "permissions": "Permissions"
+                },
+                "integrations": {
+                    "title": "Integrations",
+                    "tools": "Analytics tools",
+                    "description": "Connect your chatbot with more than 200 online tools",
+                    "chatbase": {
+                        "title": "Chatbase",
+                        "description": "Send chatbot data to your Chatbase account",
+                        "page": {
+                            "apiKey": "Bot's API Key",
+                            "instructions": {
+                                "insertUrl": "<p>To activate this integration, go to your Chatbase account, and copy your bot's API Key which should be available: <ul><li>When crating a new bot</li><li>In your \"My Bots\" page</li></ul></p>",
+                                "description": "<p>After copying it, go to your bot's integration configurations page, and copy your API Key in the \"Chatbase Bot API Key\" field.<p>Finally, click the <strong>Activate</strong> switch to enble this integration.</p>",
+                                "note": "<p><strong>Note:</strong> Chatbase may have a 15 minute delay to update your bot's information.</p>"
+                            }
+                        }
+                    },
+                    "webhook": {
+                        "title": "Webhook",
+                        "description": "Send chatbot data to your application",
+                        "page": {
+                            "configurations": "Configurations",
+                            "howToConnect": "How to Connect",
+                            "integrationUrl": "Analytics integration url",
+                            "documentation": {
+                                "insertUrl": "<p>Insert an URL of some application to BLiP send all analytics informations of your chatbot</p><p><b>Example: </b>https://requestb.in/14rxsmm1</p>",
+                                "description": "<p>This trigger fires every time your bot send or receives messages to notify your application about this event.</p><p><b>Note:</b> This URL must be prepared to receive a <b>POST HTTP</b> request with a <a target='_blank' href='https://docs.blip.ai/#messages'>Message</a> object on <i>Body</i></p>",
+                                "sample": "<p><b>Example:</b> Request when your chatbot receives a message from Facebook user:</p>"
+                            }
+                        }
+                    },
+                    "rdstation": {
+                        "title": "RDStation",
+                        "description": "Send chatbot data to your RDStation account",
+                        "page": {
+                            "publicToken": "RDStation's public token",
+                            "configurations": "Configurations",
+                            "howToConnect": "How to Connect",
+                            "documentation": {
+                                "insertUrl": "<p>To activate this integration, go to your RDStation account, and copy your Token which should be available here:</p><p><a target='_blank' href=\"https://app.rdstation.com.br/integracoes/tokens\">https://app.rdstation.com.br/integracoes/tokens</a>.</p><p>After copying it, go to your bot's integration configurations page, and copy your Token in the \"RDStation's Public Token\" field.<p>Finally, click the <b>Activate</b> switch to enble this integration.</p>",
+                                "description": "<p>In oder to create new lead conversions into your RDStation account, you must send a command of type <a target='_blank' href='https://docs.blip.ai/#event-analysis'>event-track</a>, with the fields <code>category: \"lead\"</code>, and <code>action: \"create\"</code>.</p><p>The command must have at least the following two fields as extras: <code>email</code> and <code>identificador</code>; if any of these parameters <b>were invalid/undefined</b>, the lead <b>will not be saved</b>.</p><p>There are other optional fields you can send to complement the lead's informaton, check out this <a target='_blank' href='https://ajuda.rdstation.com.br/hc/pt-br/articles/200310589--Integrar-sistema-pr%C3%B3prio-para-Cria%C3%A7%C3%A3o-de-Leads-no-RD-Station-API-'>link</a> for more infomation.</p>",
+                                "sample": "<p><b>Example:</b> HTTP Request made to save the lead:</p>"
+                            }
+                        }
+                    }
+                }
+            },
+            "list": {
+                "view": {
+                    "noneRegistered": "No chatbots registered",
+                    "chatbots": "Chatbots",
+                    "registeredChatbots": "Chatbots registered",
+                    "searchChatbots": "Search chatbots...",
+                    "chatbotNotFound": "No chatbot found with name"
+                }
+            }
+        }
+    },
+    "variables": {
+        "bucket": "Document stored at the bot's bucket. The '?' must be replaced by the document's ID saved in the bucket",
+        "config": "Global variables defined at the flow configuration where the '?' must be replaced by the desired value",
+        "contact": {
+            "name": "Contact's name",
+            "address": "Contact's adress",
+            "city": "Contact's city",
+            "email": "Contact's email",
+            "source": "Contact's channel",
+            "phoneNumber": "Contact's phone number",
+            "photoUri": "Contact's photo URI",
+            "cellPhoneNumber": "Contact's cellphone number",
+            "gender": "Contact's gender",
+            "timezone": "Contact's timezone relative to GMT",
+            "culture": "Contact's culture (in the IETF format)",
+            "extras": "A generic JSON to store tuples of strings (key, value) ",
+            "identity": "Contact's identity in the name@domain format",
+            "group": "Name of the group to which the contact is"
+        },
+        "calendar": {
+            "datetime": "Current GMT-0 date and time (in the yyyy-MM-ddTHH:mm:ssZ format)",
+            "date": "Current GMT-0 date (in the yyyy-MM-dd format)",
+            "day": "Current day of the month",
+            "month": "Current month",
+            "year": "Current year",
+            "time": "Current GMT-0 time (in the HH:mm format)",
+            "hour": "Current time",
+            "minute": "Current minute",
+            "second": "Current second",
+            "unixTimeMilliseconds": "Current date in the Unix timestamp format (milliseconds)",
+            "unixTime": "Current date in the Unix timestamp format",
+            "dayOfWeek": "Today's index in the week (where 0 is Sunday and 6 is Saturday)",
+            "tomorrow": {
+                "datetime": "Tomorrow's GMT-0 date and time (in the yyyy-MM-ddTHH:mm:ssZ format)",
+                "date": "Tomorrow's GMT-0 date (in the yyyy-MM-dd format)",
+                "day": "Tomorrow's day at the current month",
+                "month": "Tomorrow's current month",
+                "year": "Tomorrow's current month",
+                "time": "Tomorrow's current GMT-0 time (in the HH:mm format)",
+                "hour": "Tomorrow's current hour",
+                "minute": "Tomorrow's current minute",
+                "second": "Tomorrow's current second",
+                "unixTimeMilliseconds": "Tomorrow's date in the Unix timestamp format (milliseconds)",
+                "unixTime": "Tomorrow's date in the Unix timestamp format",
+                "dayOfWeek": "Tomorrow's index in the week (where 0 is Sunday and 6 is Saturday)"
+            },
+            "yesterday": {
+                "datetime": "Yesterday's GMT-0 date and time (in the yyyy-MM-ddTHH:mm:ssZ format)",
+                "date": "Yesterday's GMT-0 date (in the yyyy-MM-dd format)",
+                "day": "Yesterday's day number in the month",
+                "month": "Yesterday's month",
+                "year": "Yesterday's year",
+                "time": "Yesterday's current GMT-0 time (in the HH:mm format)",
+                "hour": "Yesterday's current hour",
+                "minute": "Yesterday's current minute",
+                "second": "Yesterday's current second",
+                "unixTimeMilliseconds": "Yesterday's date in the Unix timestamp format (milliseconds)",
+                "unixTime": "Yesterday's date in the Unix timestamp format",
+                "dayOfWeek": "Yesterday's index in the week (where 0 is Sunday and 6 is Saturday)"
+            }
+        },
+        "input": {
+            "content": "Content of message sent by user",
+            "entity": {
+                "id": "Identifier of the recognized entity (where ? must be replaced by the entity's name)",
+                "name": "Name of the recognized entity (where ? must be replaced by the entity's name)",
+                "value": "Value of the recognized entity (where ? must be replaced by the entity's name)"
+            },
+            "intent": {
+                "id": "Identifier of the recognized intent",
+                "name": "Name of the recognized intent",
+                "score": "Reliability linked to the recognized intent",
+                "answer": "One of the answers linked to the recognized intent"
+            },
+            "length": "Quantity of content itens inside message sent by user (only for Collections)",
+            "type": "Type of message sent by user",
+            "message": "The message received by the bot"
+        },
+        "random": {
+            "guid": "Unique alphanumeric identifier",
+            "string": "Randomized string",
+            "integer": "Randomized integer"
+        },
+        "state": {
+            "id": "Identifier of current block in the flow",
+            "name": "Name of current block in the flow",
+            "previous": {
+                "id": "Identifier of the previous block in the flow",
+                "name": "Name of the previous block in the flow"
+            }
+        }
+    }
+}

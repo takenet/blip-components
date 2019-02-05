@@ -1,0 +1,2326 @@
+{
+    "utils": {
+        "errorMsg": {
+            "1": "Ocorreu um erro ao carregar a página",
+            "2": "Ocorreu um erro ao alterar a página",
+            "3": "Ocorreu um erro ao carregar os dados",
+            "4": "Ocorreu um erro ao alterar os dados",
+            "5": "Erro ao ativar a conta",
+            "6": "Ocorreu um erro, por favor tente novamente",
+            "8": "Ocorreu um erro ao carregar as informações da conta",
+            "9": "Erro ao atualizar senha.",
+            "10": "Erro ao salvar as configurações",
+            "11": "Ocorreu um erro ao listar as contas. Tente novamente mais tarde",
+            "12": "Ocorreu um erro ao tentar excluir o chatbot",
+            "13": "Ocorreu um erro ao carregar este chatbot",
+            "14": "Ocorreu um erro ao publicar o chatbot",
+            "15": "Ocorreu um erro ao carregar as perguntas",
+            "16": "Ocorreu um erro ao atualizar a base de conhecimento",
+            "17": "Ocorreu um erro ao excluir um item da base de conhecimento",
+            "18": "Verifique se existe uma pergunta repetida",
+            "19": "Erro ao carregar o contexto",
+            "20": "Erro ao publicar o FAQ",
+            "21": "Ocorreu um erro ao carregar a base de conhecimento",
+            "22": "Ocorreu um algum erro ao carregar as perguntas não identificadas",
+            "23": "Erro ao iniciar treinamento",
+            "24": "Erro ao carregar as perguntas",
+            "25": "Erro ao associar pergunta a resposta",
+            "26": "Erro ao remover a pergunta",
+            "27": "Ocorreu um erro ao carregar a lista de atendentes",
+            "28": "Horários inválidos",
+            "30": "Senha atual incorreta",
+            "31": "E-mail inválido ou não existe",
+            "32": "Este e-mail não está cadastrado",
+            "33": "Token inválido para este e-mail",
+            "34": "Endereço de e-mail não verificado. Verifique até {{localExpirationDate}} e evite que a conta seja bloqueada.",
+            "35": "Dados indisponíveis",
+            "36": "Sua sessão expirou",
+            "37": "Login e/ou senha inválidos",
+            "38": "Destinatário não encontrado",
+            "39": "Não é possível salvar com itens de menu vazios",
+            "40": "Este campo é obrigatório",
+            "41": "O valor é muito curto",
+            "42": "O valor é muito longo",
+            "43": "Deve ser um e-mail válido",
+            "44": "Não é um valor válido",
+            "45": "Resolução inválida",
+            "46": "Formato inválido",
+            "47": "Ocorreu algum problema para salvar as alterações.",
+            "48": "A conta já se encontra em uso. Escolha outra e tente novamente",
+            "49": "Chave de acesso inválida. Verifique sua chave de acesso e tente novamente.",
+            "50": "Token inválido",
+            "51": "Erro ao carregar o contexto",
+            "52": "O FAQ ainda está em treinamento",
+            "53": "As suas crendenciais estão inválidas!",
+            "54": "Nenhuma pergunta não identificada",
+            "55": "pergunta(s) não identificada(s)",
+            "56": "As suas crendenciais estão inválidas",
+            "57": "Nenhum resultado encontrado",
+            "58": "Ocorreu algum erro ao carregar as perguntas não identificadas",
+            "59": "Nenhuma resposta escolhida",
+            "60": "Esta pergunta já foi inserida anteriormente",
+            "61": "Verifique se todos os campos estão preenchidos",
+            "62": "Verifique se existe alguma pergunta repetida",
+            "63": "Dados insuficientes",
+            "64": "Confira suas credenciais e tente novamente.",
+            "65": "Ocorreu algum problema ao salvar as alterações.",
+            "66": "Ocorreu algum problema",
+            "67": "Acesso não autorizado",
+            "68": "Ocorreu um erro ao carregar este chatbot",
+            "69": "Ocorreu um erro ao salvar o recurso. Por favor, tente novamente.",
+            "70": "Ocorreu um erro ao apagar o recurso. Por favor, tente novamente.",
+            "71": "Já existe um serviço com este nome",
+            "72": "Você não tem permissão para editar esse sub-bot",
+            "73": "É necessário ao menos um chatbot principal",
+            "74": "Você não tem permissões necessárias para esta ação",
+            "75": "Este e-mail não faz parte da equipe",
+            "76": "Você não pode alterar as próprias permissões",
+            "77": "Verifique se existe um item repetido",
+            "78": "Erro ao remover intenção",
+            "79": "Já existe uma intenção com esse nome",
+            "80": "A frase '{{question}}' já está cadastrada na intenção '{{intention}}'",
+            "81": "Erro ao salvar entidade",
+            "82": "Erro ao carregar entidade",
+            "83": "Erro ao remover entidade",
+            "84": "Já existe uma entidade com este nome",
+            "85": "Nenhum valor ou sinônimo desta entidade foi encontrado =(",
+            "86": "Por favor configure o seu provedor de inteligência artificial",
+            "87": "Ocorreu um erro na publicação",
+            "88": "Nenhuma intenção com perguntas foi encontrada",
+            "89": "Ocorreu um erro no treinamento",
+            "90": "Erro ao remover a frase",
+            "91": "Erro ao enviar feedback da análise",
+            "92": "Erro ao aprovar análise",
+            "93": "Erro ao excluir análise",
+            "94": "Erro ao carregar análises",
+            "95": "Favor definir outro provedor como padrão antes de desativar o provedor atual",
+            "96": "Erro no Watson: nome da intenção pode conter somente letras, underscore, hífen e pontos e não pode começar com \"sys\"",
+            "97": "Erro no Watson: o limite de workspaces do seu plano foi alcançado. Remova pelo menos 3 workspaces e tente novamente",
+            "98": "Erro no Watson: verifique suas configurações e tente novamente",
+            "99": "Período inválido",
+            "100": "Não encontramos resultados para o seu filtro",
+            "101": "O seu provedor de inteligência ainda não identificou sugestões para o seu chatbot.",
+            "102": "Erro ao carregar o fluxograma",
+            "103": "Erro ao salvar o fluxograma",
+            "104": "Não é possível deletar este estado",
+            "105": "Erro ao publicar o fluxo: Um ou mais blocos estão inválidos. Corrija os blocos marcados de vermelho e tente novamente.",
+            "106": "Erro atualizando o whitelist",
+            "107": "Erro ao publicar o fluxo",
+            "108": "Ação não permitida",
+            "109": "Esse já é o seu provedor principal",
+            "110": "Erro ao remover atendente{{plural}}",
+            "111": "Existe um loop no seu fluxo começando no bloco '{{state}}' que não requer entrada de usuário.<br/>Inclua uma ou mais entradas do usuário nos blocos ligados a este.",
+            "112": "Erro ao adicionar ou atualizar regra",
+            "113": "Erro ao excluir regra",
+            "114": "Não é possível publicar o fluxo enquanto o Builder estiver desativado. Ative-o nas configurações de conexão do seu chatbot.",
+            "115": "Erro ao fazer upload da imagem",
+            "116": "Verifique se todos os campos estão válidos",
+            "117": "Remova os caracteres especiais do nome da intenção",
+            "118": "Você não possui exemplos suficientes",
+            "119": "Você precisa de ativar a Tela Inicial antes de adicionar um Menu Persistente",
+            "120": "Você precisa de remover o Menu Persistente antes de desativar a Tela Inicial",
+            "121": "Número inválido de amostras",
+            "122": "O messenger está temporariamente indisponível para publicação de chatbots. <a target='_blank' href='https://messenger.fb.com/newsroom/messenger-platform-changes-in-development/'>Saiba mais</a>.",
+            "123": "Cabeçalho inválido! Adicione NAME e SAMPLE à suas respectivas colunas",
+            "124": "Cabeçalho inválido! Adicione NAME, VALUE e SYNONYMOUS à suas respectivas colunas",
+            "125": "Escolha pelo menos 1 equipe para o{{plural}} atendente{{plural}}",
+            "126": "Adicione pelo menos um valor à sua entidade",
+            "127": "Erro ao deletar relatório",
+            "128": "O nome da entidade tem mais de 30 caracteres",
+            "129": "Pelo menos um dos valores da entidade tem mais de 50 caracteres",
+            "130": "Pelo menos um dos sinônimos da entidade tem mais de 64 caracteres",
+            "131": "Treinamento em progresso no provedor de IA",
+            "132": "Conteúdos inválidos: Há respostas prontas com títulos repetidos",
+            "133": "Não é possível sair do bot no momento",
+            "134": "O nome da entidade é obrigatório",
+            "135": "O valor da entidade é obrigatório",
+            "136": "Erro ao adicionar atendente à equipe",
+            "137": "Erro ao enviar email",
+            "138": "<b>Ops! Você não terminou de configurar a conta...</b><br>Termine a configuração para ativar o canal WhatsApp",
+            "140": "Nome de host inválido",
+            "141": "Código de pais inválido",
+            "142": "Telefone inválido",
+            "143": "Insira uma mensagem de status",
+            "144": "Insira uma descrição",
+            "145": "PIN inválido",
+            "146": "Código de registro inválido",
+            "147": "Há alguma informação inválida em Dados Enterprise ou em Registro de número. Confira os dados e tente novamente!",
+            "148": "Erro ao carregar configurações",
+            "149": "Ops! O arquivo ultrapassou 5000 resultados e não pode ser baixado!",
+            "150": "Erro ao ativar canal",
+            "151": "Erro ao cadastrar PIN. Por favor, tente novamente",
+            "152": "Esse número possui verificação em duas etapas. Por favor, insira seu PIN.",
+            "153": "Por favor, insira um PIN para sua conta.",
+            "154": "As informações do seu perfil ainda estão sendo carregadas. Por favor, recarregue a página em alguns segundos.",
+            "155": "Houve um problema ao enviar a planilha por e-mail.",
+            "156": "Erro ao transferir ticket #{{sequentialId}}. Por favor, tente novamente",
+            "157": "Número de atendimentos não pode ser menor que 0.",
+            "158": "O ticket #{{sequentialId}} já foi transferido ou finalizado",
+            "159": "O valor é muito pequeno",
+            "160": "O valor é muito grande",
+            "161": "Erro ao atualizar atendente{{plural}}",
+            "162": "Tags devem ter menos de 30 caracteres.",
+            "163": "Há uma tag de equipe pendente. Complete ou apague-a.",
+            "164": "Essa lista de distribuição já existe. Escolha outro nome",
+            "165": "Parece que seu arquivo não foi salvo no formato UTF-8, portanto, alguns caracteres especiais (ex.: ç, ã, etc.) não puderam ser interpretados. Configure seu editor de texto para salvar no formato UTF-8, salve seu arquivo nesse formato, e tente importar seu arquivo novamente.",
+            "166": "Erro ao finalizar ticket #{{sequentialId}}. Por favor, tente novamente",
+            "167": "Número de atendimentos não pode ser nulo.",
+            "168": "URL inválida. Ela deve seguir o padrão exemplificado.",
+            "169": "<strong>Ops! Você não terminou de configurar a conta...</strong><br>Termine a configuração para ativar o canal Infobip SMS"
+        },
+        "successMsg": {
+            "1": "Dados alterados com sucesso!",
+            "2": "Conta ativada!",
+            "3": "Senha alterada com sucesso!",
+            "4": "Senha cadastrada com sucesso!",
+            "5": "Mensagem apagada com sucesso!",
+            "6": "Mensagem agendada com sucesso!",
+            "7": "Atualizado com sucesso!",
+            "8": "Configurações salvas!",
+            "9": "FAQ publicado com sucesso!",
+            "10": "Treinamento iniciado!",
+            "11": "Pergunta excluída!",
+            "12": "Recurso salvo com sucesso!",
+            "13": "Recurso apagado com sucesso!",
+            "14": "Contato atualizado!",
+            "15": "Intenção removida",
+            "16": "O registro foi salvo!",
+            "17": "A entidade foi salva!",
+            "18": "Entidade removida!",
+            "19": "A intenção foi salva!",
+            "20": "Publicado com sucesso!",
+            "21": "Treinado com sucesso!",
+            "22": "Frase removida!",
+            "23": "Análise submetida para avaliação!",
+            "24": "Análise aprovada!",
+            "25": "Análise excluída!",
+            "26": "Item classificado!",
+            "27": "Whitelist de domínios atualizada!",
+            "28": "Fluxo publicado!",
+            "29": "Atendente{{plural}} removido{{plural}} com sucesso!",
+            "30": "Copiado para a área de transferência!",
+            "31": "Regra de encaminhamento excluída!",
+            "32": "Relatório removido com sucesso!",
+            "33": "Valor removido!",
+            "34": "Permissões do usuário editadas com sucesso!",
+            "35": "Respostas prontas salvas com sucesso!",
+            "36": "Você saiu do chatbot",
+            "37": "Atendente adicionado com sucesso!",
+            "38": "Atendente{{plural}} atualizado{{plural}} com sucesso!",
+            "39": "Email enviado com sucesso!",
+            "40": "<b>Sucesso!</b><br>Você está conectado ao WhatsApp.",
+            "41": "Perfil atualizado com sucesso!",
+            "42": "Atendimento transferido para a equipe {{team}}. Numero de ticket gerado: {{sequentialId}}",
+            "43": "Ticket {{sequentialId}} finalizado com sucesso.",
+            "44": "<b>Sucesso!</b><br>Você está conectado ao Infobip SMS"
+        },
+        "forms": {
+            "oops": "Ops!",
+            "fullName": "Nome completo",
+            "name": "Nome",
+            "displayName": "Nome de exibição",
+            "itemName": "Nome do item",
+            "removeItem": "Remover item",
+            "tellYourName": "Informe seu nome",
+            "phoneNumber": "Telefone",
+            "countryCode": "Código de país",
+            "identity": "ID de usuário",
+            "city": "Cidade",
+            "yourNumber": "Seu número",
+            "writeContactPhone": "Escreva o seu telefone de contato",
+            "address": "Endereço",
+            "smtpServer": "Servidor SMTP",
+            "smtpPort": "Porta SMTP",
+            "imapServer": "Servidor IMAP",
+            "hostname": "Nome do host",
+            "imapPort": "Porta IMAP",
+            "enableTls": "Habilitar criptografia (TLS)",
+            "writeOrganization": "Escreva o nome da empresa responsável",
+            "email": "E-mail",
+            "userName": "Nome de usuário",
+            "user": "Usuário",
+            "password": "Senha",
+            "createAccount": "Cadastre-se grátis",
+            "completeRegister": "Completar cadastro",
+            "forgotPass": "Esqueceu sua senha?",
+            "writeMessage": "Escreva a sua mensagem",
+            "search": "Pesquisar",
+            "searchName": "Pesquisar por nome",
+            "searching": "Pesquisando",
+            "send": "Enviar",
+            "add": "Adicionar",
+            "addplus": "+ Adicionar",
+            "save": "Salvar",
+            "saveAdvance": "Salvar e avançar",
+            "advance": "Avançar",
+            "getCode": "Receber código e avançar",
+            "enter": "Entrar",
+            "create": "Criar",
+            "finish": "Finalizar",
+            "complete": "Concluir",
+            "publish": "Publicar",
+            "select": "Selecione",
+            "confirm": "Confirmar",
+            "cancel": "Cancelar",
+            "continue": "Continuar",
+            "test": "Testar",
+            "next": "Avançar",
+            "exclude": "Excluir",
+            "back": "Voltar",
+            "exit": "Sair",
+            "edit": "Editar",
+            "delete": "Excluir",
+            "schedule": "Agendar",
+            "remove": "Remover",
+            "duplicate": "Duplicar",
+            "copyNodeId": "Copiar Id",
+            "activate": "Ativar",
+            "activated": "Ativado",
+            "disabled": "Desativado",
+            "recover": "Recuperar",
+            "chatbotName": "Nome do chatbot",
+            "routerName": "Nome do router",
+            "description": "Descrição",
+            "chatbotDescription": "Descrição do chatbot",
+            "avatarImage": "Imagem do avatar",
+            "dropFile": "Arraste e solte seu arquivo ou",
+            "dropFile2": "Solte seu arquivo aqui",
+            "basicInformation": "Informações básicas",
+            "serviceName": "Nome do serviço",
+            "message": "Mensagem",
+            "insert": "Inserir",
+            "moreOptions": "Mais opções",
+            "agree": "Concordar",
+            "disagree": "Discordar",
+            "cleanFilters": "Limpar filtros",
+            "apply": "Aplicar",
+            "close": "Fechar",
+            "connect": "Conectar",
+            "connected": "Conectado",
+            "createReport": "Criar relatório",
+            "newConfiguration": "Nova Configuração",
+            "filter": "Filtrar por:",
+            "team": "Equipe",
+            "extras": "Extras",
+            "import": "Importar",
+            "export": "Exportar",
+            "download": "Baixar",
+            "refresh": "Atualizar",
+            "reset": "Resetar",
+            "member": "Membro",
+            "gender": "Gênero",
+            "choose": "Escolher",
+            "port": "Porta",
+            "request": "Solicitar",
+            "done": "Feito!",
+            "transfer": "Transferir",
+            "closeTicket": "Finalizar"
+        },
+        "misc": {
+            "to": "para",
+            "to2": "De:",
+            "until": "Até:",
+            "copyCode": "Copiar código",
+            "optional": "Opcional",
+            "processing": "Processando...",
+            "channelAvailable": "Disponível no canal",
+            "list": "Lista",
+            "line": "Linha",
+            "pie": "Pizza",
+            "bars": "Barra",
+            "column": "Coluna",
+            "counter": "Contador",
+            "table": "Tabela",
+            "chart": "Gráfico",
+            "yes": "Sim",
+            "no": "Não",
+            "ok": "OK",
+            "or": "Ou",
+            "menu": "Menu",
+            "text": "Texto",
+            "link": "Link",
+            "move": "Mover",
+            "linkRecomendation": "Insira a url com o http://. Ex.: http://blip.ai",
+            "termsOfService": "Termos de Serviço",
+            "privacyPolicy": "Política de Privacidade",
+            "help": "Ajuda",
+            "overview": "Visão Geral",
+            "configs": "Configuração",
+            "docs": "Documentação",
+            "varLibrary": "Biblioteca de variáveis",
+            "userVariables": "Minhas variáveis",
+            "print": "print",
+            "others": "outros",
+            "period": "Período",
+            "periodDelimiter": "à",
+            "datePickerPlacehold": "Escolha a data",
+            "seconds": "segundos",
+            "gender": "Gênero",
+            "male": "Masculino",
+            "female": "Feminino",
+            "notSupplied": "Não informado",
+            "messages": "Mensagens",
+            "messagesReceived": "Mensagens recebidas",
+            "messagesSent": "Mensagens enviadas",
+            "numberAccumulated": "Número acumulado desde a criação do bot",
+            "date": "Data",
+            "createChatbot": "Criar chatbot",
+            "hour": "Horário",
+            "emailPlaceholder": "Ex: nome@email.com",
+            "hostnamePlaceholder": "Ex: nomedohost.com",
+            "portPlaceholder": "Ex: 8081",
+            "userNamePlaceholder": "Insira seu nome de usuário",
+            "passwordPlaceholder": "Insira sua senha",
+            "start": "Início",
+            "end": "Fim",
+            "close": "Fechar",
+            "category": "Categoria",
+            "domain": "Domínio",
+            "key": "Chave",
+            "value": "Valor",
+            "selectAll": "Selecionar todos",
+            "warning": "Cuidado",
+            "noSearchResults": "Nenhum resultado encontrado",
+            "savingMsg": "Salvando...",
+            "savedMsg": "Salvo",
+            "variable": "Variável",
+            "search": "Pesquisar",
+            "genderType": {
+                "notInformed": "<b>Gênero:</b> Não Informado",
+                "male": "<b>Gênero:</b> Masculino",
+                "female": "<b>Gênero:</b> Feminino"
+            },
+            "filterBy": "Filtrar por",
+            "visualization": "Visualização",
+            "untitled": "Sem título",
+            "rename": "Renomear",
+            "day": "Dia",
+            "days": "Dias",
+            "helperConfirm": "OK. Entendi",
+            "users": "Usuários",
+            "publishedAt": "Publicado em",
+            "createdAt": "Criado em",
+            "seeAll": "Ver todos",
+            "language": "Idioma",
+            "culture": "Cultura",
+            "leaveChatbot": "Sair do chatbot",
+            "actions": "Ações",
+            "image": "Imagem",
+            "addButtonDefault": "+ Adicionar informações extras",
+            "property": "Propriedade",
+            "odata": {
+                "equals": "Igual a",
+                "notEqual": "Diferente de",
+                "contains": "Contém",
+                "notContain": "Não contém",
+                "startsWith": "Começa com",
+                "endsWith": "Termina com",
+                "greaterThan": "Maior que",
+                "lessThan": "Menor que",
+                "greaterThanOrEquals": "Maior que ou igual a",
+                "lessThanOrEquals": "Menor que ou igual a"
+            },
+            "discover": "Descobrir",
+            "new": "Novo!",
+            "copyText": "Copiar",
+            "copiedText": "Copiado!",
+            "learnMore": "Saiba mais!",
+            "expandTooltip": "Expandir"
+        },
+        "locale": {
+            "days": {
+                "sun": "dom",
+                "mon": "seg",
+                "tues": "ter",
+                "wed": "qua",
+                "thurs": "qui",
+                "fri": "sex",
+                "sat": "sáb"
+            },
+            "fullDays": {
+                "sun": "Sunday",
+                "mon": "Monday",
+                "tues": "Tuesday",
+                "wed": "Wednesday",
+                "thurs": "Thrursday",
+                "fri": "Friday",
+                "sat": "Saturday"
+            },
+            "months": {
+                "jan": "Jan",
+                "feb": "Fev",
+                "mar": "Mar",
+                "apr": "Abr",
+                "may": "Maio",
+                "jun": "Jun",
+                "jul": "Jul",
+                "aug": "Ago",
+                "sep": "Set",
+                "oct": "Out",
+                "nov": "Nov",
+                "dec": "Dez"
+            },
+            "fullMonths": {
+                "jan": "Janeiro",
+                "feb": "Fevereiro",
+                "mar": "Março",
+                "apr": "Abril",
+                "may": "Maio",
+                "jun": "Junho",
+                "jul": "Julho",
+                "aug": "Agosto",
+                "sep": "Setembro",
+                "oct": "Outubro",
+                "nov": "Novembro",
+                "dec": "Dezembro"
+            }
+        }
+    },
+    "terms": {
+        "heading1": "Termos de uso e privacidade do BLiP",
+        "heading2": "Bem vindo ao BLiP. Somos uma plataforma de propriedade da TAKE que proporciona a disponibilização de canais de mensageria (chatbots) dentre outras atividades, e o presente termo governa o seu uso. Conforme consta neste Termo, os dizeres \"plataforma BLiP\", ou \"Solução\" significa os recursos proporcionados pelo BLiP, bem como todas as funcionalidades associados ao uso da plataforma.",
+        "heading3": "ACEITAÇÃO DOS TERMOS",
+        "heading4": "ALTERAÇÕES AOS TERMOS DE USO",
+        "heading5": "PRIVACIDADE",
+        "heading6": "PREFERÊNCIAS DE COMUNICAÇÃO",
+        "heading7": "PROPRIEDADE INTELECTUAL DO BLiP",
+        "heading8": "COUNTEÚDO DE USUÁRIOS",
+        "heading9": "USOS ACEITÁVEIS",
+        "heading10": "GERENCIAMENTO DA CONTA",
+        "heading11": "SUSPENSÃO E ENCERRAMENTO DO SERVIÇO",
+        "heading12": "ALTERAÇÕES NO SERVIÇO",
+        "heading13": "RENÚNCIAS E LIMITAÇÕES DE RESPONSABILIDADE",
+        "heading14": "DISPOSIÇÕES ADICIONAIS",
+        "subheading1": "Cadastro",
+        "subheading2": "Conteúdo de Usuários",
+        "subheading3": "Análise de Conteúdo",
+        "subheading4": "Observância Legal",
+        "subheading5": "Suas Responsabilidades",
+        "subheading6": "Mantenha sua Senha em Segurança",
+        "subheading7": "Faça back-ups",
+        "subheading8": "Pela BLiP",
+        "subheading9": "Medidas Adicionais",
+        "subheading10": "Renúncias",
+        "subheading11": "Exclusão de Responsabilidade",
+        "lastModified": "Última modificação: 21 de setembro de 2018",
+        "p1": "Ao clicar no botão que indica a sua aceitação, você declara que está de acordo com este Termo e com o uso da plataforma. Se você utilizar a plataforma de uma organização, você concorda com este Termo em nome dessa organização e declara que tem autoridade para fazê-lo. Nesse caso, os pronomes \"você\" e \"seu\" se referirão à citada organização. <strong>Você também declara, neste ato, possuir os necessários poderes para assumir as declarações previstas neste Termo.</strong>",
+        "p2": "O BLiP pode alterar este Termo a qualquer momento seja para refletir alterações da legislação aplicável ou atualizações do serviço, ou para incorporar novo serviço ou funcionalidades. Quaisquer alterações serão inseridas no local em que tais termos aparecerem. Se você não concordar com alguma alteração feita neste Termo, deverá deixar de usá-lo. Ao continuar utilizando a plataforma, você expressa a sua concordância em vincular-se aos termos atualizados.",
+        "p3": "Durante o uso da plataforma, você poderá ser solicitado a fornecer dados pessoais, entretanto antes de iniciar o uso da plataforma você será solicitado a declarar que concorda em fornecer tais dados, e também com a nossa Política de Privacidade e com o tratamento que daremos às suas informações.<br>A nossa política de retenção de dados passa por constantes implementações visando atender as disposições da legislação brasileira de proteção de dados, inclusive a Lei 12.965/14 (Marco Civil da Internet). Os dados pessoais são coletados para possibilitar a utilização do BLiP e direcionar melhorias e evoluções na plataforma, bem como para realizar comunicações autorizadas pelo titular dos dados sobre informações da plataforma, e não são compartilhados com terceiros.",
+        "p4": "Ao usar o BLiP, você consente em receber comunicações eletrônicas relacionadas à sua conta. Essas comunicações podem envolver o envio de emails ao endereço de email fornecido na inscrição ou o envio de comunicações sobre o BLiP na página \"Minha Conta\" e incluem notificações sobre a sua conta (por exemplo, autorizações de pagamento, mudanças de senha ou forma de pagamento, emails de confirmação e outras informações sobre o andamento de projetos de chatbots) e são parte do seu relacionamento com o BLiP. Você concorda que quaisquer avisos, consentimentos, divulgações ou outras comunicações enviadas pelo BLiP a você eletronicamente satisfazem os requisitos de comunicações legais. Você deve manter cópias físicas ou eletrônicas das comunicações eletrônicas. Você também concorda em receber outras comunicações, incluindo comunicados sobre novos recursos, ofertas especiais, anúncios promocionais e pesquisas de satisfação por email ou outros métodos. Se você desejar não mais receber comunicações, você poderá se descadastrar no link existente nos e-mails enviados a você pelo BLiP.",
+        "p5": "Nem este Termo nem o uso da plataforma transfere a você a propriedade intelectual da plataforma ou do conteúdo que você acessa através do serviço (além do seu Conteúdo). Este Termo não lhe outorga nenhum direito de usar as marcas registradas ou outros elementos distintivos do BLiP. O uso indevido e desautorizado das marcas registradas ou outros elementos distintivos do BLiP pode acarretar na suspensão ou encerramento da sua utilização do site ou do serviço e gera o dever de indenizar a TAKE por danos morais e por perdas.",
+        "p6": "Você declara e garante que todas as informações disponibilizadas para o cadastro e utilização do serviço são verdadeiras, exatas e completas, obrigando-se a comunicar ao BLiP qualquer alteração em tais dados, em até 24 (vinte e quatro) horas da efetivação das alterações.",
+        "p7": "Você é responsável por seu próprio conteúdo e deve garantir que detém todos os direitos e autorizações necessários para utilizar o Conteúdo em relação à plataforma. A TAKE nem o BLiP são responsáveis por nenhuma medida que você venha a adotar a respeito do seu Conteúdo, incluindo o seu compartilhamento público. Não use nenhum conteúdo na plataforma a menos que tenha obtido a prévia autorização do proprietário desse conteúdo ou, de outra forma, seja autorizado por lei a fazê-lo. Não permitimos que alguns conteúdos sejam abordados na plataforma. Ao utilizar o nosso serviço, você concorda com a nossa Política de Conteúdo.",
+        "p8": "Você reconhece que, para garantir a observância das obrigações legais, o BLiP pode precisar analisar determinados conteúdos submetidos ao serviço para determinar se são ilegais ou infringem este Termo (como no caso de nos relatarem algum conteúdo ilegal). Podemos também alterar, impedir o acesso, excluir ou nos recusarmos a exibir conteúdo que acreditarmos infringir a lei ou este Termo. Sem prejuízo do exposto, o BLiP não tem, de outra forma, obrigação de monitorar ou analisar qualquer conteúdo submetido ao serviço.",
+        "p9": "Você deve usar o serviço exclusivamente em observância à lei aplicável e apenas nos termos por ela permitidos.",
+        "p10": "Você é responsável por sua conduta, seu Conteúdo e suas comunicações com os outros enquanto usa o serviço. Ao utilizar o serviço, você deve cumprir com os seguintes requisitos:<br>(a) Você não pode fazer mal uso de nosso serviço, interferindo em sua operação normal ou tentando acessá-lo por outro método que não seja pelas interfaces e instruções que fornecemos;<br>(b) Você não pode se esquivar de qualquer limitação imposta à sua conta pelo BLiP (como abrir uma nova conta para conduzir uma pesquisa que tenhamos encerrado por violação do Termo);<br>(c) Você não pode investigar, escanear ou testar a vulnerabilidade de nenhum sistema ou rede do BLiP;<br>(d) Você não pode realizar engenharia reversa do serviço ou tentar fazer isto;<br>(e) Você não pode transmitir nenhum vírus, malware ou outros tipos de software ilícitos, nem links a esse tipo de software, através do serviço;<br>(f) Você não pode usar o serviço para infringir os direitos de propriedade intelectual da TAKE, do BLIP, ou de terceiro, tampouco para realizar atividades ilícitas.",
+        "p11": "Você deve criar uma conta para o uso do BLiP. Você é responsável por manter sua senha em segurança, assim como quaisquer outras credenciais usadas para acessar essa conta. <b>Você, e não o BLiP, é responsável por qualquer atividade realizada em sua conta (que não sejam as atividades pelas quais o BLiP for diretamente responsável)</b> quer você tenha ou não autorizado essas atividades. Se você ficar sabendo de qualquer acesso não autorizado à sua conta, deverá notificá-lo imediatamente ao BLiP. As contas não podem ser compartilhadas, e cada conta deve ser usada por apenas pela pessoa autorizada.",
+        "p12": "Você é responsável por manter, proteger e fazer backups de seu Conteúdo. O BLiP não será responsável por nenhuma falha no armazenamento, pela perda ou corrupção do seu Conteúdo.",
+        "p13": "O BLiP pode limitar, suspender ou deixar de lhe prestar o serviço se você não cumprir com este Termo ou se usar o serviço de forma a gerar uma responsabilidade legal. A TAKE ou o BLiP também poderá suspender a prestação do serviço se houver a suspeita de má conduta adotada por você. Se suspendermos ou encerrarmos o serviço prestado a você, nos esforçaremos para notificar-lhe antecipadamente para que você possa exportar uma cópia de seu Conteúdo do serviço.",
+        "p14": "Se houver infração a este Termo de forma contínua e ofensiva, o BLiP poderá adotar medidas para impedir que você continue utilizando o serviço, bloqueando, inclusive, seu endereço IP.",
+        "p15": "O BLiP realiza constantes alterações e melhorias no serviço. Podemos adicionar, alterar ou remover a funcionalidade do serviço a qualquer momento sem prévia notificação. O BLiP também pode limitar, suspender ou interromper o serviço a seu exclusivo critério. Caso o BLiP interrompa o serviço, lhe enviaremos uma notificação com uma antecedência razoável para permitir que você exporte uma cópia do seu Conteúdo do serviço.",
+        "p16": "Embora a plataforma esteja sempre online, é possível que haja indisponibilidade periódica por vários motivos. COM EXCEÇÃO DO PREVISTO EXPRESSAMENTE NESTE TERMO E NA MEDIDA DO PERMITIDO PELA LEI APLICÁVEL, O SERVIÇO É PRESTADO \"TAL COMO SE APRESENTA\", E NEM O BLiP NEM A TAKE NÃO PRESTAM NENHUMA GARANTIA DE NENHUM TIPO, SEJA ELA EXPRESSA, IMPLÍCITA OU ESTATUTÁRIA, INCLUSIVE DE COMERCIALIBILIDADE, ADEQUAÇÃO PARA UM FIM ESPECÍFICO E DE NÃO INFRAÇÃO, E RELATIVA À DISPONIBILIDADE, CONFIABILIDADE OU PRECISÃO DO SERVIÇO.",
+        "p17": "NA MEDIDA DO PERMITIDO PELA LEI APLICÁVEL, O BLiP, SEUS EXECUTIVOS, EMPREGADOS, AGENTES, FORNECEDORES E LICENCIADORES NÃO SERÃO RESPONSÁVEIS POR QUAISQUER DANOS INDIRETOS, EMERGENCIAIS, ESPECIAIS, INCIDENTAIS, PUNITIVOS OU EXEMPLARES DE QUALQUER TIPO, INCLUINDO DANOS POR LUCROS CESSANTES, PERDA DE USO E PERDA DE DADOS, RESULTANTES DE OU RELACIONADOS AO SERVIÇO E ESTE TERMO, SEJAM TAIS DANOS BASEADOS EM CONTRATO, ATO ILÍCITO, RESPONSABILIDADE OBJETIVA OU QUALQUER OUTRA TEORIA LEGAL, MESMO QUE O BLiP TENHA SIDO ADVERTIDO DA POSSIBILIDADE DOS REFERIDOS DANOS E MESMO QUE UM RECURSO NÃO CUMPRA COM SEU PROPÓSITO ESSENCIAL.",
+        "p18": "<b>Acordo Integral.</b> Este Termo (incluindo eventuais Termos Adicionais) constitui o acordo integral entre você e o BLiP e sobrepõe-se a quaisquer outros acordos, termos e condições prévios ou contemporâneos, escritos ou orais, relativos a seu objeto. Quaisquer termos e condições que constarem de um pedido de compra ou documento semelhante emitido por você não são aplicáveis ao serviço, não prevalecem sobre este Termo, não fazem parte dele e são nulos.",
+        "p19": "<b>Partes Contratantes Independentes.</b> O relacionamento entre você e a TAKE (proprietária do BLiP) é o de partes contratantes independentes, e não de sócios legais, funcionários ou agentes da outra parte.",
+        "p20": "<b>Ausência de Renúncia.</b> O fato de uma parte deixar de executar uma disposição prevista neste Termo ou de demorar a fazê-lo não será interpretado como uma renúncia, desta parte, a seu direito de fazê-lo posteriormente.",
+        "p21": "<b>Prevalência.</b> Se surgir qualquer conflito, os Termos Adicionais prevalecem sobre este Termo em relação ao serviço aos quais os Termos Adicionais sejam aplicáveis.",
+        "p22": "<b>Individualidade.</b> Se qualquer disposição deste Termo for considerada inexequível por um tribunal de jurisdição competente, a mencionada disposição deverá ser considerada individualmente, devendo as demais disposições permanecer em pleno vigor e efeito.",
+        "p23": "<b>Foro:</b> Fica eleito pelas PARTES, com renúncia expressa de qualquer outro, por mais privilegiado que seja, o foro de Belo Horizonte/MG, como o único competente para dirimir quaisquer dúvidas ou controvérsia oriundas deste Termo."
+    },
+    "modules": {
+        "navbar": {
+            "chatbots": "Chatbots",
+            "myAccount": "Minha conta",
+            "docs": "API Reference",
+            "forum": "Forum",
+            "blog": "Blog",
+            "helpCenter": "Help Center",
+            "logout": "Sair",
+            "login": "Login",
+            "createAccount": "Criar conta"
+        },
+        "analytics": {
+            "analyticsChart": {
+                "selectContext": "Selecione um contexto...",
+                "displayType": "Tipo de exibição",
+                "newChart": "Novo gráfico"
+            },
+            "userDimension": {
+                "users": "Usuários",
+                "allUsers": "Todos os usuários",
+                "activeUsers": "Usuários Ativos",
+                "recurrentUsers": "Usuários recorrentes",
+                "addFilters": "Adicionar filtros"
+            },
+            "eventDimenstion": {
+                "category": "Categoria",
+                "action": "Ação"
+            },
+            "dimensionFilter": {
+                "condition": "Condição",
+                "value": "Valor"
+            },
+            "grouping": {
+                "total": "Total",
+                "action": "Ação",
+                "eventExtra": "Extra do evento",
+                "userExtra": "Extra do usuário",
+                "userProperty": "Propriedade do usuário",
+                "extra": "Extra",
+                "type": "Tipo"
+            }
+        },
+        "docs": {
+            "helpUs": "Ajude a melhorar este documento no",
+            "home": "Início",
+            "concepts": "Conceitos",
+            "address": "Endereçamento",
+            "messages": "Mensagens",
+            "notifications": "Notificações",
+            "commands": "Comandos",
+            "contentTypes": "Tipos de conteúdo",
+            "text": "Texto",
+            "chatState": "Estado da conversa",
+            "mediaLink": "Link de mídia",
+            "webLink": "Link web",
+            "menu": "Menu",
+            "mediaMenu": "Menu multimídia",
+            "collection": "Coleção",
+            "list": "Lista",
+            "container": "Container",
+            "localization": "Localização",
+            "paymentRequest": "Solicitação de pagamento",
+            "paymentStatus": "Status do pagamento",
+            "paymentReceipt": "Recibo do pagamento",
+            "userInput": "Entrada do usuário",
+            "confidentialInformation": "Informação confidencial",
+            "resource": "Recurso",
+            "redirect": "Redirecionamento",
+            "nativeContent": "Conteúdo nativo",
+            "channels": "Canais",
+            "payments": "Pagamentos",
+            "extensions": "Extensões",
+            "delegation": "Delegação",
+            "scheduler": "Agendador",
+            "broadcast": "Envio em massa",
+            "bucket": "Armazenamento",
+            "directory": "Diretório",
+            "eventAnalysis": "Análise de eventos",
+            "chatHistory": "Histórico de conversas",
+            "chatbotProfile": "Perfil do chatbot",
+            "resources": "Recursos",
+            "contacts": "Contatos",
+            "tunnel": "Túnel",
+            "artificialIntelligence": "Inteligência artificial",
+            "templates": "Modelos",
+            "operator": "Atendimento manual",
+            "installation": "Instalação",
+            "migrating": "Migração",
+            "configuration": "Configuração",
+            "receive": "Receber",
+            "send": "Enviar",
+            "messageTypes": "Tipos de mensagem",
+            "attendanceTransfer": "Transferência de atendimento",
+            "executing": "Executando",
+            "hosting": "Hospedagem",
+            "navigationTutorial": "Tutorial: Navegação",
+            "examples": "Exemplos",
+            "instantiatingClient": "Instanciando o cliente"
+        },
+        "login": {
+            "greeting": "Bem-vindo :)",
+            "greetingMorning": "Bom dia :)",
+            "greetingAfternoon": "Boa tarde :)",
+            "greetingEvening": "Boa noite :)",
+            "greetingDefault": "Olá :)",
+            "doLogin": "Para começar, faça o login de sua conta."
+        },
+        "message": {
+            "confidentialMessage": "Mensagem confidencial",
+            "messageScheduler": {
+                "writeMessage": "Escreva sua mensagem...",
+                "sendDate": "Data do envio",
+                "sendHour": "Hora do envio",
+                "destination": "Lista de distribuição"
+            }
+        },
+        "ui": {
+            "uploadButton": {
+                "title": "Definir imagem",
+                "alt": "Imagem"
+            },
+            "filterBy": {
+                "filterBy": "Filtrar por",
+                "channels": "Canais"
+            }
+        },
+        "templates": {
+            "attendance": {
+                "title": "Atendimento manual",
+                "description": "Responda seus usuários através de um atendente humano"
+            },
+            "faq": {
+                "title": "FAQ",
+                "description": "Crie um FAQ para responder dúvidas dos seus usuários automaticamente"
+            },
+            "faq2": {
+                "title": "FAQ"
+            },
+            "sdk": {
+                "title": "SDK"
+            },
+            "undefined": {
+                "title": "SDK"
+            },
+            "builder": {
+                "title": "Builder",
+                "description": "Crie seu bot visualmente de forma customizada"
+            },
+            "master": {
+                "title": "Roteador"
+            },
+            "webhook": {
+                "title": "Webhook"
+            }
+        },
+        "marketplace": {
+            "test": {
+                "title": "Testar template"
+            },
+            "customerService": {
+                "title": "Atendimento manual",
+                "description": "Responda seus usuários através de um atendente humano",
+                "details": {
+                    "title": "Bot de atendimento humano",
+                    "description": "Com o bot de atendimento humano é possível responder as dúvidas de qualquer cliente utilizando a ferramenta BLiP Desk.<br><br> O bot analisa horário de funcionamento, disponibilidade dos atendentes e ainda possui relatórios para analisar a qualidade de cada atendimento."
+                }
+            },
+            "delivery": {
+                "title": "Entrega de Pizza",
+                "description": "Exemplo de atendimento para uma pizzaria"
+            }
+        },
+        "application": {
+            "create": {
+                "title": "Criar chatbot",
+                "chooseTemplate": "Selecione o tipo do seu chatbot",
+                "getStarted": "Começar",
+                "provideAName": "Dê um nome ao seu chatbot",
+                "needHelp": "Precisa de ajuda para desenvolver o chatbot da sua empresa? <a href='https://blip.ai/criesuaconversa/' target='_blank'><strong>Solicite um orçamento</strong></a>",
+                "poweredByProfessionals": "Todos os templates são projetados, construídos e treinados por profissionais.",
+                "createTemplate": "Se preferir usar um dos nossos modelos estáticos para criar um chatbot, <a>clique aqui</a>.",
+                "fromScratch": {
+                    "title": "Criar do zero",
+                    "description": "Utilize o <strong>Builder</strong> do BLiP para criar um chatbot de forma prática"
+                },
+                "template": {
+                    "title": "Template",
+                    "description": "Utilize um de nossos templates para criar o seu chatbot em minutos",
+                    "select": "Escolher um template",
+                    "provideAName": "Dê um nome para o seu",
+                    "selectTemplate": "Escolha o template do chatbot",
+                    "create": "Criar"
+                },
+                "router": {
+                    "title": "Criar router",
+                    "howWorks": "Como funciona o router",
+                    "description": "O router te ajuda a reunir vários chatbots em um só. Dessa forma, seu usuário terá acesso a múltiplos serviços conversando com um único bot.",
+                    "knowMore": "<a href='https://docs.blip.ai/' target='blank'><strong>Quero saber mais</strong></a>",
+                    "provideAName": "Dê um nome para o seu router"
+                }
+            },
+            "detail": {
+                "teamTitle": "Equipe",
+                "test": "Testar",
+                "testTitle": "Testar seu chatbot",
+                "config": "Configuração",
+                "panel": "Painel",
+                "publications": "Canais",
+                "messagesTitle": "Mensagens",
+                "paymentsTitle": "Pagamentos",
+                "logMessages": "Log",
+                "scheduler": "Agendador",
+                "overview": "Visão geral",
+                "dataAnalysis": "Análise",
+                "interactionsTitle": "Interações",
+                "setup": "Setup",
+                "leaveBot": {
+                    "title": "Você está saindo desse chatbot",
+                    "body": "Você tem certeza que deseja sair desse chatbot?"
+                },
+                "configs": {
+                    "title": "Configurações",
+                    "basic": "Configurações básicas",
+                    "basicSubtitle": "Defina nome, descrição e a imagem de seu chatbot",
+                    "apiKey": "Informações de conexão",
+                    "apiKeySubtitle": "Obtenha e defina as configurações de conexão do seu chatbot",
+                    "welcome": {
+                        "title": "Tela de Boas-vindas",
+                        "subtitle": "Defina a Mensagem de Saudação e o botão Começar",
+                        "welcomeMessage": "Mensagem de Saudação",
+                        "welcomeMessageDescription": "Descreva brevemente o que o seu bot faz ou oferece, e ajude o seu usuário a entender porque deveria usá-lo!",
+                        "welcomeMessagePlaceholder": "Escreva o texto para a mensagem de saudação",
+                        "buttonLabel": "Texto do botão Começar",
+                        "buttonLabelDescription": "Personalize o texto do botão Começar (Disponível somente no canal BLiP Chat)",
+                        "buttonLabelPlaceholder": "Escreva o texto para o texto do botão Começar",
+                        "callbackMessage": "Postback do botão Começar",
+                        "callbackMessageDescription": "Personalize a primeira mensagem que o bot receberá quando o usuário clicar no botão Começar.",
+                        "callbackMessagePlaceholder": "Escreva o texto para a postback do botão Começar",
+                        "confirmationMessage": "Você tem alterações não salvas na página. Deseja realmente sair?"
+                    }
+                },
+                "home": {
+                    "avgAnswerTime": "Tempo médio de resposta",
+                    "timezone": "Fuso horário",
+                    "team": "Equipe",
+                    "flowPublishedAt": "Fluxo publicado em ",
+                    "teamMessage": "Você ainda não convidou ninguém para participar do projeto do seu bot",
+                    "teamLink": "Que tal começar agora? :)"
+                },
+                "resources": {
+                    "title": "Recursos",
+                    "description": "Adicione e altere recursos do seu chatbot. Os recursos podem ser utilizados com conteúdo das mensagens enviadas pelo chatbot.",
+                    "helpTitle": "Mais informações",
+                    "help": "<p><strong>Chave</strong>: A chave do recurso utilizada para recuperar o valor do conteúdo da mensagem pelo servidor.</p><p><strong>Tipo</strong>: O MIME type do conteúdo, utilizado na propriedade 'type' da mensagem. Veja a <a href=\"https://docs.blip.ai/#content-types\" target=\"_blank\">documentação</a> para conhecer todos os tipos.</p><p><strong>Conteúdo</strong>: Valor de texto ou JSON do conteúdo do recurso, que será substituido na propriedade 'content' da mensagem. </p><p>Veja exemplos de uso na <a href=\"https://docs.blip.ai/#resource\" target=\"_blank\">documentação</a>.</p>",
+                    "filterPlaceholder": "Pesquise por um recurso",
+                    "invalidDocumentFilter": "O campo deve conter mais de 2 caracteres para realizar a busca",
+                    "key": "Chave",
+                    "content": "Conteúdo",
+                    "type": "Tipo",
+                    "newResource": "Novo recurso",
+                    "duplicatedKeyModalTitle": "Chave duplicada",
+                    "duplicatedKeyModalBody": "Já existe um recurso para a chave informada. Deseja substituí-lo?",
+                    "selectResourceType": "Selecione o tipo"
+                },
+                "attendance": {
+                    "title": "Atendimento",
+                    "team": {
+                        "add": "+ Adicionar atendente",
+                        "pageTitle": "Atendentes",
+                        "title": "Atendentes",
+                        "subtitle": "Adicione e gerencie sua equipe de atendimento",
+                        "description": "",
+                        "searchFilter": "Pesquise por e-mail ou nome",
+                        "member": "Membro",
+                        "email": "E-mail",
+                        "warning": "Erro ao alterar equipe",
+                        "team": "Equipe",
+                        "selected": "selecionado{{plural}}",
+                        "modal": {
+                            "addAgent": "Adicionar atendente",
+                            "editAgent": "Editar atendente",
+                            "subtitle": "Adicione e defina a equipe do seu novo atendente",
+                            "teamsPlaceholder": "Adicione equipes",
+                            "defaultSlotsNumber": "Número padrão"
+                        },
+                        "editDropdown": {
+                            "title": "Editar <span class='bp-c-blip-light'>{{number}}</span> atendente{{plural}}",
+                            "selectionSubtitle": "Para editar o{{plural}} atendente{{plural}} selecionado{{plural}}, preencha pelo menos um dos campos abaixo.",
+                            "selectionApply": "Aplicar à seleção",
+                            "teamLabel": "Equipes",
+                            "teamPlaceholder": "Escolha os time(s)",
+                            "ticketsPlaceholder": "Insira o número de tickets"
+                        },
+                        "deleteDropdown": {
+                            "title": "Remover <span class='bp-c-blip-light'>{{number}}</span> atendente{{plural}}",
+                            "agentMessage": "Tem certeza de que quer remover este atendente?",
+                            "selectionMessage": "Tem certeza de que quer remover o{{plural}} atendente{{plural}} selecionado{{plural}}?"
+                        },
+                        "tableTitleAgent": "Atendente",
+                        "tableTitleEmail": "E-mail",
+                        "tableTitleTeam": "Equipe",
+                        "tableTitleSlots": "Tickets simultâneos",
+                        "editChooseTeam": "Selecione a(s) equipe(s)",
+                        "sortByFieldTitle": "Clique para ordenar"
+                    },
+                    "generalsettings": {
+                        "pageTitle": "Configurações gerais",
+                        "title": "Configurações gerais",
+                        "subtitle": "Customize outras opções do atendimento do BLiP Desk",
+                        "tags": "Gerenciar tags",
+                        "tagsDescription": "Defina as tags que estarão disponíveis para os atendentes utilizarem ao finalizar um ticket no Desk ",
+                        "isRequired": "Tornar tags obrigatórias ao finalizar um atendimento",
+                        "tagsPlaceholder": "Digite suas tags e pressione \"Enter\" para adicioná-las.",
+                        "autoDistribution": {
+                            "title": "Distribuição automática",
+                            "description": "Defina o número máximo de atendimentos distribuídos automáticamente por atendente.",
+                            "agentSlots": "Atendimentos por atendente",
+                            "tip": "Para ativar, utilize um valor maior que 0."
+                        }
+                    },
+                    "history": {
+                        "pageTitle": "Histórico de atendimentos",
+                        "title": "Histórico de atendimentos",
+                        "subtitle": "Analise os tickets gerados para cada atendimento realizado",
+                        "user": "Usuário",
+                        "tickets": "Tickets",
+                        "agent": "Atendente",
+                        "agentPlaceholder": "Selecione o(s) atendente(s)",
+                        "filterBy": "Filtrar por",
+                        "team": "Equipe",
+                        "status": "Status",
+                        "ClosedAttendant": "Atendido",
+                        "Dropped": "Abandonado",
+                        "Missed": "Perdido",
+                        "Transferred": "Transferido",
+                        "InAttendance": "Em atendimento",
+                        "WaitingResponse": "Aguardando 1ª resposta",
+                        "Waiting": "Na fila",
+                        "teamPlaceholder": "Selecione a(s) equipe(s)",
+                        "notFound": "Nenhum ticket encontrado =(",
+                        "tag": "Tags",
+                        "tagPlaceholder": "Selecione a(s) tag(s)",
+                        "customer": "Usuário",
+                        "customerPlaceholder": "Digite o nome ou email do usuário",
+                        "rating": "Avaliação",
+                        "id": "Ticket",
+                        "agentEmail": "Email do atendente",
+                        "number": "Número",
+                        "information": "Informações",
+                        "tags": "Tags",
+                        "conversationHistory": "Histórico de Conversa",
+                        "noMessages": "Ainda não há histórico de conversa ):",
+                        "testeUser": "Usuário de teste",
+                        "noTickets": "Não há tickets do BLiP Desk abertos para este usuário",
+                        "avgResponseTicketTime": {
+                            "title": "Tempo médio de resposta"
+                        },
+                        "seeMore": "Entenda mais",
+                        "helperTitle": "O que é histórico de atendimento?",
+                        "helperBody": "O BLiP Desk gerará um ticket com todas as informações do atendimento realizado, como transcrição da conversa, número do ticket e nome do atendente. Utilize os filtros e faça suas análises.",
+                        "sendCSVByEmail": "Enviar planilha por email",
+                        "sendCSVTitle": "Enviar planilha",
+                        "sendCSVSubtitle": "Insira o e-mail para envio do histórico de atendimentos:",
+                        "sendCSVEmail": "E-mail",
+                        "sendCSVEmailPlaceholder": "Digite o endereço de e-mail",
+                        "sendCSVButtonText": "Enviar",
+                        "sendCSVSendingMessage": "Enviaremos os dados para {{email}} assim que eles forem processados."
+                    },
+                    "rules": {
+                        "add": "+ Adicionar regra",
+                        "pageTitle": "Regras",
+                        "forwardTo": {
+                            "label": "Encaminhar para equipe",
+                            "placeholder": "Selecione a equipe",
+                            "searchPlaceholder": "Pesquise por uma equipe"
+                        },
+                        "filterBy": "Filtrar por",
+                        "ruleLabel": "Título de regra",
+                        "teamLabel": "Equipe",
+                        "confirmDeleteTitle": "Confirmar exclusão",
+                        "confirmDeleteBody": "<p>Você realmente deseja excluir esta regra?</p>",
+                        "warning": "Erro ao salvar/atualizar regra",
+                        "property": {
+                            "message": "Mensagem",
+                            "contact": {
+                                "name": "Nome Contato",
+                                "email": "Email Contato",
+                                "extras": "Extras Contato"
+                            }
+                        },
+                        "relation": {
+                            "contains": "Contém",
+                            "notContains": "Não contém",
+                            "equals": "É igual",
+                            "notEquals": "Não é igual"
+                        },
+                        "modal": {
+                            "if": "Se",
+                            "condition": "Condição",
+                            "addRule": "Adicionar regra",
+                            "editRule": "Editar regra",
+                            "then": "Encaminhar para equipe"
+                        },
+                        "title": "Regras de atendimento",
+                        "subtitle": "Defina as regras de encaminhamento das conversas para uma equipe",
+                        "description": ""
+                    },
+                    "channels": {
+                        "pageTitle": "Ferramentas de atendimento",
+                        "title": "Ferramentas de atendimento",
+                        "subtitle": "Escolha e configure a ferramenta de atendimento humano",
+                        "description": "",
+                        "blipAgent": {
+                            "title": "BLiP Desk",
+                            "description": "Canal de atendimento do BLiP",
+                            "overview": {
+                                "description": "Para utilizar o BLiP Desk basta ativar o canal e acessar nossa interface de atendimento."
+                            },
+                            "configuration": {},
+                            "documentation": {}
+                        }
+                    },
+                    "analytics": {
+                        "title": "Monitoramento",
+                        "subtitle": "Monitore os dados do dia no BLiP Desk",
+                        "page": {
+                            "title": "Monitoramento",
+                            "dashboard": {
+                                "noTickets": "Não há tickets do BLiP Desk abertos",
+                                "tickets": {
+                                    "title": "Tickets",
+                                    "waiting": "Na fila",
+                                    "waitingTooltip": "Tickets na fila aguardando atendimento no momento.",
+                                    "maxQueueTime": "Tempo máximo na fila",
+                                    "maxQueueTimeTooltip": "Tempo máximo que um usuário está aguardando na fila para ser atribuído a um atendente",
+                                    "maxFirstResponseTime": "Tempo máximo de 1ª resposta",
+                                    "maxFirstResponseTimeTooltip": "Tempo máximo que um atendente esta gastando para dar a primeira resposta ao usuário, após ser atribuído.",
+                                    "inAttendance": "Em atendimento",
+                                    "inAttendanceTooltip": "Tickets abertos que já receberam a primeira resposta do atendente.",
+                                    "ticketPerAgent": "Tickets por atendente",
+                                    "ticketPerAgentTooltip": "Média de tickets por atendentes no momento"
+                                },
+                                "agentsStatus": {
+                                    "title": "Status dos atendentes",
+                                    "online": "Online",
+                                    "invisible": "Invisível",
+                                    "offline": "Offline",
+                                    "pause": "Pausa"
+                                },
+                                "today": {
+                                    "title": "Hoje",
+                                    "avgWaitTime": "Tempo médio de espera",
+                                    "avgWaitTimeTooltip": "Tempo médio em que o usuário aguarda para ser atendido. Tempo na fila + Tempo para primeira resposta",
+                                    "avgResponseTime": "Tempo médio de resposta",
+                                    "avgResponseTimeTooltip": "Tempo médio que o atendente demora para responder uma mensagem do cliente.",
+                                    "avgAttendanceTime": "Tempo médio de atendimento",
+                                    "avgAttendanceTimeTooltip": "Duração média dos atendimentos do período",
+                                    "lost": "Perdidos",
+                                    "lostTooltip": "Tickets cancelado pelo usuário antes de serem atribuídos a um atendente",
+                                    "abandoned": "Abandonados",
+                                    "abandonedTooltip": "Tickets cancelado pelo usuário após serem atribuídos a um atendente",
+                                    "attended": "Atendidos",
+                                    "attendedTooltip": "Tickets finalizados ou transferidos pelo atendente.",
+                                    "closed": "Fechados",
+                                    "closedTooltip": "Total de tickets fechados pelo BLiP Desk no período. Corresponde a soma dos abandonados e atendidos."
+                                }
+                            },
+                            "thread": {
+                                "title": "Conversa com {{user}}",
+                                "team": "Equipe",
+                                "agent": "Atendente",
+                                "status": {
+                                    "title": "Status",
+                                    "queued": "Na fila",
+                                    "assigned": "Atribuído",
+                                    "inAttendance": "Em atendimento",
+                                    "transferred": "Transferido",
+                                    "closed": "Finalizado"
+                                }
+                            },
+                            "userProfile": {
+                                "tooltip": "Perfil do Usuário"
+                            },
+                            "list": {
+                                "openTickets": {
+                                    "title": "Atribuído / Em atendimento",
+                                    "queueTime": "Tempo na fila",
+                                    "firstResponseTime": "Primeira resposta",
+                                    "user": "Usuário",
+                                    "agent": "Atendente",
+                                    "attendanceTime": "Tempo de atendimento",
+                                    "ticket": "Ticket",
+                                    "waiting": "Aguardando..."
+                                },
+                                "waitingTickets": {
+                                    "title": "Na fila",
+                                    "queueTime": "Tempo na fila",
+                                    "user": "Usuário",
+                                    "ticket": "Ticket",
+                                    "team": "Equipe"
+                                },
+                                "agents": {
+                                    "title": "Atendentes",
+                                    "agent": "Atendente",
+                                    "inAttendanceTickets": "Tickets em atendimento",
+                                    "averageAttendance": "Tempo médio de atendimento"
+                                },
+                                "teams": {
+                                    "title": "Equipes",
+                                    "team": "Equipe",
+                                    "waitingTickets": "Tickets aguardando",
+                                    "inAttendanceTickets": "Tickets em atendimento",
+                                    "averageWait": "Tempo médio de espera",
+                                    "averageAttendance": "Tempo médio de atendimento"
+                                },
+                                "tags": {
+                                    "title": "Tags",
+                                    "tag": "Tag",
+                                    "closedTickets": "Tickets finalizados",
+                                    "averageAttendance": "Tempo médio de atendimento"
+                                }
+                            }
+                        }
+                    },
+                    "report": {
+                        "title": "Relatório de atendimento",
+                        "subtitle": "Analise os dados do BLiP Desk",
+                        "filterBy": "Filtrar por:",
+                        "channels": "Canais",
+                        "dashboard": {
+                            "tickets": {
+                                "chart": {
+                                    "title": "Tickets por dia",
+                                    "tooltip": "Total de tickets abertos e finalizados por dia"
+                                },
+                                "title": "Tickets",
+                                "open": "Abertos",
+                                "closed": "Finalizados",
+                                "tooltip": "Total de tickets abertos e finalizados no período"
+                            },
+                            "time": {
+                                "title": "Tempo médio de",
+                                "wait": "Espera",
+                                "waitTooltip": "Tempo médio que o usuário espera para ser atendido no período",
+                                "response": "Resposta",
+                                "responseTooltip": "Tempo médio de resposta do atendente ao usuário no período",
+                                "service": "Atendimento",
+                                "serviceTooltip": "Tempo médio dos atendimentos realizados no período"
+                            },
+                            "noAttendances": "Dados insuficientes"
+                        },
+                        "list": {
+                            "agents": {
+                                "title": "Atendentes",
+                                "agent": "Atendente"
+                            },
+                            "teams": {
+                                "title": "Equipes",
+                                "team": "Equipe"
+                            },
+                            "tags": {
+                                "title": "Tags",
+                                "tag": "Tag"
+                            },
+                            "common": {
+                                "closedTickets": "Tickets finalizados",
+                                "averageWaitTime": "Tempo médio de espera",
+                                "averageAttendance": "Tempo médio de atendimento",
+                                "averageResponse": "Tempo médio de resposta"
+                            }
+                        }
+                    },
+                    "replies": {
+                        "title": "Respostas prontas",
+                        "subtitle": "Defina respostas para te ajudar a ganhar mais agilidade durante o atendimento",
+                        "pageTitle": "Respostas prontas",
+                        "searchFilter": "buscar por categoria",
+                        "add": "Criar categoria",
+                        "noRepliesFound": {
+                            "title": "Você ainda não criou respostas prontas",
+                            "subTitle": "Crie respostas para agilizar seus atendimentos"
+                        },
+                        "category": {
+                            "title": "Categoria",
+                            "invalid": "Há respostas inválidas nessa categoria",
+                            "addContent": "Adicionar resposta",
+                            "reply": {
+                                "defaultTitle": "Sem título",
+                                "noContentFoundTitle": "Você ainda não adicionou respostas",
+                                "noContentFoundSubTitle": "Comece a adicionar conteúdo nas respostas prontas",
+                                "content": {
+                                    "titleHeader": "Título",
+                                    "noContentFound": {
+                                        "title": "Você ainda não adicionou conteúdos",
+                                        "subTitle": "Comece a adicionar conteúdos nas respostas prontas"
+                                    }
+                                }
+                            },
+                            "delete": {
+                                "title": "Deletar categoria",
+                                "body": "Deseja deletar esta categoria?"
+                            }
+                        }
+                    }
+                },
+                "users": {
+                    "title": "Usuários",
+                    "titleSingular": "Usuário",
+                    "filtersTitle": "Filtros",
+                    "description": "Visualize os usuários que interagiram com seu chatbot",
+                    "photo": "Foto",
+                    "name": "Nome",
+                    "channel": "Canal",
+                    "test": "Teste",
+                    "testContact": "Usuário de teste",
+                    "details": "Detalhes",
+                    "address": "Endereço",
+                    "city": "Cidade",
+                    "email": "Email",
+                    "phoneNumber": "Telefone",
+                    "gender": "Gênero",
+                    "extras": "Extras",
+                    "searchContact": "Pesquise por um usuário",
+                    "notFound": "Nenhum usuário encontrado",
+                    "testEnable": "Habilitar como teste",
+                    "testDisable": "Desabilitar como teste",
+                    "seeMore": "VER MAIS",
+                    "cpf": "CPF",
+                    "origin": "Canal: ",
+                    "extraInfo": "Informações Extras:",
+                    "editContact": "Editar Usuário",
+                    "filter": "Filtrar por:",
+                    "import": {
+                        "invalidCsv": "O arquivo CSV é inválido",
+                        "title": "Importar usuários",
+                        "description": "Selecione a lista de distribuição que você deseja adicionar os {{usersLength}} contatos presentes nesse arquivo.",
+                        "listName": "Nome da lista",
+                        "importingFile": "Importando arquivo...",
+                        "importFinished": "Importação concluída",
+                        "importFinishedDescription": "{{usersLength}} contatos foram adicionados à lista {{listName}}.",
+                        "importFailed": "Importação falhou",
+                        "importFailedDescription": "A importação dos contatos falhou. Por favor, confira o arquivo e tente novamente mais tarde."
+                    }
+                },
+                "ai": {
+                    "title": "Inteligência artificial",
+                    "provider": {
+                        "title": "Provedores de IA",
+                        "subtitle": "Escolha e configure o seu provedor de inteligência artificial",
+                        "description": "",
+                        "activate": "Ativar",
+                        "mainProvider": "Provedor principal",
+                        "setMainProvider": "Definir como provedor principal",
+                        "watson": {
+                            "title": "IBM Watson",
+                            "cardDescription": "",
+                            "overview": "Visão Geral",
+                            "description": "<p>Acesse o <a target='_blank' href='https://www.ibm.com/cloud-computing/bluemix/'>painel do Bluemix</a> e faça o login com sua conta. Caso ainda não possua uma, <a target='_blank' href='https://console.bluemix.net/registration/'>crie uma nova</a>.</p>",
+                            "configurations": "Configurações",
+                            "userName": "Nome de usuário",
+                            "password": "Senha",
+                            "apiKey": "Chave da Api",
+                            "url": "Url",
+                            "documentation": "Documentação",
+                            "instructions": {
+                                "bluemixTitle": "Conta no Bluemix",
+                                "bluemix": "<p>Acesse o <a target='_blank' href='https://www.ibm.com/cloud-computing/bluemix/'>painel do Bluemix</a> e faça o login com sua conta. Caso ainda não possua uma, <a target='_blank' href='https://console.bluemix.net/registration/'>crie uma nova</a>.</p>",
+                                "conversationTitle": "Serviço conversation",
+                                "conversation": "<p>No dashboard do Bluemix, <a target='_blank' href='https://console.bluemix.net/dashboard/watson'>escolha a opção Watson</a> e crie um serviço do tipo <strong>Conversation</strong>.</p><p>Podem haver <a target='_blank' href='https://console.bluemix.net/docs/services/conversation/plan-upgrade.html#limits-by-artifact'>limites de uso da API dependendo do plano escolhido</a> que podem afetar a utilização do serviço. São necessários pelo menos 3 workspaces para utilização do Conversation no BLiP.</p>",
+                                "credentialsTitle": "Credenciais do Watson",
+                                "credentials": "<p>Na página de detalhes do serviço conversation criado, escolha no menu lateral a opção <strong>Credenciais do serviço</strong>.</p><p>Na listagem de credenciais, escolha a opção <strong>Visualizar credenciais</strong>, copie os valores de <strong>username</strong> e <strong>password</strong> do JSON apresentado e cole nos campos abaixo.</p>"
+                            }
+                        },
+                        "luis": {
+                            "title": "Microsoft LUIS",
+                            "cardDescription": "",
+                            "overview": "Visão Geral",
+                            "description": "<p>Acesse o <a target='_blank' href='https://www.luis.ai'>painel do Luis</a> e faça o login com sua conta. Caso ainda não possua uma, crie uma nova.</p>",
+                            "configurations": "Configurações",
+                            "authoringKey": "Authoring Key",
+                            "endpointKey": "Endpoint Key ou Azure Language Understanding Key",
+                            "documentation": "Documentação",
+                            "instructions": {
+                                "descriptionTitle": "1 - Acessando sua conta no Luis",
+                                "description": "<p>Acesse o <a target='_blank' href='https://www.luis.ai'>painel do Luis</a> e faça o login com sua conta. Caso ainda não possua uma, crie uma nova.</p>",
+                                "authoringKeyTitle": "2 - Obtendo sua Authoring Key",
+                                "authoringKey": "<p>A Authoring Key é criada automaticamente pela conta do LUIS. Essa Key permite que você crie e edite sua aplicação usando as APIs do LUIS.<br>Para encontrá-la, faça login em <a target='_blank' href='https://www.luis.ai'>https://www.luis.ai</a> e clique no nome da conta na barra de navegação superior direita para abrir <strong>Configurações da conta</strong>. Então será exibida a Authoring Key.</p>",
+                                "endpointKeyTitle": "3 - Criando seu Endpoint Key",
+                                "endpointKey": "<p>Se você precisar de mais de 1000 solicitações por mês, você pode comprar uma chave do Microsoft Azure Language Understanding (LUIS). Você pode utilizar a Authoring Key, mas ela possui um limite de 1000 requisições por mês. Essas chaves serão usadas para publicar suas aplicações na Web.<p>Para aprender como gerenciar suas chaves acesse este <a href='https://docs.microsoft.com/en-us/azure/cognitive-services/luis/manage-keys'>link</a>. Se você utilizar uma Endpoint Key comprada no Microsoft Azure é necessário associar essa chave a sua aplicação no <a target='_blank' href='https://www.luis.ai'>painel do Luis</a>, sem essa associação não é possível analisar as frases do usuário no BLiP.</p>"
+                            }
+                        }
+                    },
+                    "publication": {
+                        "title": "Publicar modelo de IA",
+                        "subtitle": "Faça o treinamento e publique o seu modelo de IA",
+                        "publishedVersion": "Versão publicada",
+                        "trainedVersion": "Versão de treinamento",
+                        "instructions": "Antes de atualizar o seu modelo de IA, resolva:",
+                        "aiProvider": "Configuração do provedor de IA",
+                        "userIntentions": "Adicionar intenções do usuário",
+                        "config": "Resolver",
+                        "createIntention": "Resolver",
+                        "chatbotReady": "Tudo pronto para atualizar seu modelo de IA!",
+                        "chatbotReady2": "Lembre-se que esta ação está sujeita a encargos do seu provedor de IA.",
+                        "versions": "Versões",
+                        "checkList": "Checklist do modelo atual",
+                        "numIntentions": "Número de intenções",
+                        "minimum": "Mínimo de exemplos",
+                        "balancing": "Balanceamento",
+                        "lessThanTenSingular": "intenção do seu modelo possui menos de 10 exemplos",
+                        "lessThanTenPlural": "intenções do seu modelo possuem menos de 10 exemplos",
+                        "moreThanTen": "Parabéns! As intenções do seu modelo possuem pelo menos 10 exemplos do usuário",
+                        "belowAvg": "abaixo da média",
+                        "onAvg": "na média",
+                        "aboveAvg": "acima da média",
+                        "median": "Tente balancear as suas intenções para aprox.",
+                        "medianFinal": "exemplos",
+                        "congrats": "Parabéns! As intenções do seu modelo estão balanceadas",
+                        "lastModification": "Última modificação",
+                        "modelVersions": "Versões do modelo de IA"
+                    },
+                    "intentions": {
+                        "title": "Intenções",
+                        "subtitle": "Defina como seu bot deve interpretar e responder o usuário",
+                        "description": "As intenções são os possíveis pedidos dos usuários para realizar ações em seu aplicativo.",
+                        "searchIntentions": "Pesquise por uma intenção",
+                        "newIntention": "<i class='icon-add' style='font-size: 10px;'></i> Adicionar Intenção",
+                        "noneIntentionName": "Resposta padrão",
+                        "noneAnswers": "[{\"type\": \"text/plain\", \"value\": \"Lamento, mas não compreendi\"},{\"type\": \"text/plain\", \"value\": \"Infelizmente, não consegui entender\"},{\"type\": \"text/plain\", \"value\": \"Não consegui compreender, desculpe\"}]",
+                        "modal": {
+                            "title": "Confirmar exclusão",
+                            "body": "<p>Deseja realmente excluir esta intenção?</p>"
+                        },
+                        "intentionsToChange": "É recomendado que você revise as seguintes intenções",
+                        "intentionName": "Nome da intenção",
+                        "changedAt": "Modificado em",
+                        "numberOfExamples": "Exemplos",
+                        "noIntentionsFound": "Nenhuma intenção encontrada =(",
+                        "helperTitle": "O que são intenções?",
+                        "helperBody": "São as intenções que fazem a conexão entre o que o usuário diz e como o seu chatbot deve entender e responder. Crie e configure suas interações aqui.",
+                        "helperLink": {
+                            "title": "Ver documentação",
+                            "link": "https://help.blip.ai/hc/pt-br/articles/360000662551-O-que-%C3%A9-inten%C3%A7%C3%A3o-"
+                        },
+                        "intentionNameCSV": "name",
+                        "intentionExampleCSV": "sample",
+                        "importIntentions": "Importar intenções",
+                        "exportIntentions": "Exportar intenções",
+                        "invalidFlow": "O arquivo especificado não contém um fluxo válido para importação"
+                    },
+                    "enhancement": {
+                        "title": "Aprimoramento",
+                        "subtitle": "Use o histórico de conversas com o usuário para aprimorar seu modelo",
+                        "description": "Veja as sugestões dadas pelo provedor de inteligência artificial para as frases dos usuários",
+                        "export": "Exportar",
+                        "update": "Atualizar",
+                        "reliability": "Confiabilidade",
+                        "morethan": "Maior que ou igual a",
+                        "lessthan": "Menor que ou igual a",
+                        "equalsto": "Igual a",
+                        "operator": "Operador",
+                        "percentage": "Percentual",
+                        "searchFilter": "Pesquise por uma intenção para filtrar",
+                        "filterBy": "Filtrar por",
+                        "resultsFound": "resultados encontrados",
+                        "deletePhrase": "Excluir frase",
+                        "modal": {
+                            "title": "Confirmar exclusão",
+                            "body": "<p>Você deseja mesmo excluir essa frase?</p>"
+                        }
+                    },
+                    "approval": {
+                        "title": "Aprovação",
+                        "subtitle": "Identifique acertos e erros do bot antes de treinar o modelo de IA",
+                        "description": "Verifique e publique novas intenção e frases dos usuários, para aprimorar o seu chatbot",
+                        "searchFilter": "Pesquisar",
+                        "suggestedIntention": "Aprimoramento",
+                        "intention": "Intenção identificada",
+                        "approve": "Aprovar",
+                        "reject": "Rejeitar",
+                        "modal": {
+                            "title": "Confirmar exclusão",
+                            "body": "<p>Deseja realmente excluir esta análise?</p>"
+                        }
+                    },
+                    "analysis": {
+                        "title": "Análise do modelo de IA",
+                        "subtitle": "Obtenha uma visão geral do seu modelo a partir de uma análise completa",
+                        "button": "Obter insights",
+                        "searchPlaceholder": "Pesquise por um modelo",
+                        "noModelsFound": "Nenhum modelo encontrado =(",
+                        "helperTitle": "Como funciona a análise de IA?",
+                        "helperBody": "O BLiP irá gerar a matriz de confusão utilizando as intenções cadastradas e apresentar os principais insights para você  aprimorá-lo.",
+                        "versionName": "Nome da versão",
+                        "reliability": "Confiabilidade",
+                        "lastUpdate": "Atualizado em",
+                        "confirmationModalTitle": "Essa ação poderá gerar custos no seu provedor de IA",
+                        "confirmationModalBody": "A cada análise criada fazemos consultas no seu provedor de IA para validar exemplos de usuários recolhidos aleatoriamente das interações anteriores.",
+                        "confirmationModalContinue": "Deseja continuar?",
+                        "analysisConfigTitle": "Configure a sua análise",
+                        "analysisConfigBody": "Nomeie e defina a quantidade de exemplos",
+                        "reportName": "Nome do relatório",
+                        "reportQuantity": "Quantidade de exemplos",
+                        "validating": "Validando...",
+                        "matrixName": "Matriz de confusão",
+                        "helperLink": {
+                            "title": "Ver documentação",
+                            "link": "https://docs.blip.ai/#artificial-intelligence"
+                        },
+                        "modal": {
+                            "title": "Confirmar exclusão",
+                            "body": "<p>Você deseja mesmo excluir esse insight?</p>"
+                        },
+                        "analysisToast": "A sua análise está sendo gerada. Em breve você poderá consultar os resultados.",
+                        "analysisTooltip": "A análise poderá demorar alguns minutos para ser gerada."
+                    },
+                    "analysisDetail": {
+                        "avgReliability": "Confiabilidade média",
+                        "matrix": "Matriz de confusão",
+                        "tooltips": {
+                            "avgReliability": "Média da confiabilidade identificada entre os exemplos de usuário testados",
+                            "accuracy": "Indica o quão frequente o classificador está correto",
+                            "precision": "Indica se o bot não está confundindo intenções",
+                            "recall": "Indica se o bot não está deixando passar intenções",
+                            "f1": "Combina precisão e recall de modo a trazer um número único que indique a qualidade geral do seu modelo. ",
+                            "totalExamples": "Total de exemplos do usuário testados"
+                        },
+                        "metrics": {
+                            "name": "Nome",
+                            "accuracy": "Acurácia",
+                            "precision": "Precisão",
+                            "recall": "Recall",
+                            "f1score": "F1 Score"
+                        },
+                        "stats": {
+                            "total": "Total",
+                            "correct": "Classificadas corretamente",
+                            "incorrect": "Classificadas incorretamente"
+                        },
+                        "tabs": {
+                            "list": "Lista de intenções",
+                            "falsePos": "Top Falso Positivos",
+                            "falseNeg": "Top Falso Negativos",
+                            "userExamples": "Ver exemplos do usuário"
+                        },
+                        "userExamplesModal": {
+                            "title": "Exemplos de usuário",
+                            "sentence": "Frase",
+                            "intention": "Intenção esperada",
+                            "predictedIntention": "Intenção identificada",
+                            "score": "Confiança"
+                        }
+                    },
+                    "intention": {
+                        "title": "Intenção",
+                        "subtitle": "subtitulo subtitulo subtitulo",
+                        "reliability": "Confiabilidade",
+                        "inputNameTitle": "Nome da intenção",
+                        "usersPhrases": "Frases do usuário",
+                        "userPhrase": "Frase do usuário",
+                        "usersPhrasesPlaceHolder": "Adicionar frase do usuário",
+                        "answerPhrases": "Respostas variáveis",
+                        "answerPhrasesPlaceHolder": "Adicionar respostas",
+                        "intentionReliability": "Intenção / Confiabilidade",
+                        "fullData": "Ver dados completos",
+                        "information": "Informações",
+                        "userExamples": "Exemplos do usuário",
+                        "newIntention": "Nova Intenção",
+                        "addPhrase": "Adicionar frase",
+                        "insertExample": "Insira um exemplo",
+                        "insertAnswer": "Insira uma resposta",
+                        "variableAnswers": "Respostas variáveis",
+                        "exampleTooltip": "São exemplos de perguntas do usuário.<br>Uma variedade de exemplos precisam ser adicionadas para ensinar o modelo de IA",
+                        "answerTooltip": "Possíveis respostas que poderão ser enviadas para o usuário. (Somente para bots SDK/Webhook)",
+                        "noExamples": "Você ainda não adicionou nenhum exemplo",
+                        "noAnswers": "Você ainda não adicionou nenhuma resposta",
+                        "noSimilarPhrases": "Você ainda não adicionou um exemplo semelhante",
+                        "noSimilarAnswers": "Você ainda não adicionou uma resposta semelhante"
+                    },
+                    "entities": {
+                        "title": "Entidades",
+                        "name": "Nome da entidade",
+                        "values": "Valores",
+                        "lastUpdate": "Modificado em",
+                        "subtitle": "Defina as entidades presentes nas frases dos usuários",
+                        "description": "Entidades listam as categorias com os quais o seu aplicativo funciona. Por exemplo uma entidade poderá ser uma lista de sabores de pizza disponíveis no seu aplicativo de delivery  ou os artistas que estão no seu serviço de música.",
+                        "noEntitiesFound": "Nenhuma entidade encontrada",
+                        "newEntity": "<i class='icon-add' style='font-size: 10px;'></i> Adicionar Entidade",
+                        "searchEntities": "Pesquise por uma entidade",
+                        "modalBody": "<p>Deseja realmente excluir esta entidade?</p>",
+                        "importEntities": "Importar entidades",
+                        "exportEntities": "Exportar entidades",
+                        "noSimilarValueOrSynonymous": "Você ainda não adicionou uma entidade ou sinônimo semelhante",
+                        "helperTitle": "O que são entidades?",
+                        "helperBody": "Entidades listam as categorias com os quais o seu aplicativo funciona. Por exemplo uma entidade poderá ser uma lista de sabores de pizza disponíveis no seu aplicativo de delivery  ou os artistas que estão no seu serviço de música.",
+                        "helperLink": {
+                            "title": "Ver documentação",
+                            "link": "https://help.blip.ai/hc/pt-br/articles/360000662451?flash_digest=4fa750a08eb9460f83f5e904d5fb73b581b580fd"
+                        },
+                        "invalidFlow": "O arquivo especificado não contém um fluxo válido para importação"
+                    },
+                    "entity": {
+                        "title": "Entidade",
+                        "subtitle": "subtitulo subtitulo subtitulo",
+                        "inputNameTitle": "Nome da entidade",
+                        "newEntity": "Nova Entidade",
+                        "searchForValue": "Pesquise por um valor ou sinônimo",
+                        "value": "Valor",
+                        "synonyms": "Sinônimos",
+                        "newValue": "Novo valor",
+                        "newSynonym": "Sinônimo",
+                        "balancedIntention": "Próximo de X exemplos<br>",
+                        "above10": "Acima de 10 exemplos",
+                        "mergeValues": "Os sinônimos dos valores foram mesclados"
+                    }
+                },
+                "channels": {
+                    "availableOnChannel": "Disponível no canal",
+                    "keyAccess": "Chave de acesso",
+                    "chooseAccount": "Escolha uma conta",
+                    "listAccounts": "Listar contas",
+                    "pageTitle": "Canais de conversa",
+                    "blipchat": {
+                        "title": "BLiP Chat (obsoleto)",
+                        "cardDescription": "",
+                        "description": "O BLiP Chat aproxima você dos seus clientes, disponibilizando o seu chatbot embarcado em seu site ou aplicativos Android ou iOS.",
+                        "apiKeyTitle": "API KEY",
+                        "apiKeyDescription": "Utilize a API KEY para integrar a sua aplicação ao BLiP Chat:",
+                        "urlTitle": "BLiP Chat URL",
+                        "urlDescription": "Seu chatbot está <a target=\"_blank\" href=\"{{baseUrl}}/{{apiKey}}\">disponível aqui.</a>",
+                        "domainTitle": "Domínios",
+                        "domainDescription": "Adicione domínios que você disponibilizará o seu chatbot. Tecle ENTER para separá-los.",
+                        "webConfigTitle": "Configuração Web",
+                        "webConfigDescription": "Adicione esse script dentro do body da sua página web. Para configurações avançadas acesse a <a target=\"_blank\" href=\"https://github.com/takenet/blip-chat-widget\">documentação</a>. <b>Lembre-se de adicionar um domínio válido.</b>",
+                        "mobileTitle": "Configuração Mobile",
+                        "mobileDescription": "Para a integração em aplicações mobile, acesse nossas documentações <a href=\"https://github.com/takenet/blip-sdk-android\" target=\"_blank\">Android</a> e <a href=\"https://github.com/takenet/blip-sdk-ios\" target=\"_blank\">iOS</a>.",
+                        "registerDomain": "Cadastre pelo menos 1 domínio",
+                        "copiedToClip": "Copiado para a área de transferência",
+                        "displayName": "Nome de exibição",
+                        "displayNameDescription": "Este nome será exibido para os seus usuários quando abrirem o BLiP Chat",
+                        "displayNamePlaceholder": "Escreva o nome de exibição",
+                        "displayNameDetails": "O nome de exibição é uma configuração opcional do BLiP Chat e ele aparecerá para os seus clientes da seguinte forma:"
+                    },
+                    "blipchat2": {
+                        "title": "BLiP Chat",
+                        "cardDescription": "",
+                        "apiKeyTitle": "API KEY",
+                        "apiKeyDescription": "Utilize a API KEY para integrar a sua aplicação ao BLiP Chat:",
+                        "registerDomain": "Cadastre pelo menos 1 domínio",
+                        "copiedToClip": "Copiado para a área de transferência",
+                        "overview": {
+                            "title": "Visão Geral",
+                            "description": "O BLiP Chat aproxima você dos seus clientes, disponibilizando o seu chatbot embarcado em seu site ou aplicativos Android ou iOS."
+                        },
+                        "configs": {
+                            "title": "Configurações",
+                            "chatbotDomain": "Domínios do Chatbot",
+                            "displayName": "Nome de exibição",
+                            "displayNameTip": "Este nome será exibido para os seus usuários quando abrirem o BLiP Chat",
+                            "domainsPlaceholder": "Ex: https://www.blip.ai",
+                            "domainsTip": "Adicione domínios que você disponibilizará o seu chatbot. Tecle ENTER para separá-los",
+                            "receiveFiles": "Receber arquivos",
+                            "receiveFilesTip": "Ao selecionar esta opção o usuário terá a opção de enviar um arquivo para o bot",
+                            "colors": "Cores",
+                            "components": "Componentes",
+                            "chatBubble": "Balões de conversa",
+                            "background": "Background",
+                            "icon": "Ícone",
+                            "acceptedFormats": "Formatos aceitos: .png, .jpg, .jpeg",
+                            "dimensionsTip": "Dimensões recomendadas: 85x85",
+                            "iconTip": "Para atualizar o ícone em seu BLiP Chat copie o script gerado na aba Instalação",
+                            "palette": "Restaurar"
+                        },
+                        "setup": {
+                            "title": "Instalação",
+                            "webConfigDescription": "Adicione esse script dentro do body da sua página web. Para configurações avançadas acesse a <a target=\"_blank\" href=\"https://github.com/takenet/blip-sdk-web\">documentação</a>. Lembre-se de adicionar um domínio válido.",
+                            "urlTitle": "BLiP Chat URL",
+                            "urlDescription": "Seu chatbot está <a target=\"_blank\" href=\"{{baseUrl}}?appKey={{appKey}}\">disponível aqui.</a>",
+                            "mobileTitle": "Configuração Mobile",
+                            "mobileDescription": "Para a integração em aplicações mobile, acesse nossas documentações <a href=\"https://github.com/takenet/blip-sdk-android\" target=\"_blank\">Android</a> e <a href=\"https://github.com/takenet/blip-sdk-ios\" target=\"_blank\">iOS</a>."
+                        },
+                        "docs": {
+                            "title": "Documentação",
+                            "externalLink": "https://github.com/takenet/blip-chat-widget"
+                        }
+                    },
+                    "email": {
+                        "cardDescription": "",
+                        "tutorial": "É necessário configurar uma conta para seu chatbot enviar e receber e-mails, com suporte ao protocolo IMAP. O ideal é que esta conta seja exclusiva, ou seja, não seja utilizada para outros fins além da troca de mensagens do seu chatbot. Recomenda-se utilizar o <strong>Gmail</strong> para este fim. <a href='https://accounts.google.com/signup' target='_blank'>Crie uma conta gratuita agora.</a>"
+                    },
+                    "facebook": {
+                        "title": "Messenger",
+                        "cardDescription": "",
+                        "description": "Seu chatbot será acessado através de uma página no Facebook. Por isso, é importante que você <a href=\"https://www.facebook.com/pages/create\" target=\"_blank\" analystics-on=\"click\" analytics-event=\"Create Facebook page\">crie uma página</a> para a sua empresa no Facebook. Caso sua empresa já tenha uma página, você poderá utilizá-la.",
+                        "loginButton": "Entrar com Facebook",
+                        "loggedAs": "Você está acessando como",
+                        "sendToMessengerPlugin": "Send-to-Messenger",
+                        "messageUsPlugin": "Message-Us",
+                        "choosePage": "Configurar uma página",
+                        "createPage": "crie uma nova página no Facebook",
+                        "alreadyPublishedTitle": "Página em uso",
+                        "alreadyPublishedBody": "<p>A página selecionada já está publicada em outra aplicação.</p><p>Despublique antes de publicar novamente, ou utilize outra página para esta aplicação.</p>",
+                        "deactivateAlienPageTitle": "Confirmar desativação",
+                        "deactivateAlienPageBody": "<p>A página ativa pertence a outro usuário do Facebook. Ao desativá-la, portanto, esta não será mais visível em sua lista de páginas.</p><p>Você tem certeza de que deseja desativá-la?</p>",
+                        "page": {
+                            "overview": "Visão Geral",
+                            "configurations": "Configurações",
+                            "customerchatplugin": "Customer Chat Plugin",
+                            "tabs": {
+                                "chat": {
+                                    "description": "Para usar o plugin de bate-papo com um cliente, você deve: <br /> <br /> <ul><li>Inclua o domínio do seu site na lista de liberação</li><li>Inclua o SDK do Facebook para Javascript </li><li>Inclua o plugin na sua página da Web</li></ul>",
+                                    "script": "<p>O seguinte snippet de código fornecerá a versão básica do SDK na qual as opções são definidas de acordo com seus padrões mais comuns. Insira-o diretamente após a marca <body> de abertura em cada página na qual você deseja carregá-lo:</p>",
+                                    "plugin": "<p>Para adicionar o plugin à sua página da Web, inclua um div com os seguintes atributos em seu HTML:</p>"
+                                }
+                            }
+                        }
+                    },
+                    "infobip": {
+                        "title": "Infobip SMS",
+                        "cardDescription": "",
+                        "overview": {
+                            "title": "Visão Geral",
+                            "description": "Escale e entregue de forma confidencial suas mensagens<br>corporativas de SMS em todo o mundo."
+                        },
+                        "configs": {
+                            "title": "Configurações",
+                            "step1": {
+                                "title": "Conectando com o Infobip",
+                                "indicator": "Dados Infobip",
+                                "description": "Para ativar a integração com o Infobip, você precisa ser cadastrado na <a target='_blank' href='https://dev.infobip.com/getting-started/base-url'>plataforma</a> e informar os dados abaixo:",
+                                "baseUrl": "URL",
+                                "baseUrlPlaceholder": "https://suaurl.api.infobip.com"
+                            },
+                            "step2": {
+                                "indicator": "Configuração",
+                                "title": "Números que receberão SMS<br>como <strong>chatbot {{botName}}</strong>",
+                                "description": "Ative os números que receberão mensagens e selecione o número que responderá seus clientes por padrão:",
+                                "tableTitle": {
+                                    "numbers": "Números",
+                                    "default": "Padrão"
+                                },
+                                "noResults": "Sua conta não possui números cadastrados. <a target='_blank' href='https://dev.infobip.com/receive-sms#step-1-purchase-phone-number-for-receiving-message'>Compre</a> um número direto com a Infobip."
+                            }
+                        },
+                        "modal": {
+                            "deleteTitle": "Atenção",
+                            "deleteText": "Ao desativar o canal Infobip, você <b>perderá<br>todas</b> as credenciais já configuradas.",
+                            "canContinue": "<strong>Deseja continuar?</strong>",
+                            "deleteContinue": "Desativar Infobip"
+                        }
+                    },
+                    "mailgun": {
+                        "title": "E-mail",
+                        "cardDescription": "",
+                        "description": "Seu chatbot tem um endereço de e-mail padrão. Seus clientes podem interagir através deste endereço.",
+                        "label": "E-mail"
+                    },
+                    "skype": {
+                        "title": "Skype",
+                        "cardDescription": "",
+                        "applicationId": "Application ID",
+                        "callbackUrl": "Url de retorno",
+                        "acquireApplicationIdTitle": "Adquirindo o Application ID",
+                        "acquireApplicationIdDescription": "<p>Acesse o <a target=\"_blank\" href=\"https://apps.dev.microsoft.com/\">Application Registration Portal</a> da Microsoft e crie um novo aplicativo. Informe o nome do seu chatbot. </p><p>Preencha o campo <strong>Application ID</strong> do BLiP com o <em>Application ID</em> informado no portal, conforme a imagem abaixo:</p>",
+                        "acquirePasswordTitle": "Adquirindo a Senha",
+                        "acquirePasswordDescriptionP1": "<p>Na mesma tela de cadastro do aplicativo, clique em <strong>Generate Password</strong>.</p>",
+                        "acquirePasswordDescriptionP2": "<p>No BLiP, ative o canal e clique em <strong>Salvar</strong>. Será gerada uma URl de callback.</p>",
+                        "createChatbotTitle": "Criando o seu chatbot no Skype",
+                        "createChatbotDescriptionP1": "<p>Acesse o <a target=\"_blank\" href=\"https://dev.botframework.com/bots/new\">BotFramework Portal</a> utilizando a sua conta Microsoft, e crie um novo bot usando o seu <em>Application ID</em>.</p>",
+                        "createChatbotDescriptionP2": "<p>Copie a <em>Url de retorno</em> gerada pelo BLiP e cole no campo <strong>Messaging endpoint</strong> do BotFramework, conforme a imagem acima. Preencha o restante do formulário e efetive o cadastro.</p>",
+                        "testingTitle": "Testando o seu chatbot",
+                        "testingDescriptionP1": "<p>Após efetivar o cadastro será exibida uma página contendo algumas informações sobre o bot. Para testá-lo você precisa clicar em <strong>Skype</strong> na página Channels para adicioná-lo aos seus contatos no Skype e começar uma conversa com ele pela aplicação do Skype. <strong>Não</strong> teste o bot usando o botão Teste localizado no canto superior direito.</p>",
+                        "testingDescriptionP2": "<p>Para o seu chatbot funcionar no Skype, a equipe do Skype precisa aprová-lo.</p>",
+                        "testingDescriptionP3": "<p>Para isto, você deve ir no <a target=\"_blank\" href=\"https://dev.botframework.com/bots/new\">BotFramework Portal</a> usando sua conta Microsoft e clicar em <strong>My Bots</strong>. Nesta tela serão listados os bots existentes. Selecione o bot que você quer disponibilizar no Skype e clique em <strong>Edit</strong> no canal Skype. Em seguida, clique em <strong>Publish</strong>, preencha todos os dados necessários e clique em <strong>Submit for Review</strong>. Seu bot será analizado pela equipe do Skype.</p>",
+                        "testingDescriptionP4": "<p>Se seu bot não tiver sido aprovado ainda pode ser que você somente consiga testá-lo usando a mesma conta do Skype que você utilizou para criá-lo.</p>"
+                    },
+                    "sms": {
+                        "cardDescription": "",
+                        "description": "Ative este canal e tenha um número de telefone para o seu chatbot. Seus clientes poderão interagir com vocês através deste número."
+                    },
+                    "takeio": {
+                        "title": "SMS",
+                        "cardDescription": "",
+                        "description": "<p>O parâmetro abaixo pertence ao seu usuário do <a href=\"https://broker.take.io/\" target=\"_blank\">TakeIo</a>. Ele está disponível na aba <strong>Desenvolvimento</strong>, no menu <strong>Chave de acesso</strong>.</p><p>Após preencher o campo, liste suas contas disponíveis e escolha uma para utilizar o canal SMS.</p><p><strong>É recomendável utilizar uma conta exclusiva para seu chatbot.</strong></p>"
+                    },
+                    "telegram": {
+                        "title": "Telegram",
+                        "cardDescription": "",
+                        "gettingReady": "Preparando o Telegram",
+                        "installTelegram": "<p>Instale o Telegram e acesse o <a target=\"_blank\" href=\"https://telegram.me/botfather\">@botfather</a>.</p><p>Para criar o seu Telegram Bot, envie o commando /newbot.</p>",
+                        "giveName": "Dê um nome para o seu Bot Telegram.",
+                        "giveUniqueName": "Dê um nome único para o seu bot Telegram.",
+                        "telegramToken": "Adquirindo o Telegram access token",
+                        "afterToken": "Após seguir os passos acima, o Telegram disponibilizará o token, conforme a mensagem abaixo:"
+                    },
+                    "workplace": {
+                        "title": "Workplace Chat",
+                        "cardDescription": "",
+                        "description": "<p>Seu chatbot será acessado através do workplace da sua empresa, então certifique-se que ele está em funcionamento (veja mais informações <a href='https://developers.facebook.com/docs/workplace'>aqui</a>). </p> <p> Lembre-se que apenas admnistradores do Workplace community podem criar apps e gerar access token na comunidade.",
+                        "introduction": "<p>Seu chatbot será acessado através do workplace da sua empresa, então certifique-se que ele está em funcionamento (veja mais informações <a href='https://developers.facebook.com/docs/workplace'>aqui</a>). </p> <p> Lembre-se que apenas admnistradores do Workplace community podem criar apps e gerar access token na comunidade.",
+                        "createAppTitle": "Crie seu aplicativo para o Workplace",
+                        "configureApp": "Configure seu app",
+                        "getAppId": "Obtenha seu App ID",
+                        "blipConnect": "Conecte seu app ao BLiP",
+                        "goToIntegration": "Va em <strong>Integrations</strong> no painel de controle da empresa.",
+                        "customIntegration": "No final da pagina clique em <strong>Create Custom Integration</strong>",
+                        "describeApp": "Informe um nome e uma descrição para o app, depois clique em <strong>Create</strong>",
+                        "copyToken": "O diálogo <em>Edit Custom Integration</em> irá abrir após criar o app. O <em>Page Access Token</em> será necessário futuramente. Crie um clicando em <strong>Create Access Token</strong>. Copie o token e salve-o em um local temporário (Este token só será mostrado uma unica vez). Copie também o <em>App Secret</em>, você precisará fornecer ao BLiP essas informações.",
+                        "permissions": "Na seção <em>Permissions</em> selecione as opções <em>Read content</em> e <em>Message any member</em>.",
+                        "webhook": "Em <em>Configure Webhooks</em> especifique o callback URL e o <em>Verify Token</em> com os valores abaixo</p>",
+                        "enableEvents": "<p>Habilite <em>message_deliveries, messages, messaging_postbacks and message_reads</em> em <strong>Subscription Fields</strong>, então clique em <strong>Save</strong>.",
+                        "seeWork": "Clique em <em>Mensagens</em> e depois clique em <em>See All In Work Chat</em> no final da aba.",
+                        "nameApp": "Escreva o nome do seu app no campo de buscas do <em>Work Chat</em>.",
+                        "appId": "Clique em seu app na lista de resultados e copie o <em>App Id</em> da URL.",
+                        "blipConnection": "Após criar o Workplace App forneça nos campos abaixo o <em>App Id</em> do passo anterior, o <em>Access Token</em>  e o  <em>App Secret</em> que você copiou antes no <em>Edit Custom Integration</em>. </p> <p>Assim que salvar o formulário seu app será publicado.</p>"
+                    },
+                    "whatsapp": {
+                        "title": "WhatsApp",
+                        "cardDescription": "",
+                        "overview": {
+                            "title": "Visão Geral",
+                            "description": "Atenda seus clientes no canal mais utilizado do mundo.<br>Com o WhatsApp, suas mensagens são mais rápidas, simples e valiosas*.",
+                            "button": "Adquirir contato oficial",
+                            "manual": "Já tenho um contato oficial/<br>Quero ativar manualmente",
+                            "detail": "*Mensagens de suporte ao cliente são gratuitas, mas notificações informativas serão cobradas. Entre em contato para saber mais!"
+                        },
+                        "configs": {
+                            "title": "Configurações",
+                            "step1": {
+                                "title": "BLiP WhatsApp",
+                                "indicator": "Dados Enterprise",
+                                "description": "Para ativar a integração com o WhatsApp, você precisa estar cadastrado no <a target='_blank' href='https://developers.facebook.com/'>Facebook for Developers</a> e criar um contato oficial."
+                            },
+                            "step2": {
+                                "indicator": "Registro do número",
+                                "description": "Insira o número de telefone e o certificado de nome verificado (VName) da sua conta Business do WhatsApp.",
+                                "pincode": "PIN",
+                                "pincodeQuestion": "Seu número possui PIN?",
+                                "pincodeWarning": "Caso já tenha cadastrado um PIN, insira-o abaixo. Ignorar este passo pode acarretar em erros na ativação da conta.",
+                                "pincodeSetUp": "Defina um PIN",
+                                "pincodePlaceholder": "O PIN deve conter 6 dígitos",
+                                "getCode": "Receber código de registro do número",
+                                "sms": "Via SMS",
+                                "smsObs": "(apenas mobile)",
+                                "voice": "Via ligação de voz",
+                                "voiceObs": "(em Inglês)",
+                                "regTitle": "O WhatsApp enviará o código ao número que você cadastrou!",
+                                "regDescription": "Espere até que o WhatsApp envie o código de registro ao seu número via o método escolhido. Esse processo inclui tempo de espera, porque precisa ser autorizado pelo próprio WhatsApp.",
+                                "code": "Código de registro",
+                                "codePlaceholder": "Insira o código enviado pelo WhatsApp",
+                                "countryCodePlaceholder": "Insira o código de país do telefone",
+                                "phoneNumberPlaceholder": "Insira o seu número de telefone",
+                                "VNameCertificate": "Certificado VName",
+                                "VNameCertificatePlaceholder": "Insira o certificado VName",
+                                "payAttentionOnCode": "Não se esqueça de anotar o número. Caso queira gerar um novo código, você deverá aguardar até que o próximo código esteja disponível."
+                            },
+                            "step3": {
+                                "indicator": "Informações do perfil",
+                                "user": "Contato Oficial no WhatsApp",
+                                "status": "Mensagem de status",
+                                "statusPlaceholder": "Ex: O BLiP agora está no WhatsApp :)",
+                                "descPlaceholder": "Ex: O BLiP é a melhor plataforma para criar, gerenciar e evoluir contatos inteligentes.",
+                                "address": "Endereço (opcional)",
+                                "addressPlaceholder": "Insira o endereço da sua empresa",
+                                "email": "Email do contato (opcional)",
+                                "emailPlaceholder": "Insira o email da sua empresa",
+                                "website": "Website do contato (opcional)",
+                                "websitePlaceholder": "Insira o website da sua empresa"
+                            },
+                            "example": {
+                                "officialContact": "Contato oficial",
+                                "contactName": "Nome de contato",
+                                "companyDetails": "Detalhes da empresa",
+                                "address": "Endereço",
+                                "website": "Website"
+                            }
+                        },
+                        "modal": {
+                            "deleteTitle": "Atenção!",
+                            "deleteText": "Ao desativar o canal WhatsApp, você <b>perderá todas as credenciais</b> já configuradas.",
+                            "canContinue": "Deseja continuar?",
+                            "deleteContinue": "Desativar WhatsApp",
+                            "pincodeTitle": "Insira seu PIN",
+                            "pincodeText": "Esse número possui verificação em duas etapas. Por favor, insira seu PIN para avançar."
+                        }
+                    }
+                },
+                "dashboard": {
+                    "general": {
+                        "title": "Visão geral",
+                        "subtitle": "Analise os resultados gerais do seu chatbot",
+                        "usersPerDay": "Usuários por dia (total)",
+                        "usersPerDayTooltip": "Total diário de usuários do bot",
+                        "newUsers": "Novos usuários",
+                        "newUsersTooltip": "Usuários que tiveram a primeira interação com o bot no período analisado",
+                        "recurrentUsers": "Usuários recorrentes",
+                        "recurrentUsersTooltip": "Usuários que retornaram ao bot no período analisado",
+                        "noEnoughData": "Não há dados suficientes para exibir este gráfico",
+                        "activeClientsPerDay": "Usuários ativos por dia",
+                        "clientsPerDay": "Usuários por dia",
+                        "averageResponseTime": "Tempo médio de resposta",
+                        "averageResponseTimeSuffix": "Geral (últimos 3 dias)",
+                        "averageResponseTimeSuffixNoData": "(últimos 3 dias)",
+                        "totalMessages": "Trafegadas",
+                        "sentMessages": "Enviadas",
+                        "receivedMessages": "Recebidas",
+                        "messagesPerDay": "Mensagens por dia",
+                        "averageInteractionsPerUser": "Média de interações por usuários",
+                        "usersPerDayCSV": "Usuários Ativos",
+                        "messagesPerUserTag": "Média",
+                        "wordCount": "Nuvem de palavras recebidas"
+                    },
+                    "analytics": {
+                        "title": "Análise",
+                        "subtitle": "subtitulo subtitulo subtitulo",
+                        "startDate": "Início do período:",
+                        "endDate": "Fim do período:",
+                        "newGraph": "Novo gráfico",
+                        "noGraphMessage": "Nenhum gráfico encontrado",
+                        "noGraphDescription": "Aqui você poderá visualizar e analisar dados e estatísticas acerca do uso de seu chatbot. Você pode utilizar estes dados para obter informações sobre como melhor atender seus clientes.",
+                        "footer": "Veja como você pode criar um novo contexto para analisar",
+                        "downloadNotAvailable": "Download ainda não está disponível",
+                        "noContext": "Não foi encontrado nenhum contexto para seu chatbot"
+                    }
+                },
+                "payments": {
+                    "title": "Pagamentos",
+                    "pagSeguro": {
+                        "pagSeguroPainelTitle": "Acessando o painel do PagSeguro",
+                        "pagSeguroPainel": "<p>Acesse o <a target='_blank' href='https://pagseguro.uol.com.br/login.jhtml'>painel do Pagseguro</a> com seu endereço de e-mail. </p><p><a target='_blank' href='https://pagseguro.uol.com.br/registration/registration.jhtml?tipo=cadastro#!vendedor'>Crie uma conta de vendedor</a> caso ainda não tenha e efetue o login.</p>",
+                        "pagseguroTokenTitle": "Adquirindo o token",
+                        "pagseguroToken": "<p>Após o login, acesse o menu Painel > Minha conta > Preferências > Integrações.</p><p>Escolha a opção <em>Gerar token</em>, copie o valor e o insira no formulário abaixo, junto com o seu e-mail da sua conta Pagseguro.</p>"
+                    }
+                },
+                "templates": {
+                    "api": {
+                        "credentials": "Credenciais",
+                        "pageTitle": "Informações de conexão",
+                        "pageDescription": "Defina as configurações de envio e recebimento de mensagens e notificações do seu chatbot",
+                        "howToStart": "Como começar?",
+                        "instructions": "Utilize o seu IDENTIFICADOR e a CHAVE DE ACESSO para se conectar ao BLiP. Para começar acesse a <a href='https://docs.blip.ai' target='_blank'>documentação</a> completa e saiba como usar.",
+                        "identifier": "Identificador",
+                        "usingBuilder": "Conectar usando o builder",
+                        "usingBuilderDescription": "Construa um bot utilizando o bot builder do BLiP",
+                        "usingSdk": "Conectar usando SDK",
+                        "usingSdkTitleDesc": "para C# e JS",
+                        "usingSdkDescription": "Receba suas credenciais de acesso",
+                        "usingHttp": "Conectar usando HTTP",
+                        "usingHttpTitleDesc": "para qualquer linguagem",
+                        "usingHttpDesc": "Informe sua URLs para receber mensagens e notificações",
+                        "httpEndpoints": "Endpoints HTTP",
+                        "headerAuthentication": "Cabeçalho de autenticação (Authorization)",
+                        "sendMessagesUrl": "Url para enviar mensagens",
+                        "sendNotificationsUrl": "Url para enviar notificações",
+                        "sendCommandsUrl": "Url para enviar comandos",
+                        "warning": "Atenção",
+                        "changeConnectionDisclaimer": "<p>Você deve escolher entre Builder, SDK ou HTTP como conexão ativa.</p><p>Alterando a conexão automaticamente desconectará a ativa.</p><p>Deseja continuar?</p>"
+                    },
+                    "faq": {
+                        "oneQuestion": "pergunta",
+                        "multipleQuestions": "perguntas",
+                        "knowledgeBase": "Base de conhecimento",
+                        "instructions": "Para informações sobre como configurar e utilizar o modelo FAQ, <a ui-sref=\"https://portal.blip.ai/#/docs/templates/faq\" target=\"_blank\">consulte nossa documentação</a>.",
+                        "addNewResponse": "Nova resposta",
+                        "startTrain": "Treinar modelo de IA",
+                        "newResponses": "Novas perguntas/respostas",
+                        "training": "Em treinamento...",
+                        "configAi": "Configurar inteligência artificial",
+                        "question": "Pergunta",
+                        "response": "Resposta",
+                        "unknownQuestions": "Perguntas não identificadas",
+                        "unknownQuestions2": "Pergunta(s) não identificada(s)",
+                        "noUnknownQuestions": "Você não tem perguntas não identificadas",
+                        "assignToResponse": "Associe a uma resposta",
+                        "assignedToResponse": "Pergunta associada a resposta",
+                        "errorOnAssignToResponse": "Erro ao associar pergunta a resposta",
+                        "undoExclusion": "Desfazer exclusão",
+                        "multipleInsert": "Inserir várias",
+                        "bulkInsert": "Insira uma pergunta por linha",
+                        "addQuestion": "Adicionar pergunta",
+                        "addResponse": "Adicionar resposta",
+                        "modalTitle": "Confirmar exclusão",
+                        "modalBody": "<p>Este item será <strong>permanentemente</strong> excluído da base de conhecimento.</p><p>Você tem certeza de que deseja excluir este item?</p>",
+                        "existingQuestion": "Pergunta já existe na base de conhecimento",
+                        "errorUpdateBase": "Ocorreu um erro ao atualizar a base de conhecimento"
+                    },
+                    "faq2": {
+                        "scoreTitle": "Confiabilidade",
+                        "scoreSubtitle": "Defina o nível de precisão das respostas de seu bot",
+                        "instructions": "<p>Configure como seu chatbot irá se comportar em relação as perguntas recebidas. Depois disso, treine e publique seu modelo através do menu <strong>Inteligência artificial</strong>.</p><p>Para informações sobre como configurar e utilizar o modelo FAQ, <a href=\"https://portal.blip.ai/#/docs/templates/faq\" target=\"_blank\">consulte nossa documentação</a>.</p>",
+                        "scoreThreshold": "Limite de confiabilidade: ",
+                        "scoreThresholdDescription": "Percentual mínimo da pontuação de uma intenção para ser considerada uma resposta válida",
+                        "feedbackTitle": "Feedback",
+                        "feedbackSubtitle": "Configure seu bot para que ele peça feedbacks",
+                        "askFeedback": "Solicitar feedback",
+                        "askFeedbackDescription": "A cada resposta encontrada através do modelo, solicitar feedback do cliente se a mesma ajudou ou não.",
+                        "positiveFeedback": "Texto de feedback positivo",
+                        "positiveFeedbackDescription": "Texto do botão enviado ao cliente para informar que a resposta recebida é válida para a pergunta",
+                        "negativeFeedback": "Texto de feedback negativo",
+                        "negativeFeedbackDescription": "Texto do botão enviado ao cliente para informar que a resposta recebida não é válida para a pergunta",
+                        "thanksForFeedback": "Mensagem de agradecimento pelo feedback",
+                        "thanksForFeedbackDescription": "Mensagem opcional de agradecimento a ser enviada a cada feedback recebido do usuário",
+                        "usefulFeedback": "👍 Foi útil",
+                        "notUsefulFeedback": "👎 Não foi útil"
+                    },
+                    "master": {
+                        "title": "Roteador",
+                        "services": "Serviços",
+                        "description": "Adicione sub-bots como serviços do seu chatbot principal.",
+                        "instructions": "Para informações sobre como configurar e utilizar o modelo Roteador, <a href=\"https://portal.blip.ai/#/docs/templates/master\" target=\"_blank\">consulte nossa documentação</a>.",
+                        "addService": "Adicionar um serviço",
+                        "createServiceName": "Crie um nome para seu serviço",
+                        "usedFor": "É usado para referenciar seu serviço ao trocar de bot",
+                        "assignBot": "Associe um chatbot para este serviço",
+                        "defaultBot": "é o meu chatbot principal",
+                        "service": "Serviço",
+                        "chatbot": "Chatbot",
+                        "defaultBotTitle": "Chatbot principal",
+                        "chatbotNotFound": "Nenhum chatbot encontrado",
+                        "operator": "Atendimento manual",
+                        "redirectTimeoutPlaceholder": "Expiração do redirecionamento (segundos)",
+                        "redirectTimeoutDescription": "Tempo limite em segundos que este bot deve ficar ativo na conversa desde a última interação do cliente"
+                    },
+                    "attendance": {
+                        "outOfOfficeMessage": "Olá, obrigado por entrar em contato! Estou ausente no momento, mas entrarei em contato no meu horário de atendimento.",
+                        "attendanceChannels": "Canais de atendimento",
+                        "automaticResponse": "Resposta automática",
+                        "name": "Atendimento manual",
+                        "blipAttendance": "Atendente BLiP",
+                        "instructions": "<p>Para atender os seus clientes acesse <a href='https://web.blip.ai' target='_blank'>web.blip.ai</a>.</p>",
+                        "instructions2": "O seu atendente irá receber as mensagens dos seus clientes neste canal",
+                        "blipEmail": "Atendente BLiP e-mail",
+                        "blipPhone": "Atendente BLiP telefone",
+                        "attendanceType": "Tipo de atendente",
+                        "blipExclusive": "* Exclusivo para o BLiP Web",
+                        "blipTeamMember": "Selecione um membro da equipe",
+                        "attendanceName": "Nome do atendente",
+                        "notShow": "Este nome não irá aparecer para os seus clientes",
+                        "zendesk": "Atendente ZenDesk",
+                        "zendeskInstructions": "Seu chatbot será acessado através de uma conta no <a target='_blank' href='https://www.zendesk.com/'>Zendesk</a>. Por isso é importante <a target='_blank' href='https://www.zendesk.com/register/'>criar uma conta</a>. Caso sua empresa já possua uma, você poderá utilizá-la.<br><br><strong>Importante:</strong> Sua conta do Zendesk precisa ser do plano <a href=\"https://www.zendesk.com.br/product/pricing/\">Team ou superior</a> para suportar integrações. Além disso, o e-mail da sua conta no Zendesk precisa ter sido autenticado, através do link que é enviado no momento da criação.",
+                        "apiTokenInstructions": "Acesse a página Admin > Canais > API e adicione um novo token ou utilize um existente.",
+                        "zendeskUrl": "URL do Zendesk",
+                        "emailExample": "atendente@email.com",
+                        "zendeskEmail": "E-mail utilizado para entrar no Zendesk",
+                        "apiToken": "API Token",
+                        "emailAttendance": "Atendente E-mail",
+                        "emailAttendance2": "E-mail do atendente",
+                        "emailInstructions": "<p>O seu atendente utilizará um endereço de e-mail para receber as mensagens dos clientes e respondê-los.</p><p>Ao responder, é importante <strong>não alterar o assunto do e-mail</strong> para sabermos a qual cliente o atendente está respondendo.</p><p>É necessário publicar seu chatbot no canal <strong>E-mail</strong>. Para isso, no menu lateral, escolha <strong>Publicações -> E-mail</strong> informando os dados solicitados.</p>",
+                        "emailInstructions2": "O seu atendente irá receber as mensagens dos seus clientes neste e-mail",
+                        "workTime": "Horário de funcionamento",
+                        "weekDays": "Dias da semana",
+                        "firstMessageInstructions": "Escreva uma mensagem para enviar aos seus clientes que entrarem em contato fora do horário de funcionamento.",
+                        "firstMessageDesc": "Escolha uma mensagem para os seus clientes receberem na primeira vez que interagirem com o seu chatbot.",
+                        "answerYourClients": "Como vou responder os clientes?",
+                        "attendanceUnavailable": "Nenhum atendente disponível",
+                        "attendanceUnavailableDesc": "Escolha uma mensagem para o seu cliente receber quando não existir nenhum atendente disponível.",
+                        "enableZendesk": "Criando uma conta no Zendesk",
+                        "zendeskToken": "Como adquirir o API Token"
+                    },
+                    "webhook": {
+                        "howToStart": "Como começar?",
+                        "instructions": "Para enviar mensagens utilize a <a href='https://docs.blip.ai/#webhook' target='_blank'>API de Webhook</a>.",
+                        "authHeader": "Cabeçalho de autenticação (Authorization)",
+                        "urlMessages": "Url para enviar mensagens",
+                        "urlNotifications": "Url para enviar notificações",
+                        "urlCommands": "Url para enviar comandos",
+                        "urlReceiveMessages": "Url para receber mensagens",
+                        "urlReceiveNotifications": "Url para receber notificações"
+                    },
+                    "builder": {
+                        "displayName": "Builder",
+                        "description": "Construa o fluxo do seu chatbot visualmente"
+                    }
+                },
+                "edit": {
+                    "title": "Editar Chatbot",
+                    "deleteChatbot": "Excluir chatbot",
+                    "deleteChatbotDescription": "Após excluir seu chatbot, este não estará mais visível em sua lista de chatbots do BLiP e também não estará mais disponível para seus clientes.",
+                    "deleteChatbotPermissionDenied": "Somente a conta pagadora pode deletar o chatbot",
+                    "deleteChatbotPermissionDeniedPaymentAccount": "Conta pagadora: {{paymentAccount}}",
+                    "deleteSuccessMessage": "Chatbot excluído",
+                    "deleteErrorMessage": "Ocorreu um erro ao tentar excluir o chatbot",
+                    "confirmDeleteTitle": "Confirmar exclusão",
+                    "confirmDeleteBody": "<p>Este chatbot será <strong>permanentemente</strong> excluído do BLiP e despublicado de todos os canais.</p><p><strong>Você tem certeza de que deseja excluir este chatbot?</strong></p>",
+                    "advancedConfigurationLink": "Clique <a href ng-click=\"$ctrl.openAdvancedSettingsModal($event)\">aqui</a> para acessar as configurações avançadas",
+                    "advancedConfigurationModal": "<p>Alterações nas configurações avançadas do bot podem deixá-lo indisponível.</p> <p><strong>Deseja continuar?</strong></p>",
+                    "advancedConfiguration": "Configurações avançadas",
+                    "onAdvancedConfigurationSaved": "Configuração salva",
+                    "onAdvancedConfigurationError": "Ocorreu um erro ao salvar a configuração"
+                },
+                "persistentMenu": {
+                    "title": "Menu Persistente",
+                    "subtitle": "Configure o menu persistente de seu chatbot",
+                    "persistentMenu": "Menu persistente",
+                    "persistentMenuDescription": "O menu persistente estará sempre disponível para o seu cliente. Ele deve conter comandos que poderão ser utilizadas em qualquer momento do fluxo. Você poderá adicionar até 5 palavras que disparam um comando.",
+                    "persistentMenuRequirement": "Para definir o menu persistente, é necessário definir o botão de ação",
+                    "confirmationMessage": "Você tem alterações não salvas na página. Deseja realmente sair?"
+                },
+                "messages": {
+                    "title": "Log",
+                    "subtitle": "Veja o log das mensagens trocadas pelo seu bot",
+                    "history": {
+                        "notificationsTitle": "Notificações",
+                        "noNotifications": "Não foram encontradas notificações para a mensagem",
+                        "messagesTitle": "Debug",
+                        "filterPlaceholder": "Pesquise por qualquer termo para filtrar as mensagens...",
+                        "newMessages": "Mensagens novas",
+                        "noMessages": "Aguardando a primeira mensagem",
+                        "noMessagesDescription": "Aqui você poderá visualizar todas as mensagens enviadas e recebidas, assim como informações de quem as enviou. Você pode aproveitar este tempo para ficar disponível em outros canais e alcançar mais clientes.",
+                        "channelsEnabled": "Canais publicados"
+                    }
+                },
+                "growth": {
+                    "title": "Growth",
+                    "scheduler": {
+                        "title": "Agendador",
+                        "subtitle": "Agende e gerencie seus broadcasts",
+                        "description": "Envios de broadcast estão sujeitos a moderação de acordo com a <a target='_blank' href='https://portal.blip.ai/#/terms'>Política da Plataforma</a>.",
+                        "noSchedulesFound": "Nenhum agendamento encontrado =(",
+                        "requestPermissionDescription": "Para utilizar a funcionalidade <b>Agendador</b>, solicite sua autorização e aguarde seu email de autorização.",
+                        "scheduleMessage": "Agendar mensagem",
+                        "broadcast": "Campanha",
+                        "dateAndTime": "Data e hora",
+                        "usedBudget": "Budget utilizado",
+                        "status": "Status",
+                        "statusScheduled": "Agendada",
+                        "statusMessage": "Dados referentes apenas aos canais Facebook Messenger e WhatsApp",
+                        "showOldMessages": "Mostrar mensagens anteriores",
+                        "errorLoadingMessageInformation": "Não foi possível carregar informações de uma ou mais mensagens.",
+                        "errorLoadingScheduledMessages": "Ocorreu algum problema ao carregar as mensagens agendadas.",
+                        "messageScheduled": "Mensagem agendada com sucesso!",
+                        "errorSchedulingMessage": "Ocorreu algum problema ao agendar a mensagem.",
+                        "messageDeleted": "Mensagem apagada com sucesso!",
+                        "errorDeletingMessage": "Ocorreu algum problema ao apagar a mensagem.",
+                        "errorModalTile": "Detalhes dos erros",
+                        "occurrencesColumn": "Ocorrências",
+                        "descriptionColumn": "Descrição",
+                        "noContacts": "Não é possível realizar o agendamento de mensagens, pois não exitem destinatários em sua lista de contatos.",
+                        "allContacts": "Todos os contatos",
+                        "keyPlaceholder": "Variável",
+                        "valuePlaceholder": "Valor",
+                        "requestAuth": {
+                            "action": "Solicitar autorização",
+                            "description": "Selecione o motivo da solicitação e forneça mais informações se necessário.",
+                            "reason": "Motivo",
+                            "reasonPlaceholder": "Selecione o motivo da solicitação",
+                            "engagement": "Quero engajar meus clientes",
+                            "advertisement": "Quero criar anúncios",
+                            "info": "Informações (obrigatório)",
+                            "infoPlaceholder": "Escreva qualquer informação adicional",
+                            "sent": "Solicitação enviada{{punctuation}}",
+                            "sentDescription": "Enviaremos um email assim que o <b>Agendador</b> estiver disponível para você."
+                        },
+                        "delete": {
+                            "title": "Confirmar exclusão",
+                            "body": "Deseja realmente excluir esta campanha?"
+                        },
+                        "icons": {
+                            "sent": "Enviado",
+                            "delivered": "Entregue",
+                            "visualized": "Visualizado",
+                            "failed": "Falhou"
+                        },
+                        "wizard": {
+                            "defaultTitle": "Nome da broadcast",
+                            "description": "Envios de broadcast estão sujeitos a moderação de acordo com a <a>Política da Plataforma</a>",
+                            "scheduleCreated": "Agendamendo concluído!",
+                            "rawContent": {
+                                "addType": "Adicionar novo tipo",
+                                "type": "Tipo",
+                                "content": "Conteúdo"
+                            },
+                            "errors": {
+                                "noPurpose": "Escolha uma razão para enviar o broadcast",
+                                "noDistList": "Escolha uma lista de distribuição",
+                                "datePassed": "Data para agendamento já passou",
+                                "invalidContent": "Conteúdo inválido. Deve ser um objeto JSON válido."
+                            },
+                            "step1": {
+                                "title": "Conteúdo",
+                                "subtitle": "Crie o conteúdo do broadcast",
+                                "description": "Apenas cards de <b>texto</b> são aceitos em todos os canais.",
+                                "warning": "Canais que aceitam <span class='bp-fw-bold bp-c-warning-yellow'>{{card}}</span>:",
+                                "asTextChannels": "Para os canais abaixo, o card será exibido como texto:",
+                                "asLinkChannels": "Para os canais abaixo, o card será exibido como link:"
+                            },
+                            "step2": {
+                                "title": "Audiência",
+                                "subtitle": "Defina sua audiência",
+                                "userList": {
+                                    "title": "Lista de usuários para distribuição",
+                                    "description": "Selecione as listas de distruibuição definidas para receber seu broadcast.",
+                                    "label": "Selecionar lista",
+                                    "placeholder": "Selecione a lista de distribruição alvo"
+                                },
+                                "impact": {
+                                    "title": "Estimativa de impacto",
+                                    "users": "usuários",
+                                    "totalCost": "Estimativa de custo total:",
+                                    "userCost": "Estimativa preço por usuário:"
+                                }
+                            },
+                            "step3": {
+                                "title": "Agendamento",
+                                "subtitle": "Tipo de mensagem",
+                                "description": "As tags de mensagens oferecem a possibilidade de enviar mensagens para pessoas fora do período normalmente permitido de 24 horas, para um número limitado de objetivos, que exigem notificações ou atualizações constantes.",
+                                "purposeLabel": "Selecione o motivo",
+                                "purposePlaceholder": "Selecione o motivo do broadcast",
+                                "send": {
+                                    "title": "Enviar",
+                                    "options": {
+                                        "now": "Enviar agora",
+                                        "schedule": "Agendar"
+                                    },
+                                    "date": "Data",
+                                    "hour": "Hora"
+                                }
+                            },
+                            "purposes": {
+                                "communityAlert": "Notificação de emergência",
+                                "confirmedEventReminder": "Lembrete de confirmação de evento",
+                                "nonPromotionalSubscription": "Mensagem não promocional",
+                                "pairingUpdate": "Atualização de pareamento",
+                                "applicationUpdate": "Atualização da aplicação",
+                                "accountUpdate": "Atualização da conta",
+                                "paymentUpdate": "Atualização de pagamento",
+                                "personalFinanceUpdate": "Atualização de finanças pessoais",
+                                "shippingUpdate": "Atualização de envio",
+                                "reservationUpdate": "Atualização de reserva",
+                                "issueResolution": "Resolução de problema",
+                                "appointmentUpdate": "Atualização de compromisso",
+                                "gameEvent": "Evento de jogo",
+                                "transportationUpdate": "Atualização de transporte",
+                                "featureFunctionalityUpdate": "Atualização de funcionalidade",
+                                "ticketUpdate": "Atualização de ticket"
+                            }
+                        }
+                    },
+                    "sugarAds": {
+                        "title": "Facebook Ads",
+                        "subtitle": "Crie anúncios do seu chatbot no Facebook Ads",
+                        "scheduler": "Agende mensagens para envio em massa",
+                        "noPagesFound": "Nenhuma página publicada",
+                        "noPagesFoundDesc": "Para criar uma campanha no Facebook Ads para seu chatbot,",
+                        "activateMessengerPage": "ative uma página no Messenger"
+                    }
+                },
+                "team": {
+                    "title": "Equipe",
+                    "description": "Adicione pessoas para a sua equipe e dê permissões para alterarem o Chatbot.",
+                    "addButton": "<i class='icon-add' style='font-size: 10px;'></i> Adicionar Membro",
+                    "emailPlaceholder": "Digite o e-mail de quem será convidado",
+                    "sentEmail": "Foi enviado um e-mail para o seu convidado.",
+                    "resentInvite": "Convite reenviado",
+                    "pendingInvite": "Convite pendente",
+                    "userCannotRemoved": "O usuário não pode ser removido",
+                    "invitedOn": "Convidado em",
+                    "confirmExclusion": "Confirmar exclusão",
+                    "modalBody": "<p>Deseja realmente remover {{email}} do seu chatbot?</p>",
+                    "invitedRemoved": "Convidado removido",
+                    "addTitle": "Adicionar membro",
+                    "editTitle": "Editar membro",
+                    "botOwner": "Dono do bot",
+                    "noMemberFound": "Nenhum membro encontrado =(",
+                    "addUserModal": {
+                        "title": "Adicionar membro",
+                        "subtitle": "Adicione e defina permissões ao novo membro de sua equipe",
+                        "slider": {
+                            "visualize": "Visualizar",
+                            "custom": "Customizado",
+                            "edit": "Visualizar e editar",
+                            "admin": "Admin"
+                        }
+                    }
+                },
+                "permissions": {
+                    "payments": {
+                        "title": "Integrações"
+                    },
+                    "iaProviders": {
+                        "title": "Provedores de IA"
+                    },
+                    "iaModel": {
+                        "title": "Modelo de IA"
+                    },
+                    "iaEnhancement": {
+                        "title": "Aprimoramento"
+                    },
+                    "channels": {
+                        "title": "Canais"
+                    },
+                    "desk": {
+                        "title": "Help Desk"
+                    },
+                    "users": {
+                        "title": "Usuários do bot"
+                    },
+                    "growth": {
+                        "title": "Growth"
+                    },
+                    "basicConfigurations": {
+                        "title": "Configurações básicas"
+                    },
+                    "connectionInformations": {
+                        "title": "Informações de conexões"
+                    },
+                    "resources": {
+                        "title": "Recursos"
+                    },
+                    "team": {
+                        "title": "Equipe"
+                    },
+                    "logMessages": {
+                        "title": "Log de mensagens"
+                    },
+                    "builder": {
+                        "title": "Builder"
+                    },
+                    "analysis": {
+                        "title": "Análise"
+                    },
+                    "ai": {
+                        "title": "Inteligência artificial",
+                        "team": {
+                            "title": "Equipe"
+                        },
+                        "logMessages": {
+                            "title": "Log de mensagens"
+                        },
+                        "builder": {
+                            "title": "Builder"
+                        },
+                        "analysis": {
+                            "title": "Analise"
+                        }
+                    },
+                    "configurations": {
+                        "title": "Configurações"
+                    },
+                    "permission": "Permissão",
+                    "none": "Sem permissão",
+                    "read": "Visualizar",
+                    "readWrite": "Ver e editar",
+                    "features": "Funcionalidades",
+                    "permissions": "Permissões"
+                },
+                "integrations": {
+                    "title": "Integrações",
+                    "tools": "Ferramentas analytics",
+                    "description": "Conecte seu chatbot com mais de 200 ferramentas online",
+                    "chatbase": {
+                        "title": "Chatbase",
+                        "description": "Envie dados do seu chatbot para sua conta do Chatbase",
+                        "page": {
+                            "apiKey": "API Key do bot",
+                            "instructions": {
+                                "insertUrl": "<p>Para ativar a integração você deve ir à sua conta Chatbase e copiar a API Key do seu bot disponível: <ul><li>Ao criar um novo bot</li><li>Na sua página de bots</li></ul></p>",
+                                "description": "<p>Após copiá-la, vá à seção de configurações e cole-a no campo \"API Key do bot do Chatbase\".</p><p>Por fim, clique no switch <strong>Ativar</strong> para ativar a funcionalidade.</p>",
+                                "note": "<p><strong>Observação:</strong> O Chatbase pode demorar 15 minutos para atualizar as informações do seu bot.</s>"
+                            }
+                        }
+                    },
+                    "webhook": {
+                        "title": "Webhook",
+                        "description": "Envie os dados do seu chatbot para sua aplicação.",
+                        "page": {
+                            "configurations": "Configurações",
+                            "howToConnect": "Como conectar",
+                            "integrationUrl": "Url para integração de analytics",
+                            "documentation": {
+                                "insertUrl": "<p>Insira a URL de alguma aplicação para que o BLiP envie todas as informações de analytics do seu chatbot</p><p><b>Exemplo: </b>https://requestb.in/14rxsmm1</p>",
+                                "description": "<p>Esse endpoint será chamado sempre que seu bot enviar ou receber alguma mensagem, para notificar sua aplicação sobre esses eventos.</p><p><b>Note:</b> Essa URL deve estar preparada para receber requisições <b>HTTP POST</b> com um objeto <a target='_blank' href='https://docs.blip.ai/#messages'>Message</a> no <i>Body</i></p>",
+                                "sample": "<p><b>Exemplo:</b> Requisição realizada pelo BLiP (na aplicação configurada) quando o chatbot recebe uma mensagem de um usuário do Facebook</p>"
+                            }
+                        }
+                    },
+                    "rdstation": {
+                        "title": "RDStation",
+                        "description": "Envie os dados do seu chatbot para sua conta RDStation.",
+                        "page": {
+                            "publicToken": "Public token do RDStation",
+                            "configurations": "Configurações",
+                            "howToConnect": "Como conectar",
+                            "documentation": {
+                                "insertUrl": "<p>Para ativar a integração, você deve ir à sua conta RDStation, e copiar o seu Token disponível no seguinte link:</p><p><a target='_blank' href=\"https://app.rdstation.com.br/integracoes/tokens\">https://app.rdstation.com.br/integracoes/tokens</a>.</p><p>Após copiá-lo, vá à seção de configurações e cole-o no campo \"Public Token do RDStation\".</p><p>Por fim, clique no switch <b>Ativar</b> para ativar a funcionalidade.</p>",
+                                "description": "<p>Para criar novas conversões de leads na sua conta RDStation, você deve mandar um comando de tipo <a target='_blank' href='https://docs.blip.ai/#event-analysis'>event-track</a>, com os campos <code>category: \"lead\"</code> e <code>action: \"create\"</code>.</p><p>O comando deve ter pelo menos dois campos que são obrigatórios: <code>email</code> e <code>identificador</code>; se algum destes <b>não estiver definido</b>, o lead <b>não será salvo</b>.</p>",
+                                "sample": "<p><b>Exemplo:</b> Requisição HTTP realizada para salvar a conversão:</p>"
+                            }
+                        }
+                    }
+                }
+            },
+            "list": {
+                "view": {
+                    "noneRegistered": "Nenhum chatbot cadastrado",
+                    "chatbots": "Chatbots",
+                    "registeredChatbots": "Chatbots cadastrados",
+                    "searchChatbots": "Buscar chatbots...",
+                    "chatbotNotFound": "Não foi encontrado nenhum chatbot com o nome"
+                }
+            }
+        }
+    },
+    "variables": {
+        "bucket": "Documento armazenado no bucket do bot, onde '?' deve ser substituído pelo ID do documento salvo no bucket",
+        "config": "Variáveis globais definidas na configuração do fluxo onde '?' deve ser substituido pelo valor da variável global criada",
+        "contact": {
+            "name": "O nome do contato",
+            "address": "O endereço do contato",
+            "city": "A cidade do contato.",
+            "email": "O e-mail do contato.",
+            "source": "O nome do canal do contato",
+            "phoneNumber": "O telefone do contato",
+            "photoUri": "A URI da foto pública do contato",
+            "cellPhoneNumber": "O telefone celular do contato",
+            "gender": "O sexo do contato",
+            "timezone": "O timezone do contato relativo ao GMT",
+            "culture": "A informação da cultura do usuário (no formato IETF)",
+            "extras": "Um JSON genérico para armazenar pares de strings (chaves e valor)",
+            "identity": "A identidade do contato no formato name@domain",
+            "group": "Indica o nome do grupo ao qual o usuário pertence"
+        },
+        "calendar": {
+            "datetime": "Data e hora atual GMT-0 (no formato yyyy-MM-ddTHH:mm:ssZ)",
+            "date": "Data atual GMT-0 (no formato yyyy-MM-dd)",
+            "day": "Valor que representa o dia no mês corrente",
+            "month": "Valor que representa o mês corrente. ",
+            "year": "Valor que representa o ano corrente",
+            "time": "Hora atual GMT-0 (no formato HH:mm)",
+            "hour": "Valor que representa a hora corrente",
+            "minute": "Valor que representa o minuto corrente",
+            "second": "Valor que representa o segundo corrente",
+            "unixTime": "Data atual no formato unix timestamp",
+            "unixTimeMilliseconds": "Data atual no formato unix timestamp (milisegundos)",
+            "dayOfWeek": "Valor que representa o dia da semana do dia corrente. (onde 0 é Domingo e 6 é sábado)",
+            "tomorrow": {
+                "datetime": "Data de amanhã e hora atual GMT-0 (no formato yyyy-MM-ddTHH:mm:ssZ)",
+                "date": "Data de amanhã GMT-0 (no formato yyyy-MM-dd)",
+                "day": "Valor que representa o dia de amanhã no mês corrente.",
+                "month": "Valor que representa o mês da data amanhã.",
+                "year": "Valor que representa o ano da data amanhã.",
+                "time": "Hora atual na data de amanhã GMT-0 (no formato HH:mm)",
+                "hour": "Valor que representa a hora corrente na data de amanhã.",
+                "minute": "Valor que representa o minuto corrente na data de amanhã.",
+                "second": "Valor que representa o segundo corrente na data de amanhã.",
+                "unixTimeMilliseconds": "Data de amanhã no formato unix timestamp (milisegundos)",
+                "unixTime": "Data de amanhã no formato unix timestamp",
+                "dayOfWeek": "Valor que representa o dia da semana da data de amanhã. (onde 0 é Domingo e 6 é sábado)"
+            },
+            "yesterday": {
+                "datetime": "Data de ontem e hora atual GMT-0 (no formato yyyy-MM-ddTHH:mm:ssZ)",
+                "date": "Data de ontem GMT-0 (no formato yyyy-MM-dd)",
+                "day": "Valor que representa o dia de ontem no mês corrente.",
+                "month": "Valor que representa o mês da data ontem.",
+                "year": "Valor que representa o ano da data ontem.",
+                "time": "Hora atual na data de ontem GMT-0 (no formato HH:mm)",
+                "hour": "Valor que representa a hora corrente na data de ontem.",
+                "minute": "Valor que representa o minuto corrente na data de ontem.",
+                "second": "Valor que representa o segundo corrente na data de ontem.",
+                "unixTimeMilliseconds": "Data de ontem no formato unix timestamp (milisegundos)",
+                "unixTime": "Data de ontem no formato unix timestamp",
+                "dayOfWeek": "Valor que representa o dia da semana da data de ontem. (onde 0 é Domingo e 6 é sábado)"
+            }
+        },
+        "input": {
+            "content": "Conteud da mensagem enviado pelo usuário",
+            "entity": {
+                "id": "Identificador da entidade reconhecida (onde ? deve ser trocado pelo nome da entidade)",
+                "name": "Nome da entidade reconhecida (onde ? deve ser trocado pelo nome da entidade)",
+                "value": "Valor da entidade reconhecida (onde ? deve ser trocado pelo nome da entidade)"
+            },
+            "intent": {
+                "id": "Identificador da intenção reconhecida",
+                "name": "Nome da intenção reconhecida",
+                "score": "Confiabilidade atrelada a intenção reconhecida",
+                "answer": "Uma das respostas atreladas a intenção reconhecida"
+            },
+            "length": "Quantidade de conteúdos existente na mensagem enviada pelo usuário (apenas para Collections)",
+            "type": "Tipo da mensagem enviado pelo usuário",
+            "message": "É o envelope de mensagem recebido pelo bot"
+        },
+        "random": {
+            "guid": "Identificador alfa númerico único",
+            "string": "Conjunto de caracteres (string) aleatório",
+            "integer": "Número inteiro aleatório"
+        },
+        "state": {
+            "id": "Id do bloco corrente no fluxo",
+            "name": "Nome do bloco corrente no fluxo",
+            "previous": {
+                "id": "Id do bloco anterior no fluxo",
+                "name": "Nome do bloco anterior no fluxo"
+            }
+        }
+    }
+}
