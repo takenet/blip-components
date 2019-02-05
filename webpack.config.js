@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 const cssPlugin = new MiniCssExtractPlugin({
     filename: 'blip-components.css',
@@ -10,14 +11,16 @@ const cssPlugin = new MiniCssExtractPlugin({
 
 module.exports = function() {
     return {
-        entry: [
-            'webpack/hot/dev-server',
-            'webpack-dev-server/client?http://localhost:8080',
-            __dirname + '/src/index'
-        ],
+        context: __dirname,
+        entry: {
+            'components': 'index',
+            'events': 'events',
+            'templates': 'templates',
+            'EventEmitter': 'shared/EventEmitter'
+        },
         output: {
             path: path.resolve(__dirname, 'dist'),
-            filename: 'blip-components.js',
+            filename: '[name].js',
             libraryTarget: 'commonjs2'
         },
         optimization: {
@@ -112,12 +115,16 @@ module.exports = function() {
             angular: 'angular',
             moment: 'moment',
             'angular-translate': 'angular-translate',
+            'angular-translate-storage-cookie': 'angular-translate-storage-cookie',
             fecha: 'fecha'
         },
         plugins: [
             new webpack.HotModuleReplacementPlugin(),
             new webpack.LoaderOptionsPlugin({
                 debug: true
+            }),
+            new MonacoWebpackPlugin({
+                languages: ['json', 'javascript'],
             }),
             new ForkTsCheckerWebpackPlugin({
                 tslint: './tslint.json',
