@@ -2,6 +2,7 @@ language: node_js
 node_js:
   - '8.11.3' # use latest stable nodejs version
 before_script:
+  - npm cache clean -f
   - npm install
 script:
   - npm run build # jest test with coverage flag does coverage too
