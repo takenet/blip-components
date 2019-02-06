@@ -1,4 +1,4 @@
-import './statusBar.scss';
+import './statusbar.scss';
 import * as angular from 'angular';
 import { IScope } from 'angular';
 import * as uuid from 'uuid';
