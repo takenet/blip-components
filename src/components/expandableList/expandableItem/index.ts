@@ -4,8 +4,7 @@ export class ExpandableItemComponent {
     expandableListCtrl: any;
     isActive: boolean = false;
     hasArrow: boolean;
-    constructor( private $element, private $timeout) {
-    }
+    constructor(private $element, private $timeout) {}
 
     $onInit() {
         this.expandableListCtrl.addItem(this);

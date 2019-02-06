@@ -1,5 +1,4 @@
 import './reloadButton.scss';
-import { Component } from 'decorators';
 import * as loading from 'assets/img/loading3.png';
 
 class ReloadButton {
