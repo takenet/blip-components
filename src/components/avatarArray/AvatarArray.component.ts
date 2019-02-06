@@ -1,6 +1,7 @@
 import './AvatarArray.scss';
 import template from './AvatarArrayView.html';
-export class AvatarArrayComponent {
+
+class AvatarArray {
     public members: Array<any>;
     public limit: number;
 
@@ -25,8 +26,8 @@ export class AvatarArrayComponent {
     }
 }
 
-export const AvatarArray = {
-    controller: AvatarArrayComponent,
+export const AvatarArrayComponent = {
+    controller: AvatarArray,
     controllerAs: '$ctrl',
     bindings: {
         members: '<?',

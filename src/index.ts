@@ -1,6 +1,6 @@
 //Components
 import accordion from './components/accordion';
-import { AvatarArray } from './components/avatarArray/avatarArray.component';
+import { AvatarArrayComponent } from './components/avatarArray/avatarArray.component';
 import { CardComponent } from './components/card/card.component';
 import { materialInput } from './components/materialInput/materialInput.component';
 import { Radio } from './components/radio/radio.components';
@@ -8,7 +8,7 @@ import { Checkbox } from './components/checkbox/checkbox.components';
 import { colorPicker } from './components/colorPicker/colorPicker.component';
 import { ExpandableList } from './components/expandableList/expandableList.component';
 import { ExpandableItem } from './components/expandableList/expandableItem';
-import { ExpandableContent } from './components/expandableContent/expandableContent.component';
+import { ExpandableContentComponent } from './components/expandableContent/expandableContent.component';
 import { savingState } from './components/savingState/savingState.component';
 import contentBoxes from './components/contentBoxes';
 import editableInput from './components/editableInput';
@@ -70,7 +70,7 @@ import { sharedModules } from './modules';
 export const module = (function(ng) {
     return ng.module('blip-components', [sharedModules])
         .component('accordion', accordion)
-        .component('avatarArray', AvatarArray)
+        .component('avatarArray', AvatarArrayComponent)
         .component('card', CardComponent)
         .component('materialInput', materialInput)
         .component('radio', Radio)
@@ -78,7 +78,7 @@ export const module = (function(ng) {
         .component('colorPicker', colorPicker)
         .component('expandableList', ExpandableList)
         .component('expandableItem', ExpandableItem)
-        .component('expandableContent', ExpandableContent)
+        .component('expandableContent', ExpandableContentComponent)
         .component('savingState', savingState)
         .component('contentBoxes', contentBoxes)
         .component('editableInput', editableInput)

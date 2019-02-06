@@ -3,7 +3,7 @@ import template from './ExpandableContentView.html';
 import { IScope } from 'angular';
 import { EventEmitter } from 'shared/EventEmitter';
 
-export class ExpandableContentComponent {
+class ExpandableContent {
     isActive: boolean = false;
     defaultState: boolean;
     hasArrow: boolean;
@@ -45,8 +45,8 @@ export class ExpandableContentComponent {
     }
 }
 
-export const ExpandableContent = {
-    controller: ExpandableContentComponent,
+export const ExpandableContentComponent = {
+    controller: ExpandableContent,
     transclude: {
         itemHeader: '?itemHeader',
         itemBody: '?itemBody',
