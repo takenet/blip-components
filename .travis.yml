@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 'node' # use latest stable nodejs version
+  - '8.11.3' # use latest stable nodejs version
 before_script:
   - npm install
 script:
