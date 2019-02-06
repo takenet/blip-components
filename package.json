@@ -5,7 +5,7 @@
   "main": "./dist/components.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --port 3000",
-    "build": "webpack",
+    "build": "./node_modules/.bin/webpack",
     "commit": "./node_modules/.bin/git-cz",
     "semantic-release": "semantic-release --prepare && npm publish && semantic-release post"
   },
