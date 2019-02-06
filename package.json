@@ -33,7 +33,6 @@
     "@types/angular-ui-router": "^1.1.40",
     "@types/node": "^7.0.18",
     "@types/webpack": "^4.4.24",
-    "angular": "1.5.8",
     "angular-translate": "^2.15.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
