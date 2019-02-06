@@ -11,6 +11,7 @@ const cssPlugin = new MiniCssExtractPlugin({
 
 module.exports = function() {
     return {
+        mode: 'none',
         entry: {
             'components': 'index',
             'events': 'events',
