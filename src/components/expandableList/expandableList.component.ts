@@ -1,4 +1,4 @@
-import './ExpandableList.scss';
+import './expandableList.scss';
 
 export class ExpandableListComponent {
     public mainElement: HTMLElement;
