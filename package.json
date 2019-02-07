@@ -1,7 +1,7 @@
 {
   "name": "blip-components",
   "version": "0.0.0",
-  "description": "Angularjs components used in blip.ai",
+  "description": "Shared components used in portal.blip.ai",
   "main": "./dist/components.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --port 3000",
