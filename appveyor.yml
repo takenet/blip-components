@@ -12,5 +12,5 @@ test_script:
 build_script:
     - cmd: npm run build
 
-build_success:
+on_success:
     - cmd: npm run semantic-release
