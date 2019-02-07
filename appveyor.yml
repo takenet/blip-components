@@ -11,12 +11,13 @@ install:
     - npm i -g npm@6.3.0
     - npm install
 
-before_build:
+build: off
+deploy: off
+
+test_script:
     - node --version
     - npm --version
-
-build_script:
-    - cmd: npm run build
+    - npm run build
 
 on_success:
     - cmd: npm run semantic-release
