@@ -1,3 +1,7 @@
+branches:
+    only:
+    - master
+
 environment:
     nodejs_version: "8.11.3"
 
@@ -5,7 +9,7 @@ install:
     - npm i -g npm@6.3.0
     - npm install
 
-test_script:
+before_build:
     - node --version
     - npm --version
 
