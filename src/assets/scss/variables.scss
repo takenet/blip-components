@@ -188,10 +188,14 @@ $bp-font-family: 'Nunito', 'Helvetica', sans-serif;
 $bp-base-font-size: 16px;
 
 //4 small fonts (for normal text, minor titles and subtitles)
-$bp-font-small-1: 0.625rem; //10px
-$bp-font-small-2: 0.75rem; //12px
-$bp-font-small-3: 0.875rem; //14px
-$bp-font-small-4: 1rem; //16px (base)
+$bp-fs-8: 1*$m; //10px
+$bp-fs-7: 1.2*$m; //12px
+$bp-fs-6: 1.4*$m; //14px
+$bp-fs-5: 1.6*$m; //16px (base)
+$bp-fs-4: 2*$m; //20px
+$bp-fs-3: 2.4*$m; //24px
+$bp-fs-2: 3.2*$m; //32px
+$bp-fs-1: 4.8*$m; //48px
 
 //2 medium fonts (for headline text, major titles and subtitles)
 $bp-font-medium-1: 1.25rem; //20px
@@ -208,11 +212,11 @@ $bold: 700;
 
 $base-font-family: 'Nunito', 'Helvetica', 'Arial', sans-serif;
 $base-font-weight: $regular;
-$base-font-size: $bp-font-small-4;
-$regular-font-size: $bp-font-small-3;
+$base-font-size: $bp-fs-5;
+$regular-font-size: $bp-fs-6;
 $base-letter-spacing: -0.04em;
 
-$small-font-size: $bp-font-small-2;
+$small-font-size: $bp-fs-7;
 
 $serif-font-family: 'Merriweather', serif;
 

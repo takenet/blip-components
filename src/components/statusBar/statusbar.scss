@@ -6,7 +6,7 @@
     tooltip tip {
         width: 175px;
         text-align: left;
-        font-size: $bp-font-small-2;
+        font-size: $bp-fs-7;
 
         .icon-false, .icon-true {
             font-size: 12px !important;
@@ -14,7 +14,7 @@
 
         span {
             border: none!important;
-            font-size: $bp-font-small-2;
+            font-size: $bp-fs-7;
         }
     }
 
