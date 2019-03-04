@@ -1,8 +1,6 @@
+import * as angular from 'angular';
 import template from './SubheaderIconsView.html';
 import { IStateService } from 'angular-ui-router';
-
-const customSubheaderItemsId = '#custom-subheader-items';
-const defaultMenuLimit = 4;
 
 class SubheaderIcons {
     //Properties
@@ -40,13 +38,16 @@ class SubheaderIcons {
     }
 }
 
-export const SubheaderIconsComponent = {
-    template: template,
-    controllerAs: '$ctrl',
-    controller: SubheaderIcons,
-    bindings: {
-        menuIcons: '<',
-        isAttendance: '<?',
-        showBlipChatSidenav: '<?',
-    },
-};
+export const SubheaderIconsComponent = angular
+    .module('blipComponents.subheaderIcons', [])
+    .component('subheaderIcons', {
+        template,
+        controllerAs: '$ctrl',
+        controller: SubheaderIcons,
+        bindings: {
+            menuIcons: '<',
+            isAttendance: '<?',
+            showBlipChatSidenav: '<?',
+        },
+    })
+    .name;

@@ -1,3 +1,4 @@
+import * as angular from 'angular';
 import { DropdownItemController } from './DropdownItemController';
 import template from './DropdownItemView.html';
 
@@ -16,22 +17,25 @@ import template from './DropdownItemView.html';
  * @param {boolean} closeOnClick    - Determines if menu should close when content is clicked
  * @param {expression} onOpen       - Callback when dropdown is opened
  */
-export const dropdownItem = {
-    bindings: {
-        itemTitle: '@',
-        hideIcon: '<?',
-        customIcon: '@?',
-        hideUpIcon: '<?',
-        align: '@?',
-        direction: '<?',
-        minWidth: '<?',
-        maxHeight: '@?',
-        buttonClasses: '@?',
-        closeOnClick: '<?',
-        onOpen: '&?',
-    },
-    transclude: true,
-    controller: DropdownItemController,
-    controllerAs: '$ctrl',
-    template,
-};
+export const dropdownItem = angular
+    .module('blipComponents.dropdownItem', [])
+    .component('dropdownItem', {
+        bindings: {
+            itemTitle: '@',
+            hideIcon: '<?',
+            customIcon: '@?',
+            hideUpIcon: '<?',
+            align: '@?',
+            direction: '<?',
+            minWidth: '<?',
+            maxHeight: '@?',
+            buttonClasses: '@?',
+            closeOnClick: '<?',
+            onOpen: '&?',
+        },
+        transclude: true,
+        controller: DropdownItemController,
+        controllerAs: '$ctrl',
+        template,
+    })
+    .name;

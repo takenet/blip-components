@@ -1,6 +1,7 @@
-import template from './ChipsView.html';
+import * as angular from 'angular';
 import { Component } from 'decorators';
 import './_chips.scss';
+import { IComponentOptions } from 'angular';
 
 @Component({
     selector: 'chips',
@@ -12,7 +13,7 @@ import './_chips.scss';
         {{item.text}} <icon-dpr ng-if="!$ctrl.hideRemove" size="xs" class="remove-chip" ng-click="$ctrl.removeItem(item)">&#xE5CD;</icon-dpr>
     </div>`,
 })
-export class ChipsComponent {
+class Chips {
     data: any;
     hideRemove: boolean;
     onRemove: (obj: any) => {};
@@ -23,3 +24,8 @@ export class ChipsComponent {
         this.onRemove({ $data: this.data, $removedItem: item });
     }
 }
+
+export const ChipsComponent = angular
+    .module('blipComponents.chips', [])
+    .component('chips', <IComponentOptions>Chips)
+    .name;

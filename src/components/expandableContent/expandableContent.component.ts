@@ -1,3 +1,4 @@
+import * as angular from 'angular';
 import './expandableContent.scss';
 import template from './ExpandableContentView.html';
 import { IScope } from 'angular';
@@ -45,17 +46,20 @@ class ExpandableContent {
     }
 }
 
-export const ExpandableContentComponent = {
-    controller: ExpandableContent,
-    transclude: {
-        itemHeader: '?itemHeader',
-        itemBody: '?itemBody',
-    },
-    bindings: {
-        headerItems: '@?',
-        bodyItems: '@?',
-        defaultState: '<?',
-        onToggleActive: '&?',
-    },
-    template,
-};
+export const ExpandableContentComponent = angular
+    .module('blipComponents.expandableContent', [])
+    .component('expandableContent', {
+        controller: ExpandableContent,
+        transclude: {
+            itemHeader: '?itemHeader',
+            itemBody: '?itemBody',
+        },
+        bindings: {
+            headerItems: '@?',
+            bodyItems: '@?',
+            defaultState: '<?',
+            onToggleActive: '&?',
+        },
+        template,
+    })
+    .name;

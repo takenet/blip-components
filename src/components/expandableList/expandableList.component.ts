@@ -1,4 +1,5 @@
 import './expandableList.scss';
+import * as angular from 'angular';
 
 export class ExpandableListComponent {
     public mainElement: HTMLElement;
@@ -22,14 +23,16 @@ export class ExpandableListComponent {
     }
 }
 
-export const ExpandableList = {
-    controller: ExpandableListComponent,
-    transclude: true,
-    require: {},
-    bindings: {
-        extras: '<?',
-        headerItems: '@?',
-        bodyItems: '@?',
-    },
-    template: '<div class="expandable-list" ng-transclude></div>',
-};
+export const ExpandableList = angular
+    .module('blipComponents.expandableList', [])
+    .component('expandableList', {
+        controller: ExpandableListComponent,
+        transclude: true,
+        require: {},
+        bindings: {
+            extras: '<?',
+            headerItems: '@?',
+            bodyItems: '@?',
+        },
+        template: '<div class="expandable-list" ng-transclude></div>',
+    });

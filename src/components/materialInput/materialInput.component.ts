@@ -105,14 +105,17 @@ export class MaterialInputComponent {
     }
 }
 
-export const materialInput = {
-    controller: MaterialInputComponent,
-    controllerAs: '$ctrl',
-    transclude: true,
-    bindings: {
-        initialValue: '<?',
-        autoFocus: '<?',
-    },
-    template: `<div class="material-wrapper" ng-transclude>
-    </div>`,
-};
+export const materialInput = angular
+    .module('blipComponents.materialInput', [])
+    .component('materialInput', {
+        controller: MaterialInputComponent,
+        controllerAs: '$ctrl',
+        transclude: true,
+        bindings: {
+            initialValue: '<?',
+            autoFocus: '<?',
+        },
+        template: `<div class="material-wrapper" ng-transclude>
+        </div>`,
+    })
+    .name;

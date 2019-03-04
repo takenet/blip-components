@@ -1,5 +1,6 @@
 import './card.scss';
 import template from './CardView.html';
+import * as angular from 'angular';
 import { IStateService } from 'angular-ui-router';
 import { ITranscludeFunction } from 'angular';
 
@@ -86,23 +87,26 @@ class CardComponentController implements ICardComponentController {
 }
 
 //
-export const CardComponent = {
-    template,
-    controller: CardComponentController,
-    controllerAs: '$ctrl',
-    bindings: {
-        itemTitle: '@',
-        collapsable: '<?',
-        aditionalInfo: '@?',
-        sref: '@?',
-        sparams: '<?',
-        onEdit: '&?',
-        onExclude: '&?',
-        cardInfo: '@?',
-        showOptions: '<?',
-    },
-    transclude: {
-        cardFooter: '?cardFooter',
-        cardOptions: '?cardOptions',
-    },
-};
+export const CardComponent = angular
+    .module('blipComponents.card', [])
+    .component('card', {
+        template,
+        controller: CardComponentController,
+        controllerAs: '$ctrl',
+        bindings: {
+            itemTitle: '@',
+            collapsable: '<?',
+            aditionalInfo: '@?',
+            sref: '@?',
+            sparams: '<?',
+            onEdit: '&?',
+            onExclude: '&?',
+            cardInfo: '@?',
+            showOptions: '<?',
+        },
+        transclude: {
+            cardFooter: '?cardFooter',
+            cardOptions: '?cardOptions',
+        },
+    })
+    .name;

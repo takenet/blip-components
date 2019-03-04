@@ -1,3 +1,4 @@
+import * as angular from 'angular';
 import './ConfusionMatrix.scss';
 import template from './ConfusionMatrixView.html';
 
@@ -130,12 +131,15 @@ export class ConfusionMatrixComponent {
     }
 }
 
-export const ConfusionMatrix = {
-    controller: ConfusionMatrixComponent,
-    controllerAs: '$ctrl',
-    template,
-    bindings: {
-        matrix: '<',
-        keys: '<',
-    },
-};
+export const ConfusionMatrix = angular
+    .module('blipComponents.confusionMatrix', [])
+    .component('confusionMatrix', {
+        controller: ConfusionMatrixComponent,
+        controllerAs: '$ctrl',
+        template,
+        bindings: {
+            matrix: '<',
+            keys: '<',
+        },
+    })
+    .name;

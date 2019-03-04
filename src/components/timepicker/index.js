@@ -1,20 +1,23 @@
+import * as angular from 'angular';
 import TimepickerView from './TimepickerView.html';
 import TimepickerController from './TimepickerController';
 
-let TimepickerComponent = {
-    template: TimepickerView,
-    controllerAs: '$ctrl',
-    controller: TimepickerController,
-    transclude: true,
-    require: {
-        ngModel: 'ngModel',
-    },
-    bindings: {
-        minTime: '@',
-        maxTime: '@',
-        step: '@',
-        type: '@',
-    },
-};
+export const TimepickerComponent = angular
+    .module('blipComponents.timePicker', [])
+    .component('timepicker', {
+        template: TimepickerView,
+        controllerAs: '$ctrl',
+        controller: TimepickerController,
+        transclude: true,
+        require: {
+            ngModel: 'ngModel',
+        },
+        bindings: {
+            minTime: '@',
+            maxTime: '@',
+            step: '@',
+            type: '@',
+        },
+    })
+    .name;
 
-export default TimepickerComponent;

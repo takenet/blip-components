@@ -1,5 +1,7 @@
 import '../expandableList.scss';
 import template from './ExpandableItemView.html';
+import * as angular from 'angular';
+
 export class ExpandableItemComponent {
     expandableListCtrl: any;
     isActive: boolean = false;
@@ -24,19 +26,22 @@ export class ExpandableItemComponent {
     }
 }
 
-export const ExpandableItem = {
-    controller: ExpandableItemComponent,
-    transclude: {
-        itemHeader: '?itemHeader',
-        itemBody: '?itemBody',
-    },
-    require: {
-        expandableListCtrl: '^^expandableList'
-    },
-    bindings: {
-        extras: '<?',
-        headerItems: '@?',
-        bodyItems: '@?',
-    },
-    template
-};
+export const ExpandableItem = angular
+    .module('blipComponents.expandableItem', [])
+    .component('expandableItem', {
+        controller: ExpandableItemComponent,
+        transclude: {
+            itemHeader: '?itemHeader',
+            itemBody: '?itemBody',
+        },
+        require: {
+            expandableListCtrl: '^^expandableList'
+        },
+        bindings: {
+            extras: '<?',
+            headerItems: '@?',
+            bodyItems: '@?',
+        },
+        template
+    })
+    .name;

@@ -1,5 +1,6 @@
 import './AvatarArray.scss';
 import template from './AvatarArrayView.html';
+import * as angular from 'angular';
 
 class AvatarArray {
     public members: Array<any>;
@@ -7,7 +8,6 @@ class AvatarArray {
 
     constructor(private $scope) {
         this.$scope.$watch('$ctrl.members', (newValue, oldValue) => {
-            // if (newValue !== oldValue) {
             setTimeout(() => {
                 let array = Array.from(
                     document.querySelectorAll('.avatar-array > tooltip'),
@@ -21,17 +21,19 @@ class AvatarArray {
                     x.style.zIndex = String(100 - index);
                 });
             }, 0);
-            // }
         });
     }
 }
 
-export const AvatarArrayComponent = {
-    controller: AvatarArray,
-    controllerAs: '$ctrl',
-    bindings: {
-        members: '<?',
-        limit: '<?',
-    },
-    template,
-};
+export const AvatarArrayComponent = angular
+    .module('blipComponents.avatarArray', [])
+    .component('avatarArray', {
+        controller: AvatarArray,
+        controllerAs: '$ctrl',
+        bindings: {
+            members: '<?',
+            limit: '<?',
+        },
+        template,
+    })
+    .name;

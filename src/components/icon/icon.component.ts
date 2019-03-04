@@ -1,3 +1,4 @@
+import * as angular from 'angular';
 import { IComponentController } from 'angular';
 import { strToEl } from 'data/function';
 
@@ -48,13 +49,16 @@ class IconController implements IComponentController {
     }
 }
 
-export const IconComponent = {
-    controller: IconController,
-    controllerAs: '$ctrl',
-    bindings: {
-        name: '@?',
-        color: '@?',
-        width: '@?',
-        height: '@?',
-    }
-};
+export const IconComponent = angular
+    .module('blipComponents.iconComponent', [])
+    .component('icon', {
+        controller: IconController,
+        controllerAs: '$ctrl',
+        bindings: {
+            name: '@?',
+            color: '@?',
+            width: '@?',
+            height: '@?',
+        }
+    })
+    .name;

@@ -1,3 +1,4 @@
+import * as angular from 'angular';
 import './letterAvatar.scss';
 import * as colorsArray from './colors.json';
 import template from './LetterAvatarView.html';
@@ -42,12 +43,15 @@ class LetterAvatarController {
     }
 }
 
-export const letterAvatar = {
-    template: template,
-    controller: LetterAvatarController,
-    controllerAs: '$ctrl',
-    bindings: {
-        text: '<?',
-    },
-    transclude: false,
-};
+export const letterAvatar = angular
+    .module('blipComponents.letterAvatar', [])
+    .component('letterAvatar', {
+        template: template,
+        controller: LetterAvatarController,
+        controllerAs: '$ctrl',
+        bindings: {
+            text: '<?',
+        },
+        transclude: false,
+    })
+    .name;

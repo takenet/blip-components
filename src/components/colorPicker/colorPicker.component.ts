@@ -1,4 +1,5 @@
 import './colorPicker.scss';
+import * as angular from 'angular';
 
 export class ColorPickerComponent {
     colorBlock: HTMLCanvasElement;
@@ -196,22 +197,25 @@ export class ColorPickerComponent {
     }
 }
 
-export const colorPicker = {
-    controller: ColorPickerComponent,
-    controllerAs: '$ctrl',
-    bindings: {
-        inputColor: '=',
-        id: '@',
-    },
-    template: `
-    <div class="date-picker-wrapper">
-        <span class="color-label" ng-click="$ctrl.toggleColorPicker()"></span>
-        <div class="color-picker" ng-class="{'show-picker': $ctrl.showPicker }">
-            <div class="canvas-wrapper">
-                <canvas class="color-canvas color-block" height="150" width="150"></canvas>
-                <canvas class="color-canvas color-strip" height="150" width="30"></canvas>
+export const colorPicker = angular
+    .module('blipComponents.colorPicker', [])
+    .component('colorPicker', {
+        controller: ColorPickerComponent,
+        controllerAs: '$ctrl',
+        bindings: {
+            inputColor: '=',
+            id: '@',
+        },
+        template: `
+        <div class="date-picker-wrapper">
+            <span class="color-label" ng-click="$ctrl.toggleColorPicker()"></span>
+            <div class="color-picker" ng-class="{'show-picker': $ctrl.showPicker }">
+                <div class="canvas-wrapper">
+                    <canvas class="color-canvas color-block" height="150" width="150"></canvas>
+                    <canvas class="color-canvas color-strip" height="150" width="30"></canvas>
+                </div>
+                <input type="text" maxlenght="7" placeholder="Hex Code" class="color-text-input" ng-model="$ctrl.inputColor" ng-class="{'invalid-input': !$ctrl.validColor }"></input>
             </div>
-            <input type="text" maxlenght="7" placeholder="Hex Code" class="color-text-input" ng-model="$ctrl.inputColor" ng-class="{'invalid-input': !$ctrl.validColor }"></input>
-        </div>
-     </div>`,
-};
+        </div>`,
+    })
+    .name;

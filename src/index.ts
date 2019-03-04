@@ -1,35 +1,33 @@
 //Components
-import accordion from './components/accordion';
-import { AvatarArrayComponent } from './components/avatarArray/avatarArray.component';
-import { CardComponent } from './components/card/card.component';
-import { materialInput } from './components/materialInput/materialInput.component';
-import { Radio } from './components/radio/radio.components';
-import { Checkbox } from './components/checkbox/checkbox.components';
-import { colorPicker } from './components/colorPicker/colorPicker.component';
-import { ExpandableList } from './components/expandableList/expandableList.component';
-import { ExpandableItem } from './components/expandableList/expandableItem';
-import { ExpandableContentComponent } from './components/expandableContent/expandableContent.component';
-import { savingState } from './components/savingState/savingState.component';
-import contentBoxes from './components/contentBoxes';
-import editableInput from './components/editableInput';
-import expandable from './components/expandable';
-import formField from './components/formField';
-import { iconDpr } from './components/icon-dpr';
-import { IconComponent } from './components/icon/icon.component';
-import iconButton from './components/iconButton';
-import { InfoHeader } from './components/infoHeader/infoHeader.component';
-import inputList from './components/inputList';
-import scrollContent from './components/scrollContent';
-import sidenavMenu from './components/sidenavMenu';
-import sidenavMenuItem from './components/sidenavMenuItem';
-import { SwitchComponent } from './components/switch';
-import timepicker from './components/timepicker';
-import toggleButton from './components/toggleButton';
-import { PageHeaderDirective } from './components/pageHeader/PageHeaderDirective';
-import { OnErrorSrcDirective } from './components/onErrorSrc/onErrorSrc.directive';
-import { dropdownItem } from './components/dropdownItem';
-import { ChipsComponent } from './components/chips/chips.component';
-import ContentTabsComponent from './components/contentTabs';
+export { accordion } from './components/accordion';
+export { AvatarArrayComponent } from './components/avatarArray/avatarArray.component';
+export { CardComponent } from './components/card/card.component';
+export { materialInput } from './components/materialInput/materialInput.component';
+export { Radio } from './components/radio/radio.components';
+export { Checkbox } from './components/checkbox/checkbox.components';
+export { colorPicker } from './components/colorPicker/colorPicker.component';
+export { ExpandableList } from './components/expandableList/expandableList.component';
+export { ExpandableItem } from './components/expandableList/expandableItem';
+export { ExpandableContentComponent } from './components/expandableContent/expandableContent.component';
+export { savingState } from './components/savingState/savingState.component';
+export { contentBoxes } from './components/contentBoxes';
+export { editableInput } from './components/editableInput';
+export { expandable } from './components/expandable';
+export { formField } from './components/formField';
+export { iconDpr } from './components/icon-dpr';
+export { IconComponent } from './components/icon/icon.component';
+export { iconButton } from './components/iconButton';
+export { InfoHeader } from './components/infoHeader/infoHeader.component';
+export { inputList } from './components/inputList';
+export { ScrollContentComponent } from './components/scrollContent';
+export { sidenavMenu } from './components/sidenavMenu';
+export { sidenavMenuItem } from './components/sidenavMenuItem';
+export { SwitchComponent } from './components/switch';
+export { TimepickerComponent } from './components/timepicker';
+export { ToggleButtonComponent } from './components/toggleButton';
+export { dropdownItem } from './components/dropdownItem';
+export { ChipsComponent } from './components/chips/chips.component';
+import { default as ContentTabsComponent } from './components/contentTabs';
 import { TabComponent } from './components/contentTabs/tab';
 import { SubheaderIconsComponent } from './components/subheaderIcons/subheaderIcons.component';
 import { LocalLoadingComponent } from './components/loading/localLoading.component';
@@ -65,47 +63,52 @@ import { ImpactCircleComponent } from './components/impactCircle/impactCircle.co
 import { BuilderSearchComponent } from './components/builderSearch/builderSearch.component';
 import { UserMenuComponent } from './components/userMenu/userMenu.component';
 import { BlipFooterComponent } from './components/blipFooter/blipFooter.component';
+
+//Directives
+import { PageHeaderDirective } from './components/pageHeader/PageHeaderDirective';
+import { OnErrorSrcDirective } from './components/onErrorSrc/onErrorSrc.directive';
+
 import { IComponentOptions } from 'angular';
 import { sharedModules } from './modules';
 
 export const module = (function(ng) {
     return ng.module('blip-components', [sharedModules])
-        .component('accordion', accordion)
-        .component('avatarArray', AvatarArrayComponent)
-        .component('card', CardComponent)
-        .component('materialInput', materialInput)
-        .component('radio', Radio)
-        .component('checkbox', Checkbox)
-        .component('colorPicker', colorPicker)
-        .component('expandableList', ExpandableList)
-        .component('expandableItem', ExpandableItem)
-        .component('expandableContent', ExpandableContentComponent)
-        .component('savingState', savingState)
-        .component('contentBoxes', contentBoxes)
-        .component('editableInput', editableInput)
-        .component('expandable', expandable)
-        .component('formField', formField)
-        .component('iconDpr', iconDpr)
+        // .component('accordion', accordion)
+        // .component('avatarArray', AvatarArrayComponent)
+        // .component('card', CardComponent)
+        // .component('materialInput', materialInput)
+        // .component('radio', Radio)
+        // .component('checkbox', Checkbox)
+        // .component('colorPicker', colorPicker)
+        // .component('expandableList', ExpandableList)
+        // .component('expandableItem', ExpandableItem)
+        // .component('expandableContent', ExpandableContentComponent)
+        // .component('savingState', savingState)
+        // .component('contentBoxes', contentBoxes)
+        // .component('editableInput', editableInput)
+        // .component('expandable', expandable)
+        // .component('formField', formField)
+        // .component('iconDpr', iconDpr)
         // .component('icon', IconComponent)
-        .component('iconButton', iconButton)
-        .component('infoHeader', InfoHeader)
-        .component('inputList', inputList)
-        .component('scrollContent', scrollContent)
-        .component('sidenavMenu', sidenavMenu)
-        .component('sidenavMenuItem', sidenavMenuItem)
-        .component('switch', SwitchComponent)
-        .component('timepicker', timepicker)
-        .component('toggleButton', toggleButton)
-        .component('dropdownItem', dropdownItem)
-        .component('chips', <IComponentOptions>ChipsComponent)
-        .component('contentTabs', ContentTabsComponent)
-        .component('tab', TabComponent)
-        .component('confusionMatrix', ConfusionMatrix)
-        .component('letterAvatar', letterAvatar)
-        .component('subheaderIcons', SubheaderIconsComponent)
-        .component('localLoading', <IComponentOptions>LocalLoadingComponent)
-        .component('searchInput', SearchInputComponent)
-        .component('listItems', ListItemsComponent)
+        // .component('iconButton', iconButton)
+        // .component('infoHeader', InfoHeader)
+        // .component('inputList', inputList)
+        // .component('scrollContent', ScrollContentComponent)
+        // .component('sidenavMenu', sidenavMenu)
+        // .component('sidenavMenuItem', sidenavMenuItem)
+        // .component('switch', SwitchComponent)
+        // .component('timepicker', TimepickerComponent)
+        // .component('toggleButton', ToggleButtonComponent)
+        // .component('dropdownItem', dropdownItem)
+        // .component('chips', ChipsComponent)
+        // .component('contentTabs', ContentTabsComponent)
+        // .component('tab', TabComponent)
+        // .component('confusionMatrix', ConfusionMatrix)
+        // .component('letterAvatar', letterAvatar)
+        // .component('subheaderIcons', SubheaderIconsComponent)
+        // .component('localLoading', LocalLoadingComponent)
+        // .component('searchInput', SearchInputComponent)
+        // .component('listItems', ListItemsComponent)
         .component('listItem', ListItemComponent)
         .component('customSelect', CustomSelectComponent)
         .component('selectItem', SelectItemComponent)

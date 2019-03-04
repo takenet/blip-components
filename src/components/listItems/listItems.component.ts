@@ -1,3 +1,5 @@
+import * as angular from 'angular';
+
 /**
  * Usage:
  * <list-items>
@@ -38,16 +40,19 @@ class ListItems {
     }
 }
 
-export const ListItemsComponent = {
-    controller: ListItems,
-    controllerAs: '$ctrl',
-    template: `
-    <div>
-        <span ng-if="$ctrl.selectAll"><checkbox ng-click="$ctrl.toggleSelectAll()" ng-model="$ctrl.isSelectedAll"><span translate>utils.misc.selectAll</span></checkbox>
-    </div>
-    <div ng-transclude></div>`,
-    transclude: true,
-    bindings: {
-        selectAll: '<?',
-    },
-};
+export const ListItemsComponent = angular
+    .module('blipComponents.listItems', [])
+    .component('listItems', {
+        controller: ListItems,
+        controllerAs: '$ctrl',
+        template: `
+        <div>
+            <span ng-if="$ctrl.selectAll"><checkbox ng-click="$ctrl.toggleSelectAll()" ng-model="$ctrl.isSelectedAll"><span translate>utils.misc.selectAll</span></checkbox>
+        </div>
+        <div ng-transclude></div>`,
+        transclude: true,
+        bindings: {
+            selectAll: '<?',
+        },
+    })
+    .name;
