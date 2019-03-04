@@ -64,6 +64,7 @@ import { ThreadMessagesComponent } from './components/threadMessages/threadMessa
 import { ImpactCircleComponent } from './components/impactCircle/impactCircle.component';
 import { BuilderSearchComponent } from './components/builderSearch/builderSearch.component';
 import { UserMenuComponent } from './components/userMenu/userMenu.component';
+import { BlipFooterComponent } from './components/blipFooter/blipFooter.component';
 import { IComponentOptions } from 'angular';
 import { sharedModules } from './modules';
 
@@ -132,6 +133,7 @@ export const module = (function(ng) {
         .component('impactCircle', ImpactCircleComponent)
         .component('builderSearch', BuilderSearchComponent)
         .component('userMenu', <IComponentOptions>UserMenuComponent)
+        .component('blipFooter', <IComponentOptions>BlipFooterComponent)
         .directive('pageHeader', PageHeaderDirective.factory)
         .directive('onErrorSrc', OnErrorSrcDirective.factory);
     })((<any>window).angular);

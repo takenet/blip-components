@@ -1,0 +1,57 @@
+@import "~assets/scss/variables";
+@import "~assets/scss/typography";
+@import "~assets/scss/mixins";
+
+footer {
+    display: flex;
+    align-items: center;
+    font-size: $bp-fs-7;
+    font-weight: $regular;
+    width: 80%; height: $footer-height;
+    padding: 2*$u 0;
+    flex-shrink: 0;
+    color: $color-text-light-6;
+    border-top: 1px solid;
+
+    a {
+        color: $bp-c-city;
+        font-weight: $bold;
+        text-decoration: none;
+
+        &:hover {
+            color: $bp-c-blip-dark;
+            text-decoration: none;
+        }
+        &:not(:first-child) { margin-left: 1.8*$m; }
+    }
+
+    span {
+        color: $color-secondary;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+// Areas
+footer.area-builder {
+    background: transparent;
+    color: #c9dfe4;
+    border: 0;
+    position: absolute;
+    bottom: 20px;
+    width: auto; height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+}
+
+@include desktop {
+    footer {
+        height: $footer-height-desktop;
+        padding: 4*$u 0;
+        .column,
+        .columns {
+            line-height: 48px;
+        }
+    }
+}
