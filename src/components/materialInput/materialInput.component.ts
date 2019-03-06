@@ -1,5 +1,5 @@
 import './materialInput.scss';
-import * as angular from 'angular';
+import angular from 'core/angular';
 import { ITimeoutService, IScope } from 'angular';
 
 export const ClearInput = 'clearInput';

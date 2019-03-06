@@ -1,6 +1,6 @@
 import './card.scss';
 import template from './CardView.html';
-import * as angular from 'angular';
+import angular from 'core/angular';
 import { IStateService } from 'angular-ui-router';
 import { ITranscludeFunction } from 'angular';
 

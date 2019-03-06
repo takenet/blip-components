@@ -2,7 +2,7 @@
 //  * DEPRECATED: Use <icon> component instead
 //  */
 import './icon-dpr.scss';
-import * as angular from 'angular';
+import angular from 'core/angular';
 
 export const iconDpr = angular
     .module('blipComponents.iconDpr', [])

@@ -1,5 +1,5 @@
 import './radio.scss';
-import * as angular from 'angular';
+import angular from 'core/angular';
 
 export class RadioComponent {
     public value: string;

@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 import './expandableContent.scss';
 import template from './ExpandableContentView.html';
 import { IScope } from 'angular';

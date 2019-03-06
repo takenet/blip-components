@@ -1,4 +1,4 @@
-import angular from 'angular';
+import angular from 'core/angular';
 import UploadAreaView from './UploadAreaView.html';
 
 export default class UploadAreaDirective {

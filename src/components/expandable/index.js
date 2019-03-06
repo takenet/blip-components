@@ -1,5 +1,5 @@
 import Type from 'data/type';
-import * as angular from 'angular';
+import angular from 'core/angular';
 
 export const { Collapse, Expand, Toggle } = Type({
     Collapse: [],

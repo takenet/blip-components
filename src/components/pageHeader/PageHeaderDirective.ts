@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import template from './PageHeaderView.html';
 import './pageHeader.scss';
 
@@ -16,7 +17,7 @@ import './pageHeader.scss';
  * <page-header page-title="Page title"></page-header>
  *
  */
-export class PageHeaderDirective {
+class PageHeader {
     containerWidth: string;
     title: any;
     hasInfo: any;
@@ -94,6 +95,11 @@ export class PageHeaderDirective {
     }
 
     static factory() {
-        return new PageHeaderDirective();
+        return new PageHeader();
     }
 }
+
+export const PageHeaderDirective = angular
+    .module('blipComponents.pageHeader', [])
+    .directive('pageHeader', PageHeader.factory)
+    .name;

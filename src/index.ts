@@ -27,52 +27,52 @@ export { TimepickerComponent } from './components/timepicker';
 export { ToggleButtonComponent } from './components/toggleButton';
 export { dropdownItem } from './components/dropdownItem';
 export { ChipsComponent } from './components/chips/chips.component';
-import { default as ContentTabsComponent } from './components/contentTabs';
-import { TabComponent } from './components/contentTabs/tab';
-import { SubheaderIconsComponent } from './components/subheaderIcons/subheaderIcons.component';
-import { LocalLoadingComponent } from './components/loading/localLoading.component';
-import { SearchInputComponent } from './components/searchInput/searchInput.component';
-import { ListItemsComponent } from './components/listItems/listItems.component';
-import { ListItemComponent } from './components/listItem/listItem.component';
-import { CustomSelectComponent } from './components/customSelect/customSelect.component';
-import { SelectItemComponent } from './components/customSelect/selectItem/selectItem.component';
-import { BuilderNodeComponent } from './components/builderNode/builderNode.component';
-import { ActionsBarComponent } from './components/actionsBar/actionsBar.component';
-import { KeyValueComponent } from './components/keyValue/keyValue.component';
-import { KeyValueItemComponent } from './components/keyValue/keyValueItem.component';
-import { InputClipboardComponent } from './components/inputClipboard/inputClipboard.component';
-import { letterAvatar } from './components/letterAvatar';
-import { TooltipButtonComponent } from './components/tooltipButton/tooltipButton.component';
-import { ReloadButtonComponent } from './components/reloadButton/reloadButton.component';
-import { StatusBar } from './components/statusBar/statusBar.component';
-import { PageHelp } from './components/pageHelp/pageHelp.component';
-import { ConfusionMatrix } from './components/confusionMatrix/confusionMatrix.component';
-import { LoadingIconComponent } from './components/loadingIcon/loadingIcon.component';
-import { FilterByComponent } from './components/filterBy/filterBy.component';
-import { DateRangePickerComponent } from './components/dateRangePicker/dateRangePicker.component';
-import { AddRemoveComponent } from './components/addRemove/addRemove.component';
-import { BlipSelectComponent } from './components/blipSelect/blipSelect.component';
-import { BlipCheckboxComponent } from './components/blipCheckbox/blipCheckbox.component';
-import { BlipInputComponent } from './components/blipInput/blipInput.component';
-import { BlipRadioComponent } from './components/blipRadio/blipRadio.component';
-import { BlipTextareaComponent } from './components/blipTextarea/blipTextarea.component';
-import { BlipTagsComponent } from './components/blipTags/blipTags.component';
-import { MonacoEditorComponent } from './components/monacoEditor/monacoEditor.component';
-import { ThreadMessagesComponent } from './components/threadMessages/threadMessages.component';
-import { ImpactCircleComponent } from './components/impactCircle/impactCircle.component';
-import { BuilderSearchComponent } from './components/builderSearch/builderSearch.component';
-import { UserMenuComponent } from './components/userMenu/userMenu.component';
-import { BlipFooterComponent } from './components/blipFooter/blipFooter.component';
+export { ContentTabsComponent } from './components/contentTabs';
+export { TabComponent } from './components/contentTabs/tab';
+export { SubheaderIconsComponent } from './components/subheaderIcons/subheaderIcons.component';
+export { LocalLoadingComponent } from './components/loading/localLoading.component';
+export { SearchInputComponent } from './components/searchInput/searchInput.component';
+export { ListItemsComponent } from './components/listItems/listItems.component';
+export { ListItemComponent } from './components/listItem/listItem.component';
+export { CustomSelectComponent } from './components/customSelect/customSelect.component';
+export { SelectItemComponent } from './components/customSelect/selectItem/selectItem.component';
+export { BuilderNodeComponent } from './components/builderNode/builderNode.component';
+export { ActionsBarComponent } from './components/actionsBar/actionsBar.component';
+export { KeyValueComponent } from './components/keyValue/keyValue.component';
+export { KeyValueItemComponent } from './components/keyValue/keyValueItem.component';
+export { InputClipboardComponent } from './components/inputClipboard/inputClipboard.component';
+export { letterAvatar } from './components/letterAvatar';
+export { TooltipButtonComponent } from './components/tooltipButton/tooltipButton.component';
+export { ReloadButtonComponent } from './components/reloadButton/reloadButton.component';
+export { StatusBarComponent } from './components/statusBar/statusBar.component';
+export { PageHelpComponent } from './components/pageHelp/pageHelp.component';
+export { ConfusionMatrixComponent } from './components/confusionMatrix/confusionMatrix.component';
+export { LoadingIconComponent } from './components/loadingIcon/loadingIcon.component';
+export { FilterByComponent } from './components/filterBy/filterBy.component';
+export { DateRangePickerComponent } from './components/dateRangePicker/dateRangePicker.component';
+export { AddRemoveComponent } from './components/addRemove/addRemove.component';
+export { BlipSelectComponent } from './components/blipSelect/blipSelect.component';
+export { BlipCheckboxComponent } from './components/blipCheckbox/blipCheckbox.component';
+export { BlipInputComponent } from './components/blipInput/blipInput.component';
+export { BlipRadioComponent } from './components/blipRadio/blipRadio.component';
+export { BlipTextareaComponent } from './components/blipTextarea/blipTextarea.component';
+export { BlipTagsComponent } from './components/blipTags/blipTags.component';
+export { MonacoEditorComponent } from './components/monacoEditor/monacoEditor.component';
+export { ThreadMessagesComponent } from './components/threadMessages/threadMessages.component';
+export { ImpactCircleComponent } from './components/impactCircle/impactCircle.component';
+export { BuilderSearchComponent } from './components/builderSearch/builderSearch.component';
+export { UserMenuComponent } from './components/userMenu/userMenu.component';
+export { BlipFooterComponent } from './components/blipFooter/blipFooter.component';
 
 //Directives
-import { PageHeaderDirective } from './components/pageHeader/PageHeaderDirective';
-import { OnErrorSrcDirective } from './components/onErrorSrc/onErrorSrc.directive';
+export { PageHeaderDirective } from './components/pageHeader/PageHeaderDirective';
+export { OnErrorSrcDirective } from './components/onErrorSrc/onErrorSrc.directive';
 
-import { IComponentOptions } from 'angular';
-import { sharedModules } from './modules';
+//Modules
+export { sharedModules } from './modules';
 
-export const module = (function(ng) {
-    return ng.module('blip-components', [sharedModules])
+// export const module = (function(ng) {
+    // return ng.module('blip-components', [sharedModules])
         // .component('accordion', accordion)
         // .component('avatarArray', AvatarArrayComponent)
         // .component('card', CardComponent)
@@ -109,34 +109,34 @@ export const module = (function(ng) {
         // .component('localLoading', LocalLoadingComponent)
         // .component('searchInput', SearchInputComponent)
         // .component('listItems', ListItemsComponent)
-        .component('listItem', ListItemComponent)
-        .component('customSelect', CustomSelectComponent)
-        .component('selectItem', SelectItemComponent)
-        .component('builderNode', BuilderNodeComponent)
-        .component('actionsBar', ActionsBarComponent)
-        .component('keyValue', KeyValueComponent)
-        .component('keyValueItem', KeyValueItemComponent)
-        .component('inputClipboard', InputClipboardComponent)
-        .component('tooltipButton', TooltipButtonComponent)
-        .component('reloadButton', ReloadButtonComponent)
-        .component('statusBar', StatusBar)
-        .component('pageHelp', PageHelp)
-        .component('loadingIcon', LoadingIconComponent)
-        .component('filterBy', FilterByComponent)
-        .component('dateRangePicker', DateRangePickerComponent)
-        .component('blipCheckbox', BlipCheckboxComponent)
-        .component('blipInput', BlipInputComponent)
-        .component('blipRadio', BlipRadioComponent)
-        .component('addRemove', AddRemoveComponent)
-        .component('blipSelect', BlipSelectComponent)
-        .component('blipTextarea', BlipTextareaComponent)
-        .component('blipTags', BlipTagsComponent)
-        .component('monacoEditor', MonacoEditorComponent)
-        .component('threadMessages', ThreadMessagesComponent)
-        .component('impactCircle', ImpactCircleComponent)
-        .component('builderSearch', BuilderSearchComponent)
-        .component('userMenu', <IComponentOptions>UserMenuComponent)
-        .component('blipFooter', <IComponentOptions>BlipFooterComponent)
-        .directive('pageHeader', PageHeaderDirective.factory)
-        .directive('onErrorSrc', OnErrorSrcDirective.factory);
-    })((<any>window).angular);
+        // .component('listItem', ListItemComponent)
+        // .component('customSelect', CustomSelectComponent)
+        // .component('selectItem', SelectItemComponent)
+        // .component('builderNode', BuilderNodeComponent)
+        // .component('actionsBar', ActionsBarComponent)
+        // .component('keyValue', KeyValueComponent)
+        // .component('keyValueItem', KeyValueItemComponent)
+        // .component('inputClipboard', InputClipboardComponent)
+        // .component('tooltipButton', TooltipButtonComponent)
+        // .component('reloadButton', ReloadButtonComponent)
+        // .component('statusBar', StatusBar)
+        // .component('pageHelp', PageHelp)
+        // .component('loadingIcon', LoadingIconComponent)
+        // .component('filterBy', FilterByComponent)
+        // .component('dateRangePicker', DateRangePickerComponent)
+        // .component('blipCheckbox', BlipCheckboxComponent)
+        // .component('blipInput', BlipInputComponent)
+        // .component('blipRadio', BlipRadioComponent)
+        // .component('addRemove', AddRemoveComponent)
+        // .component('blipSelect', BlipSelectComponent)
+        // .component('blipTextarea', BlipTextareaComponent)
+        // .component('blipTags', BlipTagsComponent)
+        // .component('monacoEditor', MonacoEditorComponent)
+        // .component('threadMessages', ThreadMessagesComponent)
+        // .component('impactCircle', ImpactCircleComponent)
+        // .component('builderSearch', BuilderSearchComponent)
+        // .component('userMenu', UserMenuComponent)
+        // .component('blipFooter', BlipFooterComponent)
+        // .directive('pageHeader', PageHeaderDirective.factory)
+        // .directive('onErrorSrc', OnErrorSrcDirective.factory);
+    // })((<any>window).angular);

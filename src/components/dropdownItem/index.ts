@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 import { DropdownItemController } from './DropdownItemController';
 import template from './DropdownItemView.html';
 

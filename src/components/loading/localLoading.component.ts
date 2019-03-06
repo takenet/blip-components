@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 import './localLoading.scss';
 import template from './LocalLoadingView.html';
 import { Component } from 'decorators';

@@ -1,4 +1,4 @@
-import angular from 'angular';
+import angular from 'core/angular';
 import './scrollContent.scss';
 
 export const ScrollContentComponent = angular

@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 import template from './ContentTabsView.html';
 import { IScope } from 'angular';
 import './contentTabs.scss';
@@ -16,7 +16,7 @@ import { EventEmitter } from 'shared/EventEmitter';
         </tab>
     </content-tabs>
  */
-export const contentTabs = angular
+export const ContentTabsComponent = angular
     .module('blipComponents.contentTabs', [])
     .component('contentTabs', {
         controller: class {

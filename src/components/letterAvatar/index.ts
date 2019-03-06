@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 import './letterAvatar.scss';
 import * as colorsArray from './colors.json';
 import template from './LetterAvatarView.html';

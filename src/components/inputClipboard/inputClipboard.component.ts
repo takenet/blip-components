@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import './inputClipboard.scss';
 
 class InputClipboard {
@@ -22,17 +23,20 @@ class InputClipboard {
     }
 }
 
-export const InputClipboardComponent = {
-    template: `
-    <div class="input-clipboard-container">
-        <input ng-model="$ctrl.model" readonly><button ng-click="$ctrl.copyToClipboard()" class="icon-copy no-style"></button>
-    </div>`,
-    controller: InputClipboard,
-    controllerAs: '$ctrl',
-    bindings: {
-        onCopy: '&?',
-    },
-    require: {
-        ngModel: '?ngModel',
-    },
-};
+export const InputClipboardComponent = angular
+    .module('blipComponents.inputClipboard', [])
+    .component('inputClipboard', {
+        template: `
+        <div class="input-clipboard-container">
+            <input ng-model="$ctrl.model" readonly><button ng-click="$ctrl.copyToClipboard()" class="icon-copy no-style"></button>
+        </div>`,
+        controller: InputClipboard,
+        controllerAs: '$ctrl',
+        bindings: {
+            onCopy: '&?',
+        },
+        require: {
+            ngModel: '?ngModel',
+        },
+    })
+    .name;

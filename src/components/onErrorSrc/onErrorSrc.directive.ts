@@ -1,8 +1,10 @@
+import angular from 'core/angular';
+
 /**
  * Directive for checking if an image was properly load. If not, it replaces with a fallback image.
  */
 
-export class OnErrorSrcDirective {
+class OnErrorSrc {
     restrict = 'A';
 
     link(scope, element, attrs) {
@@ -14,6 +16,11 @@ export class OnErrorSrcDirective {
     }
 
     static factory() {
-        return new OnErrorSrcDirective();
+        return new OnErrorSrc();
     }
 }
+
+export const OnErrorSrcDirective = angular
+    .module('blipComponents.onErrorSrc', [])
+    .directive('onErrorSrc', OnErrorSrc.factory)
+    .name;

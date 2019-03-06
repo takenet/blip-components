@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 import './inputList.scss';
 import controller from './InputListController';
 import template from './InputListView.html';

@@ -1,6 +1,6 @@
 import './checkbox.scss';
 import * as uuid from 'uuid';
-import * as angular from 'angular';
+import angular from 'core/angular';
 
 export class CheckboxComponent {
     uniqueId: string;

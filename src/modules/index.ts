@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 import { translateModule } from './translate';
 
 export const sharedModules = angular

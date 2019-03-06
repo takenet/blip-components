@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import template from './KeyValueItemView.html';
 import { EventEmitter } from 'shared/EventEmitter';
 import { IRootScopeService, IScope, IController } from 'angular';
@@ -58,24 +59,27 @@ class KeyValueItemController implements IController {
     }
 }
 
-export const KeyValueItemComponent = {
-    template,
-    controller: KeyValueItemController,
-    controllerAs: '$ctrl',
-    bindings: {
-        key: '@',
-        value: '@',
-        keyPlaceholder: '<',
-        valuePlaceholder: '<',
-        formReference: '<',
-        expandable: '<?',
-        editorLanguage: '<?',
-        onDelete: '&',
-        onKeyChanges: '&',
-        onValueChanges: '&',
-        onToggleValue: '&?',
-    },
-    require: {
-        ngModel: 'ngModel',
-    },
-};
+export const KeyValueItemComponent = angular
+    .module('blipComponents.keyValueItem', [])
+    .component('keyValueItem', {
+        template,
+        controller: KeyValueItemController,
+        controllerAs: '$ctrl',
+        bindings: {
+            key: '@',
+            value: '@',
+            keyPlaceholder: '<',
+            valuePlaceholder: '<',
+            formReference: '<',
+            expandable: '<?',
+            editorLanguage: '<?',
+            onDelete: '&',
+            onKeyChanges: '&',
+            onValueChanges: '&',
+            onToggleValue: '&?',
+        },
+        require: {
+            ngModel: 'ngModel',
+        },
+    })
+    .name;

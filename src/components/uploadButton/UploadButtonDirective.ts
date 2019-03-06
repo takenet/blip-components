@@ -1,4 +1,4 @@
-import angular from 'angular';
+import angular from 'core/angular';
 import UploadButtonView from './UploadButtonView.html';
 import './UploadButton.scss';
 export default class UploadButtonDirective {

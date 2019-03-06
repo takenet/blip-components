@@ -1,4 +1,4 @@
-import angular from 'angular';
+import angular from 'core/angular';
 import controller from './ContentBoxesController';
 import template from './ContentBoxesView.html';
 import './ContentBoxes.scss';

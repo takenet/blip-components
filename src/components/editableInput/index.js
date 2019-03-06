@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 import './editableInput.scss';
 import controller from './EditableInputController';
 import template from './EditableInputView.html';

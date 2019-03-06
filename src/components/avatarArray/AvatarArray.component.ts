@@ -1,6 +1,6 @@
 import './AvatarArray.scss';
 import template from './AvatarArrayView.html';
-import * as angular from 'angular';
+import angular from 'core/angular';
 
 class AvatarArray {
     public members: Array<any>;

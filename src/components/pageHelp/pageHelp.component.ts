@@ -1,6 +1,7 @@
+import angular from 'core/angular';
 import './pageHelp.scss';
 import template from './PageHelpView.html';
-export class PageHelpComponent {
+class PageHelp {
     public title: string;
     public body: string;
     public docLink: any;
@@ -24,14 +25,17 @@ export class PageHelpComponent {
     }
 }
 
-export const PageHelp = {
-    controller: PageHelpComponent,
-    controllerAs: '$ctrl',
-    bindings: {
-        title: '@',
-        body: '@',
-        docLink: '<',
-        close: '<?',
-    },
-    template,
-};
+export const PageHelpComponent = angular
+    .module('blipComponents.pageHelp', [])
+    .component('pageHelp', {
+        controller: PageHelp,
+        controllerAs: '$ctrl',
+        bindings: {
+            title: '@',
+            body: '@',
+            docLink: '<',
+            close: '<?',
+        },
+        template,
+    })
+    .name;

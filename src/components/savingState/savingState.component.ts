@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 import './savingState.scss';
 import * as saveSpinner from 'assets/img/loading3.png';
 import * as saveCheck from 'assets/img/checked.png';

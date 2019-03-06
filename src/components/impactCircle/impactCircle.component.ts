@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import template from './ImpactCircleView.html';
 import './ImpactCircle.scss';
 
@@ -86,12 +87,15 @@ class ImpactCircleController {
     }
 }
 
-export const ImpactCircleComponent = {
-    template,
-    controller: ImpactCircleController,
-    controllerAs: '$ctrl',
-    bindings: {
-        impactEvaluation: '<?',
-        total: '<?',
-    },
-};
+export const ImpactCircleComponent = angular
+    .module('blipComponents.impactCircle', [])
+    .component('impactCircle', {
+        template,
+        controller: ImpactCircleController,
+        controllerAs: '$ctrl',
+        bindings: {
+            impactEvaluation: '<?',
+            total: '<?',
+        },
+    })
+    .name;

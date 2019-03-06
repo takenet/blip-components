@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 
 export const TabComponent = angular
     .module('blipComponents.tabComponent', [])

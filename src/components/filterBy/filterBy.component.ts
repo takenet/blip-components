@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import template from './FilterByView.html';
 
 /**
@@ -30,14 +31,17 @@ class FilterBy {
     }
 }
 
-export const FilterByComponent = {
-    controller: FilterBy,
-    controllerAs: '$ctrl',
-    template,
-    bindings: {
-        onAddItem: '&?',
-        onRemoveItem: '&?',
-        filters: '<?',
-        items: '<?',
-    },
-};
+export const FilterByComponent = angular
+    .module('blipComponents.filterBy', [])
+    .component('filterBy', {
+        controller: FilterBy,
+        controllerAs: '$ctrl',
+        template,
+        bindings: {
+            onAddItem: '&?',
+            onRemoveItem: '&?',
+            filters: '<?',
+            items: '<?',
+        },
+    })
+    .name;

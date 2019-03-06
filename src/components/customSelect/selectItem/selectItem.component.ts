@@ -1,5 +1,5 @@
 import { IRootScopeService, IScope } from 'angular';
-import { ToggleCustomSelect } from '../customSelect.component';
+import angular from 'core/angular';
 
 class SelectItem {
     value: any;
@@ -26,16 +26,19 @@ class SelectItem {
     }
 }
 
-export const SelectItemComponent = {
-    template:
-        '<div class="select-item" ng-click="$ctrl.selectItem()">{{$ctrl.label}}</div>',
-    controller: SelectItem,
-    controllerAs: '$ctrl',
-    bindings: {
-        value: '@',
-        label: '@',
-    },
-    require: {
-        customSelectCtrl: '^^customSelect',
-    },
-};
+export const SelectItemComponent = angular
+    .module('blipComponents.selectItem', [])
+    .component('selectItem', {
+        template:
+            '<div class="select-item" ng-click="$ctrl.selectItem()">{{$ctrl.label}}</div>',
+        controller: SelectItem,
+        controllerAs: '$ctrl',
+        bindings: {
+            value: '@',
+            label: '@',
+        },
+        require: {
+            customSelectCtrl: '^^customSelect',
+        },
+    })
+    .name;

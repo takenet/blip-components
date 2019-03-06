@@ -1,4 +1,4 @@
-import angular from 'angular';
+import angular from 'core/angular';
 import 'angular-translate';
 import 'angular-translate-loader-partial';
 import 'angular-translate-storage-cookie';

@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import { BlipTags } from 'blip-toolkit';
 import { ComponentController } from '../base';
 import './blipTags.scss';
@@ -162,26 +163,29 @@ class BlipTagsController extends ComponentController
     }
 }
 
-export const BlipTagsComponent = {
-    template: '<div id="{{$ctrl.blipTagsId}} class="blip-tags"></div>',
-    controller: BlipTagsController,
-    controllerAs: '$ctrl',
-    bindings: {
-        canAddOptions: '<?',
-        promptTextCreator: '@?',
-        placeholder: '@?',
-        options: '<?',
-        canRemoveTags: '<?',
-        canChangeBackground: '<?',
-        onTagAdded: '&?',
-        onTagRemoved: '&?',
-        onTagClick: '&?',
-        onSelectTagColor: '&?',
-        onTagListUpdated: '&?',
-        mode: '@?',
-        toggleTagsMode: '<?',
-    },
-    require: {
-        ngModel: 'ngModel',
-    },
-};
+export const BlipTagsComponent = angular
+    .module('blipComponents.blipTags', [])
+    .component('blipTags', {
+        template: '<div id="{{$ctrl.blipTagsId}} class="blip-tags"></div>',
+        controller: BlipTagsController,
+        controllerAs: '$ctrl',
+        bindings: {
+            canAddOptions: '<?',
+            promptTextCreator: '@?',
+            placeholder: '@?',
+            options: '<?',
+            canRemoveTags: '<?',
+            canChangeBackground: '<?',
+            onTagAdded: '&?',
+            onTagRemoved: '&?',
+            onTagClick: '&?',
+            onSelectTagColor: '&?',
+            onTagListUpdated: '&?',
+            mode: '@?',
+            toggleTagsMode: '<?',
+        },
+        require: {
+            ngModel: 'ngModel',
+        },
+    })
+    .name;

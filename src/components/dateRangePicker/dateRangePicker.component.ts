@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import * as moment from 'moment';
 import * as locale from './locale.json';
 import HotelDatepicker from './hotel-datepicker';
@@ -89,17 +90,20 @@ class DateRangePickerController {
     }
 }
 
-export const DateRangePickerComponent = {
-    template: '<input class="date-range-picker">',
-    controller: DateRangePickerController,
-    controllerAs: '$ctrl',
-    bindings: {
-        initialDate: '@?',
-        onSelectPeriod: '&?',
-        onDayClick: '&?',
-        afterClose: '&?',
-    },
-    require: {
-        ngModel: '?ngModel',
-    },
-};
+export const DateRangePickerComponent = angular
+    .module('blipComponents.dateRangePicker', [])
+    .component('dateRangePicker', {
+        template: '<input class="date-range-picker">',
+        controller: DateRangePickerController,
+        controllerAs: '$ctrl',
+        bindings: {
+            initialDate: '@?',
+            onSelectPeriod: '&?',
+            onDayClick: '&?',
+            afterClose: '&?',
+        },
+        require: {
+            ngModel: '?ngModel',
+        },
+    })
+    .name;

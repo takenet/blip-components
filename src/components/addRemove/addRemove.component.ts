@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import * as styles from './addRemove.module.scss';
 
 class AddRemoveController {
@@ -27,17 +28,20 @@ class AddRemoveController {
     }
 }
 
-export const AddRemoveComponent = {
-    template: `
-    <span ng-click="$ctrl.onAdd()" ng-if="$ctrl.$showAdd" ng-class="$ctrl.styles.button" class="br-100 background-light-blip no-style">+</span>
-    <span ng-click="$ctrl.onRemove()" ng-if="$ctrl.$showRemove" ng-class="$ctrl.styles.button" class="br-100 background-light-blip no-style">-</span>
-    `,
-    controller: AddRemoveController,
-    controllerAs: '$ctrl',
-    bindings: {
-        showAdd: '<?',
-        showRemove: '<?',
-        onAdd: '&',
-        onRemove: '&',
-    },
-};
+export const AddRemoveComponent = angular
+    .module('blipComponents.addRemove', [])
+    .component('addRemove', {
+        template: `
+        <span ng-click="$ctrl.onAdd()" ng-if="$ctrl.$showAdd" ng-class="$ctrl.styles.button" class="br-100 background-light-blip no-style">+</span>
+        <span ng-click="$ctrl.onRemove()" ng-if="$ctrl.$showRemove" ng-class="$ctrl.styles.button" class="br-100 background-light-blip no-style">-</span>
+        `,
+        controller: AddRemoveController,
+        controllerAs: '$ctrl',
+        bindings: {
+            showAdd: '<?',
+            showRemove: '<?',
+            onAdd: '&',
+            onRemove: '&',
+        },
+    })
+    .name;

@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import template from './blipTextareaView.html';
 import * as uuid from 'uuid';
 import { ComponentController } from '../base';
@@ -35,22 +36,25 @@ class BlipTextareaController extends ComponentController {
     }
 }
 
-export const BlipTextareaComponent = {
-    template,
-    controller: BlipTextareaController,
-    controllerAs: '$ctrl',
-    bindings: {
-        disabled: '<?',
-        fieldName: '@?',
-        label: '@?',
-        placeholder: '@?',
-        required: '@?',
-        rows: '@?',
-        maxlength: '@?',
-        parentForm: '=?',
-        onChange: '&?',
-    },
-    require: {
-        ngModel: 'ngModel',
-    },
-};
+export const BlipTextareaComponent = angular
+    .module('blipComponents.blipTextarea', [])
+    .component('blipTextarea', {
+        template,
+        controller: BlipTextareaController,
+        controllerAs: '$ctrl',
+        bindings: {
+            disabled: '<?',
+            fieldName: '@?',
+            label: '@?',
+            placeholder: '@?',
+            required: '@?',
+            rows: '@?',
+            maxlength: '@?',
+            parentForm: '=?',
+            onChange: '&?',
+        },
+        require: {
+            ngModel: 'ngModel',
+        },
+    })
+    .name;

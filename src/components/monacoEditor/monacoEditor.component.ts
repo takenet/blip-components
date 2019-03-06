@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import { IComponentController } from 'angular';
 import { EventEmitter } from 'shared/EventEmitter';
 
@@ -134,24 +135,27 @@ class MonacoEditor implements IMonacoEditorComponentBindings {
     }
 }
 
-export const MonacoEditorComponent = {
-    template: `
-        <div id="monaco-editor-container"
-            ng-style="{ width: $ctrl.containerWidth, height: $ctrl.containerHeight }"
-            ></div>
-    `,
-    controller: MonacoEditor,
-    controllerAs: '$ctrl',
-    bindings: {
-        width: '@?',
-        height: '@?',
-        language: '@?',
-        theme: '@?',
-        code: '@?',
-        lazyLoad: '<?',
-        onDidCreateEditor: '&?',
-        onCodeChange: '&?',
-        onSave: '&?',
-    },
-    transclude: false,
-};
+export const MonacoEditorComponent = angular
+    .module('blipComponents.monacoEditor', [])
+    .component('monacoEditor', {
+        template: `
+            <div id="monaco-editor-container"
+                ng-style="{ width: $ctrl.containerWidth, height: $ctrl.containerHeight }"
+                ></div>
+        `,
+        controller: MonacoEditor,
+        controllerAs: '$ctrl',
+        bindings: {
+            width: '@?',
+            height: '@?',
+            language: '@?',
+            theme: '@?',
+            code: '@?',
+            lazyLoad: '<?',
+            onDidCreateEditor: '&?',
+            onCodeChange: '&?',
+            onSave: '&?',
+        },
+        transclude: false,
+    })
+    .name;

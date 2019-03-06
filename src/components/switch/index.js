@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 import './switch.scss';
 import controller from './SwitchController';
 import template from './SwitchView.html';

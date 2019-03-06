@@ -1,6 +1,6 @@
 import '../expandableList.scss';
 import template from './ExpandableItemView.html';
-import * as angular from 'angular';
+import angular from 'core/angular';
 
 export class ExpandableItemComponent {
     expandableListCtrl: any;

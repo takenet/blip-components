@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import template from './ThreadMessagesView.html';
 import { debounce } from 'data/function';
 import { EventEmitter } from 'shared/EventEmitter';
@@ -52,14 +53,17 @@ class ThreadMessages implements IComponentController {
     }
 }
 
-export const ThreadMessagesComponent = {
-    template,
-    controller: ThreadMessages,
-    controllerAs: '$ctrl',
-    bindings: {
-        messages: '<',
-        loadMore: '&',
-        scrollToBottom: '<',
-        isLoadingThread: '<'
-    },
-};
+export const ThreadMessagesComponent = angular
+    .module('blipComponents.threadMessages', [])
+    .component('threadMessages', {
+        template,
+        controller: ThreadMessages,
+        controllerAs: '$ctrl',
+        bindings: {
+            messages: '<',
+            loadMore: '&',
+            scrollToBottom: '<',
+            isLoadingThread: '<'
+        },
+    })
+    .name;

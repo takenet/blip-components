@@ -1,5 +1,5 @@
 import './expandableList.scss';
-import * as angular from 'angular';
+import angular from 'core/angular';
 
 export class ExpandableListComponent {
     public mainElement: HTMLElement;

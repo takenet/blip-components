@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import BuilderNodeView from './BuilderNodeView.html';
 import './builderNode.scss';
 
@@ -49,16 +50,19 @@ class BuilderNode {
     }
 }
 
-export const BuilderNodeComponent = {
-    controller: BuilderNode,
-    controllerAs: '$ctrl',
-    template: BuilderNodeView,
-    bindings: {
-        node: '<',
-        onEdit: '&?',
-        onDelete: '&?',
-        onDuplicate: '&?',
-        onCopyNodeId: '&?',
-        onUpdateElement: '&?',
-    },
-};
+export const BuilderNodeComponent = angular
+    .module('blipComponents.builderNode', [])
+    .component('builderNode', {
+        controller: BuilderNode,
+        controllerAs: '$ctrl',
+        template: BuilderNodeView,
+        bindings: {
+            node: '<',
+            onEdit: '&?',
+            onDelete: '&?',
+            onDuplicate: '&?',
+            onCopyNodeId: '&?',
+            onUpdateElement: '&?',
+        },
+    })
+    .name;

@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 import TimepickerView from './TimepickerView.html';
 import TimepickerController from './TimepickerController';
 

@@ -1,6 +1,7 @@
+import angular from 'core/angular';
 import './blipFooter.scss';
 import { Component } from 'decorators';
-import { IComponentController } from 'angular';
+import { IComponentController, IComponentOptions } from 'angular';
 
 @Component({
     template: `
@@ -13,10 +14,15 @@ import { IComponentController } from 'angular';
         areaClass: '@?',
     }
 })
-export class BlipFooterComponent implements IComponentController {
+export class BlipFooter implements IComponentController {
     copyrightYear: number;
 
     $onInit() {
         this.copyrightYear = new Date().getFullYear();
     }
 }
+
+export const BlipFooterComponent = angular
+    .module('blipComponents.blipFooter', [])
+    .component('blipFooter', <IComponentOptions>BlipFooter)
+    .name;

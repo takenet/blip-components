@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import './BuilderSearch.scss';
 import template from './BuilderSearchView.html';
 import { EventEmitter } from 'shared/EventEmitter';
@@ -79,11 +80,14 @@ class BuilderSearchController {
     }
 }
 
-export const BuilderSearchComponent = {
-    controller: BuilderSearchController,
-    controllerAs: '$ctrl',
-    bindings: {
-        onGetInput: '&?',
-    },
-    template,
-};
+export const BuilderSearchComponent = angular
+    .module('blipComponents.builderSearch', [])
+    .component('builderSearch', {
+        controller: BuilderSearchController,
+        controllerAs: '$ctrl',
+        bindings: {
+            onGetInput: '&?',
+        },
+        template,
+    })
+    .name;

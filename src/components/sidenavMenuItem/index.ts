@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 import template from './SidenavMenuItemView.html';
 import './SidenavMenuItem.scss';
 

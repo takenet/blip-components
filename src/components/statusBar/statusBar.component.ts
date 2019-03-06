@@ -1,8 +1,8 @@
 import './statusbar.scss';
-import * as angular from 'angular';
+import angular from 'core/angular';
 import { IScope } from 'angular';
 import * as uuid from 'uuid';
-export class StatusBarComponent {
+class StatusBar {
     public percentageValue: number;
     public tooltipText: any;
     public tooltipSentence: string = '';
@@ -62,20 +62,23 @@ export class StatusBarComponent {
     }
 }
 
-export const StatusBar = {
-    controller: StatusBarComponent,
-    controllerAs: '$ctrl',
-    transclude: true,
-    bindings: {
-        percentageValue: '<',
-        tooltipText: '<?',
-    },
-    template: `
-        <div id="{{$ctrl.id}}" class="status-bar-wrapper">
-            <div class="status-bar" tooltips tooltip-template="{{$ctrl.tooltipText}}" tooltip-side="bottom" tooltip-hidden="!$ctrl.hasTooltip">
-                <span class="cell"></span>
-                <span class="cell"></span>
-                <span class="cell"></span>
-            </div>
-      </div>`,
-};
+export const StatusBarComponent = angular
+    .module('blipComponents.statusBar', [])
+    .component('statusBar', {
+        controller: StatusBar,
+        controllerAs: '$ctrl',
+        transclude: true,
+        bindings: {
+            percentageValue: '<',
+            tooltipText: '<?',
+        },
+        template: `
+            <div id="{{$ctrl.id}}" class="status-bar-wrapper">
+                <div class="status-bar" tooltips tooltip-template="{{$ctrl.tooltipText}}" tooltip-side="bottom" tooltip-hidden="!$ctrl.hasTooltip">
+                    <span class="cell"></span>
+                    <span class="cell"></span>
+                    <span class="cell"></span>
+                </div>
+        </div>`,
+    })
+    .name;

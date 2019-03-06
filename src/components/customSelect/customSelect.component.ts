@@ -1,5 +1,4 @@
-import * as angular from 'angular';
-import foldToASCII from 'data/foldToASCII';
+import angular from 'core/angular';
 import CustomSelectView from './CustomSelectView.html';
 import './customSelect.scss';
 import {
@@ -189,22 +188,25 @@ class CustomSelect {
     }
 }
 
-export const CustomSelectComponent = {
-    template: CustomSelectView,
-    controller: CustomSelect,
-    controllerAs: '$ctrl',
-    bindings: {
-        disabled: '<?',
-        enableSearch: '<?',
-        noWrap: '<?',
-        placeholder: '@?',
-        inputPlaceholder: '@?',
-        items: '=?',
-        searchFor: '@?',
-        label: '@?',
-    },
-    require: {
-        ngModel: 'ngModel',
-    },
-    transclude: true,
-};
+export const CustomSelectComponent = angular
+    .module('blipComponents.customSelect', [])
+    .component('customSelect', {
+        template: CustomSelectView,
+        controller: CustomSelect,
+        controllerAs: '$ctrl',
+        bindings: {
+            disabled: '<?',
+            enableSearch: '<?',
+            noWrap: '<?',
+            placeholder: '@?',
+            inputPlaceholder: '@?',
+            items: '=?',
+            searchFor: '@?',
+            label: '@?',
+        },
+        require: {
+            ngModel: 'ngModel',
+        },
+        transclude: true,
+    })
+    .name;

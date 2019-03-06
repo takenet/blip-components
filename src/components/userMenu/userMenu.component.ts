@@ -1,10 +1,8 @@
-import { IComponentController } from 'angular';
+import angular from 'core/angular';
+import { IComponentController, IComponentOptions } from 'angular';
 import { Component } from 'decorators';
-
 import template from './UserMenu.html';
-
 import './userMenu.scss';
-
 import * as ArrowB from 'assets/img/ArrowB.png';
 
 @Component({
@@ -14,8 +12,7 @@ import * as ArrowB from 'assets/img/ArrowB.png';
     },
     transclude: true,
 })
-
-export class UserMenuComponent implements IComponentController {
+class UserMenu implements IComponentController {
 
     arrowBPath: any;
     fullName: string;
@@ -25,3 +22,8 @@ export class UserMenuComponent implements IComponentController {
     }
 
 }
+
+export const UserMenuComponent = angular
+    .module('blipComponents.userMenu', [])
+    .component('userMenu', <IComponentOptions>UserMenu)
+    .name;

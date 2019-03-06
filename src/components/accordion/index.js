@@ -1,4 +1,4 @@
-import angular from 'angular';
+import angular from 'core/angular';
 
 export const accordion = angular
     .module('blipComponents.accordion', [])

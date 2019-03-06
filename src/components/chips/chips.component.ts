@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import angular from 'core/angular';
 import { Component } from 'decorators';
 import './_chips.scss';
 import { IComponentOptions } from 'angular';

@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import template from './blipInputView.html';
 import './blipInput.scss';
 import * as uuid from 'uuid';
@@ -65,31 +66,34 @@ class BlipInputController extends ComponentController {
     }
 }
 
-export const BlipInputComponent = {
-    template,
-    controller: BlipInputController,
-    controllerAs: '$ctrl',
-    bindings: {
-        disabled: '<?',
-        errorPromise: '=?',
-        fieldName: '@',
-        helper: '@?',
-        label: '@',
-        maxlength: '@?',
-        minlength: '@?',
-        max: '@?',
-        min: '@?',
-        parentForm: '=?',
-        placeholder: '@?',
-        required: '@?',
-        type: '@?',
-        onChange: '&?',
-        inputAutocomplete: '@?',
-        fieldId: '@?',
-        showPasswordStrength: '<?',
-        unmaskablePassword: '<?',
-    },
-    require: {
-        ngModel: 'ngModel',
-    },
-};
+export const BlipInputComponent = angular
+    .module('blipComponents.blipInput', [])
+    .component('blipInput', {
+        template,
+        controller: BlipInputController,
+        controllerAs: '$ctrl',
+        bindings: {
+            disabled: '<?',
+            errorPromise: '=?',
+            fieldName: '@',
+            helper: '@?',
+            label: '@',
+            maxlength: '@?',
+            minlength: '@?',
+            max: '@?',
+            min: '@?',
+            parentForm: '=?',
+            placeholder: '@?',
+            required: '@?',
+            type: '@?',
+            onChange: '&?',
+            inputAutocomplete: '@?',
+            fieldId: '@?',
+            showPasswordStrength: '<?',
+            unmaskablePassword: '<?',
+        },
+        require: {
+            ngModel: 'ngModel',
+        },
+    })
+    .name;

@@ -1,5 +1,5 @@
 import './colorPicker.scss';
-import * as angular from 'angular';
+import angular from 'core/angular';
 
 export class ColorPickerComponent {
     colorBlock: HTMLCanvasElement;

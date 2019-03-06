@@ -1,8 +1,6 @@
-import * as angular from 'angular';
-import { ITimeoutService, IScope, ICompileService } from 'angular';
+import angular from 'core/angular';
 import template from './blipCheckboxView.html';
 import * as uuid from 'uuid';
-import { INgModelController } from 'angular';
 import { ComponentController } from '../base';
 import './blipCheckbox.scss';
 const BLIP_CHECKBOX_PREFIX = 'blip-checkbox-';
@@ -17,31 +15,35 @@ const BLIP_CHECKBOX_PREFIX = 'blip-checkbox-';
  */
 
 class BlipCheckboxController extends ComponentController {
-  elementId: string;
-  input: HTMLInputElement;
-  isChecked: boolean;
+    elementId: string;
+    input: HTMLInputElement;
+    isChecked: boolean;
 
-  constructor(private $element, private $timeout, private $translate, $scope) {
-    super();
-    this.elementId = `${BLIP_CHECKBOX_PREFIX}${uuid.v4()}`;
-    this.input = this.$element[0].querySelector('input');
+    constructor(
+        private $element,
+        $scope
+    ) {
+        super();
+        this.elementId = `${BLIP_CHECKBOX_PREFIX}${uuid.v4()}`;
+        this.input = this.$element[0].querySelector('input');
 
-    $scope.$watch('$ctrl.input.checked',
-    (newVal) => {
-      this.isChecked = newVal;
-    });
-  }
+        $scope.$watch('$ctrl.input.checked', newVal => {
+            this.isChecked = newVal;
+        });
+    }
 }
 
-export const BlipCheckboxComponent = {
-  template,
-  controller: BlipCheckboxController,
-  controllerAs: '$ctrl',
-  bindings: {
-    disabled: '<?',
-    label: '@?',
-  },
-  require: {
-    ngModel: 'ngModel',
-  },
-};
+export const BlipCheckboxComponent = angular
+    .module('blipComponents.blipCheckbox', [])
+    .component('blipCheckbox', {
+        template,
+        controller: BlipCheckboxController,
+        controllerAs: '$ctrl',
+        bindings: {
+            disabled: '<?',
+            label: '@?'
+        },
+        require: {
+            ngModel: 'ngModel'
+        }
+    }).name;

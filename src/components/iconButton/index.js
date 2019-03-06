@@ -1,5 +1,5 @@
 import './iconButton.scss';
-import * as angular from 'angular';
+import angular from 'core/angular';
 
 export const iconButton = angular
     .module('blipComponents.iconButton', [])

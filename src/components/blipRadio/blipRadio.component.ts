@@ -1,8 +1,6 @@
-import * as angular from 'angular';
-import { ITimeoutService, IScope, ICompileService } from 'angular';
+import angular from 'core/angular';
 import template from './blipRadioView.html';
 import * as uuid from 'uuid';
-import { INgModelController } from 'angular';
 import { ComponentController } from '../base';
 const BLIP_RADIO_PREFIX = 'blip-radio-';
 
@@ -20,23 +18,25 @@ const BLIP_RADIO_PREFIX = 'blip-radio-';
 class BlipRadioController extends ComponentController {
     elementId: string;
 
-   constructor(private $element, private $timeout, private $translate) {
-      super();
-      this.elementId = `${BLIP_RADIO_PREFIX}${uuid.v4()}`;
-   }
+    constructor() {
+        super();
+        this.elementId = `${BLIP_RADIO_PREFIX}${uuid.v4()}`;
+    }
 }
 
-export const BlipRadioComponent = {
-   template,
-   controller: BlipRadioController,
-   controllerAs: '$ctrl',
-   bindings: {
-      disabled: '<?',
-      group: '@?',
-      label: '@?',
-      value: '@?',
-   },
-   require: {
-      ngModel: 'ngModel',
-   },
-};
+export const BlipRadioComponent = angular
+    .module('blipComponents.blipRadio', [])
+    .component('blipRadio', {
+        template,
+        controller: BlipRadioController,
+        controllerAs: '$ctrl',
+        bindings: {
+            disabled: '<?',
+            group: '@?',
+            label: '@?',
+            value: '@?'
+        },
+        require: {
+            ngModel: 'ngModel'
+        }
+    }).name;

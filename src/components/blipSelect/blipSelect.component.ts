@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import { BlipSelect } from 'blip-toolkit';
 import * as uuid from 'uuid';
 import { IComponentController, IOnChangesObject } from 'angular';
@@ -270,32 +271,35 @@ class BlipSelectController extends ComponentController
     }
 }
 
-export const BlipSelectComponent = {
-    template: '<div id="{{$ctrl.elementId}}"></div>',
-    controller: BlipSelectController,
-    controllerAs: '$ctrl',
-    bindings: {
-        label: '@?',
-        placeholder: '@?',
-        mode: '@?',
-        onBeforeOpenSelect: '&?',
-        onAfterOpenSelect: '&?',
-        onBeforeCloseSelect: '&?',
-        onAfterCloseSelect: '&?',
-        onFocus: '&?',
-        onBlur: '&?',
-        canAddOptions: '<?',
-        clearAfterAdd: '<?',
-        onInputChange: '&?',
-        onSelectOption: '&?',
-        onAddOption: '&?',
-        customSearch: '&?',
-        options: '<?',
-        disabled: '<?',
-        invalid: '<?',
-    },
-    require: {
-        ngModel: 'ngModel',
-    },
-    transclude: true,
-};
+export const BlipSelectComponent = angular
+    .module('blipComponents.blipSelect', [])
+    .component('blipSelect', {
+        template: '<div id="{{$ctrl.elementId}}"></div>',
+        controller: BlipSelectController,
+        controllerAs: '$ctrl',
+        bindings: {
+            label: '@?',
+            placeholder: '@?',
+            mode: '@?',
+            onBeforeOpenSelect: '&?',
+            onAfterOpenSelect: '&?',
+            onBeforeCloseSelect: '&?',
+            onAfterCloseSelect: '&?',
+            onFocus: '&?',
+            onBlur: '&?',
+            canAddOptions: '<?',
+            clearAfterAdd: '<?',
+            onInputChange: '&?',
+            onSelectOption: '&?',
+            onAddOption: '&?',
+            customSearch: '&?',
+            options: '<?',
+            disabled: '<?',
+            invalid: '<?',
+        },
+        require: {
+            ngModel: 'ngModel',
+        },
+        transclude: true,
+    })
+    .name;

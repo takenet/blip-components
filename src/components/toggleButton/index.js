@@ -1,4 +1,4 @@
-import angular from 'angular';
+import angular from 'core/angular';
 import ToggleButtonView from './ToggleButtonView.html';
 
 export const ToggleButtonComponent = angular

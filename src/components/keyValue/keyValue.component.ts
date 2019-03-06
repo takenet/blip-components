@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import template from './KeyValueView.html';
 import './KeyValue.scss';
 import { IFormController } from 'angular';
@@ -171,21 +172,24 @@ class KeyValueController {
     }
 }
 
-export const KeyValueComponent = {
-    template,
-    controller: KeyValueController,
-    controllerAs: '$ctrl',
-    bindings: {
-        onError: '&',
-        onChange: '&',
-        onToggleValue: '&?',
-        keyPlaceholder: '@?',
-        valuePlaceholder: '@?',
-        addButtonText: '@?',
-        expandable: '<?',
-        editorLanguage: '<?',
-    },
-    require: {
-        ngModel: 'ngModel',
-    },
-};
+export const KeyValueComponent = angular
+    .module('blipComponents.keyValue', [])
+    .component('keyValue', {
+        template,
+        controller: KeyValueController,
+        controllerAs: '$ctrl',
+        bindings: {
+            onError: '&',
+            onChange: '&',
+            onToggleValue: '&?',
+            keyPlaceholder: '@?',
+            valuePlaceholder: '@?',
+            addButtonText: '@?',
+            expandable: '<?',
+            editorLanguage: '<?',
+        },
+        require: {
+            ngModel: 'ngModel',
+        },
+    })
+    .name;
