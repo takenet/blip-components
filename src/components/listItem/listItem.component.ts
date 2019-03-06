@@ -1,3 +1,5 @@
+import angular from 'core/angular';
+
 class ListItem {
     listItemsCtrl: any;
     isChecked: boolean = false;
@@ -13,18 +15,21 @@ class ListItem {
     }
 }
 
-export const ListItemComponent = {
-    template: `
-    <card class="pl4">
-        <div class="flex">
-            <checkbox class="mr4" ng-model="$ctrl.isChecked"></checkbox>
-            <div ng-transclude></div>
-        </div>
-    </card>`,
-    controller: ListItem,
-    controllerAs: '$ctrl',
-    transclude: true,
-    require: {
-        listItemsCtrl: '^^listItems',
-    },
-};
+export const ListItemComponent = angular
+    .module('blipComponents.listItem', [])
+    .component('listItem', {
+        template: `
+        <card class="pl4">
+            <div class="flex">
+                <checkbox class="mr4" ng-model="$ctrl.isChecked"></checkbox>
+                <div ng-transclude></div>
+            </div>
+        </card>`,
+        controller: ListItem,
+        controllerAs: '$ctrl',
+        transclude: true,
+        require: {
+            listItemsCtrl: '^^listItems',
+        },
+    })
+    .name;

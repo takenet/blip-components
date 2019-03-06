@@ -35,4 +35,5 @@ export const ExpandableList = angular
             bodyItems: '@?',
         },
         template: '<div class="expandable-list" ng-transclude></div>',
-    });
+    })
+    .name;
