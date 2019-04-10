@@ -13,15 +13,30 @@ $ npm install blip-components
 Then, use it as module on your angularjs application
 
 ```
-import 'blip-components';
+import * as blipComponents from 'blip-components';
+import 'blip-components/dist/blip-components.css';
+
+const componentNames = components =>
+    Object.keys(components).map(c => components[c]);
+
+const app = angular
+    .module('myApp', [
+        ...componentNames(blipComponents)
+    ])
+    ...
+```
+
+You can also use each component separately
+
+```
+import { BlipInputComponent } from 'blip-components';
 import 'blip-components/dist/blip-components.css';
 
 const app = angular
     .module('myApp', [
-        'blip.components'
+        BlipInputComponent
     ])
     ...
-
 ```
 
 Remeber to import the css file to style your components
