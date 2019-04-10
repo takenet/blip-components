@@ -54,6 +54,7 @@ export { AddRemoveComponent } from './components/addRemove/addRemove.component';
 export { BlipSelectComponent } from './components/blipSelect/blipSelect.component';
 export { BlipCheckboxComponent } from './components/blipCheckbox/blipCheckbox.component';
 export { BlipInputComponent } from './components/blipInput/blipInput.component';
+export { BlipInputDprComponent } from './components/blipInputDpr/blipInputDpr.component';
 export { BlipRadioComponent } from './components/blipRadio/blipRadio.component';
 export { BlipTextareaComponent } from './components/blipTextarea/blipTextarea.component';
 export { BlipTagsComponent } from './components/blipTags/blipTags.component';

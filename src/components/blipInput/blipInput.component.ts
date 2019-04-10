@@ -1,96 +1,189 @@
 import angular from 'core/angular';
-import template from './blipInputView.html';
-import './blipInput.scss';
-import * as uuid from 'uuid';
+import { BlipInput } from 'blip-toolkit';
 import { ComponentController } from '../base';
-const BLIP_INPUT_PREFIX = 'blip-input-';
+import * as uuid from 'uuid';
+import { EventEmitter } from 'shared/EventEmitter';
+import { IOnChangesObject } from 'angular';
 
-/**
- * Component for styling BLiP input. To use it add an input followed by a label inside the component, e.g.:
- *
- *  <blip-input ng-model="Model" field-name="Name" label="Label">
- *   </blip-input>
- *
- * @param {expression} disabled - the expression that disables the input
- * @param {object} errorPromise - the promise for the error-messages directive
- * @param {string} fieldName - the attribute name for the input tag
- * @param {string} helper - text that goes below the input with recommendations for the user
- * @param {string} label - the text for the label tag
- * @param {string} max - input attribute if validation is needed
- * @param {string} maxlength - input attribute if validation is needed
- * @param {string} min - input attribute if validation is needed
- * @param {string} parentForm - the parent form for the input is necessary for validation
- * @param {string} required - if present, input is required
- * @param {string} type - the input type is necessary for validation. If not specified, takes value 'text'
- * @param {string} inputAutocomplete - the input autocomplete field for undesired browser autompletes
- * @param {string} unmaskablePassword - the expression that defines if input of type password will be unmaskable
- */
+const BLIP_INPUT_PREFIX = 'blip-input';
+
+enum BlipInputCallback {
+    OnInputFocus = 'onInputFocus',
+    OnInputBlur = 'onInputBlur',
+    OnInputChange = 'onInputChange',
+    OnInputError = 'onInputError',
+}
 
 class BlipInputController extends ComponentController {
+    onInputFocus: (obj) => void;
+    onInputBlur: (obj) => void;
+    onInputChange: (obj) => void;
+    onInputError: (obj) => void;
+    blipInputId: string;
+    blipInputInstance: BlipInput;
+    id: string;
+    name: string;
+    label: string;
     type: string;
-    elementId: string;
-    hasError: boolean = false;
-    passwordUnmasked: boolean = false;
-    onChange: ($val) => {};
+    placeholder: string;
+    required: boolean;
+    minLength: number;
+    maxLength: number;
+    showPasswordStrength: boolean;
+    requiredErrorMsg: string;
+    maxLengthErrorMsg: string;
+    minLengthErrorMsg: string;
+    emailTypeErrorMsg: string;
+    urlTypeErrorMsg: string;
     disabled: boolean;
 
     constructor(
         private $element,
-        private $timeout,
-        private $translate,
         private $scope,
     ) {
         super();
-        this.elementId = `${BLIP_INPUT_PREFIX}${uuid.v4()}`;
+        this.blipInputId = `${BLIP_INPUT_PREFIX}-${uuid.v4()}`;
+        this.blipInputInstance = new BlipInput({
+            id: this.id || this.blipInputId,
+            name: this.name || this.blipInputId,
+            type: this.type || 'text',
+            placeholder: this.placeholder || '',
+            required: this.required || false,
+            minLength: this.minLength || 0,
+            maxLength: this.maxLength,
+            showPasswordStrength: this.showPasswordStrength || false,
+            requiredErrorMsg: this.requiredErrorMsg,
+            maxLengthErrorMsg: this.maxLengthErrorMsg,
+            minLengthErrorMsg: this.minLengthErrorMsg,
+            emailTypeErrorMsg: this.emailTypeErrorMsg,
+            urlTypeErrorMsg: this.urlTypeErrorMsg,
+            onInputFocus: this.handle.bind(this, BlipInputCallback.OnInputFocus),
+            onInputBlur: this.handle.bind(this, BlipInputCallback.OnInputBlur),
+            onInputChange: this.handle.bind(this, BlipInputCallback.OnInputChange),
+            onInputError: this.handle.bind(this, BlipInputCallback.OnInputError),
+        });
+
+        const inputElement = this.blipInputInstance.render({
+            value: this.model || '',
+            label: this.label || '',
+            disabled: this.disabled || false,
+        });
+
+        this.$element[0].children[0].appendChild(inputElement);
+
+        this.$scope.$watch('$ctrl.model', (model) => {
+            if (this.blipInputInstance) {
+                this.updateInstance(model);
+            }
+        });
     }
 
-    $onInit() {
-        this.type = this.type || 'text';
+    $onChanges(changesObj: IOnChangesObject) {
+        if (
+            changesObj.options &&
+            !changesObj.options.isFirstChange()
+        ) {
+            this.blipInputInstance.render({
+                label: this.label,
+            });
+        }
     }
 
-    focus() {
-        let input = this.$element[0].querySelector('input') as HTMLInputElement;
-        input.focus();
+    handle(type: BlipInputCallback, emitter) {
+        this.updateModel();
+
+        switch (type) {
+            case BlipInputCallback.OnInputFocus:
+                this.handleOnInputFocus(emitter);
+                break;
+            case BlipInputCallback.OnInputBlur:
+                this.handleOnInputBlur(emitter);
+                break;
+            case BlipInputCallback.OnInputChange:
+                this.handleOnInputChange(emitter);
+                break;
+            case BlipInputCallback.OnInputError:
+                this.handleOnInputError(emitter);
+        }
     }
 
-    showPassword() {
-        let input = this.$element[0].querySelector('input') as HTMLInputElement;
-        input.type = 'text';
-        this.passwordUnmasked = true;
+    handleOnInputFocus($event) {
+        const event = {
+            ...$event,
+            id: this.blipInputId,
+            element: this.blipInputInstance
+        };
+        if (this.onInputFocus) {
+            this.onInputFocus(EventEmitter(event));
+        }
     }
 
-    hidePassword() {
-        let input = this.$element[0].querySelector('input') as HTMLInputElement;
-        input.type = 'password';
-        this.passwordUnmasked = false;
+    handleOnInputBlur($event) {
+        const event = {
+            ...$event,
+            id: this.blipInputId,
+            element: this.blipInputInstance
+        };
+        if (this.onInputBlur) {
+            this.onInputBlur(EventEmitter(event));
+        }
+    }
+
+    handleOnInputChange($event) {
+        const event = {
+            value: $event
+        };
+        if (this.onInputChange) {
+            this.onInputChange(EventEmitter(event));
+        }
+    }
+
+    handleOnInputError($event) {
+        const event = {
+            ...$event
+        };
+        if (this.onInputError) {
+            this.onInputError(EventEmitter(event));
+        }
+    }
+
+    updateInstance(model) {
+        this.blipInputInstance.render({
+            value: model || '',
+        });
+    }
+
+    updateModel() {
+        this.model = this.blipInputInstance.props.value;
     }
 }
 
 export const BlipInputComponent = angular
     .module('blipComponents.blipInput', [])
     .component('blipInput', {
-        template,
+        template: '<div id="{{$ctrl.blipInputId}} class="blip-input"></div>',
         controller: BlipInputController,
         controllerAs: '$ctrl',
         bindings: {
-            disabled: '<?',
-            errorPromise: '=?',
-            fieldName: '@',
-            helper: '@?',
-            label: '@',
-            maxlength: '@?',
-            minlength: '@?',
-            max: '@?',
-            min: '@?',
-            parentForm: '=?',
-            placeholder: '@?',
-            required: '@?',
+            id: '@?',
+            name: '@?',
+            label: '@?',
             type: '@?',
-            onChange: '&?',
-            inputAutocomplete: '@?',
-            fieldId: '@?',
+            placeholder: '@?',
+            required: '<?',
+            minLength: '<?',
+            maxLength: '<?',
             showPasswordStrength: '<?',
-            unmaskablePassword: '<?',
+            requiredErrorMsg: '@?',
+            maxLengthErrorMsg: '@?',
+            minLengthErrorMsg: '@?',
+            emailTypeErrorMsg: '@?',
+            urlTypeErrorMsg: '@?',
+            onInputFocus: '&?',
+            onInputBlur: '&?',
+            onInputChange: '&?',
+            onInputError: '&?',
+            disabled: '<?'
         },
         require: {
             ngModel: 'ngModel',
