@@ -3,7 +3,7 @@ import template from './blipInputDprView.html';
 import './blipInputDpr.scss';
 import * as uuid from 'uuid';
 import { ComponentController } from '../base';
-const BLIP_INPUT_PREFIX = 'blip-input-';
+const BLIP_INPUT_PREFIX = 'blip-input-dpr';
 
 /**
  * Component for styling BLiP input. To use it add an input followed by a label inside the component, e.g.:
@@ -41,7 +41,7 @@ class BlipInputDprController extends ComponentController {
         private $scope,
     ) {
         super();
-        this.elementId = `${BLIP_INPUT_PREFIX}${uuid.v4()}`;
+        this.elementId = `${BLIP_INPUT_PREFIX}-${uuid.v4()}`;
     }
 
     $onInit() {
