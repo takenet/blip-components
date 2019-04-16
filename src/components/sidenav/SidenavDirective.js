@@ -1,7 +1,7 @@
 import SidenavController from './SidenavController';
 import SidenavView from './SidenavView.html';
 
-export default class SidenavDirective {
+class SidenavDirective {
     constructor() {
         this.controller = SidenavController;
         this.controllerAs = '$ctrl';
@@ -21,3 +21,8 @@ export default class SidenavDirective {
         return new SidenavDirective();
     }
 }
+
+export const Sidenav = angular
+    .module('blipComponents.sidenavDirective', [])
+    .directive('sidenav', SidenavDirective.factory)
+    .name;

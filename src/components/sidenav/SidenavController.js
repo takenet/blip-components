@@ -1,5 +1,5 @@
 import angular from 'core/angular';
-
+import './sidenav.scss';
 export default class SidenavController {
 
     constructor($rootScope, $scope, $window, $document, WindowService) {
