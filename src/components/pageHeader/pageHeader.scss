@@ -1,5 +1,9 @@
 @import '../../assets/scss/variables';
 
+page-header .icon-back {
+    color: $color-text-light-5;
+}
+
 .custom-header-content {
     custom-content {
         display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -7,6 +11,26 @@
         display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
         display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
         justify-content: flex-end;
+    }
+
+    search-input {
+        margin-right: 0.8rem;
+    }
+
+    tooltip {
+        display: inline-block;
+
+        tip-cont {
+            i {
+                line-height: 1;
+                font-size: $bp-fs-4;
+                color: $bp-c-cloud;
+
+                &:hover {
+                    color: $color-primary-light;
+                }
+            }
+        }
     }
 }
 
