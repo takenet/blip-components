@@ -1,3 +1,5 @@
+@import '../../assets/scss/variables';
+
 .custom-header-content {
     custom-content {
         display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -5,5 +7,15 @@
         display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
         display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
         justify-content: flex-end;
+    }
+}
+
+.full-initial-section {
+    border-bottom: 1px solid $color-text-light-6;
+    margin: 2*$m 0 2*$m 0;
+    padding: 2*$m 0 2*$m 0;
+
+    h1 {
+        color: $color-secondary;
     }
 }
