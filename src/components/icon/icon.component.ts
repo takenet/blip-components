@@ -2,6 +2,7 @@ import angular from 'core/angular';
 import { IComponentController } from 'angular';
 import { strToEl } from 'data/function';
 
+import './icon.scss';
 /**
  * USAGE
  *
