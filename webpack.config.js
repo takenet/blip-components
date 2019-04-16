@@ -45,7 +45,7 @@ module.exports = function() {
                     }],
                 },
                 {
-                    test: /\.(jpe?g|gif|png|cur|svg)$/i,
+                    test: /\.(jpe?g|woff|woff2|eot|ttf|gif|png|cur|svg)$/i,
                     use: [
                         {
                             loader: 'url-loader',
