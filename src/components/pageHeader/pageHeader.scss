@@ -1,7 +1,7 @@
 @import '../../assets/scss/variables';
 
 page-header .icon-back {
-    color: $color-text-light-5;
+        color: $color-text-light-5;
 }
 
 .custom-header-content {
@@ -36,10 +36,12 @@ page-header .icon-back {
 
 .full-initial-section {
     border-bottom: 1px solid $color-text-light-6;
-    margin: 2*$m 0 2*$m 0;
-    padding: 2*$m 0 2*$m 0;
+    margin: 1.5*$m 0 1.5*$m 0;
+    padding: 1.5*$m 0 1.5*$m 0;
 
     h1 {
         color: $color-secondary;
+        font-size: 2.4*$m;
+        font-weight: 400;
     }
 }
