@@ -5,7 +5,7 @@
                 <h1 class="page-header-title mr2 lh-solid">
                     {{pageTitle}}
                 </h1>
-                <span id="info-icon" class="page-header-info animated fadeIn" ng-if="(helperTitle && helperBody)" ng-click="toggleHelper()">
+                <span id="info-icon" class="page-header-info animated fadeIn" ng-if="(helperTitle && helperBody && helperConfirm)" ng-click="toggleHelper()">
                     <icon-dpr class="bp-fs-6 color-text-light-3" icon-class="info"></icon-dpr>
                 </span>
             </div>
@@ -18,7 +18,7 @@
     <div class="page-header-additional-info" ng-transclude="info"></div>
 </div>
 <div>
-    <page-help class="animated fadeOut" id="helper" ng-show="helperTitle && helperBody" title="{{helperTitle}}" body="{{helperBody}}"
-        doc-link="helperDoc" close="toggleHelper"></page-help>
+    <page-help class="animated fadeOut" id="helper" ng-show="helperTitle && helperBody && helperConfirm" title="{{helperTitle}}" body="{{helperBody}}"
+        doc-link="helperDoc" help-confirm="{{helperConfirm}}" close="toggleHelper"></page-help>
 </div>
 

@@ -42,6 +42,7 @@ class PageHeader {
             goBack: '@?',
             helperTitle: '@?',
             helperBody: '@?',
+            helperConfirm: '@?',
             helperDoc: '<?',
         };
     }
