@@ -11,15 +11,6 @@ export default class SidenavController {
         this.collapsed = false;
         this.subnavbar = $rootScope.subnavbar;
         this.collapseWidth = $scope.collapseWidth;
-
-        $scope.$watch(() => WindowService.dimensions, this.applyConstraints.bind(this), true);
-        angular.element(this.$window).bind('resize', () => $scope.$apply());
-        angular.element($document).bind('click', () => $scope.$apply(() => this.applyConstraints()));
-
-        $rootScope.$on('$stateChangeStart', () => {
-            if (!this.collapsed)
-                this.toggleWithConstraints();
-        });
     }
 
     toggleCollapse($event) {
