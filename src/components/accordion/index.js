@@ -1,4 +1,5 @@
 import angular from 'core/angular';
+import './Accordion.scss';
 
 export const accordion = angular
     .module('blipComponents.accordion', [])
@@ -7,7 +8,7 @@ export const accordion = angular
         <article class="accordion relative">
             <input type="checkbox" checked />
             <i class="accordion-chevron fr"></i>
-            <h6 class="accordion-title ma0" ng-bind="$ctrl.title"></h6>
+            <h4 class="accordion-title ma0 ttu" ng-bind="$ctrl.title"></h4>
             <div class="accordion-content relative overflow-hidden dim" ng-transclude></div>
         </article>
         `,
