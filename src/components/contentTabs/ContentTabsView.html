@@ -1,8 +1,13 @@
 <div class="content-tabs">
-    <ul class="content-tabs-items">
-        <li ng-repeat="tab in $ctrl.tabs" ng-class="{'active': tab.isActive}" ng-click="$ctrl.showTab(tab)">
+    <ul class="content-tabs-items mb4">
+        <li ng-repeat="tab in $ctrl.tabs"
+            ng-class="{'active': tab.isActive, 'tab-disabled': tab.disabled, 'avoid-clicks': tab.disabled }"
+            id="content-tab-{{$index}}"
+            ng-click="$ctrl.showTab(tab)">
             <span ng-if="tab.tabHref">
-                <a href="{{tab.tabHref}}" target="_blank">{{tab.tabTitle}} <i class="icon-external-link"></i></a>
+                <a href="{{tab.tabHref}}"
+                    class="tab-href"
+                    target="_blank">{{tab.tabTitle}} <i class="icon-external-link icon icon-xss mb2"></i></a>
             </span>
             <span ng-if="!tab.tabHref">
                 {{tab.tabTitle}}

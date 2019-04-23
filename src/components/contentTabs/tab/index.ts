@@ -1,4 +1,6 @@
 import angular from 'core/angular';
+import { IScope } from 'angular';
+import { ChangeTabEvent } from '..';
 
 export const TabComponent = angular
     .module('blipComponents.tabComponent', [])
@@ -8,11 +10,11 @@ export const TabComponent = angular
             showTab: boolean;
             contentTabsCtrl: any;
 
-            constructor(private $scope) {
+            constructor(private $scope: IScope) {
                 this.showTab = false;
                 this.isActive = false;
 
-                $scope.$on('ChangeTab', () => {
+                $scope.$on(ChangeTabEvent, () => {
                     this.showTab = false;
                     this.isActive = false;
                 });
@@ -24,7 +26,7 @@ export const TabComponent = angular
                     this.showTab = true;
                     this.isActive = true;
                 }
-                parentCtrl.tabs.push(this);
+                parentCtrl.tabs = parentCtrl.tabs.concat(this);
             }
         },
         controllerAs: '$ctrl',

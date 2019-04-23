@@ -1,26 +1,37 @@
+@import '../../assets/scss/variables';
+
 .content-tabs {
     .content-tabs-items {
         display: inline-block;
-        border-bottom: 2px solid #EBF0F4;
+        border-bottom: 2px solid #ebf0f4;
         width: 100%;
 
         li {
             display: inline-block;
             padding: 10px 20px;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 1.4rem;
+            font-weight: 500;
+            font-size: $bp-fs-5;
             margin-right: 10px;
             margin-bottom: 0;
 
             &.active {
-                border-bottom: 4px solid #2cc3d5;
-                color: #2cc3d5;
+                border-bottom: 4px solid $bp-color-bot; //#2cc3d5
+                color: $bp-color-bot; //#2cc3d5
 
-                a { color: #2cc3d5; }
+                a {
+                    color: $bp-color-bot;
+                }
             }
 
-            a { color: #546E7A; }
+            &.tab-disabled {
+                color: #ebf0f4;
+            }
+
+            color: $bp-color-city;
+
+            .tab-href {
+                color: #52636c;
+            }
         }
     }
 }
