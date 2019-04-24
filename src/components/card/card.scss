@@ -62,6 +62,7 @@ card,
     .card-title + .card-content {
         padding-top: 1.5*$u;
     }
+
     .card-content {
         padding: 2.5*$u;
         margin: 0;
@@ -211,8 +212,17 @@ card,
                 white-space: nowrap;
 
                 &--no-overflow {
+                    display: table;
+                    table-layout: fixed;
                     overflow: hidden;
                     text-overflow: ellipsis;
+
+                    > span {
+                        display: inline-block;
+                        max-width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
                 }
 
                 label {
