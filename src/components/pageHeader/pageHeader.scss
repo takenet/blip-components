@@ -52,6 +52,10 @@ page-header {
     margin: 1.5*$m 0;
     padding: 1.5*$m 0;
 
+    .page-header-content {
+        height: 4.2*$m;
+    }
+
     h1 {
         color: $color-secondary;
         font-size: 2.4*$m;
