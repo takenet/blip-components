@@ -69,6 +69,7 @@ export { BlipFooterComponent } from './components/blipFooter/blipFooter.componen
 export { PageHeaderDirective } from './components/pageHeader/PageHeaderDirective';
 export { OnErrorSrcDirective } from './components/onErrorSrc/onErrorSrc.directive';
 export { Sidenav } from './components/sidenav/SidenavDirective';
+export { FileModelDirective } from './components/fileModel/fileModelDirective';
 
 //Modules
 export { sharedModules } from './modules';
