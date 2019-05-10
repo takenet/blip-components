@@ -7,7 +7,8 @@ footer {
     align-items: center;
     font-size: $bp-fs-7;
     font-weight: $regular;
-    width: 80%; height: $footer-height;
+    width: 100%;
+    height: $footer-height;
     padding: 2*$u 0;
     flex-shrink: 0;
     color: $color-text-light-6;
