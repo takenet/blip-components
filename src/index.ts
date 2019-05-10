@@ -28,6 +28,7 @@ export { expandable } from './components/expandable';
 export { ExpandableContentComponent } from './components/expandableContent/expandableContent.component';
 export { ExpandableItem } from './components/expandableList/expandableItem';
 export { ExpandableList } from './components/expandableList/expandableList.component';
+export { FileUpload } from './components/fileUpload/fileUpload.component';
 export { FilterByComponent } from './components/filterBy/filterBy.component';
 export { formField } from './components/formField';
 export { iconButton } from './components/iconButton';
