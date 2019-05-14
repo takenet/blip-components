@@ -12,7 +12,6 @@ card,
     -o-box-shadow: 0 2px 12px 0 #e1e7ee;
     box-shadow: 0 2px 12px 0 #e1e7ee;
     z-index: 1;
-    transform: scale(1);
 
     &[ng-click]:hover {
         z-index: 2;
