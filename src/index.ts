@@ -72,6 +72,7 @@ export { FileModelDirective } from './directives/fileModel/fileModelDirective';
 export { PageHeaderDirective } from './directives/pageHeader/PageHeaderDirective';
 export { OnErrorSrcDirective } from './directives/onErrorSrc/onErrorSrc.directive';
 export { Sidenav } from './directives/sidenav/SidenavDirective';
+export { PermissionsDirective } from './directives/permissions';
 
 //Modules
 export { sharedModules } from './modules';
