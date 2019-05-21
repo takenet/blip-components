@@ -13,7 +13,7 @@ class ConfusionMatrix {
         this.keys = this.keys.reduce((arr, el) => [...arr, el.name], []);
         this.keys = this.keys.map(
             (key) =>
-                key.length > 13 ? key.slice(0, 14).concat('...') : key,
+                key && key.length > 13 ? key.slice(0, 14).concat('...') : key,
         );
         this.matrix = this.matrix.map((el, index) => {
             const arr = this.getRow(el);
