@@ -12,11 +12,7 @@
   "author": "Samuel Martins",
   "license": "ISC",
   "files": [
-    "dist/components.js",
-    "dist/templates.js",
-    "dist/events.js",
-    "dist/EventEmitter.js",
-    "dist/blip-components.css"
+    "dist/*"
   ],
   "repository": {
     "type": "git",
