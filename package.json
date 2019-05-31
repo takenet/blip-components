@@ -60,6 +60,7 @@
     "monaco-editor": "0.13.1",
     "monaco-editor-webpack-plugin": "1.4.0",
     "ng-cache-loader": "0.0.15",
+    "ng-toast": "^2.0.0",
     "node-sass": "^4.5.3",
     "ob-daterangepicker": "^0.12.1",
     "resolve-url-loader": "2.3.0",

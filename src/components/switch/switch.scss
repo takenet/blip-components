@@ -10,6 +10,7 @@ switch {
         margin: 0;
 
         + label {
+            
             position: relative;
             background: $color-text-light-6;
             transition: background-color 0.33s ease;
@@ -33,6 +34,7 @@ switch {
                 background: $color-white;
                 border-radius: 50%;
                 transition: left 0.33s ease;
+                
             }
         }
 
@@ -45,5 +47,14 @@ switch {
         &:disabled + label {
             background: $color-text;
         }
+
+        
     }
+}
+.label{
+    font-weight: 700;
+    color: #52636c;
+    letter-spacing: .00625rem;
+    margin: 0;
+    vertical-align: middle;
 }
