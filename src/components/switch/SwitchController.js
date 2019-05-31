@@ -51,7 +51,6 @@ export default class {
     }
 
     toggle(event) {
-        console.log(event);
         event.stopPropagation();
 
         if (this.disabled) {
