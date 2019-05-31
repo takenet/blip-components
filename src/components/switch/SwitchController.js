@@ -9,6 +9,7 @@
  * <switch on-toggle="$ctrl.onToggleAction(value)" ng-model="$ctrl.isActive"></switch>
  */
 export default class {
+
     constructor($scope, PermissionsService, ngToast, $translate) {
         'ngInject';
 
@@ -50,13 +51,14 @@ export default class {
     }
 
     toggle(event) {
+        console.log(event);
         event.stopPropagation();
 
         if (this.disabled) {
             return;
         }
 
-        if (this.ngPermission && !this.hasPermission) {
+        if (this.ngPermission=="false" && !this.hasPermission) {
             const errorMsg74 = this._$translate.instant('utils.errorMsg.74');
             this._ngToast.danger(errorMsg74);
             return;
