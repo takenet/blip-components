@@ -14,6 +14,20 @@
             margin-right: 10px;
             margin-bottom: 0;
 
+            &.tab-href {
+                padding: 0;
+            }
+
+            a.tab-href {
+                display: block;
+                padding: 10px 20px;
+                width: 100%;
+                height: 100%;
+
+                text-align: center;
+                text-decoration: none;
+            }
+
             &.active {
                 border-bottom: 4px solid $bp-color-bot; //#2cc3d5
                 color: $bp-color-bot; //#2cc3d5
