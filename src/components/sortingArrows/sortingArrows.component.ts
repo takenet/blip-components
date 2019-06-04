@@ -1,5 +1,5 @@
 import { EventEmitter } from 'shared/EventEmitter';
-import angular from 'angular';
+import angular from 'core/angular';
 
 import './sortingArrows.scss';
 import SortingArrowsView from './SortingArrowsView.html';
