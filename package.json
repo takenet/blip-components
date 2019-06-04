@@ -16,7 +16,8 @@
     "dist/templates.js",
     "dist/events.js",
     "dist/EventEmitter.js",
-    "dist/blip-components.css"
+    "dist/blip-components.css",
+    "dist/img"
   ],
   "repository": {
     "type": "git",
