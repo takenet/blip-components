@@ -56,6 +56,7 @@ export { SearchInputComponent } from './components/searchInput/searchInput.compo
 export { SelectItemComponent } from './components/customSelect/selectItem/selectItem.component';
 export { sidenavMenu } from './components/sidenavMenu';
 export { sidenavMenuItem } from './components/sidenavMenuItem';
+export { SortinArrowsComponent, SortingParameters, SortingOrder } from './components/sortingArrows/sortingArrows.component';
 export { StatusBarComponent } from './components/statusBar/statusBar.component';
 export { SubheaderIconsComponent } from './components/subheaderIcons/subheaderIcons.component';
 export { SwitchComponent } from './components/switch';
