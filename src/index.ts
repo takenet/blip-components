@@ -56,7 +56,7 @@ export { SearchInputComponent } from './components/searchInput/searchInput.compo
 export { SelectItemComponent } from './components/customSelect/selectItem/selectItem.component';
 export { sidenavMenu } from './components/sidenavMenu';
 export { sidenavMenuItem } from './components/sidenavMenuItem';
-export { SortinArrowsComponent, SortingParameters, SortingOrder } from './components/sortingArrows/sortingArrows.component';
+export { SortinArrowsComponent } from './components/sortingArrows/sortingArrows.component';
 export { StatusBarComponent } from './components/statusBar/statusBar.component';
 export { SubheaderIconsComponent } from './components/subheaderIcons/subheaderIcons.component';
 export { SwitchComponent } from './components/switch';
@@ -74,6 +74,7 @@ export { PageHeaderDirective } from './directives/pageHeader/PageHeaderDirective
 export { OnErrorSrcDirective } from './directives/onErrorSrc/onErrorSrc.directive';
 export { Sidenav } from './directives/sidenav/SidenavDirective';
 export { PermissionsDirective } from './directives/permissions';
+export { LoadingDirective } from './directives/loading/loading.directive';
 
 //Modules
 export { sharedModules } from './modules';

@@ -4,15 +4,10 @@ import angular from 'core/angular';
 import './sortingArrows.scss';
 import SortingArrowsView from './SortingArrowsView.html';
 
-export enum SortingOrder {
+enum SortingOrder {
     Ascending = 'asc',
     Descending = 'desc',
     None = 'none'
-}
-
-export interface SortingParameters {
-    order: SortingOrder;
-    category: string;
 }
 
 export default class SortingArrowsController {
