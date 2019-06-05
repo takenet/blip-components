@@ -12,7 +12,7 @@
   "author": "Samuel Martins",
   "license": "ISC",
   "files": [
-    "dist/"
+    "dist/*"
   ],
   "repository": {
     "type": "git",
