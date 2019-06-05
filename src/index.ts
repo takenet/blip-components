@@ -56,7 +56,7 @@ export { SearchInputComponent } from './components/searchInput/searchInput.compo
 export { SelectItemComponent } from './components/customSelect/selectItem/selectItem.component';
 export { sidenavMenu } from './components/sidenavMenu';
 export { sidenavMenuItem } from './components/sidenavMenuItem';
-export { SortinArrowsComponent, SortingParameters, SortingOrder } from './components/sortingArrows/sortingArrows.component';
+export { SortinArrowsComponent } from './components/sortingArrows/sortingArrows.component';
 export { StatusBarComponent } from './components/statusBar/statusBar.component';
 export { SubheaderIconsComponent } from './components/subheaderIcons/subheaderIcons.component';
 export { SwitchComponent } from './components/switch';
@@ -72,8 +72,14 @@ export { AutoExpandDirective } from './directives/autoExpand/AutoExpand.Directiv
 export { FileModelDirective } from './directives/fileModel/fileModelDirective';
 export { PageHeaderDirective } from './directives/pageHeader/PageHeaderDirective';
 export { OnErrorSrcDirective } from './directives/onErrorSrc/onErrorSrc.directive';
+export { ErrorMessagesDirective } from './directives/errorMessages/ErrorMessagesDirective';
 export { Sidenav } from './directives/sidenav/SidenavDirective';
 export { PermissionsDirective } from './directives/permissions';
+export { UploadAreaDirective } from './directives/uploadArea/UploadAreaDirective';
+export { UploadButtonDirective } from './directives/uploadButton/UploadButtonDirective';
+export { UploadFileNameDirective } from './directives/uploadFileName/UploadFileNameDirective';
+export { OnFinishRenderDirective } from './directives/onFinishRender/onFinishRender.directive';
+export { JsonContentDirective } from './directives/jsonContent';
 
 //Modules
 export { sharedModules } from './modules';

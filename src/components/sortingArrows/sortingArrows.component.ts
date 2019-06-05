@@ -91,8 +91,8 @@ export const SortinArrowsComponent = angular
             disabled: '<?',
             onToggleOrder: '&?'
         },
-        require: {
-            ngModel: 'ngModel',
-        },
+        // require: {
+        //     ngModel: 'ngModel',
+        // },
     })
     .name;

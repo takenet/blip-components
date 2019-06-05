@@ -1,8 +1,6 @@
 class JsonContent {
 
-    constructor() {
-        this.restrict = '';
-    }
+    restrict = '';
 
     static factory() {
         'ngInject';
@@ -28,4 +26,7 @@ class JsonContent {
     }
 }
 
-export default JsonContent;
+export const JsonContentDirective = angular
+    .module('blipComponents.jsonContentDirective', [])
+    .directive('jsonContent', JsonContent.factory)
+    .name;

@@ -1,6 +1,8 @@
+import angular from 'core/angular';
 import { IRepeatScope, ITimeoutService } from 'angular';
 
-export class OnFinishRenderDirective {
+class OnFinishRender {
+
     restrict = 'A';
 
     constructor(private $timeout: ITimeoutService) {}
@@ -16,6 +18,11 @@ export class OnFinishRenderDirective {
     static factory($timeout) {
         'ngInject';
 
-        return new OnFinishRenderDirective($timeout);
+        return new OnFinishRender($timeout);
     }
 }
+
+export const OnFinishRenderDirective = angular
+    .module('blipComponents.onFinishRenderDirective', [])
+    .directive('onFinishRender', OnFinishRender.factory)
+    .name;

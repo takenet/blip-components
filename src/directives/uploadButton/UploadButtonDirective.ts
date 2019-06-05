@@ -1,7 +1,9 @@
 import angular from 'core/angular';
 import UploadButtonView from './UploadButtonView.html';
 import './UploadButton.scss';
-export default class UploadButtonDirective {
+
+class UploadButton {
+
     restrict = 'E';
     template = UploadButtonView;
     require = 'ngModel';
@@ -40,6 +42,11 @@ export default class UploadButtonDirective {
     }
 
     static factory() {
-        return new UploadButtonDirective();
+        return new UploadButton();
     }
 }
+
+export const UploadButtonDirective = angular
+    .module('blipComponents.uploadButtonDirective', [])
+    .directive('uploadButton', UploadButton.factory)
+    .name;

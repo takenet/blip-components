@@ -2,7 +2,8 @@ import angular from 'core/angular';
 import UploadFileNameView from './UploadFileNameView.html';
 import './uploadFileName.scss';
 
-export default class UploadFileNameDirective {
+class UploadFileName {
+
     restrict = 'E';
     template = UploadFileNameView;
     require = 'ngModel';
@@ -51,6 +52,11 @@ export default class UploadFileNameDirective {
     }
 
     static factory() {
-        return new UploadFileNameDirective();
+        return new UploadFileName();
     }
 }
+
+export const UploadFileNameDirective = angular
+    .module('blipComponents.uploadFileNameDirective', [])
+    .directive('uploadFileName', UploadFileName.factory)
+    .name;

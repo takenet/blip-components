@@ -1,13 +1,12 @@
 import angular from 'core/angular';
 import UploadAreaView from './UploadAreaView.html';
 
-export default class UploadAreaDirective {
-    constructor() {
-        this.restrict = 'E';
-        this.template = UploadAreaView;
-        this.require = 'ngModel';
-        this.replace = true;
-    }
+class UploadArea {
+
+    restrict = 'E';
+    template = UploadAreaView;
+    require = 'ngModel';
+    replace = true;
 
     get scope() {
         return {
@@ -85,6 +84,11 @@ export default class UploadAreaDirective {
     }
 
     static factory() {
-        return new UploadAreaDirective();
+        return new UploadArea();
     }
 }
+
+export const UploadAreaDirective = angular
+    .module('blipComponents.uploadAreaDirective', [])
+    .directive('uploadArea', UploadArea.factory)
+    .name;

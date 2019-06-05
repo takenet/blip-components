@@ -1,3 +1,4 @@
+import angular from 'core/angular';
 import ErrorMessagesView from './ErrorMessagesView.html';
 
 /**
@@ -35,7 +36,8 @@ import ErrorMessagesView from './ErrorMessagesView.html';
  *
  * @ngdoc directive
  */
-export default class ErrorMessagesDirective {
+class ErrorMessages {
+
     restrict = 'E';
     template = ErrorMessagesView;
 
@@ -119,6 +121,11 @@ export default class ErrorMessagesDirective {
     }
 
     static factory() {
-        return new ErrorMessagesDirective();
+        return new ErrorMessages();
     }
 }
+
+export const ErrorMessagesDirective = angular
+    .module('blipComponents.errorMessagesDirective', [])
+    .directive('errorMessages', ErrorMessages.factory)
+    .name;
