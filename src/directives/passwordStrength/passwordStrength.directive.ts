@@ -1,7 +1,7 @@
 import './passwordStrength.scss';
-import { IRepeatScope } from 'angular';
+import angular from 'core/angular';
 
-export class PasswordStrengthDirective {
+class PasswordStrength {
     require = {
         ngModel: 'ngModel',
     };
@@ -52,6 +52,11 @@ export class PasswordStrengthDirective {
     }
 
     static factory() {
-        return new PasswordStrengthDirective();
+        return new PasswordStrength();
     }
 }
+
+export const PasswordStrengthDirective = angular
+    .module('blipComponents.passwordStrengthDirective', [])
+    .directive('passwordStrength', PasswordStrength.factory)
+    .name;

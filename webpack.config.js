@@ -16,7 +16,7 @@ module.exports = function() {
             'components': 'index',
             'events': 'events',
             'templates': 'templates',
-            'EventEmitter': 'shared/EventEmitter'
+            'EventEmitter': 'shared/EventEmitter',
         },
         output: {
             path: path.resolve(__dirname, 'dist'),

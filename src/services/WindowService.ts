@@ -1,10 +1,10 @@
-import angular from 'angular';
+import angular from 'core/angular';
 
 const MOBILE_WIDTH = 749;
 const SMALL_WIDTH = 1260;
 const MEDIUM_WIDTH = 1365;
 
-export default class WindowService {
+export class WindowService {
     constructor(private $window) {}
 
     get dimensions() {

@@ -1,9 +1,10 @@
-
 /**
  * Directive to make a HTML element sticky to the window
  */
 
-export class StickyAttributeDirective {
+import angular from 'core/angular';
+
+class StickyAttribute {
 
     elTopPosition: any;
     isSticky: boolean;
@@ -36,6 +37,11 @@ export class StickyAttributeDirective {
     }
 
     static factory() {
-        return new StickyAttributeDirective();
+        return new StickyAttribute();
     }
 }
+
+export const StickyAttributeDirective = angular
+    .module('blipComponents.stickyAttributeDirective', [])
+    .directive('sticky', StickyAttribute.factory)
+    .name;
