@@ -75,15 +75,12 @@ export { OnErrorSrcDirective } from './directives/onErrorSrc/onErrorSrc.directiv
 export { ErrorMessagesDirective } from './directives/errorMessages/ErrorMessagesDirective';
 export { Sidenav } from './directives/sidenav/SidenavDirective';
 export { PermissionsDirective } from './directives/permissions';
-<<<<<<< HEAD
 export { UploadAreaDirective } from './directives/uploadArea/UploadAreaDirective';
 export { UploadButtonDirective } from './directives/uploadButton/UploadButtonDirective';
 export { UploadFileNameDirective } from './directives/uploadFileName/UploadFileNameDirective';
 export { OnFinishRenderDirective } from './directives/onFinishRender/onFinishRender.directive';
 export { JsonContentDirective } from './directives/jsonContent';
-=======
 export { LoadingDirective } from './directives/loading/loading.directive';
->>>>>>> 29adf6d30440ffac29363358057c4f57456115a0
 
 //Modules
 export { sharedModules } from './modules';
