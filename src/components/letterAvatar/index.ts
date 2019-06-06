@@ -3,6 +3,7 @@ import './letterAvatar.scss';
 import * as colorsArray from './colors.json';
 import template from './LetterAvatarView.html';
 import { IScope } from 'angular';
+import { getHashCode } from 'data/string';
 
 class LetterAvatarController {
     text: string;
@@ -38,7 +39,7 @@ class LetterAvatarController {
     }
 
     getHashColor() {
-        let hashIndex = this.initials.hashCode() % colorsArray.colors.length;
+        let hashIndex = getHashCode(this.initials) % colorsArray.colors.length;
         return colorsArray.colors[hashIndex];
     }
 }
