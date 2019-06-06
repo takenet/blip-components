@@ -63,6 +63,7 @@
     "ng-toast": "^2.0.0",
     "node-sass": "^4.5.3",
     "ob-daterangepicker": "^0.12.1",
+    "raw-loader": "^3.0.0",
     "resolve-url-loader": "2.3.0",
     "sass-loader": "7.1.0",
     "semantic-release": "^15.9.15",

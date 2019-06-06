@@ -51,11 +51,58 @@ module.exports = function() {
                             loader: 'url-loader',
                             options: {
                                 limit: 8192,
-                                name: 'img/[name].[ext]?[hash]'
+                                name: 'assets/[name].[ext]?[hash]'
                             }
                         }
                     ],
+                    include: {
+                        test: path.resolve(__dirname, 'src/assets/fonts'),
+                    },
                     exclude: /node_modules/
+                },
+                {
+                    test: /\.(jpe?g|woff|woff2|eot|ttf|gif|png|cur)$/i,
+                    use: [
+                        {
+                            loader: 'url-loader',
+                            options: {
+                                limit: 8192,
+                                name: 'assets/[name].[ext]?[hash]'
+                            }
+                        }
+                    ],
+                    exclude: {
+                        test: path.resolve(__dirname, 'src/assets/fonts'),
+                        test: path.resolve(__dirname, 'node_modules'),
+                    }
+                },
+                {
+                    test: /.*(?<!-icon)\.svg$/,
+                    use: [
+                        {
+                            loader: 'url-loader',
+                            options: {
+                                limit: 1024,
+                                name: 'assets/[name].[ext]?[hash]',
+                            },
+                        },
+                    ],
+                    exclude: {
+                        test: path.resolve(__dirname, 'src/assets/fonts'),
+                        test: path.resolve(__dirname, 'node_modules'),
+                    }
+                },
+                {
+                    test: /.*-icon\.svg$/i,
+                    use: [
+                        {
+                            loader: 'raw-loader'
+                        },
+                    ],
+                    exclude: {
+                        test: path.resolve(__dirname, 'src/assets/fonts'),
+                        test: path.resolve(__dirname, 'node_modules'),
+                    }
                 },
                 {
                     test: /\.css$/,
