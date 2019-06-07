@@ -45,36 +45,34 @@ module.exports = function() {
                     }],
                 },
                 {
+                    test: /\.(jpe?g|gif|png|cur)$/i,
+                    use: [
+                        {
+                            loader: 'url-loader',
+                            options: {
+                                limit: 8192,
+                                name: 'img/[name].[ext]?[hash]'
+                            }
+                        }
+                    ],
+                    exclude: {
+                        test: path.resolve(__dirname, 'src/assets/fonts'),
+                    },
+                },
+                {
                     test: /\.(jpe?g|woff|woff2|eot|ttf|gif|png|cur|svg)$/i,
                     use: [
                         {
                             loader: 'url-loader',
                             options: {
                                 limit: 8192,
-                                name: 'assets/[name].[ext]?[hash]'
+                                name: 'fonts/[name].[ext]?[hash]'
                             }
                         }
                     ],
                     include: {
                         test: path.resolve(__dirname, 'src/assets/fonts'),
                     },
-                    exclude: /node_modules/
-                },
-                {
-                    test: /\.(jpe?g|woff|woff2|eot|ttf|gif|png|cur)$/i,
-                    use: [
-                        {
-                            loader: 'url-loader',
-                            options: {
-                                limit: 8192,
-                                name: 'assets/[name].[ext]?[hash]'
-                            }
-                        }
-                    ],
-                    exclude: {
-                        test: path.resolve(__dirname, 'src/assets/fonts'),
-                        test: path.resolve(__dirname, 'node_modules'),
-                    }
                 },
                 {
                     test: /.*(?<!-icon)\.svg$/,
@@ -83,13 +81,15 @@ module.exports = function() {
                             loader: 'url-loader',
                             options: {
                                 limit: 1024,
-                                name: 'assets/[name].[ext]?[hash]',
+                                name: 'assets/[name].[ext]?[hash]'
                             },
                         },
                     ],
-                    exclude: {
-                        test: path.resolve(__dirname, 'src/assets/fonts'),
-                        test: path.resolve(__dirname, 'node_modules'),
+                    include: {
+                        test: path.resolve(__dirname, 'src/'),
+                        exclude: {
+                            test: path.resolve(__dirname, 'src/assets/fonts'),
+                        }
                     }
                 },
                 {
@@ -99,9 +99,11 @@ module.exports = function() {
                             loader: 'raw-loader'
                         },
                     ],
-                    exclude: {
-                        test: path.resolve(__dirname, 'src/assets/fonts'),
-                        test: path.resolve(__dirname, 'node_modules'),
+                    include: {
+                        test: path.resolve(__dirname, 'src/'),
+                        exclude: {
+                            test: path.resolve(__dirname, 'src/assets/fonts'),
+                        }
                     }
                 },
                 {
@@ -139,8 +141,9 @@ module.exports = function() {
                         {
                             loader: 'html-loader',
                             options: {
-                                minimize: false,
-                                exportAsEs6Default: true
+                                exportAsEs6Default: true,
+                                root: path.resolve(__dirname, 'src'),
+                                attrs: [':src', ':href', ':xlink:href'],
                             }
                         }
                     ]
@@ -149,7 +152,10 @@ module.exports = function() {
         },
         resolve: {
             extensions: ['.webpack.js', '.web.js', '.js', '.html', '.ts'],
-            modules: [path.resolve(__dirname, 'src'), 'node_modules']
+            modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+            alias: {
+                assets: path.resolve(__dirname, 'src/assets'),
+            },
         },
         devServer: {
             contentBase: path.join(__dirname, 'dist'),
