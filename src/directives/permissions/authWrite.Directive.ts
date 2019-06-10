@@ -35,7 +35,6 @@ export class NgAuthWrite {
     async link(scope, element, attrs) {
         let application = await this.currentApplicationService.fetchApplication(undefined);
         let permissions = await this.permissionsService.getPermissionsObject();
-        console.log(scope);
 
         let area = this.$state.current.params
             ? this.$state.current.params.area
