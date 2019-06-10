@@ -67,8 +67,16 @@ export class NgAuthWrite {
                         element[0].dispatchEvent(changeEvent);
                     }
                 }
-                if (element[0].attributes.disabled && attrs.ngAuthWrite != 'true') {
-                    element[0].removeAttribute('disabled');
+                if (element[0].attributes.disabled) {
+                    if (attrs.ngDisabled == 'false' || attrs.ngDisabled == 'true') {
+                        if (attrs.ngDisabled == 'false') {
+                            element[0].removeAttribute('disabled');
+                        }
+                    } else {
+                        if (attrs.ngAuthWrite != 'true') {
+                            element[0].removeAttribute('disabled');
+                        }
+                    }
                 }
             });
         } else {
