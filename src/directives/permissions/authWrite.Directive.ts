@@ -35,6 +35,7 @@ export class NgAuthWrite {
     async link(scope, element, attrs) {
         let application = await this.currentApplicationService.fetchApplication(undefined);
         let permissions = await this.permissionsService.getPermissionsObject();
+        console.log(scope);
 
         let area = this.$state.current.params
             ? this.$state.current.params.area
@@ -60,7 +61,6 @@ export class NgAuthWrite {
             userPermission.permissionAction >= permissionWrite
         ) {
             this.$timeout(() => {
-
                 if (element.hasClass('ng-hide') && !attrs.ngShow) {
                     element.removeClass('ng-hide');
                     if (attrs.autoExpand) {
@@ -68,11 +68,7 @@ export class NgAuthWrite {
                         element[0].dispatchEvent(changeEvent);
                     }
                 }
-                if (attrs.ngDisabled) {
-                    if (element[0].attributes.disabled && attrs.ngDisabled == 'false') {
-                        element[0].removeAttribute('disabled');
-                    }
-                } else {
+                if (element[0].attributes.disabled && attrs.ngAuthWrite != 'true') {
                     element[0].removeAttribute('disabled');
                 }
             });
