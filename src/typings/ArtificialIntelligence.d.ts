@@ -1,12 +1,12 @@
 interface Analysis {
     text:            string;
-    intentions:      AnalysisIntention[];
+    intentions:      AnalysisIntent[];
     entities:        AnalysisEntity[];
     provider:        string;
     modelId:         string;
 }
 
-interface AnalysisIntention {
+interface AnalysisIntent {
     id:     string;
     score:  number;
     name?:  string;
@@ -29,7 +29,7 @@ interface Entity {
     values: EntityValue[];
 }
 
-interface Intention {
+interface Intent {
     id?: string;
     storageDate?: Date;
     name: string;
