@@ -67,6 +67,7 @@ import { ToggleButtonComponent } from './toggleButton';
 import { TooltipButtonComponent } from './tooltipButton/tooltipButton.component';
 import { UserMenuComponent } from './userMenu/userMenu.component';
 import { MessageAreaComponent } from './messageArea/messageArea.component';
+import { AnalysisInfoComponent } from './analysisInfo/analysisInfo.component';
 
 export const ComponentsModule = angular
     .module('ComponentsModule', [
@@ -138,5 +139,6 @@ export const ComponentsModule = angular
         TooltipButtonComponent,
         UserMenuComponent,
         MessageAreaComponent,
+        AnalysisInfoComponent,
     ])
     .name;
