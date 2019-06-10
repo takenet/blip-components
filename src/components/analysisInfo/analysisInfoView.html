@@ -1,0 +1,32 @@
+<div class="analysis-response">
+    <div>
+        <vue-component name="blipCard" vprops="{{ $ctrl.messageCardContent }}" ng-if="$ctrl.messageCardContent"/>
+    </div>
+    <div class="intention">
+        <blip-select ng-model="$ctrl.selectedIntention"
+            options="$ctrl.structuredIntents"
+            label="{{'publication.testIntentionLabel' | translate}}"
+            ng-if="$ctrl.structuredIntents.length > 0"
+            on-focus="$ctrl.onIntentFocus()"
+            on-blur="$ctrl.onIntentBlur()">
+        </blip-select>
+        <div ng-if="!$ctrl.structuredIntents.length > 0" class="loading-area">
+            <loading-icon/>
+        </div>
+    </div>
+    <div class="hidden-content" ng-class="{ 'display': $ctrl.displayHiddencontent }" ng-if="$ctrl.displayEntityContent">
+        <div class="title">{{'publication.testEntityLabel' | translate}}</div>
+        <div ng-repeat="(name, values) in $ctrl.structuredEntities" class="entity">
+            <div class="name">
+                {{ name }}
+            </div>
+            <div ng-repeat="value in values" class="value">
+                {{ value }}
+            </div>
+        </div>
+    </div>
+    <div class="expand" ng-click="$ctrl.toggleContent()" ng-if="$ctrl.displayEntityContent">
+        <i class="icon icon-arrowdown" ng-if="!$ctrl.displayHiddencontent"></i>
+        <i class="icon icon-arrowup" ng-if="$ctrl.displayHiddencontent"></i>
+    </div>
+</div>

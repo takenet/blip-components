@@ -1,7 +1,7 @@
 import './messageArea.scss';
 import angular from 'core/angular';
 import MessageAreaView from './messageAreaView.html';
-import ComponentController from 'core/base/ComponentController';
+import { ComponentController } from '../base/ComponentController';
 
 const EMPTY_CONTENT = '';
 const SUBMIT_KEY_NAME = 'Enter';
