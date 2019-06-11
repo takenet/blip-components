@@ -8,6 +8,7 @@ const HIGHLIGHT_START = '<span class="highlight">';
 const HIGHLIGHT_END = '</span>';
 const DEFAULT_INTENTS_LABEL = 'Intents';
 const DEFAULT_ENTITIES_LABEL = 'Entities';
+const DEFAULT_INTENT_NAME = 'None';
 
 class AnalysisInfoController extends ComponentController {
 
@@ -63,7 +64,7 @@ class AnalysisInfoController extends ComponentController {
                 const intention = this.intents.find(inte => inte.id === i.id);
                 const score = i.score.toFixed(2);
 
-                i.name = intention ? intention.name : i.id;
+                i.name = intention ? intention.name : (i.id ? i.id : DEFAULT_INTENT_NAME);
 
                 return {
                     value: i.id,
