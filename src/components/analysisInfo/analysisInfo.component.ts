@@ -6,14 +6,19 @@ import { IRootElementService } from 'angular';
 
 const HIGHLIGHT_START = '<span class="highlight">';
 const HIGHLIGHT_END = '</span>';
+const DEFAULT_INTENTS_LABEL = 'Intents';
+const DEFAULT_ENTITIES_LABEL = 'Entities';
+const DEFAULT_INTENT_NAME = 'None';
 
 class AnalysisInfoController extends ComponentController {
 
     private analysisResult: Analysis;
 
+    public intentsLabel: string;
+    public entitiesLabel: string;
     public entities: Entity[];
-    public intentions: Intention[];
-    public analysis: { id: string, content: string, promise: Promise<Analysis> };
+    public intents: Intent[];
+    public analysis: { id: string, content: string, promise: Promise<any> };
     public selectedIntention: string;
     public structuredEntities: { [id: string]: string[] } = {};
     public structuredIntents: { label: string, value: string }[];
@@ -37,6 +42,8 @@ class AnalysisInfoController extends ComponentController {
         private $element: IRootElementService
     ) {
         super();
+        this.intentsLabel = this.intentsLabel || DEFAULT_INTENTS_LABEL;
+        this.entitiesLabel = this.entitiesLabel || DEFAULT_ENTITIES_LABEL;
     }
 
     async $onInit() {
@@ -45,17 +52,19 @@ class AnalysisInfoController extends ComponentController {
 
         try  {
 
-            this.analysisResult = await this.analysis.promise;
+            let { resource } = await this.analysis.promise;
+            this.analysisResult = resource;
+
             this.displayEntityContent = this.analysisResult.entities.length > 0;
 
             // Maps intentions to BLiP select format
             this.structuredIntents = this.analysisResult.intentions
             .sort((a, b) => b.score - a.score)
             .map(i => {
-                const intention = this.intentions.find(inte => inte.id === i.id);
+                const intention = this.intents.find(inte => inte.id === i.id);
                 const score = i.score.toFixed(2);
 
-                i.name = intention ? intention.name : i.id;
+                i.name = intention ? intention.name : (i.id ? i.id : DEFAULT_INTENT_NAME);
 
                 return {
                     value: i.id,
@@ -80,8 +89,10 @@ class AnalysisInfoController extends ComponentController {
             this.analysisResult.entities = this.analysisResult.entities
             .map(e => {
 
-                let entity = this.entities.find(en => en.id === e.id);
-                e.name = entity.name;
+                if (!e.name) {
+                    let entity = this.entities.find(en => en.id === e.id);
+                    e.name = entity.name;
+                }
 
                 let list = this.structuredEntities[e.name];
 
@@ -99,7 +110,7 @@ class AnalysisInfoController extends ComponentController {
 
             this.scrollTo();
 
-        }  catch  {
+        }  catch (e) {
             this.onError({ $id: this.analysis.id });
         }
 
@@ -165,8 +176,10 @@ export const AnalysisInfoComponent = angular
         controllerAs: '$ctrl',
         bindings: {
             entities: '<',
-            intentions: '<',
+            intents: '<',
             analysis: '<',
+            intentsLabel: '@?',
+            entitiesLabel: '@?',
             onEntityToggle: '&?',
             onIntentFocus: '&?',
             onIntentBlur: '&?',

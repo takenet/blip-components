@@ -9,7 +9,7 @@ export const accordion = angular
             <input type="checkbox" checked />
             <i class="accordion-chevron fr"></i>
             <h4 class="accordion-title ma0 ttu" ng-bind="$ctrl.title"></h4>
-            <div class="accordion-content relative overflow-hidden dim" ng-transclude></div>
+            <div class="accordion-content relative overflow-hidden" ng-transclude></div>
         </article>
         `,
         controllerAs: '$ctrl',
