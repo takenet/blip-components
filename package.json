@@ -1,10 +1,14 @@
 {
   "name": "blip-components",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "5.1.0-beta.10",
 =======
   "version": "5.1.0-beta.11",
 >>>>>>> 3a446cd0aa2c130ced83792ac3750f77547fd985
+=======
+  "version": "5.1.0-beta.12",
+>>>>>>> ed527290aed5d2da5be8834358d4c1a0455e37fc
   "description": "Shared components used in portal.blip.ai",
   "main": "./dist/components.js",
   "scripts": {

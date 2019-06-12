@@ -46,7 +46,6 @@ import { ListItemsComponent } from './listItems/listItems.component';
 import { LoadingIconComponent } from './loadingIcon/loadingIcon.component';
 import { LocalLoadingComponent } from './loading/localLoading.component';
 import { materialInput } from './materialInput/materialInput.component';
-import { MonacoEditorComponent } from './monacoEditor/monacoEditor.component';
 import { PageHelpComponent } from './pageHelp/pageHelp.component';
 import { ReloadButtonComponent } from './reloadButton/reloadButton.component';
 import { Radio } from './radio/radio.components';
@@ -118,7 +117,6 @@ export const ComponentsModule = angular
         LoadingIconComponent,
         LocalLoadingComponent,
         materialInput,
-        MonacoEditorComponent,
         PageHelpComponent,
         ReloadButtonComponent,
         Radio,
