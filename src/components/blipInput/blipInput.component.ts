@@ -161,7 +161,7 @@ class BlipInputController extends ComponentController {
 export const BlipInputComponent = angular
     .module('blipComponents.blipInput', [])
     .component('blipInput', {
-        template: '<div id="{{$ctrl.blipInputId}} class="blip-input"></div>',
+        template: '<div id="{{$ctrl.blipInputId}}" class="blip-input"></div>',
         controller: BlipInputController,
         controllerAs: '$ctrl',
         bindings: {
