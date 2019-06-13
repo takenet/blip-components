@@ -1,3 +1,4 @@
+import './UploadArea.scss';
 import angular from 'core/angular';
 import UploadAreaView from './UploadAreaView.html';
 

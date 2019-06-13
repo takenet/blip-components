@@ -3,17 +3,15 @@
         <span ng-show="!dragover" translate>utils.forms.dropFile</span>
         <span ng-show="dragover" translate>utils.forms.dropFile2</span>
         &nbsp;
-        <button type="button" class="button-primary waves-effect waves-light" ng-click="selectFile()" translate>utils.forms.select</button>
+        <button type="button" class="bp-btn bp-btn--bot bp-btn--small" ng-click="selectFile()" translate>utils.forms.select</button>
     </label>
-    <input id="upload-input" name="{{::id}}" ng-model="file" type="file" class="u-full-width" ng-class="{ 'has-file-reader': hasFileReader}"
-    />
-    <img ng-if="ngPermission" ng-show="file && hasFileReader" ng-auth-write ng-src-binary="file" alt="{{file.name}}" ng-click="removeFile()">
-    <img ng-if="!ngPermission" ng-show="file && hasFileReader" ng-src-binary="file" alt="{{file.name}}" ng-click="removeFile()">
+    <input id="upload-input" name="{{::id}}" ng-model="file" type="file" class="u-full-width" ng-class="{ 'has-file-reader': hasFileReader}" hidden/>
+    <img ng-if="file && hasFileReader" ng-src-binary="file" alt="{{file.name}}">
 
-    <a ng-if="ngPermission" ng-show="file && hasFileReader" ng-auth-write ng-click="removeFile()" class="text">
+    <a ng-if="ngPermission && file && hasFileReader" ng-auth-write ng-click="removeFile()" class="text">
         <i class="icon icon-s icon-material icon-padded layout-top layout-right">&#xE14C;</i>
     </a>
-    <a ng-if="!ngPermission" ng-show="file && hasFileReader" ng-click="removeFile()" class="text">
+    <a ng-if="(!ngPermission) && file && hasFileReader" ng-click="removeFile()" class="text">
         <i class="icon icon-s icon-material icon-padded layout-top layout-right">&#xE14C;</i>
     </a>
 </div>

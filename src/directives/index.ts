@@ -19,6 +19,7 @@ import { AutoSaveDirective } from './autoSave/autoSave.directive';
 
 export const DirectivesModule = angular
     .module('DirectivesModule', [
+        PermissionsDirective,
         AutoExpandDirective,
         FileModelDirective,
         PageHeaderDirective,
@@ -26,7 +27,6 @@ export const DirectivesModule = angular
         IconSrcDirective,
         ErrorMessagesDirective,
         Sidenav,
-        PermissionsDirective,
         UploadAreaDirective,
         UploadButtonDirective,
         UploadFileNameDirective,
