@@ -6,6 +6,7 @@ export class ExpandableItemComponent {
     expandableListCtrl: any;
     isActive: boolean = false;
     hasArrow: boolean;
+    onOpen: (event: any) => {};
     constructor(private $element, private $timeout) {}
 
     $onInit() {
@@ -23,6 +24,8 @@ export class ExpandableItemComponent {
     open(event) {
         this.toggleActive();
         this.expandableListCtrl.toggleItem(this);
+
+        if (this.onOpen && this.isActive) { this.onOpen(event); }
     }
 }
 
