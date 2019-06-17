@@ -2,7 +2,7 @@
     <div ng-if="!circle" class="flex flex-row items-center">
         <div class="upload-container">
             <input id="uploadFile" name="uploadFile" type="file" ng-model="file">
-            <button ng-if="!file" class="button-text-primary" translate>utils.forms.addplus</button>
+            <button ng-if="!file" class="bp-btn bp-btn--bot bp-btn--text-only" translate>utils.forms.addplus</button>
             <div ng-if="file" class="uploaded-file">
                 <div class="icon icon-attach"></div>
                 <span class="bp-fs-6">{{file.name}}</span>
