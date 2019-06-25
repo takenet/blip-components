@@ -12,8 +12,6 @@ export class NgAuthWrite {
     private $timeout: any;
     private $state: any;
     private $compile: any;
-    private currentApplicationService: any;
-    private permissionsService: any;
 
     constructor($compile, $state, $timeout) {
         //Directive
@@ -22,19 +20,23 @@ export class NgAuthWrite {
         this.$compile = $compile;
         this.$state = $state;
         this.$timeout = $timeout;
-
-        // Get the service using name on Angular enviroment
-        this.currentApplicationService = getService('CurrentApplicationService');
-        this.permissionsService = getService('PermissionsService');
     }
 
     compile() {
         return this.link.bind(this);
     }
 
+    private get CurrentApplicationService(): any {
+        return getService('CurrentApplicationService');
+    }
+
+    private get PermissionsService(): any {
+        return getService('PermissionsService');
+    }
+
     async link(scope, element, attrs) {
-        let application = await this.currentApplicationService.fetchApplication(undefined);
-        let permissions = await this.permissionsService.getPermissionsObject();
+        let application = await this.CurrentApplicationService.fetchApplication(undefined);
+        let permissions = await this.PermissionsService.getPermissionsObject();
 
         let area = this.$state.current.params
             ? this.$state.current.params.area
