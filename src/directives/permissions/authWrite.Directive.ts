@@ -38,6 +38,11 @@ export class NgAuthWrite {
         let application = await this.CurrentApplicationService.fetchApplication(undefined);
         let permissions = await this.PermissionsService.getPermissionsObject();
 
+        if (attrs.ngShow == '$ctrl.isAuthWriteProcessed') {
+            element.removeClass('ng-hide');
+            attrs.ngShow = false;
+        }
+
         let area = this.$state.current.params
             ? this.$state.current.params.area
             : this.$state.params.area;
@@ -62,7 +67,7 @@ export class NgAuthWrite {
             userPermission.permissionAction >= permissionWrite
         ) {
             this.$timeout(() => {
-                if (element.hasClass('ng-hide') && !attrs.ngShow) {
+                if (!attrs.ngShow) {
                     element.removeClass('ng-hide');
                     if (attrs.autoExpand) {
                         let changeEvent = new Event('change');
