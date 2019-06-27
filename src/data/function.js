@@ -228,3 +228,16 @@ export const getService = (serviceName) => {
         return $injector.get(serviceName);
     }
 };
+
+
+/**
+ * Return new object with all undefined properties' keys filtered out
+ */
+export const filterUndefinedProperties = (obj) => {
+    return obj && Object.keys(obj)
+        .filter(key => obj[key] !== undefined)
+        .reduce((newObj, key) => {
+            newObj[key] = obj[key];
+            return newObj;
+         }, {});
+}
