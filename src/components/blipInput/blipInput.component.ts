@@ -4,21 +4,22 @@ import { ComponentController } from '../base';
 import * as uuid from 'uuid';
 import { EventEmitter } from 'shared/EventEmitter';
 import { IOnChangesObject } from 'angular';
+import { filterUndefinedProperties } from 'data/function';
 
 const BLIP_INPUT_PREFIX = 'blip-input';
 
 enum BlipInputCallback {
-    OnInputFocus = 'onInputFocus',
-    OnInputBlur = 'onInputBlur',
-    OnInputChange = 'onInputChange',
-    OnInputError = 'onInputError',
+    OnFocus = 'onFocus',
+    OnBlur = 'onBlur',
+    OnChange = 'onChange',
+    OnError = 'onError',
 }
 
 class BlipInputController extends ComponentController {
-    onInputFocus: (obj) => void;
-    onInputBlur: (obj) => void;
-    onInputChange: (obj) => void;
-    onInputError: (obj) => void;
+    onFocus: (obj) => void;
+    onBlur: (obj) => void;
+    onChange: (obj) => void;
+    onError: (obj) => void;
     blipInputId: string;
     blipInputInstance: BlipInput;
     id: string;
@@ -27,6 +28,7 @@ class BlipInputController extends ComponentController {
     type: string;
     placeholder: string;
     required: boolean;
+    autocomplete: string;
     minLength: number;
     maxLength: number;
     showPasswordStrength: boolean;
@@ -44,11 +46,12 @@ class BlipInputController extends ComponentController {
         super();
         this.blipInputId = `${BLIP_INPUT_PREFIX}-${uuid.v4()}`;
         this.blipInputInstance = new BlipInput({
-            id: this.id || this.blipInputId,
+            id: this.id,
             name: this.name || this.blipInputId,
             type: this.type || 'text',
             placeholder: this.placeholder || '',
             required: this.required || false,
+            autocomplete: this.autocomplete,
             minLength: this.minLength || 0,
             maxLength: this.maxLength,
             showPasswordStrength: this.showPasswordStrength || false,
@@ -57,10 +60,10 @@ class BlipInputController extends ComponentController {
             minLengthErrorMsg: this.minLengthErrorMsg,
             emailTypeErrorMsg: this.emailTypeErrorMsg,
             urlTypeErrorMsg: this.urlTypeErrorMsg,
-            onInputFocus: this.handle.bind(this, BlipInputCallback.OnInputFocus),
-            onInputBlur: this.handle.bind(this, BlipInputCallback.OnInputBlur),
-            onInputChange: this.handle.bind(this, BlipInputCallback.OnInputChange),
-            onInputError: this.handle.bind(this, BlipInputCallback.OnInputError),
+            onFocus: this.handle.bind(this, BlipInputCallback.OnFocus),
+            onBlur: this.handle.bind(this, BlipInputCallback.OnBlur),
+            onChange: this.handle.bind(this, BlipInputCallback.OnChange),
+            onError: this.handle.bind(this, BlipInputCallback.OnError),
         });
 
         const inputElement = this.blipInputInstance.render({
@@ -71,21 +74,26 @@ class BlipInputController extends ComponentController {
 
         this.$element[0].children[0].appendChild(inputElement);
 
-        this.$scope.$watch('$ctrl.model', (model) => {
-            if (this.blipInputInstance) {
-                this.updateInstance(model);
-            }
-        });
+        // this.$scope.$watch('$ctrl.model', (model) => {
+        //     if (this.blipInputInstance) {
+        //         this.updateInstance(model);
+        //     }
+        // });
     }
 
     $onChanges(changesObj: IOnChangesObject) {
-        if (
-            changesObj.options &&
-            !changesObj.options.isFirstChange()
-        ) {
-            this.blipInputInstance.render({
-                label: this.label,
-            });
+        const { disabled, invalid, label, model } = changesObj;
+        const relevantChanges = filterUndefinedProperties({
+            disabled: disabled ? disabled.currentValue : undefined,
+            invalid: invalid ? invalid.currentValue : undefined,
+            label: label ? label.currentValue : undefined,
+            model: model ? model.currentValue : undefined,
+        });
+        console.log(Object.keys(relevantChanges));
+        console.log(relevantChanges);
+
+        if (this.blipInputInstance) {
+            this.blipInputInstance.render(relevantChanges);
         }
     }
 
@@ -93,57 +101,57 @@ class BlipInputController extends ComponentController {
         this.updateModel();
 
         switch (type) {
-            case BlipInputCallback.OnInputFocus:
-                this.handleOnInputFocus(emitter);
+            case BlipInputCallback.OnFocus:
+                this.handleOnFocus(emitter);
                 break;
-            case BlipInputCallback.OnInputBlur:
-                this.handleOnInputBlur(emitter);
+            case BlipInputCallback.OnBlur:
+                this.handleOnBlur(emitter);
                 break;
-            case BlipInputCallback.OnInputChange:
-                this.handleOnInputChange(emitter);
+            case BlipInputCallback.OnChange:
+                this.handleOnChange(emitter);
                 break;
-            case BlipInputCallback.OnInputError:
-                this.handleOnInputError(emitter);
+            case BlipInputCallback.OnError:
+                this.handleOnError(emitter);
         }
     }
 
-    handleOnInputFocus($event) {
+    handleOnFocus($event) {
         const event = {
             ...$event,
             id: this.blipInputId,
             element: this.blipInputInstance
         };
-        if (this.onInputFocus) {
-            this.onInputFocus(EventEmitter(event));
+        if (this.onFocus) {
+            this.onFocus(EventEmitter(event));
         }
     }
 
-    handleOnInputBlur($event) {
+    handleOnBlur($event) {
         const event = {
             ...$event,
             id: this.blipInputId,
             element: this.blipInputInstance
         };
-        if (this.onInputBlur) {
-            this.onInputBlur(EventEmitter(event));
+        if (this.onBlur) {
+            this.onBlur(EventEmitter(event));
         }
     }
 
-    handleOnInputChange($event) {
+    handleOnChange($event) {
         const event = {
             value: $event
         };
-        if (this.onInputChange) {
-            this.onInputChange(EventEmitter(event));
+        if (this.onChange) {
+            this.onChange(EventEmitter(event));
         }
     }
 
-    handleOnInputError($event) {
+    handleOnError($event) {
         const event = {
             ...$event
         };
-        if (this.onInputError) {
-            this.onInputError(EventEmitter(event));
+        if (this.onError) {
+            this.onError(EventEmitter(event));
         }
     }
 
@@ -171,6 +179,7 @@ export const BlipInputComponent = angular
             type: '@?',
             placeholder: '@?',
             required: '<?',
+            autocomplete: '@?',
             minLength: '<?',
             maxLength: '<?',
             showPasswordStrength: '<?',
@@ -179,11 +188,13 @@ export const BlipInputComponent = angular
             minLengthErrorMsg: '@?',
             emailTypeErrorMsg: '@?',
             urlTypeErrorMsg: '@?',
-            onInputFocus: '&?',
-            onInputBlur: '&?',
-            onInputChange: '&?',
-            onInputError: '&?',
-            disabled: '<?'
+            onFocus: '&?',
+            onBlur: '&?',
+            onChange: '&?',
+            onError: '&?',
+            disabled: '<?',
+            invalid: '<?',
+            parentForm: '=?',
         },
         require: {
             ngModel: 'ngModel',
