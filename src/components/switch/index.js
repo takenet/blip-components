@@ -18,7 +18,8 @@ export const SwitchComponent = angular
             ngTrueValue: '=?',
             ngFalseValue: '=?',
             ngPermission: '@',
-            onToggle: '&?'
+            onToggle: '&?',
+            manualToggle: '@?',
         }
     })
     .name;

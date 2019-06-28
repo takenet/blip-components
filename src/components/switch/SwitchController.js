@@ -17,7 +17,12 @@ export default class {
         this._$scope = $scope;
         this._$state = $state;
 
-        if (!this.manualToggle) this.manualToggle = false;
+        if (this.manualToggle) {
+            this.manualToggle = this.manualToggle === "true";
+        } else {
+            this.manualToggle = false;
+        }
+
         this.onToggle = this.onToggle ? this.onToggle : () => {};
 
         this.trueValue =
@@ -64,14 +69,14 @@ export default class {
             return;
         }
 
-        if ((this.ngPermission || this.ngPermission == "true") && !this.hasPermission) {
-            this.ToastService.toast('danger', 'utils.errorMsg.74');
-            return;
-        }
-
         if (this.manualToggle) {
             event.preventDefault();
             this.onToggle();
+            return;
+        }
+
+        if ((this.ngPermission || this.ngPermission == "true") && !this.hasPermission) {
+            this.ToastService.toast('danger', 'utils.errorMsg.74');
             return;
         }
 
