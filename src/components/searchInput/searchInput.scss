@@ -10,14 +10,22 @@
         transition: width 400ms;
         margin-left: 0;
         border: none;
-        border-bottom: 2px solid $bp-color-bot;
         background: transparent;
         height: 6*$u;
 
-        &:focus { margin-left: 10px; width: 200px; outline: 0 }
+        &:focus { 
+            margin-left: 10px; 
+            width: 200px; 
+            outline: 0;
+            border-bottom: 2px solid $bp-color-bot
+        }
 
         //Workaround for bug on Safari
-        &.input-focused { margin-left: 10px; width: 200px; }
+        &.input-focused { 
+            margin-left: 10px; 
+            width: 200px;
+            border-bottom: 2px solid $bp-color-bot;  
+        }
 
         &::-ms-clear { display: none; }
     }
