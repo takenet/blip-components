@@ -1,4 +1,9 @@
-<input type="checkbox"  ng-checked="$ctrl.isChecked" />
-<label ng-click="$ctrl.toggle()"><span></span></label>
+<input type="checkbox"
+    ng-checked="$ctrl.isChecked"
+    ng-readonly="$ctrl.disabled" />
+<label ng-click="$ctrl.toggle($event)">
+    <span></span>
+</label>
 &nbsp;
-<span class="label" ng-transclude></span>
+<span class="label"
+    ng-transclude></span>

@@ -1,0 +1,69 @@
+.message-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 57px;
+    min-height: 57px;
+    width: 100%;
+    background-color: #FFF;
+    -webkit-box-shadow: 0 -1px 12px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -1px 12px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 3px 3px;
+    z-index: 2;
+
+    & #message-area {
+        width: 100%;
+        position: relative;
+        outline: none;
+        resize: none;
+        padding: 0 15px;
+        max-height: 57px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19px;
+        border: none;
+
+        & ::placeholder {
+            color: #e4e4e4;
+        }
+    }
+
+    & #options {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 5px;
+    }
+
+    & .send-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        & :hover {
+            cursor: pointer;
+        }
+
+        & > .send-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            & > icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 40px;
+
+                & > svg {
+                    margin-left: 5px;
+                }
+
+            }
+
+        }
+    }
+}

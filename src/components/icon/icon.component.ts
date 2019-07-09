@@ -2,6 +2,7 @@ import angular from 'core/angular';
 import { IComponentController } from 'angular';
 import { strToEl } from 'data/function';
 
+import './icon.scss';
 /**
  * USAGE
  *
@@ -28,7 +29,7 @@ class IconController implements IComponentController {
 
     async $onInit() {
         if (this.name) {
-            const { default: icon } = await import(`./lib/${this.name}-icon.svg`);
+            const { default: icon } = await import(/* webpackMode: "eager" */ `./lib/${this.name}-icon.svg`);
             const svg = strToEl(icon);
 
             this.width && svg.setAttribute('width', this.width);

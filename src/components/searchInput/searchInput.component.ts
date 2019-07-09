@@ -52,7 +52,7 @@ export const SearchInputComponent = angular
         controllerAs: '$ctrl',
         template: `
         <div class="search-input-container">
-            <i tooltips tooltip-template="{{'utils.forms.search' | translate}}" tooltip-side="bottom" class="icon-search" ng-click="$ctrl.focusInput()"></i>
+            <i tooltips tooltip-template="Search" tooltip-side="bottom" class="icon-search" ng-click="$ctrl.focusInput()"></i>
             <div id="search-input-area" ng-transclude></div>
         </div>`,
         transclude: true,

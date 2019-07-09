@@ -1,0 +1,20 @@
+<ng-messages
+    ng-if="field ? (form[field].$dirty || form.$submitted) : (!form.$dirty && form.$submitted)"
+    for="error ? form[field].$error : form.$error"
+    role="alert"
+    >
+    <p ng-if="error" ng-message="required" class="badge bg-danger bp-c-white pt0" translate>utils.errorMsg.40</p>
+    <p ng-if="error" ng-message="minlength" class="badge bg-danger bp-c-white pt0" translate>utils.errorMsg.41</p>
+    <p ng-if="error" ng-message="maxlength" class="badge bg-danger bp-c-white pt0" translate>utils.errorMsg.42</p>
+    <p ng-if="error" ng-message="min" class="badge bg-danger bp-c-white pt0" translate>utils.errorMsg.159</p>
+    <p ng-if="error" ng-message="max" class="badge bg-danger bp-c-white pt0" translate>utils.errorMsg.160</p>
+    <p ng-if="error" ng-message="email" class="badge bg-danger bp-c-white pt0" translate>utils.errorMsg.43</p>
+    <p ng-if="error" ng-message="url" class="badge bg-danger bp-c-white pt0" translate>utils.errorMsg.44</p>
+    <p ng-if="error" ng-message="pattern" class="badge bg-danger bp-c-white pt0" translate>utils.errorMsg.44</p>
+    <p ng-if="error" ng-message="minTags" class="badge bg-danger bp-c-white pt0" translate>utils.errorMsg.41</p>
+    <p ng-if="error" ng-message="maxTags" class="badge bg-danger bp-c-white pt0" translate>utils.errorMsg.42</p>
+    <p ng-if="error" ng-message="resolution" class="badge bg-danger bp-c-white pt0" translate>utils.errorMsg.45</p>
+    <p ng-if="error" ng-message="mimeType" class="badge bg-danger bp-c-white pt0" translate>utils.errorMsg.46</p>
+    <p ng-if="error" ng-message="changeSelfPermission" class="badge bg-danger bp-c-white pt0" translate>utils.errorMsg.76</p>
+    <p ng-if="apiError" ng-message="api" class="badge bg-danger bp-c-white pt0" translate>{{apiError}}</p>
+</ng-messages>

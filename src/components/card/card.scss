@@ -1,9 +1,4 @@
-$color-white: #fff;
-$color-disabled: #BEBEBE;
-$color-text-dark: #4A4A4A;
-$color-text-light: #738192;
-$bold: 700;
-$u: 0.6rem;
+@import '../../assets/scss/variables';
 
 card,
 .card {
@@ -17,7 +12,6 @@ card,
     -o-box-shadow: 0 2px 12px 0 #e1e7ee;
     box-shadow: 0 2px 12px 0 #e1e7ee;
     z-index: 1;
-    transform: scale(1);
 
     &[ng-click]:hover {
         z-index: 2;
@@ -67,6 +61,7 @@ card,
     .card-title + .card-content {
         padding-top: 1.5*$u;
     }
+
     .card-content {
         padding: 2.5*$u;
         margin: 0;
@@ -132,7 +127,7 @@ card,
 
         @media (max-width: 749px) {
             height: auto;
-            
+
             .card-image-left {
                 position: absolute;
                 top: 1.5rem;
@@ -142,5 +137,146 @@ card,
                 border-radius: 50%;
             }
         }
+    }
+
+    &--with-hover {
+        box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
+        transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
+        transition-delay: .1s;
+        transform: translateZ(0);
+
+        &:hover {
+            opacity: 1 !important;
+            box-shadow:
+                0 4px 4px rgb(219, 227, 239),
+                0 16px 16px rgb(222, 228, 240),
+                0 32px 20px rgb(228, 234, 241);
+            transform: translate(0, -4px);
+        }
+    }
+
+    &--mini-card {
+
+        box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
+        transition: box-shadow .3s ease-out, top .3s ease-out;
+        transition-delay: .1s;
+        padding: 20px 50px 20px 60px;
+        margin: 0 0 10px 0;
+
+        &:hover {
+            box-shadow:
+                0 0 4px 0 rgb(169, 194, 215),
+                0 13px 20px 0 rgb(213, 222, 235);
+        }
+
+        .input-auto-expand input {
+            padding: 5px;
+            margin-right: 1*$m;
+            border: none;
+            background: transparent;
+            outline: none;
+
+            &:focus,
+            &:hover:not([disabled="disabled"]) {
+                border: 1px solid $color-gray;
+            }
+        }
+
+        form {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            width: 100%;
+            font-size: $bp-fs-6;
+
+            .form-group {
+                padding: 0;
+            }
+        }
+
+        .card-content {
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            width: 100%;
+            font-size: $bp-fs-6;
+            min-height: 40px;
+
+            .card-section {
+                white-space: nowrap;
+
+                &--no-overflow {
+                    display: table;
+                    table-layout: fixed;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    > span {
+                        display: inline-block;
+                        max-width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+
+                label {
+                    color: #8491a8;
+                    margin: 0;
+                    font-size: $bp-fs-7;
+                    font-weight: 500;
+                    display: block;
+                    padding-bottom: $u;
+                }
+            }
+
+            .divider {
+                width: 1px;
+                min-height: 40px;
+                background-color: #e3e9ec;
+                margin: 0 15px;
+            }
+
+            .card-icons {
+                color: #8F9CB5;
+                font-size: $bp-fs-4;
+                display: flex;
+                align-items: baseline;
+                justify-content: flex-end;
+
+                > * {
+                    margin-left: 1.5*$m;
+                    cursor: pointer;
+                }
+
+                &--hidden {
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: opacity 0.5s linear;
+                }
+
+                a:hover {
+                    color: inherit;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &:hover .card-icons {
+            &--hidden {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    &--square {
+        width: 230px;
+        height: 100%;
+        min-height: 217px;
     }
 }

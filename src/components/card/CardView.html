@@ -1,37 +1,55 @@
 <div ng-switch="$ctrl.collapsable">
     <div ng-switch-when="undefined">
-        <div ng-if="$ctrl.onEdit || $ctrl.onExclude || $ctrl.hasTitle" class="card-header">
+        <div ng-if="$ctrl.onEdit || $ctrl.onExclude || $ctrl.hasTitle" class="card-header pa4-1 text-medium">
             <!-- Has sref -->
             <p class="card-title"
                 ng-if="$ctrl.hasTitle && $ctrl.sref">
-                <a ng-href="{{$ctrl.href}}">{{$ctrl.itemTitle}}</a>
+                <a ng-class="{'mr3': $ctrl.cardInfo}" ng-href="{{$ctrl.href}}">{{$ctrl.itemTitle}}</a>
+                <i ng-if="$ctrl.cardInfo"
+                    tooltips
+                    tooltip-template="{{$ctrl.cardInfo}}"
+                    tooltip-side="bottom"
+                    tooltip-class="medium"
+                    class="icon-info f3 bp-c-cloud tooltip-icon-hover card-info">
+                    </i>
             </p>
             <!-- Has no sref -->
             <p class="card-title"
+                ng-class="{'mr3': $ctrl.cardInfo}"
                 ng-if="$ctrl.hasTitle && !$ctrl.sref"
-                ng-bind-html="$ctrl.itemTitle"></p>
-            <div class="card-handleable-content" ng-if="$ctrl.onEdit || $ctrl.onExclude">
-                <icon title="{{'utils.forms.edit' | translate }}" ng-if="$ctrl.onEdit" ng-auth-write ng-click="$ctrl.onEdit()">&#xE254;</icon>
-                <icon title="{{'utils.forms.remove' | translate }}" ng-if="$ctrl.onExclude" ng-auth-write ng-click="$ctrl.onExclude()">&#xE872;</icon>
+                >
+                <ng-bind-html ng-class="{'mr3': $ctrl.cardInfo}" ng-bind-html="$ctrl.itemTitle"></ng-bind-html>
+                <i ng-if="$ctrl.cardInfo"
+                    tooltips
+                    tooltip-template="{{$ctrl.cardInfo}}"
+                    tooltip-side="bottom"
+                    tooltip-class="medium"
+                    class="icon-info f3 bp-c-cloud tooltip-icon-hover card-info">
+                    </i>
+            </p>
+            <div class="card-handleable-content flex items-center">
+                <span class="bp-lh-simple icon-edit" title="{{'utils.forms.edit' | translate }}" ng-if="$ctrl.onEdit" ng-auth-write ng-click="$ctrl.$onCardEdit()"></span>
+                <span class="bp-lh-simple icon-delete" title="{{'utils.forms.remove' | translate }}" ng-if="$ctrl.onExclude" ng-auth-write ng-click="$ctrl.$onCardExclude()"></span>
+                <dropdown-item ng-if="$ctrl.showCardOptions" custom-icon="morevertical" align="right">
+                    <div ng-transclude="cardOptions" class="pv3 ph4"></div>
+                </dropdown-item>
             </div>
         </div>
-        <span class="card-divider" ng-if="$ctrl.itemTitle"></span>
         <div class="card-content" ng-transclude></div>
         <div ng-transclude="cardFooter"></div>
     </div>
     <div ng-switch-when="true">
-        <div class="card-header">
+        <div class="card-header pa4-1 text-medium">
             <p class="card-title" ng-if="$ctrl.hasTitle" ng-bind-html="$ctrl.itemTitle"></p>
-            <div class="card-handleable-content" ng-if="$ctrl.onEdit || $ctrl.onExclude">
-                <icon title="{{'utils.forms.edit' | translate }}" ng-if="$ctrl.onEdit" ng-auth-write ng-click="$ctrl.onEdit()">&#xE254;</icon>
-                <icon title="{{'utils.forms.remove' | translate }}" ng-if="$ctrl.onExclude" ng-auth-write ng-click="$ctrl.onExclude()">&#xE872;</icon>
+            <div class="card-handleable-content flex items-center" ng-if="$ctrl.onEdit || $ctrl.onExclude">
+                <span class="bp-lh-simple icon-edit" title="{{'utils.forms.edit' | translate }}" ng-if="$ctrl.onEdit" ng-auth-write ng-click="$ctrl.$onCardEdit()"></span>
+                <span class="bp-lh-simple icon-delete" title="{{'utils.forms.remove' | translate }}" ng-if="$ctrl.onExclude" ng-auth-write ng-click="$ctrl.$onCardExclude()"></span>
             </div>
 
-            <icon class="card-collapse-icon" ng-click="$ctrl.toggleCollapse()" ng-show="$ctrl.collapsed">&#xE313;</icon>
-            <icon class="card-collapse-icon" ng-click="$ctrl.toggleCollapse()" ng-show="!$ctrl.collapsed">&#xE316;</icon>
+            <icon-dpr class="card-collapse-icon" ng-click="$ctrl.$toggleCollapse()" ng-show="$ctrl.collapsed">&#xE313;</icon-dpr>
+            <icon-dpr class="card-collapse-icon" ng-click="$ctrl.$toggleCollapse()" ng-show="!$ctrl.collapsed">&#xE316;</icon-dpr>
             <span class="card-aditional-info" ng-show="$ctrl.aditionalInfo">{{$ctrl.aditionalInfo}}</span>
         </div>
-        <span class="card-divider" ng-if="$ctrl.itemTitle"></span>
         <div class="card-content" ng-show="$ctrl.showContent" ng-transclude></div>
     </div>
 </div>

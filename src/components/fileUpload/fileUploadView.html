@@ -1,0 +1,25 @@
+<div id="file-upload" class="file_upload">
+    <div class="file_upload__content" ng-if="!$ctrl.model">
+        <i class="icon-material icon file_upload__content__icon">cloud_upload</i>
+        <div class="file_upload__description">
+            <div>
+                <span translate>{{$ctrl.beforeUploadMessage}}</span>
+            </div>
+            <div>
+                <a href="#" translate>{{$ctrl.selectMessage}}</a>
+            </div>
+        </div>
+    </div>
+    <div class="file_upload__content" ng-if="$ctrl.model">
+        <i class="icon-material icon file_upload__content__icon">insert_drive_file</i>
+        <div class="file_upload__description">
+            <div>{{ $ctrl.model.name }}</div>
+            <div>
+                <a href="#" ng-click="$ctrl.removeFile()" translate>{{$ctrl.afterUploadMessage}}</a>
+            </div>
+        </div>
+    </div>
+    <div class="file_upload__input_overlap" ng-show="!$ctrl.model">
+        <input id="file-upload-input" type="file" class="file_upload__input" accept="{{ $ctrl.accept }}">
+    </div>
+</div>

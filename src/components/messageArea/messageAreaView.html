@@ -1,0 +1,10 @@
+<div class="message-input" ng-class="{ 'bp-textarea-wrapper--disabled': $ctrl.disabled }">
+    <textarea id="message-area" rows="1" data-min-rows="1" placeholder="{{ $ctrl.placeholder }}" ng-model="$ctrl.content" ng-keydown="$ctrl.keyDown($event)" ng-disabled="$ctrl.disabled"></textarea>
+    <div id="options">
+        <div class="send-button" ng-style="{ 'background-color': $ctrl.iconColor }" ng-if="$ctrl.content" ng-click="$ctrl.submit()">
+            <div class="send-icon">
+                <icon name="Send" width="18" height="40"></icon>
+            </div>
+        </div>
+    </div>
+</div>

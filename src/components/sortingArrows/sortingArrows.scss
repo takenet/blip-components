@@ -1,0 +1,60 @@
+@import '../../assets/scss/variables';
+
+.sorting-label {
+    margin-left: 1.0125em;
+}
+
+.sorting-arrows {
+    width: 0.70em;
+    height: 1.5em;
+
+    &.sorting-arrows--absolute {
+        position: absolute;
+        top: calc(50% - 0.75em);
+        left: 0;
+    }
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    vertical-align: middle;
+
+    .arrow-up,
+    .arrow-down {
+        width: 0;
+        height: 0;
+        flex-shrink: 0;
+        flex-grow: 0;
+
+        display: block;
+
+        border-top-width: 0.325em;
+        border-right-width: 0.350em;
+        border-bottom-width: 0.325em;
+        border-left-width: 0.350em;
+
+        border-style: solid;
+        border-color: transparent;
+    }
+
+    .arrow-up {
+        &:not(.arrow--selected) {
+            border-bottom-color:  $bp-color-time;
+        }
+
+        &.arrow--selected {
+            border-bottom-color:  $bp-color-rooftop;
+        }
+    }
+
+    .arrow-down {
+        &:not(.arrow--selected) {
+            border-top-color:  $bp-color-time;
+        }
+
+        &.arrow--selected {
+            border-top-color:  $bp-color-rooftop;
+        }
+    }
+}

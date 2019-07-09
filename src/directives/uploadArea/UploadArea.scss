@@ -1,0 +1,40 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.input-file {
+    background-color: $color-white-dark;
+    border: 1px $color-disabled dashed;
+    border-radius: 0;
+    color: $bp-color-city;
+    text-align: center;
+    overflow: hidden;
+    > label {
+        line-height: 6.8*$m;
+        margin: 0;
+        pointer-events: none;
+        button {
+            pointer-events: all;
+        }
+    }
+    > input[type="file"].has-file-reader {
+        position: absolute;
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        overflow: hidden;
+        z-index: -1;
+    }
+    > img {
+        margin-top: 0.6*$m;
+        max-width: 100%;
+    }
+
+    &.drag-over {
+        background-color: darken($color-gray-light, 6%);
+        color: $color-text-dark;
+        button {
+            display: none;
+        }
+    }
+}

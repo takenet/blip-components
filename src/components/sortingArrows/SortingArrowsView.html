@@ -1,0 +1,19 @@
+<span class="sorting-header inline-flex relative" ng-click="$ctrl.toggleOrder()">
+    <span class="sorting-arrows no-select" ng-class="{ 'sorting-arrows--absolute': $ctrl.label }">
+        <div class="arrow-up"
+        ng-class="{
+            'arrow--selected' : (
+                (!$ctrl.category || $ctrl.category === $ctrl.model.category)
+                && $ctrl.model.order === $ctrl.orderEnum.Ascending
+            )}">
+        </div>
+        <div class="arrow-down"
+        ng-class="{
+            'arrow--selected' : (
+                (!$ctrl.category || $ctrl.category === $ctrl.model.category)
+                && $ctrl.model.order === $ctrl.orderEnum.Descending
+            )}">
+        </div>
+    </span>
+    <span class="sorting-label" ng-if="$ctrl.label">{{ $ctrl.label }}</span>
+</span>

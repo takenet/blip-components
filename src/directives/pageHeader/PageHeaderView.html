@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="full-initial-section">
+        <div class="row flex page-header-content items-center mb0">
+            <div ng-if="backButton" class="pr3">
+                <a class="return-icon" ui-sref="{{backButton}}">
+                    <i class="icon-back"></i>
+                </a>
+            </div>
+            <div class="flex items-center w-100">
+                <h1 class="page-header-title mv0 mr2 lh-solid">
+                    {{pageTitle}}
+                </h1>
+                <span id="info-icon" class="page-header-info animated fadeIn" ng-if="(helperTitle && helperBody && helperConfirm)" ng-click="toggleHelper()">
+                    <icon-dpr class="bp-fs-6 color-text-light-3" icon-class="info"></icon-dpr>
+                </span>
+            </div>
+            <div class="custom-header-content flex items-center justify-end ml5 tr w-100" ng-transclude="customContent"></div>
+        </div>
+
+        <div ng-transclude></div>
+    </div>
+    <div class="page-header-description" ng-transclude="description"></div>
+    <div class="page-header-additional-info" ng-transclude="info"></div>
+</div>
+<div>
+    <page-help class="animated fadeOut" id="helper" ng-show="helperTitle && helperBody && helperConfirm" title="{{helperTitle}}" body="{{helperBody}}"
+        doc-link="helperDoc" help-confirm="{{helperConfirm}}" close="toggleHelper"></page-help>
+</div>
+

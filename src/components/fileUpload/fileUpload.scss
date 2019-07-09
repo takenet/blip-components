@@ -1,0 +1,39 @@
+@import '~blip-toolkit/dist/scss/variables/module';
+
+.file_upload {
+    padding: 3*$m;
+    position: relative;
+    background-color: $bp-color-whisper;
+    border: dashed 0.15*$m $bp-color-offwhite;
+}
+
+.file_upload__input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.file_upload__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $bp-color-silver;
+    min-height: 10*$m;
+}
+
+.file_upload__content__icon {
+    font-size: $bp-fs-2;
+}
+
+.file_upload__description {
+    text-align: center;
+}
+
+.file_upload__input_overlap {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
