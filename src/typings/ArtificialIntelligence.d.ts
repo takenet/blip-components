@@ -1,3 +1,4 @@
+
 interface Analysis {
     text:            string;
     intentions:      AnalysisIntent[];
