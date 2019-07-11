@@ -45,7 +45,6 @@ import { ListItemComponent } from './listItem/listItem.component';
 import { ListItemsComponent } from './listItems/listItems.component';
 import { LoadingIconComponent } from './loadingIcon/loadingIcon.component';
 import { LocalLoadingComponent } from './loading/localLoading.component';
-import { materialInput } from './materialInput/materialInput.component';
 import { PageHelpComponent } from './pageHelp/pageHelp.component';
 import { ReloadButtonComponent } from './reloadButton/reloadButton.component';
 import { Radio } from './radio/radio.components';
@@ -116,7 +115,6 @@ export const ComponentsModule = angular
         ListItemsComponent,
         LoadingIconComponent,
         LocalLoadingComponent,
-        materialInput,
         PageHelpComponent,
         ReloadButtonComponent,
         Radio,
