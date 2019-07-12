@@ -52,8 +52,7 @@ class AnalysisInfoController extends ComponentController {
 
         try  {
 
-            let { resource } = await this.analysis.promise;
-            this.analysisResult = resource;
+            this.analysisResult = await this.analysis.promise;
 
             this.displayEntityContent = this.analysisResult.entities.length > 0;
 
