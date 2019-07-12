@@ -1,10 +1,10 @@
+
 import angular from 'core/angular';
 import { AutoExpandDirective } from './autoExpand/AutoExpand.Directive';
 import { FileModelDirective } from './fileModel/fileModelDirective';
 import { PageHeaderDirective } from './pageHeader/PageHeaderDirective';
 import { OnErrorSrcDirective } from './onErrorSrc/onErrorSrc.directive';
 import { IconSrcDirective } from './IconSrc/IconSrc.directive';
-import { ErrorMessagesDirective } from './errorMessages/ErrorMessagesDirective';
 import { Sidenav } from './sidenav/SidenavDirective';
 import { PermissionsDirective } from './permissions';
 import { UploadAreaDirective } from './uploadArea/UploadAreaDirective';
@@ -25,7 +25,6 @@ export const DirectivesModule = angular
         PageHeaderDirective,
         OnErrorSrcDirective,
         IconSrcDirective,
-        ErrorMessagesDirective,
         Sidenav,
         UploadAreaDirective,
         UploadButtonDirective,
