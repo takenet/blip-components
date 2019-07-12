@@ -3,6 +3,7 @@ import { accordion } from './accordion';
 import { AvatarArrayComponent } from './avatarArray/avatarArray.component';
 import { ActionsBarComponent } from './actionsBar/actionsBar.component';
 import { AddRemoveComponent } from './addRemove/addRemove.component';
+import { BlipCarouselComponent } from './blipCarousel/blipCarousel.component';
 import { BlipCheckboxComponent } from './blipCheckbox/blipCheckbox.component';
 import { BlipFooterComponent } from './blipFooter/blipFooter.component';
 import { BlipInputDprComponent } from './blipInputDpr/blipInputDpr.component';
@@ -74,6 +75,7 @@ export const ComponentsModule = angular
         AvatarArrayComponent,
         ActionsBarComponent,
         AddRemoveComponent,
+        BlipCarouselComponent,
         BlipCheckboxComponent,
         BlipFooterComponent,
         BlipInputDprComponent,
