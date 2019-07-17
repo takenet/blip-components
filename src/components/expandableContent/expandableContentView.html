@@ -1,8 +1,8 @@
 <div>
     <div ng-if="$ctrl.hasArrow" class="item-header flex flex-row justify-between w-100" ng-click="$ctrl.open($event)">
         <div ng-if="$ctrl.hasArrow" class="flex justify-center items-start mr3 mt2">
-            <img ng-if="!$ctrl.isActive" class="color-text-light-5" src="/assets/img/slimArrows/ArrowRight.svg"></img>
-            <img ng-if="$ctrl.isActive" class="color-text-light-5" src="/assets/img/slimArrows/ArrowDown.svg"></img>
+            <img ng-if="!$ctrl.isActive" class="color-text-light-5" icon-src="ArrowRight"></img>
+            <img ng-if="$ctrl.isActive" class="color-text-light-5" icon-src="ArrowDown"></img>
         </div>
         <div class="w-100 flex flex-row" ng-transclude="itemHeader"></div>
     </div>

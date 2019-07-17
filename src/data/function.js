@@ -211,3 +211,33 @@ export const strToEl = (str) => {
 
     return r;
 };
+
+/**
+ * Get angular service from current application
+ * @param {String} serviceName - AngularJs service registered name
+ * @returns {IService}
+ */
+export const getService = (serviceName) => {
+    if (!window.angular) {
+        throw new Error('AngularJs instance is not available');
+    }
+
+    const $injector = window.angular.element(document).injector();
+
+    if ($injector) {
+        return $injector.get(serviceName);
+    }
+};
+
+
+/**
+ * Return new object with all undefined properties' keys filtered out
+ */
+export const filterUndefinedProperties = (obj) => {
+    return obj && Object.keys(obj)
+        .filter(key => obj[key] !== undefined)
+        .reduce((newObj, key) => {
+            newObj[key] = obj[key];
+            return newObj;
+         }, {});
+}

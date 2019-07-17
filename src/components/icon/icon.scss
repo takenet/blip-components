@@ -1,0 +1,128 @@
+@import '../../assets/scss/variables';
+
+.icon {
+    background-size: cover;
+    background-position: center center;
+
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 1;
+
+    &.icon-xxs {
+        font-size: $size-xxs;
+        line-height: $size-xxs;
+        width: $size-xxs;
+        height: $size-xxs;
+    }
+    &.icon-xss {
+        font-size: $size-xss;
+        line-height: $size-xss;
+        width: $size-xss;
+        height: $size-xss;
+    }
+    &.icon-xs {
+        font-size: $size-xs;
+        line-height: $size-xs;
+        width: $size-xs;
+        height: $size-xs;
+    }
+    &.icon-ss {
+        font-size: $size-ss;
+        line-height: $size-ss;
+        width: $size-ss;
+        height: $size-ss;
+    }
+    &.icon-s {
+        font-size: $size-s;
+        line-height: $size-s;
+        width: $size-s;
+        height: $size-s;
+        &.icon-filled {
+            padding: 2*$u;
+            width: $size-m;
+            height: $size-m;
+        }
+    }
+    &.icon-sm {
+        font-size: $size-sm;
+        line-height: $size-sm;
+        width: $size-sm;
+        height: $size-sm;
+    }
+    &.icon-m {
+        font-size: $size-m;
+        line-height: $size-m;
+        width: $size-m;
+        height: $size-m;
+    }
+    &.icon-l {
+        font-size: $size-l;
+        line-height: $size-l;
+        width: $size-l;
+        height: $size-l;
+    }
+
+    &.icon-padded {
+        margin: 0.5*$u;
+    }
+    &.icon-left {
+        margin-right: 1.5*$u;
+    }
+    &.icon-right {
+        margin-left: 1.5*$u;
+    }
+    &.icon-bottom {
+        vertical-align: bottom;
+    }
+
+    &.icon-border {
+        border: 1px $color-text-light solid;
+    }
+
+    // &.icon-avatar {
+    //     background-image: url(../../img/icons/avatar-default.png);
+    // }
+
+    &.icon-material {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+
+        -moz-osx-font-smoothing: grayscale;
+
+        font-feature-settings: 'liga';
+    }
+
+    &.icon-circle {
+        background: none;
+        border: 1px $color-disabled solid;
+        border-radius: 50%;
+        &.active {
+            background-color: $color-primary;
+            border: 1px $color-primary solid;
+        }
+        &.inactive {
+            background-color: $color-danger;
+            border: 1px $color-danger solid;
+        }
+    }
+}
+
+.round {
+    border-radius: 50%;
+}

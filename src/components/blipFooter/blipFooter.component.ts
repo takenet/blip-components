@@ -5,7 +5,7 @@ import { IComponentController, IComponentOptions } from 'angular';
 
 @Component({
     template: `
-    <footer class="w-100 {{$ctrl.areaClass}}">
+    <footer class="{{$ctrl.areaClass}}">
         <div class="w-100 tc">
             <span class="bp-c-city" translate-compile>&copy;{{$ctrl.copyrightYear}}, BLiP {{'footer.copyRight' | translate}} |</span><span class="pl1" translate="footer.terms" translate-compile></span>
         </div>

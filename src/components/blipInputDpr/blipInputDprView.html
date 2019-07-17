@@ -39,7 +39,7 @@
             &#xE5CA;
         </i>
         <img
-            src="/assets/img/EyePassword.svg"
+            icon-src="EyePassword"
             class="mh2 bp-input-check pb2"
             ng-if="($ctrl.unmaskablePassword && $ctrl.type === 'password') && !$ctrl.passwordUnmasked"
             ng-class="{ 'invisible': $ctrl.disabled || !$ctrl.model }"
@@ -48,7 +48,7 @@
             ng-mouseleave="$ctrl.hidePassword()"
             alt="">
         <img
-            src="/assets/img/EyePasswordActive.svg"
+            icon-src="EyePasswordActive"
             class="mh2 bp-input-check pb2"
             ng-if="($ctrl.unmaskablePassword && $ctrl.type === 'password') && $ctrl.passwordUnmasked"
             ng-class="{ 'invisible': $ctrl.disabled || !$ctrl.model }"

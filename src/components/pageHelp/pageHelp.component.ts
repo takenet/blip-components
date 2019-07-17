@@ -16,7 +16,6 @@ class PageHelp {
             const text = await this.$translate(
                 'modules.application.detail.ai.intentions.helperLink.title',
             );
-            this.helpConfirm = await this.$translate('utils.misc.helperConfirm');
             this.docLink = {
                 text,
                 link: 'https://help.blip.ai/hc/pt-br',
@@ -33,6 +32,7 @@ export const PageHelpComponent = angular
         bindings: {
             title: '@',
             body: '@',
+            helpConfirm: '@',
             docLink: '<',
             close: '<?',
         },

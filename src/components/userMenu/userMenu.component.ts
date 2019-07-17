@@ -9,6 +9,7 @@ import * as ArrowB from 'assets/img/ArrowB.png';
     template,
     bindings: {
         fullName: '=',
+        onMenuOpen: '&',
     },
     transclude: true,
 })
@@ -16,9 +17,16 @@ class UserMenu implements IComponentController {
 
     arrowBPath: any;
     fullName: string;
+    onMenuOpen: any;
 
     constructor() {
         this.arrowBPath = ArrowB;
+    }
+
+    handleOnMenuOpen() {
+        if (this.onMenuOpen) {
+            this.onMenuOpen();
+        }
     }
 
 }

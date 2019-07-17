@@ -1,0 +1,17 @@
+<div class="input-file relative" ng-class="{ 'drag-over': dragover }">
+    <label for="{{::id}}" ng-if="!file && hasFileReader">
+        <span ng-show="!dragover" translate>utils.forms.dropFile</span>
+        <span ng-show="dragover" translate>utils.forms.dropFile2</span>
+        &nbsp;
+        <button type="button" class="bp-btn bp-btn--bot bp-btn--small" ng-click="selectFile()" translate>utils.forms.select</button>
+    </label>
+    <input id="upload-input" name="{{::id}}" ng-model="file" type="file" class="u-full-width" ng-class="{ 'has-file-reader': hasFileReader}" hidden/>
+    <img ng-if="file && hasFileReader" ng-src-binary="file" alt="{{file.name}}">
+
+    <a ng-if="ngPermission && file && hasFileReader" ng-auth-write ng-click="removeFile()" class="text">
+        <i class="icon icon-s icon-material icon-padded layout-top layout-right">&#xE14C;</i>
+    </a>
+    <a ng-if="(!ngPermission) && file && hasFileReader" ng-click="removeFile()" class="text">
+        <i class="icon icon-s icon-material icon-padded layout-top layout-right">&#xE14C;</i>
+    </a>
+</div>

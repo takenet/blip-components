@@ -16,6 +16,10 @@
     font-size: 1.1*$m;
 }
 
+sidenav-menu-item {
+    a { line-height: 124% }
+}
+
 @keyframes updown {
   0% {
     top: -15px;
