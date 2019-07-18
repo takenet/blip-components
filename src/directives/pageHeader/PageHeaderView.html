@@ -7,7 +7,8 @@
                 </a>
             </div>
             <div class="flex items-center w-100">
-                <h1 class="page-header-title mv0 mr2 lh-solid">
+                <div ng-transclude="customTitle"></div>
+                <h1 class="mb0 mr3 lh-solid" ng-if="!hasCustomTitle">
                     {{pageTitle}}
                 </h1>
                 <span id="info-icon" class="page-header-info animated fadeIn" ng-if="(helperTitle && helperBody && helperConfirm)" ng-click="toggleHelper()">
