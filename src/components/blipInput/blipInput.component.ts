@@ -89,8 +89,6 @@ class BlipInputController extends ComponentController {
             label: label ? label.currentValue : undefined,
             model: model ? model.currentValue : undefined,
         });
-        console.log(Object.keys(relevantChanges));
-        console.log(relevantChanges);
 
         if (this.blipInputInstance) {
             this.blipInputInstance.render(relevantChanges);
