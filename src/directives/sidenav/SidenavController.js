@@ -13,17 +13,6 @@ export default class SidenavController {
         this.collapseWidth = $scope.collapseWidth;
     }
 
-    toggleCollapse($event) {
-        if (this.collapsed)
-            $event.preventDefault();
-
-        $event.stopPropagation();
-        $event.cancelBubbling = true;
-
-        if (this.collapsed || (!this.collapsed && $event.target.nodeName.toLowerCase() === 'nav'))
-            this.toggleWithConstraints();
-    }
-
     applyConstraints() {
         if (this.collapseWidth === 'large') {
             this.collapsed = !this.windowService.isLarge;

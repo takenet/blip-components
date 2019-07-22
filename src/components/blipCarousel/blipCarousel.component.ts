@@ -28,7 +28,7 @@ export const BlipCarouselComponent = angular
         controllerAs: '$ctrl',
         transclude: true,
         bindings: {
-            itemWidth: '@',
+            itemWidth: '<',
         },
     })
     .name;
