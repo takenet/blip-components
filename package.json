@@ -1,6 +1,6 @@
 {
   "name": "blip-components",
-  "version": "5.1.0-beta.28",
+  "version": "5.1.0-beta.29",
   "description": "Shared components used in portal.blip.ai",
   "main": "./dist/components.js",
   "scripts": {
