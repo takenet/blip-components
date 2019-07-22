@@ -22,6 +22,8 @@ export class NgAuthRead {
 
     async link(scope, element, attrs) {
 
+        element.addClass('ng-hide');
+
         let application = await this.CurrentApplicationService.fetchApplication(undefined);
         let permissions = await this.PermissionsService.getPermissionsObject();
 
@@ -29,13 +31,13 @@ export class NgAuthRead {
         let areaClaim = permissions[area].claim;
         let userPermission = application.applicationUserPermissionModel.find(
             (p) => p.permissionClaim == areaClaim && p.permissionAction > 0,
-        );
+        ) || undefined;
 
         if (
-            !userPermission ||
-            userPermission.permissionAction < permissionRead
+            userPermission &&
+            userPermission.permissionAction >= permissionRead
         ) {
-            element.addClass('ng-hide');
+            element.removeClass('ng-hide');
         }
     }
 
