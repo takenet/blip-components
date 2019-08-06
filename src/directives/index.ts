@@ -16,6 +16,7 @@ import { LoadingDirective } from './loading/loading.directive';
 import { StickyAttributeDirective } from './stickyAttribute/stickyAttribute.directive';
 import { PasswordStrengthDirective } from './passwordStrength/passwordStrength.directive';
 import { AutoSaveDirective } from './autoSave/autoSave.directive';
+import { BindHtmlCompileDirective } from './bindHtmlCompile/bindHtmlCompileDirective';
 
 export const DirectivesModule = angular
     .module('DirectivesModule', [
@@ -34,6 +35,7 @@ export const DirectivesModule = angular
         LoadingDirective,
         StickyAttributeDirective,
         PasswordStrengthDirective,
-        AutoSaveDirective
+        AutoSaveDirective,
+        BindHtmlCompileDirective
     ])
     .name;
