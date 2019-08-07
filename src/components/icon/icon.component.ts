@@ -25,7 +25,7 @@ class IconController implements IComponentController {
     width: string;
     height: string;
     color: string;
-    constructor(private $element) {}
+    constructor(private $element) { }
 
     async $onInit() {
         if (this.name) {
@@ -35,6 +35,8 @@ class IconController implements IComponentController {
             this.width && svg.setAttribute('width', this.width);
             this.height && svg.setAttribute('height', this.height);
             this.color && this.clearPathsAndFillColor(svg, this.color);
+            this.height && (this.$element[0].style.height = this.height + 'px');
+            this.width && (this.$element[0].style.width = this.width + 'px');
             this.$element[0].appendChild(svg);
         }
     }
