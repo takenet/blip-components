@@ -2,10 +2,16 @@
     <div ng-class="{
         'show-dropdown': $ctrl.isOpen,
         'hide-dropdown': !$ctrl.isOpen
-    }" ng-style="{{$ctrl.divStyle}}" class="dropdown-item-content z-2 {{$ctrl.directionClass}} {{$ctrl.auxClasses}}" ng-transclude ></div>
-    <span ng-click="$ctrl.toggleOpen($event)" class="{{$ctrl.buttonClasses}}">
+        }"
+         ng-style="{{$ctrl.divStyle}}"
+         class="dropdown-item-content z-2 {{$ctrl.directionClass}} {{$ctrl.auxClasses}}"
+         ng-transclude></div>
+    <span ng-click="$ctrl.toggleOpen($event)"
+          class="{{$ctrl.buttonClasses}}">
         <div bind-html-compile="$ctrl.itemTitle"></div>
-        <icon-dpr ng-if="$ctrl.customIcon" icon-class="{{$ctrl.customIcon}}"></icon-dpr>
-        <icon-dpr ng-if="!$ctrl.customIcon" ng-hide="$ctrl.hideIcon">{{$ctrl.arrowIcon}}</icon-dpr>
+        <icon-dpr ng-if="$ctrl.customIcon"
+                  icon-class="{{$ctrl.customIcon}}"></icon-dpr>
+        <icon-dpr ng-if="!$ctrl.customIcon"
+                  ng-hide="$ctrl.hideIcon">{{$ctrl.arrowIcon}}</icon-dpr>
     </span>
 </div>
