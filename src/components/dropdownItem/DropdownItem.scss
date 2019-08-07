@@ -101,13 +101,13 @@ $dropdown-padding: 10px;
 }
 
 .dropdown-align-right {
-    right: -$dropdown-padding;
+    right: -$dropdown-padding*2.5;
 
     &:before { right: $dropdown-padding; }
 }
 
 .dropdown-align-left {
-    left: -$dropdown-padding;
+    left: -$dropdown-padding*2.5;
 
     &:before { left: $dropdown-padding; }
 }
