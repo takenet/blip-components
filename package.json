@@ -81,5 +81,19 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "release": {
+    "analyzeCommits": {
+      "releaseRules": [
+        {
+          "type": "build",
+          "release": "patch"
+        },
+        {
+          "type": "refactor",
+          "release": "minor"
+        }
+      ]
+    }
   }
 }
