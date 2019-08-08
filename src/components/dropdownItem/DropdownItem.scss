@@ -107,7 +107,7 @@ $dropdown-padding: 10px;
 }
 
 .dropdown-align-left {
-    left: -$dropdown-padding*2.5;
+    left: -$dropdown-padding;
 
     &:before { left: $dropdown-padding; }
 }
