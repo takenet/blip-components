@@ -48,8 +48,8 @@
 
         & > .send-icon {
             display: flex;
-            flex-direction: column;
             justify-content: center;
+            align-items: center;
 
             & > icon {
                 display: flex;
@@ -57,13 +57,7 @@
                 align-items: center;
                 width: 100%;
                 height: 40px;
-
-                & > svg {
-                    margin-left: 5px;
-                }
-
             }
-
         }
     }
 }
