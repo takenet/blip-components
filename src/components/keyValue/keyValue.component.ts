@@ -25,7 +25,7 @@ class KeyValueController {
 
     constructor(private $scope) {
         this.$scope.$watchCollection('$ctrl.model', () => {
-            if (this.isFirst) {
+            if (this.isFirst && this.model) {
                 this.setKeyValues();
                 this.isFirst = false;
             }
