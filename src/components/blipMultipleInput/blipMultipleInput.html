@@ -1,7 +1,7 @@
 <form name="$ctrl.multipleInputsForm" ng-show="$ctrl.model.length > 0" novalidate>
     <ul class="multiple-input-list">
         <!-- Iteration -->
-        <li ng-if="!$ctrl.isModelEmpty()" ng-repeat="inputValue in $ctrl.model track by $index" class="relative">
+        <li ng-repeat="inputValue in $ctrl.model track by $index" class="relative">
             <ng-form name="{{'form' + $index}}" class="flex">
                 <blip-input-dpr
                     ng-model="inputValue"
