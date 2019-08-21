@@ -1,0 +1,11 @@
+@import '../../assets/scss/variables';
+
+.load-more {
+    padding: 20px 0;
+    background-color: #DEE8EC;
+
+    > div {
+        color: $bp-color-bot;
+        min-height: 40px;
+    }
+}
