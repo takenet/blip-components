@@ -1,0 +1,25 @@
+<form name="$ctrl.multipleInputsForm" ng-show="$ctrl.model.length > 0" novalidate>
+    <ul class="multiple-input-list">
+        <!-- Iteration -->
+        <li ng-repeat="inputValue in $ctrl.model track by $index" class="relative">
+            <ng-form name="{{'form' + $index}}" class="flex">
+                <blip-input-dpr
+                    ng-model="inputValue"
+                    type="text"
+                    label="{{$ctrl.inputLabel}}"
+                    placeholder="{{$ctrl.inputPlaceholder}}"
+                    form-reference="$ctrl.multipleInputsForm['form' + $index]"
+                    on-change="$ctrl.saveInput($val, $index)"
+                    class="w-100"></blip-input-dpr>
+                <i ng-click="$ctrl.delete($index)" class="delete-input self-center icon-close lh-solid"></i>
+            </ng-form>
+        </li>
+    </ul>
+</form>
+<!-- Add item form -->
+<div class="flex justify-end">
+    <button ng-click="$ctrl.addNewItem()" type="button" class="bp-btn bp-btn--bot bp-btn--text-only"
+        translate>
+        {{ $ctrl.addButtonText }}
+    </button>
+</div>
