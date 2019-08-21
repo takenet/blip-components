@@ -23,8 +23,6 @@ export class ViewMoreBar implements IComponentController {
     message: string;
     loadMore: () => {};
 
-    $onInit() {}
-
     load() {
         this.loadMore();
     }
