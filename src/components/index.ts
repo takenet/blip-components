@@ -9,6 +9,7 @@ import { BlipCheckboxComponent } from './blipCheckbox/blipCheckbox.component';
 import { BlipFooterComponent } from './blipFooter/blipFooter.component';
 import { BlipInputDprComponent } from './blipInputDpr/blipInputDpr.component';
 import { BlipInputComponent } from './blipInput/blipInput.component';
+import { BlipMultipleInputComponent } from './blipMultipleInput/blipMultipleInput.component';
 import { BlipRadioComponent } from './blipRadio/blipRadio.component';
 import { BlipSelectComponent } from './blipSelect/blipSelect.component';
 import { BlipTagsComponent } from './blipTags/blipTags.component';
@@ -81,6 +82,7 @@ export const ComponentsModule = angular
         BlipFooterComponent,
         BlipInputDprComponent,
         BlipInputComponent,
+        BlipMultipleInputComponent,
         BlipRadioComponent,
         BlipSelectComponent,
         BlipTagsComponent,
