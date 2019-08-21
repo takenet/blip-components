@@ -1,5 +1,6 @@
 import angular from 'core/angular';
 import { accordion } from './accordion';
+import { AnalysisInfoComponent } from './analysisInfo/analysisInfo.component';
 import { AvatarArrayComponent } from './avatarArray/avatarArray.component';
 import { ActionsBarComponent } from './actionsBar/actionsBar.component';
 import { AddRemoveComponent } from './addRemove/addRemove.component';
@@ -46,6 +47,7 @@ import { ListItemComponent } from './listItem/listItem.component';
 import { ListItemsComponent } from './listItems/listItems.component';
 import { LoadingIconComponent } from './loadingIcon/loadingIcon.component';
 import { LocalLoadingComponent } from './loading/localLoading.component';
+import { MessageAreaComponent } from './messageArea/messageArea.component';
 import { PageHelpComponent } from './pageHelp/pageHelp.component';
 import { ReloadButtonComponent } from './reloadButton/reloadButton.component';
 import { Radio } from './radio/radio.components';
@@ -65,12 +67,12 @@ import { TimepickerComponent } from './timepicker';
 import { ToggleButtonComponent } from './toggleButton';
 import { TooltipButtonComponent } from './tooltipButton/tooltipButton.component';
 import { UserMenuComponent } from './userMenu/userMenu.component';
-import { MessageAreaComponent } from './messageArea/messageArea.component';
-import { AnalysisInfoComponent } from './analysisInfo/analysisInfo.component';
+import { ViewMoreBarComponent } from './viewMoreBar/viewMoreBar.component';
 
 export const ComponentsModule = angular
     .module('ComponentsModule', [
         accordion,
+        AnalysisInfoComponent,
         AvatarArrayComponent,
         ActionsBarComponent,
         AddRemoveComponent,
@@ -117,6 +119,7 @@ export const ComponentsModule = angular
         ListItemsComponent,
         LoadingIconComponent,
         LocalLoadingComponent,
+        MessageAreaComponent,
         PageHelpComponent,
         ReloadButtonComponent,
         Radio,
@@ -136,7 +139,6 @@ export const ComponentsModule = angular
         ToggleButtonComponent,
         TooltipButtonComponent,
         UserMenuComponent,
-        MessageAreaComponent,
-        AnalysisInfoComponent,
+        ViewMoreBarComponent
     ])
     .name;
