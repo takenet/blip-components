@@ -87,6 +87,22 @@ export default class ContentBoxesController {
         return this.hasEmptyMenu;
     }
 
+    //Verify if has box menu
+    hasBoxMenus() {
+        let hasBoxMenu = false;
+        this.ngModel.options.forEach((o) => {
+            let optionLabel = o.label;
+            if (
+                optionLabel &&
+                optionLabel.type &&
+                optionLabel.type === 'application/vnd.lime.document-select+json'
+            ) {
+                hasBoxMenu = true;
+            }
+        });
+        return hasBoxMenu;
+    }
+
     //Show count items
     maxItensOf(option) {
         let items = option.label.value.options;
@@ -221,6 +237,10 @@ export default class ContentBoxesController {
     saveModel() {
         if (this.hasEmptyMenus()) {
             this.blankMenuError({ $item: this.ngModel });
+            return;
+        }
+        if (this.hideMenu && this.hasBoxMenus()) {
+            this.boxMenuError({ $item: this.ngModel });
             return;
         }
         this.onSave({ $item: this.ngModel });
