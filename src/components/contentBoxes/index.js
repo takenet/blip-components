@@ -12,8 +12,10 @@ export const contentBoxes = angular
             ngModel: '<',
             maxDepth: '<',
             childLevelItems: '<?',
+            hideMenu: '<?',
             onSave: '&',
             blankMenuError: '&?',
+            boxMenuError: '&?',
         },
     })
     .name;
