@@ -14,17 +14,17 @@ import './ViewMoreBar.scss';
     bindings: {
         iconName: '@',
         message: '@',
-        loadMore: '&',
+        onLoadMore: '&',
     }
 })
 
 export class ViewMoreBar implements IComponentController {
     iconName: string;
     message: string;
-    loadMore: () => {};
+    onLoadMore: () => {};
 
     load() {
-        this.loadMore();
+        this.onLoadMore();
     }
 }
 
