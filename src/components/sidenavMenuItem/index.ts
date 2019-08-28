@@ -13,6 +13,7 @@ export const sidenavMenuItem = angular
             sref: any;
             icon: any;
             parent: any;
+            baseSref: string;
             childrenActive: boolean;
             _isNewFather: boolean;
             _isNewChildren: boolean;
@@ -116,7 +117,11 @@ export const sidenavMenuItem = angular
             }
 
             get href() {
-                return this.$state.href(this.sref, this.sparams);
+                const stateHref = this.$state.href(this.sref, this.sparams);
+                if (this.baseSref) {
+                    return this.baseSref.concat(stateHref);
+                }
+                return stateHref;
             }
 
             get isExpanded() {
@@ -150,6 +155,7 @@ export const sidenavMenuItem = angular
             icon: '@',
             active: '@',
             sref: '@',
+            baseSref: '@?',
             sparams: '<',
             preventDefault: '<?',
             hasChildren: '<?',
