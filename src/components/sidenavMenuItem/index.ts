@@ -29,7 +29,6 @@ export const sidenavMenuItem = angular
                 private AccountService,
             ) {
                 'ngInject';
-
                 this.$rootScope = $rootScope;
                 this.$state = $state;
                 this.$element = $element;
