@@ -14,7 +14,7 @@
             </div>
             <div ng-if="$ctrl.isSlotAvailable($index)" class="add-option-box">
                 <div class="content-boxes__list__options">
-                    <div ng-auth-write="disable" ng-click="$ctrl.addToList('box')">
+                    <div ng-if="!$ctrl.hideMenu" ng-auth-write="disable" ng-click="$ctrl.addToList('box')">
                         <icon-dpr>&#xE02E;</icon-dpr>
                         <span translate>utils.misc.menu</span>
                     </div>
