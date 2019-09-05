@@ -10,7 +10,7 @@ $border-blue: #4cd7e6;
     height: 100%;
     color: $color-text;
     overflow: hidden;
-    border-collapse: inherit;
+    border-spacing: 0;
 
     thead {
         z-index: -2;
