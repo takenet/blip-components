@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/takenet/blip-components#readme",
   "devDependencies": {
+    "cz-customizable": "^5.3.0",
+    "cz-customizable-ghooks": "^1.5.0",
+    "ghooks": "^2.0.4",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "webpack": "^3.10.0"
   },
@@ -79,7 +82,13 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./.cz-config.js"
+    },
+    "ghooks": {
+      "commit-msg": "cz-customizable-ghooks $2"
     }
   },
   "release": {
