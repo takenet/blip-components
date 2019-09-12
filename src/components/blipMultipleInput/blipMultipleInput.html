@@ -11,7 +11,7 @@
                     form-reference="$ctrl.multipleInputsForm['form' + $index]"
                     on-change="$ctrl.saveInput($val, $index)"
                     class="w-100"></blip-input-dpr>
-                <img class="trash-icon" icon-src="Trash" />
+                <img class="trash-icon" icon-src="Trash" ng-click="$ctrl.delete($index)" />
             </ng-form>
         </li>
     </ul>
