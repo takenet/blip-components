@@ -11,13 +11,13 @@
                     form-reference="$ctrl.multipleInputsForm['form' + $index]"
                     on-change="$ctrl.saveInput($val, $index)"
                     class="w-100"></blip-input-dpr>
-                <i ng-click="$ctrl.delete($index)" class="delete-input self-center icon-close lh-solid"></i>
+                <img class="trash-icon" icon-src="Trash" />
             </ng-form>
         </li>
     </ul>
 </form>
 <!-- Add item form -->
-<div class="flex justify-end">
+<div class="flex">
     <button ng-click="$ctrl.addNewItem()" type="button" class="bp-btn bp-btn--bot bp-btn--text-only"
         translate>
         {{ $ctrl.addButtonText }}
