@@ -1,0 +1,32 @@
+<table id="$ctrl.elementId" class="bp-table bp-table--round w-100 mb3" cellspacing="0">
+    <thead>
+        <tr>
+            <th class="tc adjust" ng-if="$ctrl.selectable">
+                <blip-checkbox
+                    ng-model="$ctrl.allChecked"
+                    on-input-clicked="$ctrl.toggleCheckall()"
+                    disabled="$ctrl.tableData.length === 0"
+                    indeterminate-state="$ctrl.isIndeterminate">
+                </blip-checkbox>
+            </th>
+            <th ng-repeat="column in $ctrl.columns">
+                a
+            </th>
+            <div ng-transclude></div>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="item in $ctrl.tableData track by $index" ng-class="{'checked': item.checked}">
+            <td class="tc adjust" ng-if="$ctrl.selectable">
+                <blip-checkbox
+                    ng-model="item.checked"
+                    on-input-clicked="$ctrl.itemStateChange(item.checked, $index)">
+                </blip-checkbox>
+            </td>
+            <td class="tl adjust" ng-repeat="column in $ctrl.columns">
+                {{item[column.rowParam]}}
+            </td>
+        </tr>
+    </tbody>
+</table>
