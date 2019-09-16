@@ -32,7 +32,8 @@ module.exports = {
       { name: 'utils' },
       { name: 'docs' },
       { name: 'configs' },
-      { name: 'build' }
+      { name: 'build' },
+      { name: 'component' }
     ],
 
     allowCustomScopes: true,
