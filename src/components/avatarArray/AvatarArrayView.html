@@ -1,6 +1,3 @@
 <div class="avatar-array">
-    <span tooltips tooltip-template="{{member.tooltipName}}" tooltip-side="bottom" tooltip-class="small" ng-repeat="member in $ctrl.members">
-        <img ng-if="member.photoUri" ng-src="{{member.photoUri}}" alt="{{member.fullName}}">
-        <letter-avatar ng-if="!member.photoUri" class="account-editing-avatar ml4" text="member.fullName"></letter-avatar>
-    </span>
+    <avatar user="member" ng-repeat="member in $ctrl.members"></avatar>
 </div>

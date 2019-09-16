@@ -1,6 +1,7 @@
 import angular from 'core/angular';
 import { accordion } from './accordion';
 import { AnalysisInfoComponent } from './analysisInfo/analysisInfo.component';
+import { AvatarComponent } from './avatar/avatar.component';
 import { AvatarArrayComponent } from './avatarArray/avatarArray.component';
 import { ActionsBarComponent } from './actionsBar/actionsBar.component';
 import { AddRemoveComponent } from './addRemove/addRemove.component';
@@ -74,6 +75,7 @@ export const ComponentsModule = angular
     .module('ComponentsModule', [
         accordion,
         AnalysisInfoComponent,
+        AvatarComponent,
         AvatarArrayComponent,
         ActionsBarComponent,
         AddRemoveComponent,
