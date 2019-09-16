@@ -20,7 +20,6 @@ class BlipTable {
     public elementId: string;
     public selectable: boolean;
     public allChecked: boolean;
-    public isIndeterminate: boolean;
     public selected: any[];
 
     constructor(
@@ -37,43 +36,25 @@ class BlipTable {
     $onInit() {
         if (this.selectable) {
             this.allChecked = false;
-            this.isIndeterminate = false;
             this.selected = [];
-            this.tableData.forEach(el => el.checked = false);
+        }
+    }
 
-            this.$scope.$watch('$ctrl.selected.length', (newVal: number) => {
-                if (newVal === 0) {
-                    this.allChecked = false;
-                    this.isIndeterminate = false;
-                } else if (newVal < this.tableData.length) {
-                    this.allChecked = false;
-                    this.isIndeterminate = true;
-                } else if (newVal === this.tableData.length) {
-                    this.allChecked = true;
-                    this.isIndeterminate = false;
+    $onChanges(changesObj: IOnChangesObject) {
+        if (changesObj.tableData) {
+            this.tableData.forEach(el => {
+                if (el.checked === undefined) {
+                    el.checked = false;
                 }
             });
         }
     }
 
-    itemStateChange($state: boolean, $index: number) {
-        if ($state) {
+    itemStateChange(state: boolean, $index: number) {
+        if (state) {
             this.selected.push(this.tableData[$index]);
-        } else if ($state === false) {
+        } else if (state === false) {
             this.selected.splice(this.selected.indexOf(this.tableData[$index]), 1);
-        }
-    }
-
-    toggleCheckall() {
-        this.tableData.forEach(el => {
-            if (el.checked != this.allChecked) {
-                el.checked = this.allChecked;
-            }
-        });
-        if (this.allChecked) {
-            this.selected = angular.copy(this.tableData);
-        } else {
-            this.selected = [];
         }
     }
 

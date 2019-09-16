@@ -4,9 +4,9 @@
             <th class="tc adjust" ng-if="$ctrl.selectable">
                 <blip-checkbox
                     ng-model="$ctrl.allChecked"
-                    on-input-clicked="$ctrl.toggleCheckall()"
+                    check-if="$ctrl.selected.length === $ctrl.tableData.length"
                     disabled="$ctrl.tableData.length === 0"
-                    indeterminate-state="$ctrl.isIndeterminate">
+                    indeterminate-state="$ctrl.selected.length > 0 && $ctrl.selected.length < $ctrl.tableData.length">
                 </blip-checkbox>
             </th>
             <th ng-repeat="column in $ctrl.columns">
@@ -19,10 +19,7 @@
     <tbody>
         <tr ng-repeat="item in $ctrl.tableData track by $index" ng-class="{'checked': item.checked}">
             <td class="tc adjust" ng-if="$ctrl.selectable">
-                <blip-checkbox
-                    ng-model="item.checked"
-                    on-input-clicked="$ctrl.itemStateChange(item.checked, $index)">
-                </blip-checkbox>
+                <blip-checkbox ng-model="item.checked" on-input-change="$ctrl.itemStateChange(item.checked, $index)"></blip-checkbox>
             </td>
             <td class="tl adjust" ng-repeat="column in $ctrl.columns">
                 {{item[column.rowParam]}}
