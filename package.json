@@ -6,6 +6,7 @@
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --port 3000",
     "build": "./node_modules/.bin/webpack",
+    "watch": "./node_modules/.bin/webpack --watch --progress",
     "commit": "./node_modules/.bin/git-cz",
     "semantic-release": "semantic-release --prepare && npm publish && semantic-release post"
   },
