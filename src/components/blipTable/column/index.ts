@@ -16,7 +16,6 @@ class BlipColumn {
     }
 
     $onInit() {
-        console.log('that me', this);
         this.tableCtrl.columns = this.tableCtrl.columns.concat(this);
     }
 }

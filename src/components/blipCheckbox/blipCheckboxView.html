@@ -1,5 +1,5 @@
 <label class="bp-input--check--wrapper" id="{{$ctrl.elementId}}">
     <input class="bp-input" type="checkbox" ng-model="$ctrl.model" ng-disabled="$ctrl.disabled" ng-change="$ctrl.onInputChange()">
-    <div class="bp-input--checkbox" ng-class="{'bp-input--checkbox--indeterminate': $ctrl.indeterminateState}">&check;</div>
+    <div class="bp-input--checkbox">&check;</div>
     <span ng-if="$ctrl.label" ng-bind-html="$ctrl.label">{{$ctrl.label}}</span>
 </label>

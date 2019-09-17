@@ -20,7 +20,7 @@ class BlipTable {
     public elementId: string;
     public selectable: boolean;
     public allChecked: boolean;
-    public selected: any[];
+    public selected: number[];
 
     constructor(
         private $element: IRootElementService,
@@ -37,6 +37,12 @@ class BlipTable {
         if (this.selectable) {
             this.allChecked = false;
             this.selected = [];
+
+            this.$scope.$watch('$ctrl.selected.length', (newVal: number) => {
+                if (newVal && newVal === this.tableData.length) {
+                    this.allChecked = true;
+                }
+            });
         }
     }
 
@@ -52,9 +58,9 @@ class BlipTable {
 
     itemStateChange(state: boolean, $index: number) {
         if (state) {
-            this.selected.push(this.tableData[$index]);
-        } else if (state === false) {
-            this.selected.splice(this.selected.indexOf(this.tableData[$index]), 1);
+            this.selected.push($index);
+        } else if (state === false && this.selected.includes($index)) {
+            this.selected.splice(this.selected.indexOf($index), 1);
         }
     }
 
@@ -64,6 +70,15 @@ class BlipTable {
         } else {
             this.tableData.sort((a, b) => a[attrName] < b[attrName] ? 1 : -1);
         }
+    }
+
+    toggleCheckAll() {
+        this.tableData.forEach((el, index) => {
+            if (el.checked != this.allChecked) {
+                el.checked = this.allChecked;
+                this.itemStateChange(this.allChecked, index);
+            }
+        });
     }
 
 }

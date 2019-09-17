@@ -32,9 +32,10 @@ class BlipCheckboxController extends ComponentController {
             this.isChecked = newVal;
         });
 
-        this.$scope.$watch('$ctrl.conditionCheck', (newVal: boolean) => {
-            this.input.checked = newVal;
+        this.$scope.$watch('$ctrl.indeterminateState', (newVal: boolean) => {
+            this.input.indeterminate = newVal || false;
         });
+
     }
 }
 

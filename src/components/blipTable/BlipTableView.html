@@ -4,9 +4,9 @@
             <th class="tc adjust" ng-if="$ctrl.selectable">
                 <blip-checkbox
                     ng-model="$ctrl.allChecked"
-                    condition-check="$ctrl.selected.length === $ctrl.tableData.length"
                     disabled="$ctrl.tableData.length === 0"
-                    indeterminate-state="$ctrl.selected.length > 0 && $ctrl.selected.length < $ctrl.tableData.length">
+                    indeterminate-state="$ctrl.selected.length > 0 && $ctrl.selected.length < $ctrl.tableData.length"
+                    on-input-change="$ctrl.toggleCheckAll()">
                 </blip-checkbox>
             </th>
             <th ng-repeat="column in $ctrl.columns">
