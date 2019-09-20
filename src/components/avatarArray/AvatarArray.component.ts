@@ -1,4 +1,3 @@
-import './AvatarArray.scss';
 import template from './AvatarArrayView.html';
 import angular from 'core/angular';
 
@@ -10,7 +9,7 @@ class AvatarArray {
         this.$scope.$watch('$ctrl.members', (newValue, oldValue) => {
             setTimeout(() => {
                 let array = Array.from(
-                    document.querySelectorAll('.avatar-array > tooltip'),
+                    document.querySelectorAll('.avatar-array tooltip'),
                 ) as Element[];
                 if (this.limit) {
                     array = array.slice(0, this.limit);
