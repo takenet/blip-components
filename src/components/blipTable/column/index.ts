@@ -3,20 +3,29 @@ import { IScope, IRootElementService } from 'angular';
 // import { ChangeTabEvent } from '..';
 
 class BlipColumn {
-    sortable: boolean;
-    sortAscending: boolean;
-    tableCtrl: any;
+    public sortable: boolean;
+    public sortAscending: boolean;
+    private tableCtrl: any;
 
     constructor(
-        private $scope: IScope,
         private $element: IRootElementService,
     ) {
-        this.sortable = this.$element[0].hasAttribute('sortable') ? true : false;
-        this.sortAscending = undefined;
+        this.sortable = this.$element[0].hasAttribute('sortable');
     }
 
     $onInit() {
         this.tableCtrl.columns = this.tableCtrl.columns.concat(this);
+        if (this.sortable) {
+            this.resetSorting();
+        }
+    }
+
+    toggleSorting() {
+        this.sortAscending = this.sortAscending ? false : true;
+    }
+
+    resetSorting() {
+        this.sortAscending = undefined;
     }
 }
 
@@ -25,7 +34,7 @@ export const ColumnComponent = angular
     .component('blipColumn', {
         controller: BlipColumn,
         controllerAs: '$ctrl',
-        template: '<th ng-transclude></th>',
+        template: '',
         transclude: true,
         require: {
             tableCtrl: '^^blipTable',
@@ -33,6 +42,8 @@ export const ColumnComponent = angular
         bindings: {
             rowParam: '@',
             rowTitle: '@?',
+            title: '@',
+            sortBy: '@?',
         }
     })
     .name;
