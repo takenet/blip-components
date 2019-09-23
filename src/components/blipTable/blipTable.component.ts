@@ -61,14 +61,17 @@ class BlipTable {
     }
 
     itemStateChange(state: boolean, $index: number) {
+        if (state === undefined) { return; }
+
+        const item = this.tableData[$index];
         if (state) {
-            this.selected.push(this.tableData[$index]);
-        } else if (state === false && this.selected.includes(this.tableData[$index])) {
-            this.selected.splice(this.selected.indexOf(this.tableData[$index]), 1);
+            this.selected.push(item);
+        } else if (this.selected.includes(item)) {
+            this.selected.splice(this.selected.indexOf(item), 1);
         }
     }
 
-    toggleCheckAll() {
+    onCheckAllChange() {
         this.tableData.forEach((el, index) => {
             if (el.checked != this.allChecked) {
                 el.checked = this.allChecked;
@@ -77,7 +80,7 @@ class BlipTable {
         });
     }
 
-    orderColumn($index) {
+    orderColumn($index: number) {
         const column = this.columns[$index];
         if (column.sortable) {
 

@@ -42,7 +42,9 @@ export const ColumnComponent = angular
         bindings: {
             rowParam: '@',
             rowTitle: '@?',
+            rowClass: '@?',
             title: '@',
+            columnClass: '@?',
             sortBy: '@?',
         }
     })
