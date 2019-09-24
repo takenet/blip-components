@@ -1,13 +1,17 @@
 <div class="author-details">
     <div class="flex items-center">
         <!-- User image -->
-        <dropdown-item item-title="{{$ctrl.itemTitle()}}"
-                       hide-icon="true"
-                       align="right"
-                       min-width="200"
-                       id="account-dropdown"
-                       on-open="$ctrl.handleOnMenuOpen()">
-            <div ng-transclude></div>
+        <dropdown-item hide-icon="true" align="right" min-width="200" id="account-dropdown"
+            on-open="$ctrl.handleOnMenuOpen()">
+            <div ng-transclude>
+            </div>
+            <item-title>
+                <div class='flex flex-row justify-center items-center pointer'>
+                    <avatar class='author-header-avatar' user="$ctrl.user"></avatar>
+                    <span ng-if="!$ctrl.compact" class='bot-name fw3'>{{$ctrl.user.fullName}}</span>
+                    <icon name="ArrowDown" width="16" height="16"></icon>
+                </div>
+            </item-title>
         </dropdown-item>
     </div>
 </div>
