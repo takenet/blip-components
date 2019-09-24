@@ -1,3 +1,6 @@
 <div class="avatar-array">
-    <avatar user="member" ng-repeat="member in $ctrl.members"></avatar>
+    <span ng-repeat="member in $ctrl.members"
+        tooltips tooltip-template="{{$ctrl.user.tooltipName}}" tooltip-side="bottom" tooltip-class="small">
+        <avatar user="member"></avatar>
+    </span>
 </div>
