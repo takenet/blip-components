@@ -1,33 +1,9 @@
 .avatar {
-    tooltip {
-        width: 55px;
-        height: 55px;
-        cursor: default;
-        position: absolute;
-        background: white;
+    img {
         border-radius: 50%;
-        left: 0;
-        transition: left 1s linear;
-
-        & > tip-cont > span {
-            position: absolute;
-            padding: 2px;
-            width: 55px;
-            height: 55px;
-            background: white;
-            border-radius: 50%;
-        }
-
-        img {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-        }
     }
-
+    
     letter-avatar {
         margin: 0;
-        height: 50px;
-        width: 50px;
     }
 }
