@@ -9,6 +9,7 @@
     <span ng-click="$ctrl.toggleOpen($event)"
           class="{{$ctrl.buttonClasses}} flex">
         <div bind-html-compile="$ctrl.itemTitle"></div>
+        <span ng-transclude="item-title"></span>
         <icon-dpr ng-if="$ctrl.customIcon"
                   icon-class="{{$ctrl.customIcon}}"></icon-dpr>
         <icon-dpr ng-if="!$ctrl.customIcon"
