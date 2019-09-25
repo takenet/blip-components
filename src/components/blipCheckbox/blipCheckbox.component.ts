@@ -46,7 +46,6 @@ export const BlipCheckboxComponent = angular
         controller: BlipCheckboxController,
         controllerAs: '$ctrl',
         bindings: {
-            conditionCheck: '<?',
             disabled: '<?',
             indeterminateState: '<?',
             label: '@?',
