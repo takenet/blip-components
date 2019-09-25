@@ -19,24 +19,23 @@ export class DropdownItemController {
 
     constructor(private $rootScope, private $timeout, $scope) {
         'ngInject';
+
         this.isOpen = false;
+        $rootScope.$on(ToggleDropdownItem, () => {
+            this.isOpen = false;
+        });
+        $scope.$on('$stateChangeSuccess', () => {
+            document.removeEventListener('click', $rootScope.clickOutsideDropdown);
+            this.isOpen = false;
+        });
+    }
+
+    $onInit() {
         this.closeOnClick =
             this.closeOnClick == undefined ? true : this.closeOnClick;
         this.auxClasses = '';
         this.hideIcon = this.hideIcon == undefined ? false : this.hideIcon;
         this.styleValues = {};
-
-        $rootScope.$on(ToggleDropdownItem, () => {
-            this.isOpen = false;
-        });
-
-        $scope.$on('$stateChangeSuccess', () => {
-            document.removeEventListener(
-                'click',
-                $rootScope.clickOutsideDropdown,
-            );
-            this.isOpen = false;
-        });
 
         if (this.align) {
             this.auxClasses += `dropdown-align-${this.align}`;
