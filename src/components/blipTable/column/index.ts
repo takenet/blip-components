@@ -46,6 +46,7 @@ export const ColumnComponent = angular
             title: '@',
             columnClass: '@?',
             sortBy: '@?',
+            width: '@?',
         }
     })
     .name;

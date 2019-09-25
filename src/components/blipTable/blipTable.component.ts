@@ -7,13 +7,13 @@ const BLIP_TABLE_PREFIX = 'blip-table-';
 
 /**
  * Usage:
- * <blip-table table-data="TableDataHere" selectable>
+ * <blip-table table-data="TableDataHere" selectable scrollable>
  *
-      <column title="Column title here"
+      <column title="Column title here" width="Column width in percentage"
         row-param="Row parameter on TableData here" sortable></column>
 
-      <column title="Column title here"
-        row-param="Row parameter on TableData here"
+      <column title="Column title here" column-class="Classes for header"
+        row-param="Row parameter on TableData here" row-class="Classes for row"
         sort-by="Optional sorting parameter. If absent, row-param will be used instead" sortable></column>
 
       <column title="Column title here"
@@ -25,6 +25,7 @@ class BlipTable {
     public tableData: any[];
     public columns: any[];
     public elementId: string;
+    public scrollable: boolean;
     public selectable: boolean;
     public allChecked: boolean;
     public selected: any[];
@@ -35,6 +36,7 @@ class BlipTable {
     ) {
         this.elementId = `${BLIP_TABLE_PREFIX}${uuid.v4()}`;
         this.columns = [];
+        this.scrollable = this.$element[0].hasAttribute('scrollable');
         this.selectable = this.$element[0].hasAttribute('selectable');
     }
 
@@ -57,7 +59,16 @@ class BlipTable {
                 if (el.checked === undefined) { el.checked = false; }
             });
             this.columns.forEach(c => c.resetSorting());
+
+            if (changesObj.tableData.previousValue.length === 0 && this.scrollable) {
+                this.setScrollHeight();
+            }
         }
+    }
+
+    setScrollHeight() {
+        const scroller: HTMLDivElement = this.$element[0].querySelector('.bp-table-scroll-y-div');
+        scroller.style.maxHeight = `${scroller.offsetHeight}px`;
     }
 
     itemStateChange(state: boolean, $index: number) {
