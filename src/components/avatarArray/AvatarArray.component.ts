@@ -1,4 +1,5 @@
 import template from './AvatarArrayView.html';
+import './AvatarArray.scss';
 import angular from 'core/angular';
 
 class AvatarArray {

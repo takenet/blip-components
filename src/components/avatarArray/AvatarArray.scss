@@ -1,0 +1,32 @@
+.avatar-array {
+    tooltip {
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        cursor: default;
+        background: white;
+        border-radius: 50%;
+        left: 0;
+        transition: left 1s linear;
+
+        &>tip-cont>span {
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            padding: 2px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        img {
+            width: 51px;
+            height: 51px;
+        }
+    }
+
+    letter-avatar {
+        height: 50px;
+        width: 50px;
+    }
+
+}
