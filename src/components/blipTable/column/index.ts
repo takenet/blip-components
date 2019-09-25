@@ -1,11 +1,13 @@
-import angular from 'core/angular';
-import { IScope, IRootElementService } from 'angular';
-// import { ChangeTabEvent } from '..';
+import angular from 'angular';
+import { IRootElementService } from 'angular';
+import { BlipTableController } from '../blipTable.component';
 
-class BlipColumn {
+export class BlipColumnController {
     public sortable: boolean;
     public sortAscending: boolean;
-    private tableCtrl: any;
+    public rowParam: string;
+    public sortBy: string;
+    private tableCtrl: BlipTableController;
 
     constructor(
         private $element: IRootElementService,
@@ -32,7 +34,7 @@ class BlipColumn {
 export const ColumnComponent = angular
     .module('blipComponents.columnComponent', [])
     .component('blipColumn', {
-        controller: BlipColumn,
+        controller: BlipColumnController,
         controllerAs: '$ctrl',
         template: '',
         transclude: true,

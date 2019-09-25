@@ -1,7 +1,8 @@
-import angular from 'core/angular';
+import angular from 'angular';
 import { IRootElementService, IOnChangesObject, IScope } from 'angular';
 import * as uuid from 'uuid';
 import template from './BlipTableView.html';
+import { BlipColumnController } from './column';
 
 const BLIP_TABLE_PREFIX = 'blip-table-';
 
@@ -21,9 +22,9 @@ const BLIP_TABLE_PREFIX = 'blip-table-';
 
     </blip-table>
  */
-class BlipTable {
+export class BlipTableController {
     public tableData: any[];
-    public columns: any[];
+    public columns: BlipColumnController[];
     public elementId: string;
     public scrollable: boolean;
     public selectable: boolean;
@@ -76,9 +77,10 @@ class BlipTable {
 
         const item = this.tableData[$index];
         if (state) {
-            this.selected.push(item);
+            this.selected = this.selected.concat(item);
         } else if (this.selected.includes(item)) {
-            this.selected.splice(this.selected.indexOf(item), 1);
+            const selectedIndex = this.selected.indexOf(item);
+            this.selected = this.selected.slice(0, selectedIndex).concat(this.selected.slice(selectedIndex + 1));
         }
     }
 
@@ -122,7 +124,7 @@ class BlipTable {
 export const BlipTableComponent = angular
     .module('blipComponents.blipTable', [])
     .component('blipTable', {
-        controller: BlipTable,
+        controller: BlipTableController,
         controllerAs: '$ctrl',
         template,
         bindings: {
