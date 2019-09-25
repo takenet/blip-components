@@ -33,7 +33,9 @@ export const dropdownItem = angular
             closeOnClick: '<?',
             onOpen: '&?',
         },
-        transclude: true,
+        transclude: {
+            'item-title': '?itemTitle'
+        },
         controller: DropdownItemController,
         controllerAs: '$ctrl',
         template,

@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 const cssPlugin = new MiniCssExtractPlugin({
     filename: 'blip-components.css',
@@ -35,7 +34,7 @@ module.exports = function() {
                     exclude: /node_modules/
                 },
                 {
-                    test: /\.ts(x?)$/,
+                    test: /\.ts$/,
                     exclude: /node_modules/,
                     use: [{
                         loader: 'ts-loader',
@@ -175,9 +174,6 @@ module.exports = function() {
             new webpack.HotModuleReplacementPlugin(),
             new webpack.LoaderOptionsPlugin({
                 debug: true
-            }),
-            new MonacoWebpackPlugin({
-                languages: ['json', 'javascript'],
             }),
             new ForkTsCheckerWebpackPlugin({
                 tslint: './tslint.json',

@@ -8,16 +8,15 @@ import * as ArrowB from 'assets/img/ArrowB.png';
 @Component({
     template,
     bindings: {
-        fullName: '=',
+        user: '<',
         compact: '=?',
         onMenuOpen: '&',
     },
     transclude: true,
 })
 class UserMenu implements IComponentController {
-
     arrowBPath: any;
-    fullName: string;
+    user: any;
     onMenuOpen: any;
     compact: boolean;
 
@@ -33,21 +32,6 @@ class UserMenu implements IComponentController {
             this.onMenuOpen();
         }
     }
-
-    itemTitle() {
-        return `<div class='flex flex-row justify-center items-center pointer'>
-            <letter-avatar class='author-header-avatar' text="'${this.fullName}'"> </letter-avatar>
-            ${
-            this.compact !== true
-                ?
-                `<span class='bot-name fw3'>${this.fullName}</span>
-                <icon name="ArrowDown" width="16" height="16"></icon>`
-                :
-                ''
-            }
-            </div>`;
-    }
-
 }
 
 export const UserMenuComponent = angular
