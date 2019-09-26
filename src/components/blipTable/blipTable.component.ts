@@ -94,10 +94,9 @@ export class BlipTableController {
     }
 
     orderColumn($index: number) {
+
         const column = this.columns[$index];
-
         if (column.sortable) {
-
             this.columns.forEach((c, index) => {
                 if (index != $index && c.sortable) { c.resetSorting(); }
             });
