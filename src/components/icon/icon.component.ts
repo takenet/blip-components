@@ -41,6 +41,21 @@ class IconController implements IComponentController {
         }
     }
 
+    $onChanges(changes) {
+        const svg = (this.$element[0] as HTMLElement).firstElementChild;
+
+        // tslint:disable-next-line: curly
+        if (!svg) return;
+
+        if ('width' in changes && changes.width !== this.width) {
+            svg.setAttribute('width', this.width);
+        } else if ('height' in changes && changes.height !== this.height) {
+            svg.setAttribute('height', this.height);
+        } else if ('color' in changes && changes.color !== this.color) {
+            this.clearPathsAndFillColor(svg, this.color);
+        }
+    }
+
     clearPathsAndFillColor(svg: Element, color: string) {
         let paths = svg.getElementsByTagName('path');
 
