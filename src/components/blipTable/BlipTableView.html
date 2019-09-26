@@ -1,0 +1,67 @@
+<table class="bp-table bp-table--round round-up w-100 mt3">
+
+    <colgroup>
+        <col ng-if="$ctrl.selectable" class="checkbox-container">
+        <col ng-repeat="column in $ctrl.columns"
+            ng-style="column.width && {'width': '{{column.width}}', 'min-width': '{{column.width}}'}">
+    </colgroup>
+
+    <thead>
+        <tr>
+            <th class="tc adjust" ng-if="$ctrl.selectable">
+                <div class="flex items-center justify-center">
+                    <blip-checkbox
+                        ng-model="$ctrl.allChecked"
+                        disabled="$ctrl.tableData.length === 0"
+                        indeterminate-state="$ctrl.selected.length > 0 && $ctrl.selected.length < $ctrl.tableData.length"
+                        on-input-change="$ctrl.onCheckAllChange()">
+                    </blip-checkbox>
+                </div>
+            </th>
+
+            <th class="{{column.columnClass}}" ng-repeat="column in $ctrl.columns track by $index" ng-click="$ctrl.orderColumn($index)">
+                <div class="flex items-center">
+                    <span>{{column.title}}</span>
+                    <div ng-if="column.sortable" class="arrows mh2">
+                        <div class="arrow arrow-up" ng-class="{'sorted': column.sortAscending}"></div>
+                        <div class="arrow arrow-down" ng-class="{'sorted': column.sortAscending === false}"></div>
+                    </div>
+                </div>
+            </th>
+
+            <div ng-transclude></div>
+        </tr>
+    </thead>
+
+</table>
+
+<div class="mt0 mb3" ng-class="{'bp-table-scroll-y-div': $ctrl.scrollable}">
+
+    <table class="bp-table bp-table--round round-down w-100" id="$ctrl.elementId">
+
+        <colgroup>
+            <col ng-if="$ctrl.selectable" class="checkbox-container">
+            <col ng-repeat="column in $ctrl.columns"
+                ng-style="column.width && {'width': '{{column.width}}', 'min-width': '{{column.width}}'}">
+        </colgroup>
+
+        <tbody>
+            <tr ng-repeat="item in $ctrl.tableData track by $index" ng-class="{'checked': item.checked}">
+                <td class="tc adjust" ng-if="$ctrl.selectable">
+                    <div class="flex items-center justify-center">
+                        <blip-checkbox
+                            ng-model="item.checked"
+                            on-input-change="$ctrl.itemStateChange(item.checked, $index)">
+                        </blip-checkbox>
+                    </div>
+                </td>
+
+                <td class="{{column.rowClass}}" ng-repeat="column in $ctrl.columns" title="{{item[column.rowTitle]}}">
+                    {{item[column.rowParam]}}
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>

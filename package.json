@@ -69,7 +69,7 @@
     "angular-translate-loader-partial": "^2.18.1",
     "angular-translate-storage-cookie": "^2.15.1",
     "babel-polyfill": "^6.16.0",
-    "blip-toolkit": "^4.12.3",
+    "blip-toolkit": "^4.13.0",
     "fecha": "^2.3.3",
     "moment": "^2.22.1",
     "ng-cache-loader": "0.0.15",

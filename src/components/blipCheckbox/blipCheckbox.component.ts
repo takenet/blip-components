@@ -3,6 +3,7 @@ import template from './blipCheckboxView.html';
 import * as uuid from 'uuid';
 import { ComponentController } from '../base';
 import './blipCheckbox.scss';
+import { IScope, IRootElementService } from 'angular';
 const BLIP_CHECKBOX_PREFIX = 'blip-checkbox-';
 
 /**
@@ -20,16 +21,21 @@ class BlipCheckboxController extends ComponentController {
     isChecked: boolean;
 
     constructor(
-        private $element,
-        $scope
+        private $element: IRootElementService,
+        private $scope: IScope,
     ) {
         super();
         this.elementId = `${BLIP_CHECKBOX_PREFIX}${uuid.v4()}`;
         this.input = this.$element[0].querySelector('input');
 
-        $scope.$watch('$ctrl.input.checked', newVal => {
+        this.$scope.$watch('$ctrl.input.checked', (newVal: boolean) => {
             this.isChecked = newVal;
         });
+
+        this.$scope.$watch('$ctrl.indeterminateState', (newVal: boolean) => {
+            this.input.indeterminate = newVal || false;
+        });
+
     }
 }
 
@@ -41,7 +47,9 @@ export const BlipCheckboxComponent = angular
         controllerAs: '$ctrl',
         bindings: {
             disabled: '<?',
-            label: '@?'
+            indeterminateState: '<?',
+            label: '@?',
+            onInputChange: '&?',
         },
         require: {
             ngModel: 'ngModel'

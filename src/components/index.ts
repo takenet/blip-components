@@ -13,6 +13,7 @@ import { BlipInputComponent } from './blipInput/blipInput.component';
 import { BlipMultipleInputComponent } from './blipMultipleInput/blipMultipleInput.component';
 import { BlipRadioComponent } from './blipRadio/blipRadio.component';
 import { BlipSelectComponent } from './blipSelect/blipSelect.component';
+import { BlipTableComponent } from './blipTable/blipTable.component';
 import { BlipTagsComponent } from './blipTags/blipTags.component';
 import { BlipTextareaComponent } from './blipTextarea/blipTextarea.component';
 import { BuilderNodeComponent } from './builderNode/builderNode.component';
@@ -21,6 +22,7 @@ import { CardComponent } from './card/card.component';
 import { Checkbox } from './checkbox/checkbox.components';
 import { ChipsComponent } from './chips/chips.component';
 import { colorPicker } from './colorPicker/colorPicker.component';
+import { ColumnComponent } from './blipTable/column';
 import { ConfusionMatrixComponent } from './confusionMatrix/confusionMatrix.component';
 import { contentBoxes } from './contentBoxes';
 import { ContentTabsComponent } from './contentTabs';
@@ -87,6 +89,7 @@ export const ComponentsModule = angular
         BlipMultipleInputComponent,
         BlipRadioComponent,
         BlipSelectComponent,
+        BlipTableComponent,
         BlipTagsComponent,
         BlipTextareaComponent,
         BuilderNodeComponent,
@@ -95,6 +98,7 @@ export const ComponentsModule = angular
         Checkbox,
         ChipsComponent,
         colorPicker,
+        ColumnComponent,
         ConfusionMatrixComponent,
         contentBoxes,
         ContentTabsComponent,
