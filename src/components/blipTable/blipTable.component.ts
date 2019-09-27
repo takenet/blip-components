@@ -49,6 +49,8 @@ export class BlipTableController {
             this.$scope.$watch('$ctrl.selected.length', (newVal: number) => {
                 if (newVal && newVal === this.tableData.length) {
                     this.allChecked = true;
+                } else if (newVal === 0) {
+                    this.allChecked = false;
                 }
             });
         }
