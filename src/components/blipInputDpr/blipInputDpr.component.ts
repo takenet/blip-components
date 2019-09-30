@@ -24,6 +24,7 @@ const BLIP_INPUT_PREFIX = 'blip-input-dpr';
  * @param {string} type - the input type is necessary for validation. If not specified, takes value 'text'
  * @param {string} inputAutocomplete - the input autocomplete field for undesired browser autompletes
  * @param {string} unmaskablePassword - the expression that defines if input of type password will be unmaskable
+ * @param {expression} invalid - the input is invalid
  */
 
 class BlipInputDprController extends ComponentController {
@@ -33,6 +34,7 @@ class BlipInputDprController extends ComponentController {
     passwordUnmasked: boolean = false;
     onChange: ($val) => {};
     disabled: boolean;
+    invalid: boolean;
 
     constructor(
         private $element,
@@ -91,6 +93,7 @@ export const BlipInputDprComponent = angular
             fieldId: '@?',
             showPasswordStrength: '<?',
             unmaskablePassword: '<?',
+            invalid: '<?'
         },
         require: {
             ngModel: 'ngModel',

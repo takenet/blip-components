@@ -2,7 +2,7 @@
     ng-class="{
     'bp-input-wrapper--focus': focused,
     'bp-input-wrapper--valid': focused && $ctrl.parentForm[$ctrl.fieldName].$viewValue && $ctrl.parentForm[$ctrl.fieldName].$valid,
-    'bp-input-wrapper--invalid': !$ctrl.disabled && !$ctrl.parentForm[$ctrl.fieldName].$pristine && $ctrl.parentForm[$ctrl.fieldName].$invalid,
+    'bp-input-wrapper--invalid': $ctrl.invalid || (!$ctrl.disabled && !$ctrl.parentForm[$ctrl.fieldName].$pristine && $ctrl.parentForm[$ctrl.fieldName].$invalid),
     'bp-input-wrapper--disabled': $ctrl.disabled }"
     ng-click="$ctrl.focus()"
     id="{{$ctrl.elementId}}">
@@ -11,7 +11,7 @@
        'bp-c-rooftop': !focused,
        'bp-c-blip-dark': focused,
        'bp-c-true': focused && $ctrl.parentForm[$ctrl.fieldName].$viewValue && $ctrl.parentForm[$ctrl.fieldName].$valid,
-       'bp-c-warning': !$ctrl.parentForm[$ctrl.fieldName].$pristine && $ctrl.parentForm[$ctrl.fieldName].$invalid }">{{$ctrl.label}}</label>
+       'bp-c-warning': $ctrl.invalid || (!$ctrl.parentForm[$ctrl.fieldName].$pristine && $ctrl.parentForm[$ctrl.fieldName].$invalid) }">{{$ctrl.label}}</label>
 
     <password-strength ng-if="$ctrl.showPasswordStrength && $ctrl.type === 'password'" ng-model="$ctrl.model"></password-strength>
 
