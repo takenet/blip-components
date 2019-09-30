@@ -66,7 +66,8 @@ class AutoExpand {
 
     _resizeInput(element, attrs) {
         const inputStyle = getComputedStyle(element[0]);
-
+        const mainContentElement = document.getElementById('main-content-area');
+        const menuAreaElement = document.getElementById('menu-area');
         if (!this.ghostElement) {
             this.ghostElement = document.createElement('div');
             document.body.appendChild(this.ghostElement);
@@ -80,11 +81,18 @@ class AutoExpand {
             'paddingRight',
             'paddingLeft',
             'letterSpacing',
-            'textTransform',
+            'textTransform'
         ])(inputStyle)(this.ghostElement.style);
 
         this.ghostElement.innerHTML = element[0].value || attrs.placeholder;
-        element[0].style.width = this.ghostElement.offsetWidth + 10 + 'px';
+        const growingWidth = this.ghostElement.offsetWidth + 10;
+        let inputWidth = growingWidth;
+        if (mainContentElement && menuAreaElement) {
+            const maxWidth =
+                mainContentElement.clientWidth - menuAreaElement.offsetWidth;
+            inputWidth = Math.min(growingWidth, maxWidth);
+        }
+        element[0].style.width = inputWidth + 'px';
         this.ghostElement.style.display = 'none'; // Avoid unecessary page scroll
     }
 
@@ -111,5 +119,4 @@ class AutoExpand {
 
 export const AutoExpandDirective = angular
     .module('blipComponents.autoExpand', [])
-    .directive('autoExpand', AutoExpand.factory)
-    .name;
+    .directive('autoExpand', AutoExpand.factory).name;
