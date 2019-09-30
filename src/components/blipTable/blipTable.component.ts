@@ -49,6 +49,8 @@ export class BlipTableController {
             this.$scope.$watch('$ctrl.selected.length', (newVal: number) => {
                 if (newVal && newVal === this.tableData.length) {
                     this.allChecked = true;
+                } else if (newVal === 0) {
+                    this.allChecked = false;
                 }
             });
         }
@@ -94,10 +96,9 @@ export class BlipTableController {
     }
 
     orderColumn($index: number) {
+
         const column = this.columns[$index];
-
         if (column.sortable) {
-
             this.columns.forEach((c, index) => {
                 if (index != $index && c.sortable) { c.resetSorting(); }
             });
