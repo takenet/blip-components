@@ -44,8 +44,9 @@ class IconController implements IComponentController {
     $onChanges(changes) {
         const svg = (this.$element[0] as HTMLElement).firstElementChild;
 
-        // tslint:disable-next-line: curly
-        if (!svg) return;
+        if (!svg) {
+            return;
+        }
 
         if ('width' in changes && changes.width !== this.width) {
             svg.setAttribute('width', this.width);
