@@ -8,8 +8,8 @@
     id="{{$ctrl.elementId}}">
     <label class="bp-label tl"
         ng-class="{
-       'bp-c-rooftop': !focused,
-       'bp-c-blip-dark': focused,
+       'bp-c-cloud': !focused && !$ctrl.invalid,
+       'bp-c-rooftop': focused && !$ctrl.invalid,
        'bp-c-true': focused && $ctrl.parentForm[$ctrl.fieldName].$viewValue && $ctrl.parentForm[$ctrl.fieldName].$valid,
        'bp-c-warning': $ctrl.invalid || (!$ctrl.parentForm[$ctrl.fieldName].$pristine && $ctrl.parentForm[$ctrl.fieldName].$invalid) }">{{$ctrl.label}}</label>
 
