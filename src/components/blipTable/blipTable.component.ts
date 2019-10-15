@@ -2,6 +2,7 @@ import angular from 'angular';
 import { IRootElementService, IOnChangesObject, IScope } from 'angular';
 import * as uuid from 'uuid';
 import template from './BlipTableView.html';
+import './BlipTable.scss';
 import { BlipColumnController } from './column';
 
 const BLIP_TABLE_PREFIX = 'blip-table-';
@@ -29,6 +30,7 @@ export class BlipTableController {
     public scrollable: boolean;
     public selectable: boolean;
     public allChecked: boolean;
+    public tableAction: any;
     public selected: any[];
 
     constructor(
@@ -131,6 +133,7 @@ export const BlipTableComponent = angular
         template,
         bindings: {
             tableData: '<',
+            tableAction: '<',
         },
         transclude: true,
     })

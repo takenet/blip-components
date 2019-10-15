@@ -28,6 +28,8 @@
                     </div>
                 </div>
             </th>
+            <th ng-if="$ctrl.tableAction !== null && $ctrl.tableAction !== undefined"  class="action-icon">
+            </th>
 
             <div ng-transclude></div>
         </tr>
@@ -58,6 +60,9 @@
 
                 <td class="{{column.rowClass}}" ng-repeat="column in $ctrl.columns" title="{{item[column.rowTitle]}}">
                     {{item[column.rowParam]}}
+                </td>
+                <td id="td-action-icon" class="action-icon" ng-if="$ctrl.tableAction !== null && $ctrl.tableAction !== undefined ">                    
+                    <img icon-src="ArrowRight" ng-click="$ctrl.tableAction(item)"></img>
                 </td>
             </tr>
         </tbody>
