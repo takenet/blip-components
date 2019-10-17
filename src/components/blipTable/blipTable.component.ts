@@ -29,7 +29,6 @@ export class BlipTableController {
     public scrollable: boolean;
     public selectable: boolean;
     public allChecked: boolean;
-    public hasTableAction: boolean;
     public tableAction: any;
     public selected: any[];
 
@@ -56,7 +55,6 @@ export class BlipTableController {
                 }
             });
         }
-        this.hasTableAction = this.tableAction !== null && this.tableAction !== undefined;
     }
 
     $onChanges(changesObj: IOnChangesObject) {
