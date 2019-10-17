@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </th>
-            <th ng-if="$ctrl.tableAction !== null && $ctrl.tableAction !== undefined"  class="action-icon">
+            <th ng-if="$ctrl.hasTableAction"  class="action-icon">
             </th>
 
             <div ng-transclude></div>
@@ -48,7 +48,7 @@
         </colgroup>
 
         <tbody>
-            <tr ng-repeat="item in $ctrl.tableData track by $index" ng-class="{'checked': item.checked}">
+            <tr ng-repeat="item in $ctrl.tableData track by $index" ng-class="{'checked': item.checked, 'hasTableAction': $ctrl.hasTableAction}">
                 <td class="tc adjust" ng-if="$ctrl.selectable">
                     <div class="flex items-center justify-center">
                         <blip-checkbox
@@ -61,7 +61,7 @@
                 <td class="{{column.rowClass}}" ng-repeat="column in $ctrl.columns" title="{{item[column.rowTitle]}}">
                     {{item[column.rowParam]}}
                 </td>
-                <td id="td-action-icon" class="action-icon" ng-if="$ctrl.tableAction !== null && $ctrl.tableAction !== undefined ">                    
+                <td id="td-action-icon" class="action-icon" ng-if="$ctrl.hasTableAction">                    
                     <img icon-src="ArrowRight" ng-click="$ctrl.tableAction(item)"></img>
                 </td>
             </tr>
