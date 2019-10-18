@@ -132,7 +132,7 @@ export const BlipTableComponent = angular
         template,
         bindings: {
             tableData: '<',
-            tableAction: '<',
+            tableAction: '<?',
         },
         transclude: true,
     })

@@ -61,7 +61,7 @@
                 <td class="{{column.rowClass}}" ng-repeat="column in $ctrl.columns" title="{{item[column.rowTitle]}}">
                     {{item[column.rowParam]}}
                 </td>
-                <td id="td-action-icon" class="action-icon" ng-if="$ctrl.tableAction">                    
+                <td class="action-icon td-action-icon" ng-if="$ctrl.tableAction">                    
                     <img icon-src="ArrowRight" ng-click="$ctrl.tableAction(item)"></img>
                 </td>
             </tr>
