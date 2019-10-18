@@ -29,6 +29,7 @@ export class BlipTableController {
     public scrollable: boolean;
     public selectable: boolean;
     public allChecked: boolean;
+    public tableAction: any;
     public selected: any[];
 
     constructor(
@@ -131,6 +132,7 @@ export const BlipTableComponent = angular
         template,
         bindings: {
             tableData: '<',
+            tableAction: '<?',
         },
         transclude: true,
     })
