@@ -1,5 +1,5 @@
 import angular from 'core/angular';
-import template from './BlipMultipleInput.html';
+import template from './blipMultipleInput.html';
 import './BlipMultipleInput.scss';
 import { IFormController } from 'angular';
 
