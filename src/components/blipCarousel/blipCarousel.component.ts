@@ -1,13 +1,15 @@
 import angular from 'core/angular';
-import template from './blipCarousel.html';
+import template from './BlipCarousel.html';
 import { BlipCarousel } from 'blip-toolkit';
+import * as uuid from 'uuid';
+const BLIP_CAROUSEL_PREFIX = 'blip-carousel';
 
 class BlipCarouselController {
     id: string;
     itemWidth: number;
 
     constructor(private $timeout) {
-        this.id = 'teste';
+        this.id = `${BLIP_CAROUSEL_PREFIX}-${uuid.v4()}`;
     }
 
     async $onInit() {
