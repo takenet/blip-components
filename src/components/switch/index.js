@@ -17,7 +17,6 @@ export const SwitchComponent = angular
             ngChecked: '=?',
             ngTrueValue: '=?',
             ngFalseValue: '=?',
-            ngDisabled: '=?',
             ngPermission: '@',
             onToggle: '&?',
             manualToggle: '@?',
