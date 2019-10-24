@@ -1,6 +1,6 @@
 import angular from 'core/angular';
 import './expandableContent.scss';
-import template from './ExpandableContentView.html';
+import template from './expandableContentView.html';
 import { IScope } from 'angular';
 import { EventEmitter } from 'shared/EventEmitter';
 

@@ -69,6 +69,10 @@ export default class {
             return;
         }
 
+        if (this.ngDisabled) {
+            return;
+        }
+
         if (this.manualToggle) {
             event.preventDefault();
             this.onToggle();
