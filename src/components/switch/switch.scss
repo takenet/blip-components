@@ -1,6 +1,6 @@
 @import '../../assets/scss/variables';
 
-switch {
+switch {  
     input[type="checkbox"] {
         position: absolute;
         top: 0;
@@ -46,9 +46,7 @@ switch {
         }
         &:disabled + label {
             background: $color-text;
-        }
-
-        
+        }        
     }
 }
 .label{
