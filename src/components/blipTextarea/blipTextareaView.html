@@ -2,7 +2,7 @@
     'bp2-textarea-wrapper--show': !$ctrl.disabled,
     'bp-textarea-wrapper--focus': focused,
     'bp-textarea-wrapper--disabled': $ctrl.disabled,
-    'bp-textarea-wrapper--invalid': !$ctrl.disabled && !$ctrl.parentForm[$ctrl.fieldName].$pristine && $ctrl.parentForm[$ctrl.fieldName].$invalid }"
+    'bp-textarea-wrapper--invalid': $ctrl.invalid || (!$ctrl.disabled && !$ctrl.parentForm[$ctrl.fieldName].$pristine && $ctrl.parentForm[$ctrl.fieldName].$invalid) }"
     ng-click="$ctrl.focus()" id="{{$ctrl.elementId}}">
     <label class="bp-label bp2-textarea__label tl" ng-class="{
        'bp-c-rooftop': !focused,

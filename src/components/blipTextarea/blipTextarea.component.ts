@@ -18,6 +18,7 @@ class BlipTextareaController extends ComponentController {
     elementId: string;
     rows: string;
     autoResize: boolean;
+    invalid: boolean;
     onChange: ($val) => {};
 
     constructor(private $element) {
@@ -64,6 +65,7 @@ export const BlipTextareaComponent = angular
         controllerAs: '$ctrl',
         bindings: {
             disabled: '<?',
+            invalid: '<?',
             fieldName: '@?',
             label: '@?',
             placeholder: '@?',
