@@ -18,9 +18,13 @@ class BlipTextareaController extends ComponentController {
     elementId: string;
     rows: string;
     autoResize: boolean;
+    invalid: boolean;
     onChange: ($val) => {};
 
-    constructor(private $element) {
+    constructor(
+        private $element,
+        private $scope
+    ) {
         super();
         this.elementId = `${BLIP_TEXTAREA_PREFIX}${uuid.v4()}`;
     }
@@ -29,7 +33,7 @@ class BlipTextareaController extends ComponentController {
         this.rows = this.rows ? this.rows : '1';
 
         if (this.autoResize) {
-            this.listenTextareaKeydown();
+            this.watchModelChanges();
         }
     }
 
@@ -40,17 +44,15 @@ class BlipTextareaController extends ComponentController {
         textarea.focus();
     }
 
-    listenTextareaKeydown() {
+    watchModelChanges() {
         let textarea = this.$element[0].querySelector(
             'textarea',
         ) as HTMLTextAreaElement;
 
-        textarea.addEventListener('keydown', function() {
-            let element = this;
-
+        this.$scope.$watch('$ctrl.model', () => {
             setTimeout(function() {
-                element.style.cssText = 'height:auto; padding:0';
-                element.style.cssText = 'height:' + element.scrollHeight + 'px';
+                textarea.style.cssText = 'height: auto';
+                textarea.style.cssText = 'height:' + textarea.scrollHeight + 'px';
             }, 0);
         });
     }
@@ -64,6 +66,7 @@ export const BlipTextareaComponent = angular
         controllerAs: '$ctrl',
         bindings: {
             disabled: '<?',
+            invalid: '<?',
             fieldName: '@?',
             label: '@?',
             placeholder: '@?',
