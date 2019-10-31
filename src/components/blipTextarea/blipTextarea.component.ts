@@ -55,6 +55,20 @@ class BlipTextareaController extends ComponentController {
                 textarea.style.cssText = 'height:' + textarea.scrollHeight + 'px';
             }, 0);
         });
+
+        // For situations when $watch $ctrl.model do not detect changes
+        textarea.addEventListener('keydown', function(e) {
+            const pressedKey = e.which || e.keyCode;
+
+            // Backspace, Enter or Delete
+            if ([8, 13, 46].includes(pressedKey)) {
+                let element = this;
+                setTimeout(function() {
+                    element.style.cssText = 'height: auto';
+                    element.style.cssText = 'height:' + element.scrollHeight + 'px';
+                }, 0);
+            }
+        });
     }
 }
 
