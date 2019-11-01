@@ -28,6 +28,10 @@ export default class SortingArrowsController {
      * Toggle order of arrow and set new ngModel
      */
     toggleOrder() {
+        if (this.disabled !== undefined && this.disabled) {
+            return;
+        }
+
         const newOrder =
             (this.isFirstToggle() || this.model.order === SortingOrder.Descending)
                 ? SortingOrder.Ascending
