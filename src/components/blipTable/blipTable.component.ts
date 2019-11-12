@@ -23,6 +23,8 @@ const BLIP_TABLE_PREFIX = 'blip-table-';
     </blip-table>
  */
 export class BlipTableController {
+    private _selectedEventName: string = 'selectedEvent';
+
     public tableData: any[];
     public columns: BlipColumnController[];
     public elementId: string;
@@ -30,6 +32,7 @@ export class BlipTableController {
     public selectable: boolean;
     public allChecked: boolean;
     public tableAction: any;
+    public onSelectedChange: any;
     public selected: any[];
 
     constructor(
@@ -55,6 +58,7 @@ export class BlipTableController {
                 }
             });
         }
+        document.addEventListener(this._selectedEventName, this.onSelectedChange);
     }
 
     $onChanges(changesObj: IOnChangesObject) {
@@ -75,7 +79,7 @@ export class BlipTableController {
         scroller.style.maxHeight = `${scroller.offsetHeight}px`;
     }
 
-    itemStateChange(state: boolean, $index: number) {
+    itemStateChange(state: boolean, $index: number, isFromCheckAll: boolean = false) {
         if (state === undefined) { return; }
 
         const item = this.tableData[$index];
@@ -85,15 +89,28 @@ export class BlipTableController {
             const selectedIndex = this.selected.indexOf(item);
             this.selected = this.selected.slice(0, selectedIndex).concat(this.selected.slice(selectedIndex + 1));
         }
+        if (!isFromCheckAll) {
+            this.dispatchSelectedChangeEvent();
+        }
     }
 
     onCheckAllChange() {
+        const isFromCheckAll = true;
         this.tableData.forEach((el, index) => {
             if (el.checked != this.allChecked) {
                 el.checked = this.allChecked;
-                this.itemStateChange(this.allChecked, index);
+                this.itemStateChange(this.allChecked, index, isFromCheckAll);
             }
         });
+        this.dispatchSelectedChangeEvent();
+    }
+
+    dispatchSelectedChangeEvent() {
+        const seletedItens = {
+            'seletedItens': this.selected
+        };
+        const selectedEvent = new CustomEvent(this._selectedEventName, {'detail': seletedItens});
+        document.dispatchEvent(selectedEvent);
     }
 
     orderColumn($index: number) {
@@ -133,6 +150,7 @@ export const BlipTableComponent = angular
         bindings: {
             tableData: '<',
             tableAction: '<?',
+            onSelectedChange: '<?'
         },
         transclude: true,
     })
