@@ -26,6 +26,7 @@ export class BlipTableController {
     private _selectedEventName: string = 'selectedEvent';
 
     public tableData: any[];
+    public tableSelectedData: any[];
     public columns: BlipColumnController[];
     public elementId: string;
     public scrollable: boolean;
@@ -33,7 +34,6 @@ export class BlipTableController {
     public allChecked: boolean;
     public tableAction: any;
     public onSelectedChange: any;
-    public selected: any[];
 
     constructor(
         private $element: IRootElementService,
@@ -48,7 +48,7 @@ export class BlipTableController {
     $onInit() {
         if (this.selectable) {
             this.allChecked = false;
-            this.selected = [];
+            this.tableSelectedData = [];
 
             this.$scope.$watch('$ctrl.selected.length', (newVal: number) => {
                 if (newVal && newVal === this.tableData.length) {
@@ -86,10 +86,10 @@ export class BlipTableController {
 
         const item = this.tableData[$index];
         if (state) {
-            this.selected = this.selected.concat(item);
-        } else if (this.selected.includes(item)) {
-            const selectedIndex = this.selected.indexOf(item);
-            this.selected = this.selected.slice(0, selectedIndex).concat(this.selected.slice(selectedIndex + 1));
+            this.tableSelectedData = this.tableSelectedData.concat(item);
+        } else if (this.tableSelectedData.includes(item)) {
+            const selectedIndex = this.tableSelectedData.indexOf(item);
+            this.tableSelectedData = this.tableSelectedData.slice(0, selectedIndex).concat(this.tableSelectedData.slice(selectedIndex + 1));
         }
         if (!isFromCheckAll) {
             this.dispatchSelectedChangeEvent();
@@ -110,7 +110,7 @@ export class BlipTableController {
     dispatchSelectedChangeEvent() {
         if (this.onSelectedChange) {
             const seletedItens = {
-                'seletedItens': this.selected
+                'seletedItens': this.tableSelectedData
             };
             const selectedEvent = new CustomEvent(this._selectedEventName, {'detail': seletedItens});
             document.dispatchEvent(selectedEvent);
@@ -154,6 +154,7 @@ export const BlipTableComponent = angular
         bindings: {
             tableData: '<',
             tableAction: '<?',
+            tableSelectedData: '=?',
             onSelectedChange: '<?'
         },
         transclude: true,
