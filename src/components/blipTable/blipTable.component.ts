@@ -59,7 +59,7 @@ export class BlipTableController {
             });
         }
         if (this.onSelectedChange) {
-        document.addEventListener(this._selectedEventName, this.onSelectedChange);
+            document.addEventListener(this._selectedEventName, this.onSelectedChange);
         }
     }
 
