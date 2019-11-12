@@ -70,11 +70,12 @@ $dropdown-padding: 10px;
 
     &:before {
         content: " ";
-        width: 15px; height: 15px;
+        width: 17px; height: 17px;
         position: absolute;
         bottom: -8px;
         background: #fff;
         transform: rotate(45deg);
+        border-radius: 2px;
     }
 
     a:hover {
