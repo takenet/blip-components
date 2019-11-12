@@ -58,7 +58,9 @@ export class BlipTableController {
                 }
             });
         }
+        if (this.onSelectedChange) {
         document.addEventListener(this._selectedEventName, this.onSelectedChange);
+        }
     }
 
     $onChanges(changesObj: IOnChangesObject) {
@@ -106,11 +108,13 @@ export class BlipTableController {
     }
 
     dispatchSelectedChangeEvent() {
-        const seletedItens = {
-            'seletedItens': this.selected
-        };
-        const selectedEvent = new CustomEvent(this._selectedEventName, {'detail': seletedItens});
-        document.dispatchEvent(selectedEvent);
+        if (this.onSelectedChange) {
+            const seletedItens = {
+                'seletedItens': this.selected
+            };
+            const selectedEvent = new CustomEvent(this._selectedEventName, {'detail': seletedItens});
+            document.dispatchEvent(selectedEvent);
+        }
     }
 
     orderColumn($index: number) {
