@@ -35,6 +35,8 @@ class BlipSelectController extends ComponentController
     clearAfterAdd: boolean;
     disabled: boolean;
     invalid: boolean;
+    descriptionPosition: string;
+    placeholderIcon: string;
     //Callbacks
     onBeforeOpenSelect: () => void;
     onAfterOpenSelect: () => void;
@@ -63,6 +65,8 @@ class BlipSelectController extends ComponentController
             mode: this.mode || 'select',
             disabled: this.disabled || false,
             invalid: this.invalid || false,
+            descriptionPosition: this.descriptionPosition || 'right',
+            placeholderIcon: this.placeholderIcon,
             onBeforeOpenSelect: this.handle.bind(
                 this,
                 BlipSelectCallback.OnBeforeOpenSelect,
@@ -281,6 +285,8 @@ export const BlipSelectComponent = angular
             label: '@?',
             placeholder: '@?',
             mode: '@?',
+            descriptionPosition: '@?',
+            placeholderIcon: '@?',
             onBeforeOpenSelect: '&?',
             onAfterOpenSelect: '&?',
             onBeforeCloseSelect: '&?',

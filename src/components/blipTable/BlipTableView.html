@@ -13,7 +13,7 @@
                     <blip-checkbox
                         ng-model="$ctrl.allChecked"
                         disabled="$ctrl.tableData.length === 0"
-                        indeterminate-state="$ctrl.selected.length > 0 && $ctrl.selected.length < $ctrl.tableData.length"
+                        indeterminate-state="$ctrl.tableSelectedData.length > 0 && $ctrl.tableSelectedData.length < $ctrl.tableData.length"
                         on-input-change="$ctrl.onCheckAllChange()">
                     </blip-checkbox>
                 </div>

@@ -71,7 +71,6 @@ import { ThreadMessagesComponent } from './threadMessages/threadMessages.compone
 import { TimepickerComponent } from './timepicker';
 import { ToggleButtonComponent } from './toggleButton';
 import { TooltipButtonComponent } from './tooltipButton/tooltipButton.component';
-import { UserMenuComponent } from './userMenu/userMenu.component';
 import { ViewMoreBarComponent } from './viewMoreBar/viewMoreBar.component';
 
 export const ComponentsModule = angular
@@ -148,7 +147,6 @@ export const ComponentsModule = angular
         TimepickerComponent,
         ToggleButtonComponent,
         TooltipButtonComponent,
-        UserMenuComponent,
         ViewMoreBarComponent
     ])
     .name;
