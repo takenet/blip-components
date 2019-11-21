@@ -68,6 +68,8 @@ export class BlipDaterangePickerController implements IComponentController {
     }
 
     onSelect($period) {
+        this.period.selectedPeriod = $period;
+
         if (this.onDateSelection) {
             this.onDateSelection({$period});
         }
