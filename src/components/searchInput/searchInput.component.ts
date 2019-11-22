@@ -52,7 +52,7 @@ export const SearchInputComponent = angular
         controllerAs: '$ctrl',
         template: `
         <div class="search-input-container">
-            <i tooltips tooltip-template="Search" tooltip-side="bottom" class="icon-search" ng-click="$ctrl.focusInput()"></i>
+            <icon name="Search" width="32" height="32" color="#8CA0B3" ng-click="$ctrl.focusInput()"></icon>
             <div id="search-input-area" ng-transclude></div>
         </div>`,
         transclude: true,
