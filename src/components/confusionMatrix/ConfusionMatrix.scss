@@ -4,7 +4,8 @@
 $row-color1: #e7ebf0;
 $row-color2: #f0f3f5;
 $white: #fff;
-$border-blue: #4cd7e6;
+$hover-color: #b5bcc0;
+$main-diagonal-border-color: #2C2A46;
 
 .matrix-table {
     height: 100%;
@@ -64,6 +65,14 @@ $border-blue: #4cd7e6;
                     display: flex;
                 }
 
+                &.white{
+                    color: $white;
+                }
+
+                &.mainDiagonal {
+                    border: 2px solid $main-diagonal-border-color !important;
+                }
+
                 &.header {
                     color: $color-text;
                     width: 160px;
@@ -78,7 +87,7 @@ $border-blue: #4cd7e6;
                 }
 
                 &.cell:hover {
-                    background: $row-color1 !important;
+                    background: $hover-color !important;
                     transform: scale(1.1) !important;
                     z-index: 2;
                 }

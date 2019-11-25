@@ -9,7 +9,10 @@
     </thead>
     <tbody>
         <tr class="row" ng-repeat="rows in $ctrl.matrix track by $index" ng-init="rowId = $index">
-            <td ng-click="$ctrl.select(rowId, $event, $index)" ng-repeat="cell in rows track by $index" ng-class="{ header: $index == 0, cell: $index != 0 }" opacity-color="{{cell.percent}}">
+            <td ng-click="$ctrl.select(rowId, $event, $index)" ng-repeat="cell in rows track by $index"
+                ng-class="{ header: $index == 0, cell: $index != 0, mainDiagonal: rowId + 1 == $index, white: cell.percent > 0.5 }"
+                ng-style="cell.percent > -1 && {'background-color': 'rgba(21,175,178,{{cell.percent}})'}"
+            >
                 <span>{{cell.value}}</span>
             </td>
         </tr>
