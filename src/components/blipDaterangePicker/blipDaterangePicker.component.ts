@@ -1,7 +1,7 @@
 import angular from 'core/angular';
 import { BlipDaterangepicker } from 'blip-toolkit';
 import { Component } from 'decorators';
-import { IComponentController, IComponentOptions, IRootElementService, ILocaleService } from 'angular';
+import { IComponentController, IComponentOptions, IRootElementService, ILocaleService, IScope } from 'angular';
 
 @Component({
     template: '',
@@ -34,12 +34,17 @@ export class BlipDaterangePickerController implements IComponentController {
     constructor(
         private $element: IRootElementService,
         private $locale: ILocaleService,
+        private $scope: IScope,
     ) {
         this.daterangePicker = new BlipDaterangepicker(this.daterangepickerOptions());
     }
 
     $onInit() {
         this.$element[0].appendChild(this.daterangePicker.render());
+
+        this.$scope.$watch('$ctrl.period.selectedPeriod', () => {
+            this.daterangePicker.selectedPeriod = this.period.selectedPeriod;
+        });
     }
 
     private daterangepickerOptions() {
