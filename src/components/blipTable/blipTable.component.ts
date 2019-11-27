@@ -70,15 +70,11 @@ export class BlipTableController {
                 if (el.checked === undefined) { el.checked = false; }
             });
             this.columns.forEach(c => c.resetSorting());
-
-            if (this.scrollable && !changesObj.tableData.isFirstChange()) {
-                this.setScrollHeight();
-            }
         }
     }
 
     setScrollHeight() {
-        if (this.tableData.length > this.scrollLimit) {
+        if (this.scrollable && this.tableData.length > this.scrollLimit) {
             const scroller: HTMLDivElement = this.$element[0].querySelector('.bp-table-scroll-y-div') as HTMLDivElement;
             const tableRows = Array.from(scroller.querySelectorAll('tr')).slice(0, this.scrollLimit);
             const totalHeight = tableRows.reduce((total, row) => total + Number(row.offsetHeight), 0);
