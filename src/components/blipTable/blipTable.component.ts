@@ -31,6 +31,7 @@ export class BlipTableController {
     public elementId: string;
     public scrollable: boolean;
     public selectable: boolean;
+    public scrollLimit: number;
     public allChecked: boolean;
     public tableAction: any;
     public onSelectedChange: any;
@@ -70,15 +71,20 @@ export class BlipTableController {
             });
             this.columns.forEach(c => c.resetSorting());
 
-            if (changesObj.tableData.previousValue.length === 0 && this.scrollable) {
+            if (this.scrollable && !changesObj.tableData.isFirstChange()) {
                 this.setScrollHeight();
             }
         }
     }
 
     setScrollHeight() {
-        const scroller: HTMLDivElement = this.$element[0].querySelector('.bp-table-scroll-y-div');
-        scroller.style.maxHeight = `${scroller.offsetHeight}px`;
+        if (this.tableData.length > this.scrollLimit) {
+            const scroller: HTMLDivElement = this.$element[0].querySelector('.bp-table-scroll-y-div') as HTMLDivElement;
+            const tableRows = Array.from(scroller.querySelectorAll('tr')).slice(0, this.scrollLimit);
+            const totalHeight = tableRows.reduce((total, row) => total + Number(row.offsetHeight), 0);
+
+            scroller.style.maxHeight = `${totalHeight}px`;
+        }
     }
 
     itemStateChange(state: boolean, $index: number, isFromCheckAll: boolean = false) {
@@ -152,10 +158,11 @@ export const BlipTableComponent = angular
         controllerAs: '$ctrl',
         template,
         bindings: {
+            onSelectedChange: '<?',
+            scrollLimit: '<?',
             tableData: '<',
             tableAction: '<?',
             tableSelectedData: '=?',
-            onSelectedChange: '<?'
         },
         transclude: true,
     })
