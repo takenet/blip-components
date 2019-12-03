@@ -22,19 +22,27 @@ export const ContentTabsComponent = angular
         controller: class {
             tabs: any[];
             onChangeTab: ($event) => void;
+            onTabClick: ($event) => void;
+
             constructor(private $rootScope: IScope) {
                 this.tabs = [];
             }
 
             showTab(tab) {
+                const pos = this.tabs.findIndex(
+                    (t) => t.tabTitle === tab.tabTitle,
+                );
+
+                if (this.onTabClick) {
+                    this.onTabClick(EventEmitter({ pos }));
+                }
+
                 if (!tab.disabled && !tab.tabHref) {
                     this.$rootScope.$broadcast(ChangeTabEvent);
                     tab.showTab = true;
                     tab.isActive = true;
+
                     if (this.onChangeTab) {
-                        const pos = this.tabs.findIndex(
-                            (t) => t.tabTitle === tab.tabTitle,
-                        );
                         this.onChangeTab(EventEmitter({ pos }));
                     }
                 }
@@ -44,6 +52,7 @@ export const ContentTabsComponent = angular
         template,
         bindings: {
             onChangeTab: '&?',
+            onTabClick: '&?',
         },
         transclude: true,
     })
