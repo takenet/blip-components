@@ -8,7 +8,7 @@ class ConfusionMatrix {
     public body: any;
     public matrix: any;
     public keys: any;
-    public borderColor: string = '2px solid orange';
+    public borderColor: string = '2px solid #F9B42F';
     constructor() {
         this.keys = this.keys.reduce((arr, el) => [...arr, el.name], []);
         this.keys = this.keys.map(
@@ -22,7 +22,7 @@ class ConfusionMatrix {
     }
 
     getRow(arr) {
-        const sum = arr.reduce((sum, n) => sum + n, 0);
+        const sum = arr.reduce((sum, n) => sum + n, 0) || 1;
         return arr.map((el) => ({
             value: el,
             percent: (el / sum).toFixed(2),

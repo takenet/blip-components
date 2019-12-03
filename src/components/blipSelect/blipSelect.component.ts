@@ -35,6 +35,12 @@ class BlipSelectController extends ComponentController
     clearAfterAdd: boolean;
     disabled: boolean;
     invalid: boolean;
+    descriptionPosition: string;
+    size: string;
+    appendText: boolean;
+    noResultsFoundText: string;
+    noResultsText: string;
+    placeholderIcon: string;
     //Callbacks
     onBeforeOpenSelect: () => void;
     onAfterOpenSelect: () => void;
@@ -63,6 +69,9 @@ class BlipSelectController extends ComponentController
             mode: this.mode || 'select',
             disabled: this.disabled || false,
             invalid: this.invalid || false,
+            descriptionPosition: this.descriptionPosition || 'right',
+            size: this.size || 'small',
+            placeholderIcon: this.placeholderIcon,
             onBeforeOpenSelect: this.handle.bind(
                 this,
                 BlipSelectCallback.OnBeforeOpenSelect,
@@ -93,9 +102,13 @@ class BlipSelectController extends ComponentController
             customSearch: this.customSearch
                 ? this.handleCustomSearch.bind(this)
                 : undefined,
-            noResultsText: this.$translate.instant(
+            noResultsText: this.noResultsText || this.$translate.instant(
                 'utils.misc.noSearchResults',
             ),
+            noResultsFoundText: this.noResultsFoundText || this.$translate.instant(
+                'utils.misc.noSearchResults',
+            ),
+            appendText: this.appendText === undefined ? true : this.appendText,
             canAddOptions: this.canAddOptions,
             clearAfterAdd: this.clearAfterAdd,
         };
@@ -281,6 +294,12 @@ export const BlipSelectComponent = angular
             label: '@?',
             placeholder: '@?',
             mode: '@?',
+            descriptionPosition: '@?',
+            size: '@?',
+            noResultsText: '@?',
+            noResultsFoundText: '@?',
+            appendText: '<?',
+            placeholderIcon: '@?',
             onBeforeOpenSelect: '&?',
             onAfterOpenSelect: '&?',
             onBeforeCloseSelect: '&?',

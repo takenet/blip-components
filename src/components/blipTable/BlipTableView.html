@@ -13,7 +13,7 @@
                     <blip-checkbox
                         ng-model="$ctrl.allChecked"
                         disabled="$ctrl.tableData.length === 0"
-                        indeterminate-state="$ctrl.selected.length > 0 && $ctrl.selected.length < $ctrl.tableData.length"
+                        indeterminate-state="$ctrl.tableSelectedData.length > 0 && $ctrl.tableSelectedData.length < $ctrl.tableData.length"
                         on-input-change="$ctrl.onCheckAllChange()">
                     </blip-checkbox>
                 </div>
@@ -48,7 +48,7 @@
         </colgroup>
 
         <tbody>
-            <tr ng-repeat="item in $ctrl.tableData track by $index" ng-class="{'checked': item.checked, 'hasTableAction': $ctrl.tableAction}">
+            <tr ng-repeat="item in $ctrl.tableData track by $index" ng-class="{'checked': item.checked, 'hasTableAction': $ctrl.tableAction}" on-finish-render="$ctrl.setScrollHeight()">
                 <td class="tc adjust" ng-if="$ctrl.selectable">
                     <div class="flex items-center justify-center">
                         <blip-checkbox

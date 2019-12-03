@@ -7,6 +7,7 @@ import { ActionsBarComponent } from './actionsBar/actionsBar.component';
 import { AddRemoveComponent } from './addRemove/addRemove.component';
 import { BlipCarouselComponent } from './blipCarousel/blipCarousel.component';
 import { BlipCheckboxComponent } from './blipCheckbox/blipCheckbox.component';
+import { BlipDaterangePickerComponent } from './blipDaterangePicker/blipDaterangePicker.component';
 import { BlipFooterComponent } from './blipFooter/blipFooter.component';
 import { BlipInputDprComponent } from './blipInputDpr/blipInputDpr.component';
 import { BlipInputComponent } from './blipInput/blipInput.component';
@@ -70,7 +71,6 @@ import { ThreadMessagesComponent } from './threadMessages/threadMessages.compone
 import { TimepickerComponent } from './timepicker';
 import { ToggleButtonComponent } from './toggleButton';
 import { TooltipButtonComponent } from './tooltipButton/tooltipButton.component';
-import { UserMenuComponent } from './userMenu/userMenu.component';
 import { ViewMoreBarComponent } from './viewMoreBar/viewMoreBar.component';
 
 export const ComponentsModule = angular
@@ -83,6 +83,7 @@ export const ComponentsModule = angular
         AddRemoveComponent,
         BlipCarouselComponent,
         BlipCheckboxComponent,
+        BlipDaterangePickerComponent,
         BlipFooterComponent,
         BlipInputDprComponent,
         BlipInputComponent,
@@ -146,7 +147,6 @@ export const ComponentsModule = angular
         TimepickerComponent,
         ToggleButtonComponent,
         TooltipButtonComponent,
-        UserMenuComponent,
         ViewMoreBarComponent
     ])
     .name;
