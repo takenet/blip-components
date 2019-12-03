@@ -22,7 +22,6 @@ export const ContentTabsComponent = angular
         controller: class {
             tabs: any[];
             onChangeTab: ($event) => void;
-            onTabClick: ($event) => void;
 
             constructor(private $rootScope: IScope) {
                 this.tabs = [];
@@ -33,8 +32,8 @@ export const ContentTabsComponent = angular
                     (t) => t.tabTitle === tab.tabTitle,
                 );
 
-                if (this.onTabClick) {
-                    this.onTabClick(EventEmitter({ pos }));
+                if (tab.onTabClick) {
+                    tab.onTabClick(EventEmitter({ pos }));
                 }
 
                 if (!tab.disabled && !tab.tabHref) {
@@ -52,7 +51,6 @@ export const ContentTabsComponent = angular
         template,
         bindings: {
             onChangeTab: '&?',
-            onTabClick: '&?',
         },
         transclude: true,
     })
