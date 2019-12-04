@@ -29,7 +29,7 @@ export const ContentTabsComponent = angular
 
             showTab(tab) {
                 const pos = this.tabs.findIndex(
-                    (t) => t.tabTitle === tab.tabTitle,
+                    t => t.tabTitle === tab.tabTitle,
                 );
 
                 if (tab.onTabClick) {
