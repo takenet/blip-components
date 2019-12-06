@@ -41,6 +41,7 @@ class BlipSelectController extends ComponentController
     noResultsFoundText: string;
     noResultsText: string;
     placeholderIcon: string;
+    multiple: boolean;
     //Callbacks
     onBeforeOpenSelect: () => void;
     onAfterOpenSelect: () => void;
@@ -111,6 +112,7 @@ class BlipSelectController extends ComponentController
             appendText: this.appendText === undefined ? true : this.appendText,
             canAddOptions: this.canAddOptions,
             clearAfterAdd: this.clearAfterAdd,
+            multiple: this.multiple,
         };
 
         this.blipSelectInstance = new BlipSelect(instanceOptions);
@@ -120,11 +122,16 @@ class BlipSelectController extends ComponentController
                 options: this.options || [],
                 inputValue: this.model || '',
                 label: this.label,
+                selectedOptions: this.model || [],
             }),
         );
 
         this.$rootScope.$on(ClearInputEvent, () => {
-            this.model = '';
+            if (this.multiple) {
+                this.model = [];
+            } else {
+                this.model = '';
+            }
         });
 
         this.$scope.$watch('$ctrl.model', (model) => {
@@ -167,21 +174,27 @@ class BlipSelectController extends ComponentController
     }
 
     setCorrelatedOption(value) {
-        const correlatedOption =
-            this.options && this.options.find((o) => o.value == value);
-
-        if (correlatedOption) {
+        if (this.multiple) {
             this.blipSelectInstance.render({
-                inputValue: correlatedOption.label,
-            });
-        } else if (value) {
-            this.blipSelectInstance.render({
-                inputValue: value,
+                selectedOptions: value || [],
             });
         } else {
-            this.blipSelectInstance.render({
-                inputValue: '',
-            });
+            const correlatedOption =
+                this.options && this.options.find((o) => o.value == value);
+
+            if (correlatedOption) {
+                this.blipSelectInstance.render({
+                    inputValue: correlatedOption.label,
+                });
+            } else if (value) {
+                this.blipSelectInstance.render({
+                    inputValue: value,
+                });
+            } else {
+                this.blipSelectInstance.render({
+                    inputValue: '',
+                });
+            }
         }
     }
 
@@ -249,7 +262,11 @@ class BlipSelectController extends ComponentController
 
     handleOnSelectOption({ $event }) {
         const { optionProps } = $event;
-        this.model = optionProps.value;
+        if (this.multiple) {
+            this.model = optionProps;
+        } else {
+            this.model = optionProps.value;
+        }
 
         if (this.onSelectOption) {
             this.onSelectOption(EventEmitter({ ...$event }));
@@ -315,6 +332,7 @@ export const BlipSelectComponent = angular
             options: '<?',
             disabled: '<?',
             invalid: '<?',
+            multiple: '<?',
         },
         require: {
             ngModel: 'ngModel',
