@@ -96,8 +96,8 @@ export const ImpactCircleComponent = angular
         controllerAs: '$ctrl',
         bindings: {
             impactEvaluation: '<?',
-            description: '<',
             total: '<?',
+            description: '@',
         },
     })
     .name;
