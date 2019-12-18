@@ -38,6 +38,7 @@ export const TabComponent = angular
         bindings: {
             tabTitle: '@',
             tabHref: '@?',
+            onTabClick: '&?',
         }
     })
     .name;

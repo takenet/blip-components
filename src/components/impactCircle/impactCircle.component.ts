@@ -3,6 +3,7 @@ import template from './ImpactCircleView.html';
 import './ImpactCircle.scss';
 
 class ImpactCircleController {
+    description: string;
     impactEvaluation: number;
     total: number;
     percentage: number;
@@ -96,6 +97,7 @@ export const ImpactCircleComponent = angular
         bindings: {
             impactEvaluation: '<?',
             total: '<?',
+            description: '@',
         },
     })
     .name;

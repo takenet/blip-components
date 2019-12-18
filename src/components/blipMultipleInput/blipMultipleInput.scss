@@ -30,7 +30,11 @@
     }
 
     .trash-icon {
-        margin-left: 5px;
-        width: 17px;
+        margin-left: 12px;
+        width: 20px;
     }
+
+}
+.multipleInputAddButton {
+    width: calc(100% - 30px);
 }
