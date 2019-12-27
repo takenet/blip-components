@@ -16,6 +16,7 @@ import template from './DropdownItemView.html';
  * @param {string} buttonClasses    - Classes to be added on internal button
  * @param {boolean} closeOnClick    - Determines if menu should close when content is clicked
  * @param {expression} onOpen       - Callback when dropdown is opened
+ * @param {expression} onClose      - Callback when dropdown is closed
  */
 export const dropdownItem = angular
     .module('blipComponents.dropdownItem', [])
@@ -32,6 +33,7 @@ export const dropdownItem = angular
             buttonClasses: '@?',
             closeOnClick: '<?',
             onOpen: '&?',
+            onClose: '&?',
         },
         transclude: {
             'item-title': '?itemTitle'
