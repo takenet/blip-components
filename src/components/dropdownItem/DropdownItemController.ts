@@ -16,6 +16,7 @@ export class DropdownItemController {
     styleValues: any;
     closeOnClick: boolean;
     onOpen: () => void;
+    onClose: () => void;
 
     constructor(private $rootScope, private $timeout, $scope) {
         'ngInject';
@@ -87,6 +88,10 @@ export class DropdownItemController {
             } else if (path[i].localName == 'dropdown-item') {
                 element = true;
             }
+        }
+
+        if (this.onClose) {
+            this.onClose();
         }
 
         this.$timeout(() => {
