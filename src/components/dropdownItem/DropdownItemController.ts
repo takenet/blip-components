@@ -90,7 +90,7 @@ export class DropdownItemController {
             }
         }
 
-        if (this.onClose) {
+        if (!element && this.onClose) {
             this.onClose();
         }
 

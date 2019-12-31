@@ -1,5 +1,5 @@
 import angular from 'core/angular';
-import './reloadButton.scss';
+import './ReloadButton.scss';
 import * as loading from 'assets/img/loading3.png';
 
 class ReloadButton {
