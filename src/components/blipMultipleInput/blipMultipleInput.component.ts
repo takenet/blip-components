@@ -1,6 +1,6 @@
 import angular from 'core/angular';
 import template from './blipMultipleInput.html';
-import './BlipMultipleInput.scss';
+import './blipMultipleInput.scss';
 import { IFormController } from 'angular';
 
 class BlipMultipleInputController {
