@@ -11,6 +11,7 @@ import { BlipDaterangePickerComponent } from './blipDaterangePicker/blipDaterang
 import { BlipFooterComponent } from './blipFooter/blipFooter.component';
 import { BlipInputDprComponent } from './blipInputDpr/blipInputDpr.component';
 import { BlipInputComponent } from './blipInput/blipInput.component';
+import { BlipLoadingComponent } from './blipLoading/blipLoading.component';
 import { BlipMultipleInputComponent } from './blipMultipleInput/blipMultipleInput.component';
 import { BlipRadioComponent } from './blipRadio/blipRadio.component';
 import { BlipSelectComponent } from './blipSelect/blipSelect.component';
@@ -87,6 +88,7 @@ export const ComponentsModule = angular
         BlipFooterComponent,
         BlipInputDprComponent,
         BlipInputComponent,
+        BlipLoadingComponent,
         BlipMultipleInputComponent,
         BlipRadioComponent,
         BlipSelectComponent,
