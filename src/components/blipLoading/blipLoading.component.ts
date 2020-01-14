@@ -6,7 +6,7 @@ import { IComponentController} from 'angular';
 const BLIP_LOADING_PREFIX = 'blip-loading-';
 
 class BlipLoadingController implements IComponentController {
-    type: string;
+    type: 'dotted' | 'solid';
     elementId: string;
 
     constructor(
