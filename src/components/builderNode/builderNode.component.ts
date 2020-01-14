@@ -12,19 +12,18 @@ class BuilderNode {
     onCopyNodeId: (obj: any) => {};
     onUpdateElement: (obj: any) => {};
     builderInstance: any;
+    nodeTitle: string;
 
     constructor(private $translate, private $timeout) {
-        this.defaultTitle = this.$translate.instant(
-            'builder.node.defaultTitle',
-        );
+        this.defaultTitle = 'default';
     }
 
     get _viewTitle() {
-        if (this.node.$title == '' || this.node.$title == undefined) {
+        if (this.nodeTitle == '' || this.nodeTitle == undefined) {
             return this.defaultTitle;
         }
 
-        return this.node.$title;
+        return this.nodeTitle;
     }
 
     $onEdit($node) {
@@ -45,7 +44,7 @@ class BuilderNode {
 
     $onUpdateElement($node) {
         this.$timeout(() => {
-            this.onUpdateElement({ $node });
+            this.onUpdateElement && this.onUpdateElement({ $node });
         }, 600); // Necessary due to tags animation delay
     }
 }
@@ -57,7 +56,9 @@ export const BuilderNodeComponent = angular
         controllerAs: '$ctrl',
         template: BuilderNodeView,
         bindings: {
-            node: '<',
+            nodeId: '@',
+            nodeTitle: '@',
+            nodeTags: '<',
             onEdit: '&?',
             onDelete: '&?',
             onDuplicate: '&?',

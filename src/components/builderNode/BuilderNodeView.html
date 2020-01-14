@@ -1,27 +1,27 @@
-<span class="menumore-opt" ng-if="$ctrl.node.id !== 'onboarding' && $ctrl.node.id !== 'fallback'">
+<span class="menumore-opt" ng-if="$ctrl.nodeId !== 'onboarding' && $ctrl.nodeId !== 'fallback'">
     <span class="relative">
-        <dropdown-item item-title="<i class='icon-menumore'></i>" class="" hide-icon="true" align="right" min-width="100">
+        <!-- <dropdown-item item-title="<i class='icon-menumore'></i>" class="" hide-icon="true" align="right" min-width="100">
             <div class="ph3 bp-fs-7 tc">
-                <span ng-click="$ctrl.$onDuplicate($ctrl.node.id)" translate>utils.forms.duplicate</span>
+                <span ng-click="$ctrl.$onDuplicate($ctrl.nodeId)" translate>utils.forms.duplicate</span>
             </div>
             <div class="ph3 bp-fs-7 tc">
-                <span ng-click="$ctrl.$onDelete($ctrl.node.id)" translate>utils.forms.delete</span>
+                <span ng-click="$ctrl.$onDelete($ctrl.nodeId)" translate>utils.forms.delete</span>
             </div>
             <div class="ph3 bp-fs-7 tc">
-                <span ng-click="$ctrl.$onCopyNodeId($ctrl.node.id)" translate>utils.forms.copyNodeId</span>
+                <span ng-click="$ctrl.$onCopyNodeId($ctrl.nodeId)" translate>utils.forms.copyNodeId</span>
             </div>
-        </dropdown-item>
+        </dropdown-item> -->
     </span>
 </span>
-<span class="builder-node-title">{{$ctrl._viewTitle}}</span>
-<img ng-if="$ctrl.node.id.startsWith('desk:')" class="desk-opt" icon-src="Desk">
-<blip-tags ng-model="$ctrl.node.$tags"
+<span class="builder-node-title" ng-bind="{{$ctrl.nodeTitle || $ctrl.defaultTitle}}"></span>
+<!-- <img ng-if="$ctrl.nodeId.startsWith('desk:')" class="desk-opt" icon-src="Desk"> -->
+<!-- <blip-tags ng-model="$ctrl.nodeTags"
     mode="compact"
     toggle-tags-mode="true"
     can-remove-tags="false"
     can-change-background="false"
     on-tag-click="$ctrl.$onUpdateElement($ctrl.node.id)"
     on-tag-list-updated="$ctrl.$onUpdateElement($ctrl.node.id)"
-    ></blip-tags>
+    ></blip-tags> -->
 
 <div class="diagram-node-endpoint" action="begin"></div>
