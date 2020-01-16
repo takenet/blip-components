@@ -4,7 +4,7 @@ import angular from 'core/angular';
 
 export class ExpandableItemComponent {
     expandableListCtrl: any;
-    isActive: boolean = false;
+    isActive: boolean;
     hasArrow: boolean;
     onOpen: (event: any) => {};
     constructor(private $element, private $timeout) {}
@@ -44,6 +44,7 @@ export const ExpandableItem = angular
             extras: '<?',
             headerItems: '@?',
             bodyItems: '@?',
+            isActive: '<?',
         },
         template
     })
