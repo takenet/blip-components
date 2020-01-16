@@ -17,7 +17,6 @@ import { BlipSelectComponent } from './blipSelect/blipSelect.component';
 import { BlipTableComponent } from './blipTable/blipTable.component';
 import { BlipTagsComponent } from './blipTags/blipTags.component';
 import { BlipTextareaComponent } from './blipTextarea/blipTextarea.component';
-import { BuilderNodeComponent } from './builderNode/builderNode.component';
 import { BuilderSearchComponent } from './builderSearch/builderSearch.component';
 import { CardComponent } from './card/card.component';
 import { Checkbox } from './checkbox/checkbox.components';
@@ -93,7 +92,6 @@ export const ComponentsModule = angular
         BlipTableComponent,
         BlipTagsComponent,
         BlipTextareaComponent,
-        BuilderNodeComponent,
         BuilderSearchComponent,
         CardComponent,
         Checkbox,
