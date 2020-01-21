@@ -17,7 +17,8 @@ export default class ContentBoxesController {
         this.$rootScope = $rootScope;
         this._ngToast = ngToast;
         this._permissionsService = PermissionsService;
-        this.$onChanges = () => {
+        this.disabled = true;
+        this.$onChanges = (changes) => {
             this.bindPersistentMenu();
         };
         this.init();
@@ -63,7 +64,6 @@ export default class ContentBoxesController {
     //Verify if has empty menu
     hasEmptyMenus(option) {
         this.hasEmptyMenu = false;
-
         if (!option) {
             this.hasEmptyMenus(this.ngModel.options);
         } else {
@@ -124,6 +124,8 @@ export default class ContentBoxesController {
     //Remove option
     removeOption(option) {
         option.$onRemove();
+
+        this.disabled = false;
         this.$rootScope.$broadcast('menuHasChanged');
     }
 
@@ -152,6 +154,8 @@ export default class ContentBoxesController {
         };
 
         let modal = await this._modalService.showModal(modalSettings);
+
+        this.disabled = !!!(await modal.close)
 
         return await modal.close;
     }
@@ -225,6 +229,7 @@ export default class ContentBoxesController {
             }
         }
 
+        this.disabled = false;
         this.$rootScope.$broadcast('menuHasChanged');
     }
 
@@ -235,6 +240,7 @@ export default class ContentBoxesController {
 
     //Save model passing current model as param
     saveModel() {
+
         if (this.hasEmptyMenus()) {
             this.blankMenuError({ $item: this.ngModel });
             return;
@@ -243,6 +249,8 @@ export default class ContentBoxesController {
             this.boxMenuError({ $item: this.ngModel });
             return;
         }
+
+        this.disabled = true;
         this.onSave({ $item: this.ngModel });
     }
 }

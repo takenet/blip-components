@@ -16,15 +16,15 @@
                 <div class="content-boxes__list__options">
                     <div ng-if="!$ctrl.hideMenu" ng-auth-write="disable" ng-click="$ctrl.addToList('box')">
                         <icon-dpr>&#xE02E;</icon-dpr>
-                        <span translate>utils.misc.menu</span>
+                        <span>{{ $ctrl.menuDescription }}</span>
                     </div>
                     <div ng-auth-write="disable" ng-click="$ctrl.addToList('destiny')">
                         <icon-dpr>&#xE89E;</icon-dpr>
-                        <span translate>utils.misc.text</span>
+                        <span>{{ $ctrl.textName }}</span>
                     </div>
                     <div ng-auth-write="disable" ng-click="$ctrl.addToList('link')">
                         <icon-dpr>&#xE157;</icon-dpr>
-                        <span translate>utils.misc.link</span>
+                        <span>{{ $ctrl.linkName }}</span>
                     </div>
                 </div>
                 <icon-dpr class="content-boxes-add">&#xE147;</icon-dpr>
@@ -34,5 +34,13 @@
 </div>
 
 <div class="three columns offset-by-nine tr">
-    <button ng-auth-write ng-click="$ctrl.saveModel()" type="submit" class="bp-btn bp-btn--bot bp-btn--small" translate>utils.forms.save</button>
+    <button
+        ng-disabled="$ctrl.disabled"
+        ng-auth-write="{{$ctrl.disabled}}"
+        ng-click="$ctrl.saveModel()"
+        type="submit" 
+        class="bp-btn bp-btn--bot bp-btn--small" 
+    >
+        {{ $ctrl.saveButtonName }}
+    </button>
 </div>

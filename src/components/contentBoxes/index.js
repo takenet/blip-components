@@ -16,6 +16,10 @@ export const contentBoxes = angular
             onSave: '&',
             blankMenuError: '&?',
             boxMenuError: '&?',
+            menuDescription: '@',
+            textName: '@',
+            linkName: '@',
+            saveButtonName: '@',
         },
     })
     .name;
