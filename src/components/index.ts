@@ -11,13 +11,13 @@ import { BlipDaterangePickerComponent } from './blipDaterangePicker/blipDaterang
 import { BlipFooterComponent } from './blipFooter/blipFooter.component';
 import { BlipInputDprComponent } from './blipInputDpr/blipInputDpr.component';
 import { BlipInputComponent } from './blipInput/blipInput.component';
+import { BlipLoadingComponent } from './blipLoading/blipLoading.component';
 import { BlipMultipleInputComponent } from './blipMultipleInput/blipMultipleInput.component';
 import { BlipRadioComponent } from './blipRadio/blipRadio.component';
 import { BlipSelectComponent } from './blipSelect/blipSelect.component';
 import { BlipTableComponent } from './blipTable/blipTable.component';
 import { BlipTagsComponent } from './blipTags/blipTags.component';
 import { BlipTextareaComponent } from './blipTextarea/blipTextarea.component';
-import { BuilderNodeComponent } from './builderNode/builderNode.component';
 import { BuilderSearchComponent } from './builderSearch/builderSearch.component';
 import { CardComponent } from './card/card.component';
 import { Checkbox } from './checkbox/checkbox.components';
@@ -87,13 +87,13 @@ export const ComponentsModule = angular
         BlipFooterComponent,
         BlipInputDprComponent,
         BlipInputComponent,
+        BlipLoadingComponent,
         BlipMultipleInputComponent,
         BlipRadioComponent,
         BlipSelectComponent,
         BlipTableComponent,
         BlipTagsComponent,
         BlipTextareaComponent,
-        BuilderNodeComponent,
         BuilderSearchComponent,
         CardComponent,
         Checkbox,
