@@ -18,9 +18,7 @@ export default class ContentBoxesController {
         this._ngToast = ngToast;
         this._permissionsService = PermissionsService;
         this.disabled = true;
-        this.$onChanges = (changes) => {
-            this.bindPersistentMenu();
-        };
+        
         this.init();
     }
 
@@ -28,6 +26,10 @@ export default class ContentBoxesController {
         this.hasPermissions = await this._permissionsService.hasPermissions(
             'write',
         );
+    }
+
+    $onChanges() {
+        this.bindPersistentMenu();
     }
 
     bindPersistentMenu() {
@@ -155,7 +157,7 @@ export default class ContentBoxesController {
 
         let modal = await this._modalService.showModal(modalSettings);
 
-        this.disabled = !!!(await modal.close)
+        this.disabled = !Boolean(await modal.close)
 
         return await modal.close;
     }
