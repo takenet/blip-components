@@ -61,7 +61,7 @@ class IconController implements IComponentController {
         let paths = svg.getElementsByTagName('path');
 
         for (let i = 0; i < paths.length; i++) {
-            paths[i].setAttribute('fill', '');
+            paths[i].removeAttribute('fill');
         }
 
         svg.setAttribute('fill', color);
