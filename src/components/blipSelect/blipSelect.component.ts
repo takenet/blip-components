@@ -15,6 +15,7 @@ enum BlipSelectCallback {
     OnAfterCloseSelect,
     OnInputChange,
     OnSelectOption,
+    OnDisabledOptionClick,
     OnFocus,
     OnBlur,
     OnAddOption,
@@ -52,6 +53,7 @@ class BlipSelectController extends ComponentController
     onBlur: ($event) => void;
     onAddOption: ($event) => void;
     onSelectOption: ($event) => void;
+    onDisabledOptionClick: ($event) => void;
     customSearch: ($event) => void;
 
     constructor(
@@ -96,6 +98,10 @@ class BlipSelectController extends ComponentController
             onSelectOption: this.handle.bind(
                 this,
                 BlipSelectCallback.OnSelectOption,
+            ),
+            onDisabledOptionClick: this.handle.bind(
+                this,
+                BlipSelectCallback.OnDisabledOptionClick,
             ),
             onFocus: this.handle.bind(this, BlipSelectCallback.OnFocus),
             onBlur: this.handle.bind(this, BlipSelectCallback.OnBlur),
@@ -218,6 +224,9 @@ class BlipSelectController extends ComponentController
             case BlipSelectCallback.OnSelectOption:
                 this.handleOnSelectOption(emitter);
                 break;
+            case BlipSelectCallback.OnDisabledOptionClick:
+                this.handleOnDisabledOptionClick(emitter);
+                break;
             case BlipSelectCallback.OnFocus:
                 this.handleOnFocus(emitter);
                 break;
@@ -270,6 +279,12 @@ class BlipSelectController extends ComponentController
 
         if (this.onSelectOption) {
             this.onSelectOption(EventEmitter({ ...$event }));
+        }
+    }
+
+    handleOnDisabledOptionClick({ $event }) {
+        if (this.onDisabledOptionClick) {
+            this.onDisabledOptionClick(EventEmitter({ ...$event }));
         }
     }
 
@@ -327,6 +342,7 @@ export const BlipSelectComponent = angular
             clearAfterAdd: '<?',
             onInputChange: '&?',
             onSelectOption: '&?',
+            onDisabledOptionClick: '&?',
             onAddOption: '&?',
             customSearch: '&?',
             options: '<?',
