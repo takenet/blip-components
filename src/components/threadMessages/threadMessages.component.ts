@@ -6,6 +6,8 @@ import { IComponentController, IOnChangesObject } from 'angular';
 
 class ThreadMessages implements IComponentController {
     private scrollToBottom: boolean;
+    private scrollToBottomTimeout: number;
+    private scrollTimeout: number;
     private isLoadingThread: boolean = true; //True so placeholder appears first
     loadMore: (obj: any) => void;
     wrapper: HTMLDivElement;
@@ -27,13 +29,14 @@ class ThreadMessages implements IComponentController {
             const isChangedAndNearBottom = scrollDiff < this.wrapper.clientHeight;
 
             if (!messages.isFirstChange() && isChangedAndNearBottom) {
-                setTimeout(() => this.scrollViewToBottom());
+                this.scrollToBottomTimeout = setTimeout(() => this.scrollViewToBottom());
             }
         }
     }
 
     $onInit() {
-        setTimeout(() => {
+        console.log('init');
+        this.scrollTimeout = setTimeout(() => {
             const scroll = async (event) => {
                 if (event.srcElement.scrollTop === 0) {
                     if (this.loadMore) {
@@ -44,6 +47,17 @@ class ThreadMessages implements IComponentController {
             const debouncedScroll = debounce(scroll);
             this.wrapper.addEventListener('scroll', debouncedScroll);
         });
+    }
+
+    $onDestroy() {
+        console.log('destroyed');
+        if (this.scrollToBottomTimeout) {
+            clearTimeout(this.scrollToBottomTimeout);
+        }
+
+        if (this.scrollTimeout) {
+            clearTimeout(this.scrollTimeout);
+        }
     }
 
     scrollViewToBottom() {
