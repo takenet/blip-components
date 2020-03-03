@@ -35,7 +35,6 @@ class ThreadMessages implements IComponentController {
     }
 
     $onInit() {
-        console.log('init');
         this.scrollTimeout = setTimeout(() => {
             const scroll = async (event) => {
                 if (event.srcElement.scrollTop === 0) {
@@ -50,7 +49,6 @@ class ThreadMessages implements IComponentController {
     }
 
     $onDestroy() {
-        console.log('destroyed');
         if (this.scrollToBottomTimeout) {
             clearTimeout(this.scrollToBottomTimeout);
         }
