@@ -9,6 +9,7 @@ class ThreadMessages implements IComponentController {
     private scrollToBottomTimeout: number;
     private scrollTimeout: number;
     private isLoadingThread: boolean = true; //True so placeholder appears first
+    private debouncedScroll: any;
     loadMore: (obj: any) => void;
     wrapper: HTMLDivElement;
     constructor(
@@ -43,8 +44,8 @@ class ThreadMessages implements IComponentController {
                     }
                 }
             };
-            const debouncedScroll = debounce(scroll);
-            this.wrapper.addEventListener('scroll', debouncedScroll);
+            this.debouncedScroll = debounce(scroll);
+            this.wrapper.addEventListener('scroll', this.debouncedScroll);
         });
     }
 
@@ -56,6 +57,11 @@ class ThreadMessages implements IComponentController {
         if (this.scrollTimeout) {
             clearTimeout(this.scrollTimeout);
         }
+
+        this.wrapper.removeEventListener(
+            'scroll',
+            this.debouncedScroll,
+        );
     }
 
     scrollViewToBottom() {
