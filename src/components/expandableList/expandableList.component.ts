@@ -18,7 +18,7 @@ export class ExpandableListComponent {
             this.previousActivated = undefined;
             return;
         }
-        this.previousActivated && this.previousActivated.toggleActive();
+        this.previousActivated && this.previousActivated.deactivate();
         this.previousActivated = item;
     }
 }
