@@ -2,11 +2,13 @@ import angular from 'core/angular';
 
 export class InfoHeaderComponent {
     showInfo: boolean;
+    onInfoClicked: () => {};
     constructor() {}
 
     toggleInfo(event) {
         event.stopPropagation();
         this.showInfo = !this.showInfo;
+        this.onInfoClicked && this.onInfoClicked();
     }
 }
 
@@ -24,6 +26,7 @@ export const InfoHeader = angular
             headerClass: '@?',
             infoClass: '@?',
             extraClass: '@?',
+            onInfoClicked: '&?',
         },
         template: `<div class="flex flex-column">
             <span class="flex flex-row items-center justify-between">
