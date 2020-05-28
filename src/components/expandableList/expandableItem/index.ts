@@ -21,6 +21,10 @@ export class ExpandableItemComponent {
         this.isActive = !this.isActive;
     }
 
+    deactivate() {
+        this.isActive = false;
+    }
+
     open(event) {
         this.toggleActive();
         this.expandableListCtrl.toggleItem(this);

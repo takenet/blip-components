@@ -50,5 +50,11 @@ on port `3000`, and all changes will be tracked.
 
 To finish a build, run `npm run build`.
 
+## Want to contribute?
+
+If you want to do a commit, all you need to do is run `npm run commit` and you will get the prompts needed to start a commit!
+
+Follow contributing guidelines as [described here](CONTRIBUTING.md)
+
 ## License
 `blip-components` is under the [ISC license](https://opensource.org/licenses/ISC).

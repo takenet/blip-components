@@ -23,13 +23,14 @@
         width: 0;
         background-color: #202631;
         border-radius: 40px;
-        padding: 6px 0 0 46px;
+        padding: 8px 0 0 25px;
         height: 40px;
         color: #fff;
         z-index: 1;
         opacity: 0;
         transition: 500ms opacity;
         position: absolute;
+        text-align: center;
 
         .fw3 {
             display: none;
