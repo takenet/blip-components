@@ -2,7 +2,7 @@
 
 # blip-components
 
-BLiP components to use in AngularJS (1.x) applications.
+BLiP components to use in AngularJS (1.x) applications. 
 
 ## Usage
 
@@ -46,7 +46,7 @@ Remeber to import the css file to style your components
 ## Building
 
 If you want to contribute to our project, clone this project and, on root directory, run `npm start`. A new process will be started
-on port `3000`, and all changes will be tracked.
+on port `3000`, and all changes will be tracked. 
 
 To finish a build, run `npm run build`.
 
