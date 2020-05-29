@@ -2,7 +2,7 @@
 
 # blip-components
 
-BLiP components to use in AngularJS (1.x) applications.
+BLiP components to use in AngularJS (1.x) applications. 
 
 ## Usage
 
