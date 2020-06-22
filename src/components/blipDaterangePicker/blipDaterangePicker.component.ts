@@ -1,7 +1,7 @@
 import angular from 'core/angular';
 import { BlipDaterangepicker } from 'blip-toolkit';
 import { Component } from 'decorators';
-import { IComponentController, IComponentOptions, IRootElementService, ILocaleService, IScope } from 'angular';
+import { IComponentController, IComponentOptions, IRootElementService, ILocaleService, IScope, translate } from 'angular';
 
 @Component({
     template: '',
@@ -35,23 +35,35 @@ export class BlipDaterangePickerController implements IComponentController {
         private $element: IRootElementService,
         private $locale: ILocaleService,
         private $scope: IScope,
+        private $translate: translate.ITranslateService
     ) {
         this.daterangePicker = new BlipDaterangepicker(this.daterangepickerOptions());
     }
 
     $onInit() {
         this.$element[0].appendChild(this.daterangePicker.render());
-
         this.$scope.$watch('$ctrl.period.selectedPeriod', () => {
             this.daterangePicker.selectedPeriod = this.period.selectedPeriod;
         });
     }
 
+    private buildTranslatedArray(arrayType, type) {
+        return arrayType.map(
+            (_, index) => {
+                const translationKey = `DATETIME_FORMATS.${type}.${index}`;
+                const translatedValue = this.$translate.instant(translationKey);
+                return translationKey === translatedValue
+                    ? this.$locale.DATETIME_FORMATS.MONTH[index]
+                    : translatedValue;
+            }
+        );
+    }
+
     private daterangepickerOptions() {
         const options = {
             hasTime: this.hasTime,
-            months: this.$locale.DATETIME_FORMATS.MONTH,
-            weekdays: this.$locale.DATETIME_FORMATS.DAY,
+            months: this.buildTranslatedArray(this.$locale.DATETIME_FORMATS.MONTH, 'MONTH'),
+            weekdays: this.buildTranslatedArray(this.$locale.DATETIME_FORMATS.DAY, 'DAY'),
             cancelText: this.cancelText,
             applyText: this.applyText,
             startDatePlaceholder: this.startDatePlaceholder,
