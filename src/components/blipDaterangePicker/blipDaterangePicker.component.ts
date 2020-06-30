@@ -53,7 +53,7 @@ export class BlipDaterangePickerController implements IComponentController {
                 const translationKey = `DATETIME_FORMATS.${type}.${index}`;
                 const translatedValue = this.$translate.instant(translationKey);
                 return translationKey === translatedValue
-                    ? this.$locale.DATETIME_FORMATS.MONTH[index]
+                    ? this.$locale.DATETIME_FORMATS[type][index]
                     : translatedValue;
             }
         );
