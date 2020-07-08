@@ -8,23 +8,31 @@ export const iconDpr = angular
     .module('blipComponents.iconDpr', [])
     .component('iconDpr', {
         template: '<i class="{{$ctrl.classes}}" ng-transclude></i>',
-        controller: function() {
-            'ngInject';
-            this.size = this.size || 's';
-            this.classes = this.iconClass
-                ? `icon icon-${this.iconClass}`
-                : `icon icon-material icon-${this.size}`;
+        controller: class {
+            classes: string;
+            size: string;
+            iconClass: string;
+            avatar: string;
+            border: string;
+            round: string;
 
-            if (typeof this.avatar === 'string') {
-                this.classes += ' icon-avatar';
-            }
+            $onInit() {
+                this.size = this.size || 's';
+                this.classes = this.iconClass
+                    ? `icon icon-${this.iconClass}`
+                    : `icon icon-material icon-${this.size}`;
 
-            if (typeof this.border === 'string') {
-                this.classes += ' icon-border';
-            }
+                if (this.avatar) {
+                    this.classes += ' icon-avatar';
+                }
 
-            if (typeof this.round === 'string') {
-                this.classes += ' round';
+                if (this.border) {
+                    this.classes += ' icon-border';
+                }
+
+                if (this.round) {
+                    this.classes += ' round';
+                }
             }
         },
         controllerAs: '$ctrl',

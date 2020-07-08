@@ -26,7 +26,7 @@ export const LoadingIconComponent = angular
             height: string;
             icon: boolean;
 
-            constructor() {
+            $onInit() {
                 const props = {
                     width: this.width,
                     height: this.height,

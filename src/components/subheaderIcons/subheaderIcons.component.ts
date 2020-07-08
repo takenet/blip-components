@@ -1,6 +1,6 @@
 import angular from 'core/angular';
 import template from './SubheaderIconsView.html';
-import { IStateService } from 'angular-ui-router';
+import { StateService } from '@uirouter/angularjs';
 
 class SubheaderIcons {
     //Properties
@@ -9,7 +9,7 @@ class SubheaderIcons {
     isAttendance: boolean;
     showBlipChatSidenav: () => {};
     SubheaderIcons;
-    constructor(private $state: IStateService) {}
+    constructor(private $state: StateService) {}
 
     async $onChanges($changedObjects) {
         if (

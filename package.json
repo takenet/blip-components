@@ -33,7 +33,6 @@
     "webpack-dev-server": "^3.1.4",
     "@types/angular": "1.6.45",
     "@types/angular-translate": "^2.16.0",
-    "@types/angular-ui-router": "^1.1.40",
     "@types/node": "^7.0.18",
     "@types/webpack": "^4.4.24",
     "babel-preset-env": "^1.1.8",
@@ -64,6 +63,7 @@
     "loader-utils": "^1.0.0"
   },
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.22",
     "angular-tooltips": "^1.2.2",
     "angular-translate": "^2.15.2",
     "angular-translate-loader-partial": "^2.18.1",

@@ -1,6 +1,6 @@
 import './card.scss';
 import template from './CardView.html';
-import { IStateService } from 'angular-ui-router';
+import { StateService } from '@uirouter/angularjs';
 import { ITranscludeFunction } from 'angular';
 import angular from 'core/angular';
 
@@ -45,7 +45,7 @@ class CardComponentController implements ICardComponentController {
     itemTitle: string;
     aditionalInfo: string;
 
-    constructor(private $state: IStateService, private $transclude: ITranscludeFunction) {}
+    constructor(private $state: StateService, private $transclude: ITranscludeFunction) {}
 
     get href() {
         return this.$state.href(this.sref, this.sparams);
