@@ -64,6 +64,7 @@
     "loader-utils": "^1.0.0"
   },
   "dependencies": {
+    "angular-sanitize": "1.5.8",
     "angular-tooltips": "^1.2.2",
     "angular-translate": "^2.15.2",
     "angular-translate-loader-partial": "^2.18.1",
@@ -76,7 +77,8 @@
     "ng-toast": "^2.0.0",
     "ob-daterangepicker": "^0.12.1",
     "semantic-release": "^15.9.15",
-    "tslib": "1.6.0"
+    "tslib": "1.6.0",
+    "uuid": "^8.2.0"
   },
   "config": {
     "commitizen": {

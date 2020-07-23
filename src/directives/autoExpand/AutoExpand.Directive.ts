@@ -10,15 +10,15 @@ class AutoExpand {
     scope: boolean;
     transclude: boolean;
 
-    constructor(private $timeout) {
+    constructor(private $timeout, private $sce) {
         this.require = '?ngModel';
         this.restrict = 'A';
         this.scope = false;
         this.transclude = false;
     }
 
-    static factory($timeout) {
-        return new AutoExpand($timeout);
+    static factory($timeout, $sce) {
+        return new AutoExpand($timeout, $sce);
     }
 
     compile() {
@@ -84,7 +84,7 @@ class AutoExpand {
             'textTransform'
         ])(inputStyle)(this.ghostElement.style);
 
-        this.ghostElement.innerHTML = element[0].value || attrs.placeholder;
+        this.ghostElement.innerHTML = this.$sce.getTrustedHtml(element[0].value) || attrs.placeholder;
         const growingWidth = this.ghostElement.offsetWidth + 10;
         let inputWidth = growingWidth;
         if (mainContentElement && menuAreaElement) {
