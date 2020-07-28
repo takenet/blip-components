@@ -1,5 +1,7 @@
 <span class="avatar">
-    <img ng-if="$ctrl.user.photoUri" ng-src="{{$ctrl.user.photoUri}}" alt="{{$ctrl.user.fullName}}">
+    <img ng-if="$ctrl.user.photoUri" ng-src="{{$ctrl.user.photoUri}}" 
+    on-error="$ctrl.onError()"
+    alt="{{$ctrl.user.fullName}}">
     <letter-avatar ng-if="!$ctrl.user.photoUri" class="account-editing-avatar ml4" text="$ctrl.user.fullName">
     </letter-avatar>
 </span>
