@@ -5,7 +5,7 @@ import angular from 'core/angular';
 class AvatarComponentController {
     private user: { fullName: string, photoUri: string };
 
-    onError() {
+    onFailure() {
         this.user.photoUri = undefined;
     }
 }
