@@ -21,11 +21,14 @@ class UploadFileName {
             fileName: '=?',
             resetIcon: '&?',
             circle: '&?',
+            accept: '=?'
         };
     }
 
     link(scope, element, attrs, ngModel) {
         const x = element[0] as HTMLDivElement;
+        scope.accept = scope.accept ? scope.accept : '*';
+
         setTimeout(() => {
             element.find('input').bind('change', async function() {
                 const el = ['image/png', 'image/jpg', 'image/jpeg'].find(

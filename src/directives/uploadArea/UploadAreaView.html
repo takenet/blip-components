@@ -5,7 +5,7 @@
         &nbsp;
         <button type="button" class="bp-btn bp-btn--bot bp-btn--small" ng-click="selectFile()" translate>utils.forms.select</button>
     </label>
-    <input id="upload-input" name="{{::id}}" ng-model="file" type="file" class="u-full-width" ng-class="{ 'has-file-reader': hasFileReader}" hidden/>
+    <input id="upload-input" name="{{::id}}" ng-model="file" type="file" class="u-full-width" ng-class="{ 'has-file-reader': hasFileReader}" accept="{{::accept}}" hidden/>
     <img ng-if="file && hasFileReader" ng-src-binary="file" alt="{{file.name}}">
 
     <a ng-if="ngPermission && file && hasFileReader" ng-auth-write ng-click="removeFile()" class="text">
