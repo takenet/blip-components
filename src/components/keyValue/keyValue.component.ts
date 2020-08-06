@@ -1,9 +1,11 @@
-import angular from 'core/angular';
-import template from './KeyValueView.html';
-import './KeyValue.scss';
-import { IFormController } from 'angular';
-import { EventEmitter } from 'shared/EventEmitter';
+import { IFormController, IRootScopeService, ITimeoutService } from 'angular';
 import { ChangeTabEvent } from 'components/contentTabs';
+import angular from 'core/angular';
+import { EventEmitter } from 'shared/EventEmitter';
+import './KeyValue.scss';
+import template from './KeyValueView.html';
+
+const ACTIONS_UNDOREDO_CHANGES: string = 'actions_undoredo_changes';
 
 class KeyValueController {
     onError: () => {};
@@ -23,7 +25,7 @@ class KeyValueController {
     isFirst: boolean = true;
     expandable: boolean;
 
-    constructor(private $scope) {
+    constructor(private $scope, private $rootScope: IRootScopeService, private $timeout: ITimeoutService) {
         this.$scope.$watchCollection('$ctrl.model', () => {
             if (this.isFirst && this.model) {
                 this.setKeyValues();
@@ -40,6 +42,10 @@ class KeyValueController {
         this.$scope.$on('$destroy', () => {
             deregisterChangeTabEvent();
         });
+
+        this.$rootScope.$on(ACTIONS_UNDOREDO_CHANGES, () => {
+            this.setKeyValues();
+        }
     }
 
     set model(value) {
@@ -51,21 +57,23 @@ class KeyValueController {
         return this.ngModel ? this.ngModel.$viewValue : undefined;
     }
 
-    $onInit() {}
+    $onInit() { }
 
     // deserialize Object to array of keyValue
     setKeyValues() {
-        this.keyValues = [];
+        this.$timeout(() => {
+            this.keyValues = [];
 
-        if (this.model) {
-            Object.keys(this.model).map((key) => {
-                this.keyValues = this.keyValues.concat({
-                    key: key,
-                    value: this.model[key],
-                    toggled: false,
+            if (this.model) {
+                Object.keys(this.model).map((key) => {
+                    this.keyValues = this.keyValues.concat({
+                        key: key,
+                        value: this.model[key],
+                        toggled: false,
+                    });
                 });
-            });
-        }
+            }
+        }, 100);
     }
 
     // serialize array of keyValue into Object
