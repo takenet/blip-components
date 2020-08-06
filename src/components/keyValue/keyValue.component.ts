@@ -45,7 +45,7 @@ class KeyValueController {
 
         this.$rootScope.$on(ACTIONS_UNDOREDO_CHANGES, () => {
             this.setKeyValues();
-        }
+        });
     }
 
     set model(value) {
