@@ -31,7 +31,7 @@ class UploadFileName {
 
         setTimeout(() => {
             element.find('input').bind('change', async function() {
-                const el = ['image/png', 'image/jpg', 'image/jpeg'].find(
+                const el = ['image/png', 'image/jpg', 'image/jpeg', 'image/gif'].find(
                     (e: string) => {
                         return e === this.files[0].type;
                     },
