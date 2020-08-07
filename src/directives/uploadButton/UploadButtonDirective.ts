@@ -19,10 +19,13 @@ class UploadButton {
             file: '=ngModel',
             ngPermission: '=?',
             round: '=?',
+            accept: '=?'
         };
     }
 
     link(scope, element, attrs, ngModel) {
+        scope.accept = scope.accept ? scope.accept : '*';
+
         element.find('input').bind('change', function() {
             scope.file = this.files[0];
             scope.showFile = false;

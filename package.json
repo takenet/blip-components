@@ -72,6 +72,7 @@
     "babel-polyfill": "^6.16.0",
     "blip-toolkit": "5.19.7",
     "fecha": "^2.3.3",
+    "he": "^1.2.0",
     "moment": "^2.22.1",
     "ng-cache-loader": "0.0.15",
     "ng-toast": "^2.0.0",
