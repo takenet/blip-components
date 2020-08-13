@@ -10,6 +10,7 @@ const ACTIONS_UNDOREDO_CHANGES: string = 'actions_undoredo_changes';
 class KeyValueController {
     onError: () => {};
     onChange: () => {};
+    onAdd: () => {};
     onToggleValue: (obj: any) => {};
     keyValueForm: IFormController;
     ngModel: any;
@@ -108,6 +109,8 @@ class KeyValueController {
             value: '',
             toggled: false,
         });
+
+        this.onAdd();
     }
 
     delete(index) {
@@ -189,6 +192,7 @@ export const KeyValueComponent = angular
         bindings: {
             onError: '&',
             onChange: '&',
+            onAdd: '&',
             onToggleValue: '&?',
             keyPlaceholder: '@?',
             valuePlaceholder: '@?',
