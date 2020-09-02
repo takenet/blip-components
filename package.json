@@ -77,6 +77,7 @@
     "ng-cache-loader": "0.0.15",
     "ng-toast": "^2.0.0",
     "ob-daterangepicker": "^0.12.1",
+    "sanitize-html": "^1.27.4",
     "semantic-release": "^15.9.15",
     "tslib": "1.6.0",
     "uuid": "^8.2.0"
