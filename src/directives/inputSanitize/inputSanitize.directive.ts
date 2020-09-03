@@ -34,7 +34,10 @@ class InputSanitize {
         'lexicon',
         'lookup',
         'lexeme',
-        'grapheme'
+        'grapheme',
+        'amazon:domain',
+        'amazon:effect',
+        'amazon:emotion'
     ];
 
     constructor() {
