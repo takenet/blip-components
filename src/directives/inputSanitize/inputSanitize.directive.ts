@@ -53,7 +53,8 @@ class InputSanitize {
                         sanitizeHtml(value, {
                             allowedTags: sanitizeHtml.defaults.allowedTags.concat(
                                 this.SSML_TAGS
-                            )
+                            ),
+                            allowedAttributes: false
                         })
                     );
                 }
