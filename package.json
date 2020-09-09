@@ -8,7 +8,7 @@
     "build": "./node_modules/.bin/webpack",
     "watch": "./node_modules/.bin/webpack --watch --progress",
     "commit": "./node_modules/.bin/git-cz",
-    "semantic-release": "semantic-release",
+    "semantic-release": "semantic-release"
   },
   "author": "Samuel Martins",
   "license": "ISC",
