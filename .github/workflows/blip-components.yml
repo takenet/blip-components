@@ -1,27 +1,26 @@
-name: Publish
 
-on:
-  push:
-    branches: 
-      - master
+# .github/workflows/test-and-release.yaml
+
+name: Test and Release
+on: [push]
+
 jobs:
-  build:
-    runs-on: ubuntu-latest
+test-and-release:
+    name: Run tests and release
+    runs-on: ubuntu-18.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        
-      - name: Setup Node
+    - name: Checkout
+        uses: actions/checkout@v1
+    - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12
-          egistry-url: https://registry.npmjs.org/
-      
-      - name: NPM Install, Build, and Test
-        run: |
-          npm install
-          npm run build
-          npm run semantic-release
+        node-version: 12
+    - name: Install dependencies
+        run: npm ci
+    - name: Run tests
+        run: npm test
+    - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm run semantic-release
