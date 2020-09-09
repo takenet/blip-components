@@ -20,8 +20,6 @@ jobs:
       - name: NPM Install, Build, and Test
         run: |
           npm install
-          npm run eslint
-          npm run test
           npm run build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
