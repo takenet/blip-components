@@ -34,7 +34,7 @@
     "@types/angular": "1.6.45",
     "@types/angular-translate": "^2.16.0",
     "@types/angular-ui-router": "^1.1.40",
-    "@types/node": "^7.0.18",
+   "@types/node": "^12.12.17",
     "@types/webpack": "^4.4.24",
     "@types/sanitize-html": "^1.23.3",
     "babel-preset-env": "^1.1.8",
