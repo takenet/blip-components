@@ -1,6 +1,6 @@
 import angular from 'core/angular';
 import he from 'he';
-import * as sanitizeHtml from 'sanitize-html';
+import sanitizeHtml from 'sanitize-html';
 
 class InputSanitize {
     public restrict: string;
