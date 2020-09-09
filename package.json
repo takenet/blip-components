@@ -64,13 +64,14 @@
     "loader-utils": "^1.0.0"
   },
   "dependencies": {
+    "@types/sanitize-html": "^1.23.3",
     "angular-sanitize": "1.5.8",
     "angular-tooltips": "^1.2.2",
     "angular-translate": "^2.15.2",
     "angular-translate-loader-partial": "^2.18.1",
     "angular-translate-storage-cookie": "^2.15.1",
     "babel-polyfill": "^6.16.0",
-    "blip-toolkit": "5.19.10", 
+    "blip-toolkit": "5.19.10",
     "fecha": "^2.3.3",
     "he": "^1.2.0",
     "moment": "^2.22.1",
