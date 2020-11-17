@@ -28,7 +28,7 @@ export class BlipDaterangePickerController implements IComponentController {
     public onDateSelection: ($period) => void;
     public period: { selectedPeriod: { startDate: Date, endDate: Date },
                      validPeriod: { startDate: Date, endDate: Date },
-                     maxRange?: number };
+                     maxRangeInDays?: number };
 
     private daterangePicker: BlipDaterangepicker;
 
@@ -79,7 +79,7 @@ export class BlipDaterangePickerController implements IComponentController {
                 ...options,
                 selectedPeriod: this.period.selectedPeriod,
                 validPeriod: this.period.validPeriod,
-                maxRange: this.period.maxRange
+                maxRangeInDays: this.period.maxRangeInDays
             };
         }
 
