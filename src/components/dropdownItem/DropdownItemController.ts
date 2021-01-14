@@ -80,6 +80,7 @@ export class DropdownItemController {
                 element = true;
                 break;
             } else if (
+                path[i].classList &&
                 path[i].classList.contains('dropdown-item-content') &&
                 this.closeOnClick
             ) {
@@ -114,9 +115,11 @@ export class DropdownItemController {
             this.isOpen = false;
             this.$rootScope.$broadcast(ToggleDropdownItem);
             document.removeEventListener('click', this.clickOutsideDropdown);
+            window.removeEventListener('blur', this.clickOutsideDropdown);
         } else {
             this.$rootScope.$broadcast(ToggleDropdownItem);
             document.addEventListener('click', this.clickOutsideDropdown);
+            window.addEventListener('blur', this.clickOutsideDropdown);
             this.isOpen = !this.isOpen;
 
             if (this.onOpen) {
