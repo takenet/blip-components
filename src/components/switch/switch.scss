@@ -45,7 +45,7 @@ switch {
             }
         }
         &:disabled + label {
-            background: $bp-color-aqua-island;
+            background: $color-primary-light;
         }        
     }
 }
