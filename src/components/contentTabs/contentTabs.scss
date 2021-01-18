@@ -2,7 +2,8 @@
 
 .content-tabs {
     .content-tabs-items {
-        display: inline-block;
+        display: flex;
+        justify-content: space-around;
         border-bottom: 2px solid #ebf0f4;
         width: 100%;
 
@@ -11,7 +12,6 @@
             padding: 10px 20px;
             font-weight: 500;
             font-size: $bp-fs-5;
-            margin-right: 10px;
             margin-bottom: 0;
 
             &.tab-href {
