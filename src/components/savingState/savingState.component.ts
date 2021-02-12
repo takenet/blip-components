@@ -1,8 +1,6 @@
 import angular from 'core/angular';
 import './savingState.scss';
 import * as saveSpinner from 'assets/img/loading3.png';
-import * as saveCheck from 'assets/img/checked.png';
-
 export class SavingStateComponent {
     private isSaving: boolean;
 
@@ -20,7 +18,7 @@ export const savingState = angular
         bindings: {},
         template: `<div class="saving-component">
             <div ng-show='!$ctrl.$rootScope.saving'>
-                <img id='saving-img' src="${saveCheck}">
+                <i class="icon-true"></i>
                 <span id='saving-text' translate>utils.misc.savedMsg</span>
             </div>
             <div ng-show='$ctrl.$rootScope.saving'>
