@@ -1,3 +1,5 @@
+@import "../../assets/scss/variables";
+
 .tooltip-button {
     z-index: 9;
     display: inline-block;
@@ -15,7 +17,7 @@
         }
 
         button {
-            color: #3F7DE8;
+            color: $bp-color-bot;
         }
     }
 
@@ -44,7 +46,7 @@
         vertical-align: top;
         border: none;
         min-width: 0;
-        color: #c9dfe4;
+        color: $bp-color-breeze;
         float: left;
         position: relative;
         width: 40px;
