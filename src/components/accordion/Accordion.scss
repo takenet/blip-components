@@ -35,6 +35,13 @@
             );
     }
 
+    &-icon{
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        color: $bp-color-warning-yellow;
+    }
+
     > input[type="checkbox"] {
         position: absolute;
         cursor: pointer;
@@ -44,6 +51,10 @@
         height: 100%;
         z-index: 1;
         opacity: 0;
+
+        &.hasRouterChild{
+            opacity: 0;
+        }
 
         &:checked {
             ~ .accordion-title {
