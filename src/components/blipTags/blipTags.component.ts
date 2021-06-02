@@ -77,10 +77,9 @@ class BlipTagsController extends ComponentController
             this.model = this.model
                 ? this.model.map(removeBackgroundOptions)
                 : undefined;
-        });
+        }, 1000);
     }
 
-    //
     $onInit() {
         const tagsElement = this.blipTagsInstance.render({
             options: this.options,
@@ -110,6 +109,10 @@ class BlipTagsController extends ComponentController
         ) {
             this.blipTagsInstance.render({
                 options: this.options,
+            });
+        } else {
+            this.blipTagsInstance.render({
+                options: changesObj.options
             });
         }
     }
