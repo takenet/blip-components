@@ -6,8 +6,8 @@ import { IComponentController, IOnChangesObject } from 'angular';
 
 class ThreadMessages implements IComponentController {
     private scrollToBottom: boolean;
-    private scrollToBottomTimeout: number;
-    private scrollTimeout: number;
+    private scrollToBottomTimeout: any;
+    private scrollTimeout: any;
     private isLoadingThread: boolean = true; //True so placeholder appears first
     private debouncedScroll: any;
     loadMore: (obj: any) => void;

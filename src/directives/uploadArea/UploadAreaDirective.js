@@ -14,12 +14,14 @@ class UploadArea {
             file: '=ngModel',
             ngPermission: '=?',
             round: '=?',
+            accept: '=?'
         };
     }
 
     link(scope, element, attrs, ngModel) {
         scope.hasFileReader = window.FileReader;
-
+        scope.accept = scope.accept ? scope.accept : '*';
+        
         element.find('input').bind('change', function() {
             scope.file = this.files[0];
             ngModel.$setDirty();

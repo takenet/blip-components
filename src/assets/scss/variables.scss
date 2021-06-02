@@ -17,9 +17,9 @@ $footer-height: 57px;
 $footer-height-desktop: 50px;
 
 //Primary
-$color-primary: #2CC3D5;
-$color-primary-light: #0CC8CC;
-$color-primary-dark: #15AFB2;
+$color-primary: #3F7DE8;
+$color-primary-light: #B3D4FF;
+$color-primary-dark: #0747a6;
 
 //Secondary
 $color-secondary: #546E7A;
@@ -128,9 +128,9 @@ $darken-amount: 7%;
   @return darken($color, $darken-amount);
 }
 
-$bp-color-bot: #2cc3d5;
-$bp-color-blip-light: #0cc8cc;
-$bp-color-blip-dark: #15afb2;
+$bp-color-bot: #3F7DE8;
+$bp-color-blip-light: #B3D4FF;
+$bp-color-blip-dark: #0747a6;
 
 $bp-color-warning: #f76556;
 $bp-color-warning-light: #fbeaea;
@@ -181,9 +181,9 @@ $bp-color-facebook: #3c5a99;
 
 // Duplicated to follow BLiP Toolkit standards and keep legacy
 // Delete both when import sass file from BLiP Toolkit
-$bp-c-bot: #2cc3d5;
-$bp-c-blip-light: #0cc8cc;
-$bp-c-blip-dark: #15afb2;
+$bp-c-bot: #3F7DE8;
+$bp-c-blip-light: #B3D4FF;
+$bp-c-blip-dark: #0747a6;
 
 $bp-c-warning: #f76556;
 $bp-c-warning-light: #fbeaea;

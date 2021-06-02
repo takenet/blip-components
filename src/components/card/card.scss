@@ -4,7 +4,7 @@ card,
 .card {
     display: block;
     background-color: $color-white;
-    border-radius: 2px;
+    border-radius: 8px;
     margin-top: 1.5*$u;
     margin-bottom: 1.5*$u;
     transition: box-shadow .15s ease-in-out,transform .15s ease-in-out;

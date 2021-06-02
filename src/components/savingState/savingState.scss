@@ -2,21 +2,42 @@
 @import "../../assets/scss/mixins";
 
 .saving-component {
-    margin-left: 10px;
+    border-radius: 8px;
+    min-width: 75px;
+    height: 33px;
+    background: rgba(10, 15, 26, 0.4);
+    margin-top: -3px;
+    padding-right: 10px;
 
     div {
         @include flex-box;
         justify-items: center;
+        align-items: center;
+        align-content: center;
+        height: 33px;
     }
 
     span {
         margin-left: 5px;
         font-size: $bp-fs-6;
-        color: $bp-color-rooftop;
+        color: $bp-color-cloud;
         line-height: 1;
+        font-weight: bold;
     }
-    img {
-        height: 15px;
-        width: 15px;
+
+    i {
+        align-self: center;
+        border: 2px solid $bp-color-cloud;
+        font-size: 0.6rem;
+        margin-left: 8px;
+        border-radius: 100%;
+        padding: 0 2.5px;
+        color: $bp-color-cloud;
+    }
+
+    .spin {
+        width: 20px;
+        margin-left: 8px;
+        padding: 0 2.5px;
     }
 }

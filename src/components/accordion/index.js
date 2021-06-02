@@ -1,21 +1,32 @@
-import angular from 'core/angular';
-import './Accordion.scss';
+import angular from "core/angular";
+import template from './AccordionView.html';
+import "./Accordion.scss";
+class AccordionComponentController {
+    imageuri;
+    showimage;
+    ischecked;
+    item;
+
+    onFailure() {
+        this.imageuri = undefined;
+        this.showimage = undefined;
+        this.ischecked = true;
+        this.item = undefined;
+    }
+}
 
 export const accordion = angular
-    .module('blipComponents.accordion', [])
-    .component('accordion', {
-        template: `
-        <article class="accordion relative">
-            <input type="checkbox" checked />
-            <i class="accordion-chevron fr"></i>
-            <h4 class="accordion-title ma0 ttu" ng-bind="$ctrl.title"></h4>
-            <div class="accordion-content relative overflow-hidden" ng-transclude></div>
-        </article>
-        `,
-        controllerAs: '$ctrl',
+    .module("blipComponents.accordion", [])
+    .component("accordion", {
+        template,
+        controller: AccordionComponentController,
+        controllerAs: "$ctrl",
         transclude: true,
         bindings: {
-            title: '@',
-        },
-    })
-    .name;
+            title: "@",
+            item: "<",
+            imageuri: "<",
+            showimage: "<",
+            ischecked: "<"
+        }
+    }).name;
