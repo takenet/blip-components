@@ -111,9 +111,9 @@ class BlipTagsController extends ComponentController
                 options: this.options,
             });
         } else {
-            this.blipTagsInstance.render({
-                options: changesObj.options
-            });
+            this.blipTagsInstance.blipSelectInstance.configOptions.disabled = true;
+            this.blipTagsInstance.tagsOptions.canAddOptions = changesObj.canAddOptions.currentValue;
+            this.blipTagsInstance.tagsOptions.canRemoveTags = changesObj.canRemoveTags.currentValue;
         }
     }
 
