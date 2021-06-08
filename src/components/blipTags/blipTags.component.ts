@@ -42,6 +42,7 @@ class BlipTagsController extends ComponentController
     blipTagsInstance;
     shouldRenderMyself: boolean;
     placeholder: any;
+    disabled: boolean = false;
 
     constructor(
         private $element,
@@ -65,7 +66,7 @@ class BlipTagsController extends ComponentController
             toggleTagsMode: this.toggleTagsMode,
             canRemoveTags: this.canRemoveTags,
             canChangeBackground: this.canChangeBackground,
-            mode: this.mode,
+            mode: this.mode
         });
 
         /**
@@ -77,10 +78,9 @@ class BlipTagsController extends ComponentController
             this.model = this.model
                 ? this.model.map(removeBackgroundOptions)
                 : undefined;
-        });
+        }, 1000);
     }
 
-    //
     $onInit() {
         const tagsElement = this.blipTagsInstance.render({
             options: this.options,
@@ -111,6 +111,10 @@ class BlipTagsController extends ComponentController
             this.blipTagsInstance.render({
                 options: this.options,
             });
+        } else {
+            this.blipTagsInstance.blipSelectInstance.configOptions.disabled = this.disabled;
+            this.blipTagsInstance.tagsOptions.canAddOptions = changesObj.canAddOptions.currentValue;
+            this.blipTagsInstance.tagsOptions.canRemoveTags = changesObj.canRemoveTags.currentValue;
         }
     }
 
@@ -174,6 +178,7 @@ export const BlipTagsComponent = angular
             promptTextCreator: '@?',
             placeholder: '@?',
             options: '<?',
+            disabled: '<?',
             canRemoveTags: '<?',
             canChangeBackground: '<?',
             onTagAdded: '&?',
