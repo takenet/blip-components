@@ -10,11 +10,13 @@ export const TranslateModuleConfig = (
 
     $translateProvider
         .useLoader('AsyncTranslationLoader')
-        .registerAvailableLanguageKeys(['en', 'pt'], {
+        .registerAvailableLanguageKeys(['en', 'pt', 'es'], {
             'en_*': 'en',
             'en-*': 'en',
             'pt_*': 'pt',
             'pt-*': 'pt',
+            'es_*': 'es',
+            'es-*': 'es',
         })
         .useSanitizeValueStrategy('sanitizeParameters')
         .fallbackLanguage('en')

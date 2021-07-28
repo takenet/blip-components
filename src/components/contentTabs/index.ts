@@ -37,7 +37,7 @@ export const ContentTabsComponent = angular
                 }
 
                 if (!tab.disabled && !tab.tabHref) {
-                    this.$rootScope.$broadcast(ChangeTabEvent);
+                    this.$rootScope.$broadcast(ChangeTabEvent, this.tabs);
                     tab.showTab = true;
                     tab.isActive = true;
 

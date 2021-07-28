@@ -1,5 +1,5 @@
 <div class="upload-button" ng-class="{'dashed-border': !file}">
-    <input id="uploadFile" name="uploadFile" type="file" ng-model="$ctrl.botImage">
+    <input id="uploadFile" name="uploadFile" type="file" ng-model="$ctrl.botImage" accept="{{::accept}}">
     <div ng-show="!showFile" class="upload-items">
         <img ng-if="!file" icon-src="Arrow"></img>
         <span ng-if="!file" class="bp-fs-7 color-white" translate>modules.ui.uploadButton.title</span>

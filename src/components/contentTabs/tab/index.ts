@@ -1,6 +1,7 @@
 import angular from 'core/angular';
 import { IScope } from 'angular';
 import { ChangeTabEvent } from '..';
+import * as uuid from 'uuid';
 
 export const TabComponent = angular
     .module('blipComponents.tabComponent', [])
@@ -14,9 +15,13 @@ export const TabComponent = angular
                 this.showTab = false;
                 this.isActive = false;
 
-                $scope.$on(ChangeTabEvent, () => {
-                    this.showTab = false;
-                    this.isActive = false;
+                $scope.$on(ChangeTabEvent, ($event, currentParentTabs) => {
+                    if (currentParentTabs.length) {
+                        currentParentTabs.forEach(tab => {
+                            tab.isActive = false;
+                            tab.showTab = false;
+                        });
+                    }
                 });
             }
 

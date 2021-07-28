@@ -1,0 +1,21 @@
+<article class="accordion relative">
+    <input
+        ng-class="{'hasRouterChild' : $ctrl.item.hasRouterChild}"
+        class="accordion-checkbox"
+        type="checkbox"
+        ng-checked="$ctrl.ischecked"
+    />
+    <i
+        ng-if="$ctrl.item.hasRouterChild"
+        class="accordion-icon icon icon-warning fl"
+    ></i>
+    <i class="accordion-chevron fr"></i>
+    <img
+        ng-if="$ctrl.showimage"
+        class="accordion-image icon icon-avatar w2 h2 round small"
+        ng-src="{{$ctrl.imageuri}}"
+    />
+    <h4 class="accordion-title ma0 ttu" ng-bind="$ctrl.title"></h4>
+    <div class="accordion-content relative overflow-hidden" ng-transclude></div>
+    
+</article>

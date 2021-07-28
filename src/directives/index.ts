@@ -18,6 +18,7 @@ import { PasswordStrengthDirective } from './passwordStrength/passwordStrength.d
 import { AutoSaveDirective } from './autoSave/autoSave.directive';
 import { BindHtmlCompileDirective } from './bindHtmlCompile/bindHtmlCompileDirective';
 import { OnFailureDirective } from './onFailure/onFailure.directive';
+import { InputSanitizeDirective } from './inputSanitize/inputSanitize.directive';
 
 export const DirectivesModule = angular
     .module('DirectivesModule', [
@@ -38,6 +39,7 @@ export const DirectivesModule = angular
         PasswordStrengthDirective,
         AutoSaveDirective,
         BindHtmlCompileDirective,
-        OnFailureDirective
+        OnFailureDirective,
+        InputSanitizeDirective
     ])
     .name;
