@@ -1,14 +1,22 @@
 <ul class="u-no-margin action-icons mb0">
-    <li ng-auth-read area="desk">
-        <a>
-            <i tooltips tooltip-template="{{'modules.application.detail.attendance.title' | translate}}" tooltip-side="bottom" class="icon-talk"
-                ng-if="$ctrl.isAttendance" ng-click="$ctrl.goToBlipWebAttendance()"></i>
-        </a>
-    </li>
     <li ng-repeat="menuIcon in $ctrl.menuIcons">
-        <a ng-class="{'active' : $ctrl.isActive(menuIcon.sref)}" ui-sref="{{menuIcon.sref}}">
-            <i tooltips tooltip-template="{{menuIcon.title | translate}}" tooltip-side="bottom" ng-class="$ctrl.getIcons(menuIcon.sref)"></i>
+        <a  ng-if="$ctrl.isAttendance && menuIcon.id == 'desk'"
+            ui-sref="{{menuIcon.sref}}"
+            ng-click="$ctrl.createTrack(menuIcon.trackClick)">
+            <div class="deskSubheaderButton">
+                <icon name="Agent" width="25" height="25" color="white"></icon>
+                <span>
+                    {{'modules.application.detail.attendance.title' | translate}}
+                </span>
+            </div>
         </a>
+        <ng-template #elseBlock>
+            <a ng-class="{'active' : $ctrl.isActive(menuIcon.sref)}" 
+                ui-sref="{{menuIcon.sref}}"
+                ng-click="$ctrl.createTrack(menuIcon.trackClick)">
+                <i tooltips tooltip-template="{{menuIcon.title | translate}}" tooltip-side="bottom" ng-class="$ctrl.getIcons(menuIcon.sref)"></i>
+            </a>
+        </ng-template>
     </li>
     <li>
         <a ng-click="$ctrl.showBlipChatSidenav()">

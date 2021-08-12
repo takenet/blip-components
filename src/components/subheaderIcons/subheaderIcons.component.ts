@@ -1,5 +1,6 @@
 import angular from 'core/angular';
 import template from './SubheaderIconsView.html';
+import './SubheaderIconsView.scss';
 import { IStateService } from 'angular-ui-router';
 
 class SubheaderIcons {
@@ -8,6 +9,7 @@ class SubheaderIcons {
     application: any;
     isAttendance: boolean;
     showBlipChatSidenav: () => {};
+    createTrack: () => {};
     SubheaderIcons;
     constructor(private $state: IStateService) {}
 
@@ -48,6 +50,7 @@ export const SubheaderIconsComponent = angular
             menuIcons: '<',
             isAttendance: '<?',
             showBlipChatSidenav: '<?',
+            createTrack: '<?',
         },
     })
     .name;
