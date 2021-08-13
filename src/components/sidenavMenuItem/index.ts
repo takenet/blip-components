@@ -151,6 +151,7 @@ export const sidenavMenuItem = angular
         transclude: true,
         bindings: {
             title: '@',
+            text: '@',
             subtitle: '@',
             icon: '@',
             active: '@',

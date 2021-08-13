@@ -1,0 +1,30 @@
+@import '../../assets/scss/variables';
+
+.action-icons {
+  display: inline-flex;
+}
+
+.deskSubheaderButton {
+  display: inline-flex;
+  background: $bp-color-bot;
+  color: $bp-color-white;
+  padding: 6px 12px;
+  overflow: visible;
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.5s ease 0s;
+}
+
+.deskSubheaderButton:hover {
+  background: $bp-color-blip-dark;
+}
+
+.deskSubheaderButton span{
+  margin-left: 4px;
+  color: $bp-color-white;
+  padding-top: 1px;
+}
