@@ -1,6 +1,6 @@
 [![npm](https://img.shields.io/npm/v/blip-components.svg)](https://www.npmjs.com/package/blip-components)
 
-# blip-components
+# (DEPRECATED) blip-components
 
 BLiP components to use in AngularJS (1.x) applications. 
 
