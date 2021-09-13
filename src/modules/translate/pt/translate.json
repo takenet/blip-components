@@ -732,6 +732,8 @@
             "detail": {
                 "teamTitle": "Equipe",
                 "test": "Testar",
+                "testPublishedBot": "Testar bot publicado",
+                "testFlowBot": "Testar fluxo em construçao",
                 "testTitle": "Testar seu chatbot",
                 "config": "Configuração",
                 "panel": "Painel",

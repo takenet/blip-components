@@ -11,7 +11,11 @@ class SubheaderIcons {
     showBlipChatSidenav: () => {};
     createTrack: () => {};
     SubheaderIcons;
-    constructor(private $state: IStateService) {}
+    itemTitle;
+    constructor(private $state: IStateService) {
+        this.itemTitle = `<i
+            class="icon-lab"></i>`;
+    }
 
     async $onChanges($changedObjects) {
         if (
