@@ -8,6 +8,10 @@ class SubheaderIcons {
     menuIcons: any = [];
     application: any;
     isAttendance: boolean;
+    enabledTestEdited: boolean;
+    isBuilder: boolean;
+    applicationStatus: boolean;
+    tooltipText: string;
     showBlipChatSidenav: () => {};
     createTrack: () => {};
     SubheaderIcons;
@@ -55,6 +59,10 @@ export const SubheaderIconsComponent = angular
             isAttendance: '<?',
             showBlipChatSidenav: '<?',
             createTrack: '<?',
+            enabledTestEdited: '<',
+            isBuilder: '<',
+            applicationStatus: '<?',
+            tooltipText: '<?'
         },
     })
     .name;

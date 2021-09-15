@@ -43,11 +43,21 @@
                     item-title="{{$ctrl.itemTitle}}"
                 >
                     <ul class="test-details-menu no-style ma0 tl">
-                        <li>
-                            <a ng-click="$ctrl.showBlipChatSidenav('flow')">{{'modules.application.detail.testPublishedBot' | translate}}</a>
+                        <li ng-if="$ctrl.applicationStatus || !$ctrl.isBuilder">
+                            <img icon-src="publish-bot">
+                                <a  ng-click="$ctrl.showBlipChatSidenav('flow')"
+                                    tooltips
+                                    tooltip-template="{{$ctrl.tooltipText}}"
+                                    tooltip-side="bottom"
+                                    tooltip-class="medium"
+                                    class="f3 bp-c-cloud tooltip-icon-hover"> {{'modules.application.detail.testPublishedBot' | translate}}
+                                </a>
+                            </img>
                         </li>
-                        <li>
+                        <li ng-if="$ctrl.enabledTestEdited && $ctrl.isBuilder">
+                            <img icon-src="builder">
                             <a ng-click="$ctrl.showBlipChatSidenav('construction')">{{'modules.application.detail.testFlowBot' | translate}}</a>
+                            </img>
                         </li>
                     </ul>
                 </dropdown-item>
