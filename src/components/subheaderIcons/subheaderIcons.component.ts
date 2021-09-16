@@ -11,7 +11,7 @@ class SubheaderIcons {
     enabledTestEdited: boolean;
     isBuilder: boolean;
     applicationStatus: boolean;
-    tooltipText: string;
+    infoText: string;
     showBlipChatSidenav: () => {};
     createTrack: () => {};
     SubheaderIcons;
@@ -62,7 +62,7 @@ export const SubheaderIconsComponent = angular
             enabledTestEdited: '<',
             isBuilder: '<',
             applicationStatus: '<?',
-            tooltipText: '<?'
+            infoText: '<?'
         },
     })
     .name;

@@ -47,7 +47,7 @@
                             <img icon-src="publish-bot">
                                 <a  ng-click="(!$ctrl.applicationStatus && $ctrl.isBuilder) || $ctrl.showBlipChatSidenav('flow')"
                                     tooltips
-                                    tooltip-template="{{ 'modules.application.detail.tooltipTextTest' | translate }}"
+                                    tooltip-template= "{{$ctrl.infoText}}"
                                     tooltip-side="bottom left"
                                     tooltip-class="medium"
                                     class="f3 bp-c-cloud tooltip-icon-hover"> {{'modules.application.detail.testPublishedBot' | translate}}
