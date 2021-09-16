@@ -43,20 +43,20 @@
                     item-title="{{$ctrl.itemTitle}}"
                 >
                     <ul class="test-details-menu no-style ma0 tl">
-                        <li ng-if="$ctrl.applicationStatus || !$ctrl.isBuilder">
+                        <li ng-class="($ctrl.applicationStatus || !$ctrl.isBuilder) ? 'enabled' : 'disabled'">
                             <img icon-src="publish-bot">
-                                <a  ng-click="$ctrl.showBlipChatSidenav('flow')"
+                                <a  ng-click="(!$ctrl.applicationStatus && $ctrl.isBuilder) || $ctrl.showBlipChatSidenav('flow')"
                                     tooltips
                                     tooltip-template="{{ 'modules.application.detail.tooltipTextTest' | translate }}"
-                                    tooltip-side="bottom"
+                                    tooltip-side="bottom left"
                                     tooltip-class="medium"
                                     class="f3 bp-c-cloud tooltip-icon-hover"> {{'modules.application.detail.testPublishedBot' | translate}}
                                 </a>
                             </img>
                         </li>
-                        <li ng-if="$ctrl.enabledTestEdited && $ctrl.isBuilder">
+                        <li ng-if="$ctrl.enabledTestEdited" ng-class="($ctrl.isBuilder) ? 'enabled' : 'disabled'">
                             <img icon-src="builder">
-                            <a ng-click="$ctrl.showBlipChatSidenav('construction')">{{'modules.application.detail.testFlowBot' | translate}}</a>
+                            <a ng-click="!$ctrl.isBuilder || $ctrl.showBlipChatSidenav('construction')">{{'modules.application.detail.testFlowBot' | translate}}</a>
                             </img>
                         </li>
                     </ul>
