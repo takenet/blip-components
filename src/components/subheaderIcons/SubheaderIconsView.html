@@ -50,13 +50,14 @@
                                     tooltip-template= "{{$ctrl.infoText}}"
                                     tooltip-side="bottom left"
                                     tooltip-class="medium"
+                                    data-cy= link-test-flow-published
                                     class="f3 bp-c-cloud tooltip-icon-hover"> {{'modules.application.detail.testPublishedBot' | translate}}
                                 </a>
                             </img>
                         </li>
                         <li ng-if="$ctrl.enabledTestEdited" ng-class="($ctrl.isBuilder) ? 'enabled' : 'disabled'">
                             <img icon-src="builder">
-                            <a ng-click="!$ctrl.isBuilder || $ctrl.showBlipChatSidenav('construction')">{{'modules.application.detail.testFlowBot' | translate}}</a>
+                            <a data-cy= link-test-bot-construction ng-click="!$ctrl.isBuilder || $ctrl.showBlipChatSidenav('construction')">{{'modules.application.detail.testFlowBot' | translate}}</a>
                             </img>
                         </li>
                     </ul>
