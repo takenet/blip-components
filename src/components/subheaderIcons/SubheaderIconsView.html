@@ -48,6 +48,7 @@
                                 <a  ng-click="(!$ctrl.applicationStatus && $ctrl.isBuilder) || $ctrl.showBlipChatSidenav('flow')"
                                     tooltips
                                     tooltip-template= "{{$ctrl.infoText}}"
+                                    tooltip-hidden="{{!$ctrl.hasTooltip}}"
                                     tooltip-side="bottom left"
                                     tooltip-class="medium"
                                     data-cy= link-test-flow-published
