@@ -425,7 +425,8 @@
             "copyText": "Copiar",
             "copiedText": "Copiado!",
             "learnMore": "Saiba mais!",
-            "expandTooltip": "Expandir"
+            "expandTooltip": "Expandir",
+            "tooltipTextTest": "O bot precisa ser publicado para que possa testá-lo"
         },
         "locale": {
             "days": {
@@ -732,6 +733,9 @@
             "detail": {
                 "teamTitle": "Equipe",
                 "test": "Testar",
+                "testPublishedBot": "Testar bot publicado",
+                "testFlowBot": "Testar fluxo em construçao",
+                "tooltipTextTest": "O bot precisa ser publicado para que possa testá-lo",
                 "testTitle": "Testar seu chatbot",
                 "config": "Configuração",
                 "panel": "Painel",

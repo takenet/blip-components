@@ -1,30 +1,62 @@
 @import '../../assets/scss/variables';
 
 .action-icons {
-  display: inline-flex;
+    display: inline-flex;
+}
+
+.test {
+    &-details {
+        &-menu {
+            li {
+                margin-left: 0;
+            }
+        }
+    }
+    .builder-icon {
+        margin-left: 12px;
+        width: 20px;
+    }
+}
+.subheader-nav .action-icons{
+    .test-details-menu {
+        li {
+            display: flex;
+            margin-left: 0;
+            padding: 0 10px;
+            &.disabled {
+                opacity:0.6;
+            }
+        }
+        a {
+            color: $color-text-dark;
+            &.disabled {
+                color: $color-text-light;
+            }
+        }
+    }
 }
 
 .deskSubheaderButton {
-  display: inline-flex;
-  background: $bp-color-bot;
-  color: $bp-color-white;
-  padding: 6px 12px;
-  overflow: visible;
-  cursor: pointer;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  position: relative;
-  transition: all 0.5s ease 0s;
+    display: inline-flex;
+    background: $bp-color-bot;
+    color: $bp-color-white;
+    padding: 6px 12px;
+    overflow: visible;
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.5s ease 0s;
 }
 
 .deskSubheaderButton:hover {
-  background: $bp-color-blip-dark;
+    background: $bp-color-blip-dark;
 }
 
-.deskSubheaderButton span{
-  margin-left: 4px;
-  color: $bp-color-white;
-  padding-top: 1px;
+.deskSubheaderButton span {
+    margin-left: 4px;
+    color: $bp-color-white;
+    padding-top: 1px;
 }

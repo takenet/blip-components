@@ -1,26 +1,69 @@
 <ul class="u-no-margin action-icons mb0">
     <li ng-repeat="menuIcon in $ctrl.menuIcons">
-        <a  ng-if="$ctrl.isAttendance && menuIcon.id == 'desk'"
+        <a
+            ng-if="$ctrl.isAttendance && menuIcon.id == 'desk'"
             ui-sref="{{menuIcon.sref}}"
-            ng-click="$ctrl.createTrack(menuIcon.trackClick)">
+            ng-click="$ctrl.createTrack(menuIcon.trackClick)"
+        >
             <div class="deskSubheaderButton">
                 <icon name="Agent" width="25" height="25" color="white"></icon>
                 <span>
-                    {{'modules.application.detail.attendance.title' | translate}}
+                    {{'modules.application.detail.attendance.title' |
+                    translate}}
                 </span>
             </div>
         </a>
         <ng-template #elseBlock>
-            <a ng-class="{'active' : $ctrl.isActive(menuIcon.sref)}" 
+            <a
+                ng-class="{'active' : $ctrl.isActive(menuIcon.sref)}"
                 ui-sref="{{menuIcon.sref}}"
-                ng-click="$ctrl.createTrack(menuIcon.trackClick)">
-                <i tooltips tooltip-template="{{menuIcon.title | translate}}" tooltip-side="bottom" ng-class="$ctrl.getIcons(menuIcon.sref)"></i>
+                ng-click="$ctrl.createTrack(menuIcon.trackClick)"
+            >
+                <i
+                    tooltips
+                    tooltip-template="{{menuIcon.title | translate}}"
+                    tooltip-side="bottom"
+                    ng-class="$ctrl.getIcons(menuIcon.sref)"
+                ></i>
             </a>
         </ng-template>
     </li>
     <li>
-        <a ng-click="$ctrl.showBlipChatSidenav()">
-            <i tooltips tooltip-template="{{'modules.application.detail.test' | translate}}" tooltip-side="bottom" class="icon-lab"></i>
-        </a>
+        <div class="test-details">
+            <div class="flex items-center">
+                <!-- tooltips tooltip-template="{{'modules.application.detail.test' | translate}}"
+            tooltip-side="bottom" -->
+                <dropdown-item
+                    hide-icon="true"
+                    align="right"
+                    min-width="245"
+                    id="account-dropdown"
+                    on-open="$ctrl.handleOnMenuOpen()"
+                    button-classes="item-title"
+                    item-title="{{$ctrl.itemTitle}}"
+                >
+                    <ul class="test-details-menu no-style ma0 tl">
+                        <li ng-class="($ctrl.applicationStatus || !$ctrl.isBuilder) ? 'enabled' : 'disabled'">
+                            <img icon-src="publish-bot">
+                                <a  ng-click="(!$ctrl.applicationStatus && $ctrl.isBuilder) || $ctrl.showBlipChatSidenav('flow')"
+                                    tooltips
+                                    tooltip-template= "{{$ctrl.infoText}}"
+                                    tooltip-hidden="{{!$ctrl.hasTooltip}}"
+                                    tooltip-side="bottom left"
+                                    tooltip-class="medium"
+                                    data-cy= link-test-flow-published
+                                    class="f3 bp-c-cloud tooltip-icon-hover"> {{'modules.application.detail.testPublishedBot' | translate}}
+                                </a>
+                            </img>
+                        </li>
+                        <li ng-if="$ctrl.enabledTestEdited" ng-class="($ctrl.isBuilder) ? 'enabled' : 'disabled'">
+                            <img icon-src="builder">
+                            <a data-cy= link-test-bot-construction ng-click="!$ctrl.isBuilder || $ctrl.showBlipChatSidenav('construction')">{{'modules.application.detail.testFlowBot' | translate}}</a>
+                            </img>
+                        </li>
+                    </ul>
+                </dropdown-item>
+            </div>
+        </div>
     </li>
 </ul>

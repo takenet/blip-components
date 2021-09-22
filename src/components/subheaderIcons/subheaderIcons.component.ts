@@ -8,10 +8,19 @@ class SubheaderIcons {
     menuIcons: any = [];
     application: any;
     isAttendance: boolean;
+    enabledTestEdited: boolean;
+    isBuilder: boolean;
+    applicationStatus: boolean;
+    hasTooltip: boolean;
+    infoText: string;
     showBlipChatSidenav: () => {};
     createTrack: () => {};
     SubheaderIcons;
-    constructor(private $state: IStateService) {}
+    itemTitle;
+    constructor(private $state: IStateService) {
+        this.itemTitle = `<i
+            class="icon-lab"></i>`;
+    }
 
     async $onChanges($changedObjects) {
         if (
@@ -51,6 +60,11 @@ export const SubheaderIconsComponent = angular
             isAttendance: '<?',
             showBlipChatSidenav: '<?',
             createTrack: '<?',
+            enabledTestEdited: '<',
+            isBuilder: '<',
+            applicationStatus: '<',
+            hasTooltip: '<',
+            infoText: '<?'
         },
     })
     .name;
