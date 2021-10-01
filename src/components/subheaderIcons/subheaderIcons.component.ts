@@ -15,6 +15,7 @@ class SubheaderIcons {
     infoText: string;
     showBlipChatSidenav: () => {};
     createTrack: () => {};
+    onOpenDropdownMenu: () => {};
     SubheaderIcons;
     itemTitle;
     constructor(private $state: IStateService) {
@@ -64,7 +65,8 @@ export const SubheaderIconsComponent = angular
             isBuilder: '<',
             applicationStatus: '<',
             hasTooltip: '<',
-            infoText: '<?'
+            infoText: '<?',
+            onOpenDropdownMenu: '<?'
         },
     })
     .name;

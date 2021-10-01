@@ -38,7 +38,7 @@
 
 .deskSubheaderButton {
     display: inline-flex;
-    background: $bp-color-bot;
+background: $bp-color-bot;
     color: $bp-color-white;
     padding: 6px 12px;
     overflow: visible;
@@ -59,4 +59,12 @@
     margin-left: 4px;
     color: $bp-color-white;
     padding-top: 1px;
+}
+
+.test-details-menu{
+    li{
+        a{
+            padding-left: 5px;
+        }
+    }
 }
