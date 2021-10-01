@@ -31,14 +31,12 @@
     <li>
         <div class="test-details">
             <div class="flex items-center">
-                <!-- tooltips tooltip-template="{{'modules.application.detail.test' | translate}}"
-            tooltip-side="bottom" -->
                 <dropdown-item
                     hide-icon="true"
                     align="right"
-                    min-width="245"
+                    min-width="270"
                     id="account-dropdown"
-                    on-open="$ctrl.handleOnMenuOpen()"
+                    on-open="$ctrl.onOpenDropdownMenu()"
                     button-classes="item-title"
                     item-title="{{$ctrl.itemTitle}}"
                 >
