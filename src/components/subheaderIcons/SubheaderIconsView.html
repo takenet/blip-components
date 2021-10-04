@@ -29,7 +29,10 @@
         </ng-template>
     </li>
     <li>
-        <div class="test-details">
+        <a ng-if="!$ctrl.enabledTestEdited" ng-click="$ctrl.showBlipChatSidenav()">
+            <i tooltips tooltip-template="{{'modules.application.detail.test' | translate}}" tooltip-side="bottom" class="icon-lab"></i>
+        </a>
+        <div ng-if="$ctrl.enabledTestEdited" class="test-details">
             <div class="flex items-center">
                 <!-- tooltips tooltip-template="{{'modules.application.detail.test' | translate}}"
             tooltip-side="bottom" -->
