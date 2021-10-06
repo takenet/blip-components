@@ -25,7 +25,7 @@ class SubheaderIcons {
 
     async $onChanges($changedObjects) {
         if (
-            $changedObjects?.menuIcons &&
+            $changedObjects.menuIcons &&
             $changedObjects.menuIcons.currentValue &&
             $changedObjects.menuIcons.currentValue.length > 0
         ) {
