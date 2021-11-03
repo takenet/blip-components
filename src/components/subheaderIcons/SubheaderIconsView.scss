@@ -68,3 +68,11 @@ background: $bp-color-bot;
         }
     }
 }
+
+.toolTipUnpublishedFlow {
+    tooltip { 
+        tip {
+            left: 1.8rem !important;
+        }
+    }
+}
