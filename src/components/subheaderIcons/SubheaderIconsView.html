@@ -30,9 +30,25 @@
     </li>
     <li>
         <a ng-if="!$ctrl.enabledTestEdited" ng-click="$ctrl.showBlipChatSidenav()">
-            <i tooltips tooltip-template="{{'modules.application.detail.test' | translate}}" tooltip-side="bottom" class="icon-lab"></i>
+            <i 
+                tooltips 
+                tooltip-template="{{'modules.application.detail.test' | translate}}" 
+                tooltip-side="bottom" 
+                class="icon-lab"
+            >
+            </i>
         </a>
-        <div ng-if="$ctrl.enabledTestEdited" class="test-details">
+        <a ng-if="$ctrl.enabledTestEdited && !$ctrl.applicationStatus" class="toolTipUnpublishedFlow">
+            <i 
+                tooltips
+                tooltip-class="medium" 
+                tooltip-template="{{'modules.application.detail.tooltipTextTest' | translate}}"
+                tooltip-side="bottom left"
+                class="icon-lab"
+            >
+            </i>
+        </a>
+        <div ng-if="$ctrl.enabledTestEdited && $ctrl.applicationStatus" class="test-details">
             <div class="flex items-center">
                 <dropdown-item
                     hide-icon="true"
@@ -44,9 +60,9 @@
                     item-title="{{$ctrl.itemTitle}}"
                 >
                     <ul class="test-details-menu no-style ma0 tl">
-                        <li ng-class="($ctrl.applicationStatus || !$ctrl.isBuilder) ? 'enabled' : 'disabled'">
+                        <li ng-class="enabled">
                             <img icon-src="publish-bot">
-                                <a  ng-click="(!$ctrl.applicationStatus && $ctrl.isBuilder) || $ctrl.showBlipChatSidenav('flow')"
+                                <a  ng-click="$ctrl.showBlipChatSidenav('flow')"
                                     tooltips
                                     tooltip-template= "{{$ctrl.infoText}}"
                                     tooltip-hidden="{{!$ctrl.hasTooltip}}"

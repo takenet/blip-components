@@ -2,6 +2,17 @@
 
 .action-icons {
     display: inline-flex;
+
+    li {
+        .toolTipUnpublishedFlow {
+            tooltip { 
+                tip {
+                    left: 1.8rem;
+                }
+            }
+        }
+    }
+    
 }
 
 .test {
