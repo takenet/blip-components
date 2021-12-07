@@ -4,7 +4,6 @@ import angular from 'core/angular';
 
 export class CheckboxComponent {
     uniqueId: string;
-    public checked: string;
     public ngModel: any;
     public refer: string;
     public group: string;
@@ -33,10 +32,6 @@ export class CheckboxComponent {
     get inputId() {
         return this.refer || this.uniqueId;
     }
-
-    get isChecked() {
-        return this.checked ? true : false;
-    }
 }
 
 export const Checkbox = angular
@@ -50,7 +45,6 @@ export const Checkbox = angular
         },
         bindings: {
             group: '@?',
-            checked: '@?',
             refer: '@?',
             disabled: '<?',
         },
@@ -59,7 +53,6 @@ export const Checkbox = angular
                     id="{{$ctrl.inputId}}"
                     name="{{$ctrl.group}}"
                     ng-model="$ctrl.model"
-                    ng-checked="$ctrl.isChecked"
                     ng-disabled="$ctrl.disabled"
                     ></input>
                 <label for="{{$ctrl.inputId}}" class="flex items-center">
