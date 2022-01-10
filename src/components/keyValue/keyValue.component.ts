@@ -28,8 +28,10 @@ class KeyValueController {
 
     constructor(private $scope, private $rootScope: IRootScopeService, private $timeout: ITimeoutService) {
         this.$scope.$watchCollection('$ctrl.model', () => {
-            if (this.isFirst && this.model && Object.keys(this.model).length > 0) {
-                this.setKeyValues();
+            if (this.isFirst && this.model) {
+                if (Object.keys(this.model).length > 0) {
+                    this.setKeyValues();
+                }
                 this.isFirst = false;
             }
         });
