@@ -13,6 +13,7 @@ class SubheaderIcons {
     applicationStatus: boolean;
     hasTooltip: boolean;
     infoText: string;
+    constructionInfoText: string;
     showBlipChatSidenav: () => {};
     createTrack: () => {};
     onOpenDropdownMenu: () => {};
@@ -67,6 +68,7 @@ export const SubheaderIconsComponent = angular
             applicationStatus: '<',
             hasTooltip: '<',
             infoText: '<?',
+            constructionInfoText: '<?',
             onOpenDropdownMenu: '<?'
         },
     })
