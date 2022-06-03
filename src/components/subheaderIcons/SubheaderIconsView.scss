@@ -5,14 +5,14 @@
 
     li {
         .toolTipUnpublishedFlow {
-            tooltip { 
+            tooltip {
                 tip {
                     left: 1.8rem;
                 }
             }
         }
     }
-    
+
 }
 
 .test {
@@ -76,6 +76,25 @@
     li{
         a{
             padding-left: 5px;
+        }
+    }
+}
+
+.fullscreen {
+    .subheader-icons {
+        li {
+            display: none;
+        }
+
+        .item-lab {
+            display: block;
+            position: fixed;
+            top: 40px;
+            right: 40px;
+
+            .dropdown-align-right {
+                right: -12px;
+            }
         }
     }
 }

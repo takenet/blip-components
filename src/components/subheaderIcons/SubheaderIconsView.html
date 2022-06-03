@@ -1,4 +1,4 @@
-<ul class="u-no-margin action-icons mb0">
+<ul class="subheader-icons u-no-margin action-icons mb0">
     <li ng-repeat="menuIcon in $ctrl.menuIcons">
         <a
             ng-if="$ctrl.isAttendance && menuIcon.id == 'desk'"
@@ -28,20 +28,20 @@
             </a>
         </ng-template>
     </li>
-    <li>
+    <li class="item-lab">
         <a ng-if="!$ctrl.enabledTestEdited" ng-click="$ctrl.showBlipChatSidenav()">
-            <i 
-                tooltips 
-                tooltip-template="{{'modules.application.detail.test' | translate}}" 
-                tooltip-side="bottom" 
+            <i
+                tooltips
+                tooltip-template="{{'modules.application.detail.test' | translate}}"
+                tooltip-side="bottom"
                 class="icon-lab"
             >
             </i>
         </a>
         <a ng-if="$ctrl.enabledTestEdited && !$ctrl.applicationStatus" class="toolTipUnpublishedFlow">
-            <i 
+            <i
                 tooltips
-                tooltip-class="medium" 
+                tooltip-class="medium"
                 tooltip-template="{{'modules.application.detail.tooltipTextTest' | translate}}"
                 tooltip-side="bottom left"
                 class="icon-lab"
@@ -75,7 +75,7 @@
                         </li>
                         <li ng-if="$ctrl.enabledTestEdited" ng-class="($ctrl.isBuilder) ? 'enabled' : 'disabled'">
                             <img icon-src="builder">
-                            <a 
+                            <a
                                 tooltips
                                 tooltip-template= "{{$ctrl.constructionInfoText}}"
                                 tooltip-hidden="{{!$ctrl.constructionInfoText}}"
