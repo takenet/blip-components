@@ -64,7 +64,7 @@
     "loader-utils": "^1.0.0"
   },
   "dependencies": {
-    "angular-sanitize": "1.5.8",
+    "angular-sanitize": "^1.8.2",
     "angular-tooltips": "^1.2.2",
     "angular-translate": "^2.15.2",
     "angular-translate-loader-partial": "^2.18.1",

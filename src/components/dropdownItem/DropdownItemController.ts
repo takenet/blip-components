@@ -15,6 +15,9 @@ export class DropdownItemController {
     maxHeight: any;
     styleValues: any;
     closeOnClick: boolean;
+    colorIcon: string;
+    widthIcon: string;
+    heightIcon: string;
     onOpen: () => void;
     onClose: () => void;
 
