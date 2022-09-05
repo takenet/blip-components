@@ -15,6 +15,9 @@ import template from './DropdownItemView.html';
  * @param {number} maxHeight        - Max height of dropdown container. Using this parameter may add scroll behavior to dropdown
  * @param {string} buttonClasses    - Classes to be added on internal button
  * @param {boolean} closeOnClick    - Determines if menu should close when content is clicked
+ * @param {String} colorIcon        - icon color
+ * @param {String} widthIcon        - icon widht
+ * @param {String} heightIcon       - icon height
  * @param {expression} onOpen       - Callback when dropdown is opened
  * @param {expression} onClose      - Callback when dropdown is closed
  */
@@ -32,6 +35,9 @@ export const dropdownItem = angular
             maxHeight: '@?',
             buttonClasses: '@?',
             closeOnClick: '<?',
+            colorIcon: '@?',
+            widthIcon: '@?',
+            heightIcon: '@?',
             onOpen: '&?',
             onClose: '&?',
         },
