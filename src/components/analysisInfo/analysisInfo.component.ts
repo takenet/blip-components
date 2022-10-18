@@ -24,14 +24,7 @@ class AnalysisInfoController extends ComponentController {
     public structuredIntents: { label: string, value: string }[];
     public displayEntityContent: boolean = false;
     public displayHiddencontent: boolean = false;
-
-    public messageCardContent: any = {
-        document: {
-            type: 'text/plain',
-            content: this.analysis.content,
-        },
-        position: 'right'
-    };
+    public messageCardContent: any = {};
 
     public onEntityToggle: (toggle: object) => void;
     public onError: (id: object) => void;
@@ -49,6 +42,14 @@ class AnalysisInfoController extends ComponentController {
     async $onInit() {
 
         this.scrollTo();
+
+        this.messageCardContent = {
+            document: {
+                type: 'text/plain',
+                content: this.analysis.content,
+            },
+            position: 'right'
+        };
 
         try  {
 
@@ -146,18 +147,6 @@ class AnalysisInfoController extends ComponentController {
             }));
 
         });
-
-        this.messageCardContent = undefined;
-        setTimeout(() => {
-            this.messageCardContent = {
-                document: {
-                    type: 'text/plain',
-                    content: content,
-                },
-                position: 'right'
-            };
-        }, 0);
-
     }
 
     scrollTo() {
