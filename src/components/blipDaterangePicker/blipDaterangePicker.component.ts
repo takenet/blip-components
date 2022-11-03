@@ -37,8 +37,7 @@ export class BlipDaterangePickerController implements IComponentController {
         private $locale: ILocaleService,
         private $scope: IScope,
         private $translate: translate.ITranslateService
-    ) {
-        
+    ) {    
     }
 
     $onInit() {
