@@ -37,11 +37,10 @@ export class BlipDaterangePickerController implements IComponentController {
         private $locale: ILocaleService,
         private $scope: IScope,
         private $translate: translate.ITranslateService
-    ) {
-        this.daterangePicker = new BlipDaterangepicker(this.daterangepickerOptions());
-    }
+    ) { }
 
     $onInit() {
+        this.daterangePicker = new BlipDaterangepicker(this.daterangepickerOptions());
         this.$element[0].appendChild(this.daterangePicker.render());
         this.$scope.$watch('$ctrl.period.selectedPeriod', () => {
             this.daterangePicker.selectedPeriod = this.period.selectedPeriod;
