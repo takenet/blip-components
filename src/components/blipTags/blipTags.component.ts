@@ -43,15 +43,20 @@ class BlipTagsController extends ComponentController
     shouldRenderMyself: boolean;
     placeholder: any;
     disabled: boolean = false;
+    timeoutService: ITimeoutService;
 
     constructor(
         private $element,
         private $scope: IScope,
-        $timeout: ITimeoutService,
+        $timeout: ITimeoutService
     ) {
         super();
         this.blipTagsId = `${BLIP_TAGS_PREFIX}-${uuid.v4()}`;
         this.shouldRenderMyself = true;
+        this.timeoutService = $timeout;
+    }
+
+    createBlipTagsInstance() {
         this.blipTagsInstance = new BlipTags({
             onTagAdded: this.handle.bind(this, BlipTagsCallback.OnTagAdded),
             onTagRemoved: this.handle.bind(this, BlipTagsCallback.OnTagRemoved),
@@ -74,7 +79,7 @@ class BlipTagsController extends ComponentController
          * because on add a new tag, the background options container is showed, and user
          * can refresh the page, leaving the background options container opened util color setted
          */
-        $timeout(() => {
+        this.timeoutService(() => {
             this.model = this.model
                 ? this.model.map(removeBackgroundOptions)
                 : undefined;
@@ -112,6 +117,8 @@ class BlipTagsController extends ComponentController
                 options: this.options,
             });
         } else {
+            this.createBlipTagsInstance();
+
             this.blipTagsInstance.blipSelectInstance.configOptions.disabled = this.disabled;
             this.blipTagsInstance.tagsOptions.canAddOptions = changesObj.canAddOptions.currentValue;
             this.blipTagsInstance.tagsOptions.canRemoveTags = changesObj.canRemoveTags.currentValue;
