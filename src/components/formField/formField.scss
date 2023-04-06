@@ -1,7 +1,7 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 form-field {
-
     input,
     textarea,
     select {
@@ -9,7 +9,7 @@ form-field {
     }
 
     .field-label {
-        color: #2cc3d5;
+        color: $color-brand;
         font-weight: 600;
         font-size: $bp-fs-6;
         text-align: left;

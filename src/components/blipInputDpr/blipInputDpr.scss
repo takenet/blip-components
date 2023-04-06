@@ -1,8 +1,9 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .bp-input-error-container {
-    height: 1.5*$m;
-    background: #eaeeee;
+    height: 1.5 * $m;
+    background: $color-surface-2;
 }
 
 .invisible {
@@ -10,8 +11,9 @@
 }
 
 // Needed to remove clear and reveal password icons from IE10 and Edge
-.bp-input-wrapper{
-    input::-ms-clear, input::-ms-reveal {
+.bp-input-wrapper {
+    input::-ms-clear,
+    input::-ms-reveal {
         display: none;
     }
 }

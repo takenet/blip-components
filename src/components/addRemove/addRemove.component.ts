@@ -32,8 +32,8 @@ export const AddRemoveComponent = angular
     .module('blipComponents.addRemove', [])
     .component('addRemove', {
         template: `
-        <span ng-click="$ctrl.onAdd()" ng-if="$ctrl.$showAdd" ng-class="$ctrl.styles.button" class="br-100 bp-bg-blip-light no-style addRemove-module__button__2f2lk">+</span>
-        <span ng-click="$ctrl.onRemove()" ng-if="$ctrl.$showRemove" ng-class="$ctrl.styles.button" class="br-100 bp-bg-blip-light no-style addRemove-module__button__2f2lk">-</span>
+        <span ng-click='$ctrl.onAdd()' ng-if='$ctrl.$showAdd' ng-class='$ctrl.styles.button' class='br-100 no-style addRemove-module__button__2f2lk'>+</span>
+        <span ng-click='$ctrl.onRemove()' ng-if='$ctrl.$showRemove' ng-class='$ctrl.styles.button' class='br-100 no-style addRemove-module__button__2f2lk'>-</span>
         `,
         controller: AddRemoveController,
         controllerAs: '$ctrl',
@@ -41,7 +41,6 @@ export const AddRemoveComponent = angular
             showAdd: '<?',
             showRemove: '<?',
             onAdd: '&',
-            onRemove: '&',
-        },
-    })
-    .name;
+            onRemove: '&'
+        }
+    }).name;

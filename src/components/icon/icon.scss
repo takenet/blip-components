@@ -1,4 +1,5 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 icon {
     display: inline-flex;
@@ -48,7 +49,7 @@ icon {
         width: $size-s;
         height: $size-s;
         &.icon-filled {
-            padding: 2*$u;
+            padding: 2 * $u;
             width: $size-m;
             height: $size-m;
         }
@@ -73,20 +74,20 @@ icon {
     }
 
     &.icon-padded {
-        margin: 0.5*$u;
+        margin: 0.5 * $u;
     }
     &.icon-left {
-        margin-right: 1.5*$u;
+        margin-right: 1.5 * $u;
     }
     &.icon-right {
-        margin-left: 1.5*$u;
+        margin-left: 1.5 * $u;
     }
     &.icon-bottom {
         vertical-align: bottom;
     }
 
     &.icon-border {
-        border: 1px $color-text-light solid;
+        border: 1px $color-content-ghost solid;
     }
 
     // &.icon-avatar {
@@ -94,7 +95,7 @@ icon {
     // }
 
     &.icon-material {
-        font-family: 'Material Icons';
+        font-family: "Material Icons";
         font-weight: normal;
         font-style: normal;
         display: inline-block;
@@ -110,20 +111,20 @@ icon {
 
         -moz-osx-font-smoothing: grayscale;
 
-        font-feature-settings: 'liga';
+        font-feature-settings: "liga";
     }
 
     &.icon-circle {
         background: none;
-        border: 1px $color-disabled solid;
+        border: 1px color-content-disable solid;
         border-radius: 50%;
         &.active {
             background-color: $color-primary;
             border: 1px $color-primary solid;
         }
         &.inactive {
-            background-color: $color-danger;
-            border: 1px $color-danger solid;
+            background-color: $color-error;
+            border: 1px $color-error solid;
         }
     }
 }

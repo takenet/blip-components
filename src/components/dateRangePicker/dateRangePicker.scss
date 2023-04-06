@@ -1,19 +1,22 @@
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 /* =============================================================
  * BASE STYLES
  * ============================================================*/
 .date-range-picker {
     border-radius: 3px;
-    border: 1px solid $color-text-light-5;
-    box-shadow: 0 2px 12px 0 #E1E7EE;
-    background: #fff;
+    border: 1px solid $color-content-ghost;
+    box-shadow: 0 2px 12px 0 $color-surface-2;
+    background: $color-surface-1;
     font-size: 14px;
     padding: 8px 13px;
     width: 192px;
 
-    &:focus { outline: 0; }
+    &:focus {
+        outline: 0;
+    }
 }
 
 date-range-picker {
@@ -77,11 +80,11 @@ date-range-picker {
    * THEME
    * ============================================================*/
 date-range-picker .datepicker {
-    background-color: #fff;
+    background-color: $color-surface-1;
     border-radius: 5px;
     -webkit-box-shadow: 8px 8px 40px 5px rgba(0, 0, 0, 0.08);
     box-shadow: 8px 8px 40px 5px rgba(0, 0, 0, 0.08);
-    color: #484c55;
+    color: $color-content-disable;
     font-family: $base-font-family;
     font-size: 14px;
     line-height: 14px;
@@ -91,24 +94,26 @@ date-range-picker .datepicker {
     padding: 10px;
 
     table th:first-child,
-    table th:last-child, { padding: 0px; }
+    table th:last-child {
+        padding: 0px;
+    }
 }
 
 .datepicker__month {
     font-size: 12px;
     border-radius: 3px;
-    border: 1px solid #E3E9EC;
+    border: 1px solid $color-surface-2;
     border-collapse: initial;
 }
 
 .datepicker__month-caption {
-    background: $color-light-blip;
-    border-bottom: 1px solid #dcdcdc;
+    background: $color-brand;
+    border-bottom: 1px solid $color-surface-2;
     height: 2.5em;
     vertical-align: middle;
 
     th {
-        color: #fff;
+        color: $color-surface-1;
         font-size: 13px;
     }
 }
@@ -119,8 +124,14 @@ date-range-picker .datepicker {
 }
 
 .datepicker__week-row {
-    th:first-child, td:first-child { padding-left: 7px; }
-    th:last-child, td:last-child { padding-right: 7px; }
+    th:first-child,
+    td:first-child {
+        padding-left: 7px;
+    }
+    th:last-child,
+    td:last-child {
+        padding-right: 7px;
+    }
 }
 
 .datepicker__week-name {
@@ -129,7 +140,7 @@ date-range-picker .datepicker {
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
-    color: $color-text-light;
+    color: $color-content-ghost;
     border: 0;
 }
 
@@ -144,7 +155,7 @@ date-range-picker .datepicker {
     transition-property: color, background-color, border-color;
     -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    color: #acb2c1;
+    color: $color-content-ghost;
     padding: 9px 7px;
     border: 0;
 }
@@ -154,9 +165,9 @@ date-range-picker .datepicker {
 }
 
 .datepicker__month-day--no-check-in:after {
-    background-color: rgba(255, 0, 0, 0.1);
+    background-color: $color-delete;
     bottom: 0;
-    content: '';
+    content: "";
     display: block;
     left: 0;
     position: absolute;
@@ -170,9 +181,9 @@ date-range-picker .datepicker {
 }
 
 .datepicker__month-day--no-check-out:after {
-    background-color: rgba(255, 0, 0, 0.1);
+    background-color: $color-delete;
     bottom: 0;
-    content: '';
+    content: "";
     display: block;
     left: 50%;
     position: absolute;
@@ -182,19 +193,19 @@ date-range-picker .datepicker {
 }
 
 .datepicker__month-day--invalid {
-    color: #e8ebf4;
+    color: $color-surface-2;
 }
 
 .datepicker__month-day--disabled {
-    color: #e8ebf4;
+    color: $color-surface-2;
     position: relative;
 }
 
 .datepicker__month-day--disabled:after {
-    content: '\00d7';
+    content: "\00d7";
     left: 50%;
     position: absolute;
-    color: red;
+    color: $color-delete;
     font-size: 16px;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -202,12 +213,12 @@ date-range-picker .datepicker {
 }
 
 .datepicker__month-day--day-of-week-disabled {
-    background-color: rgba(232, 235, 244, 0.5);
+    background-color: $color-surface-3;
 }
 
 .datepicker__month-day--selected {
-    background-color: rgba($color-light-blip, 0.5);
-    color: #fff;
+    background-color: $color-system;
+    color: $color-surface-1;
 }
 
 .datepicker__month-day--selected:after {
@@ -215,20 +226,20 @@ date-range-picker .datepicker {
 }
 
 .datepicker__month-day--hovering {
-    background-color: rgba($color-light-blip, 0.5);
-    color: #fff;
+    background-color: $color-system;
+    color: $color-surface-1;
 }
 
 .datepicker__month-day--today {
-    color: $color-text-dark;
+    color: $color-content-default;
     font-weight: 700;
 }
 
 .datepicker__month-day--first-day-selected,
 .datepicker__month-day--last-day-selected {
-    background-color: $color-light-blip;
+    background-color: $color-brand;
     border-radius: 3px;
-    color: #fff;
+    color: $color-surface-1;
 }
 
 .datepicker__month-day--last-day-selected:after {
@@ -244,7 +255,7 @@ date-range-picker .datepicker {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     background-color: transparent;
     border-radius: 4px;
-    color: $color-light-blip;
+    color: $color-brand;
     display: inline-block;
     padding: 5px 10px;
     font-size: 1px;
@@ -256,7 +267,7 @@ date-range-picker .datepicker {
     &:before {
         content: "\66";
         font-size: 14px;
-        color: #fff;
+        color: $color-surface-1;
     }
 }
 
@@ -264,7 +275,7 @@ date-range-picker .datepicker {
     &:before {
         content: "\65";
         font-size: 14px;
-        color: #fff;
+        color: $color-surface-1;
     }
 }
 
@@ -283,7 +294,7 @@ date-range-picker .datepicker {
 }
 
 .datepicker__info--selected-label {
-    color: #acb2c1;
+    color: $color-content-ghost;
 }
 
 .datepicker__info-text--selected-days {
@@ -292,13 +303,13 @@ date-range-picker .datepicker {
 }
 
 .datepicker__info--error {
-    color: red;
+    color: $color-delete;
     font-size: 13px;
     font-style: italic;
 }
 
 .datepicker__info--help {
-    color: #acb2c1;
+    color: $color-content-ghost;
     font-style: italic;
 }
 
@@ -309,13 +320,13 @@ date-range-picker .datepicker {
     transition-property: color, background-color, border-color;
     -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: #746bfd;
+    background-color: $color-primary;
     border-radius: 4px;
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
     font-size: 10px;
-    color: #fff;
+    color: $color-surface-1;
     margin-top: 20px;
     padding: 7px 13px;
     text-decoration: none;
@@ -324,12 +335,12 @@ date-range-picker .datepicker {
 }
 
 .datepicker__close-button:hover {
-    background-color: #484c55;
-    color: #fff;
+    background-color: $color-content-disable;
+    color: $color-surface-1;
 }
 
 .datepicker__tooltip {
-    background-color: #ffe684;
+    background-color: $color-warning;
     border-radius: 2px;
     font-size: 11px;
     margin-top: -5px;
@@ -339,9 +350,9 @@ date-range-picker .datepicker {
 .datepicker__tooltip:after {
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-top: 4px solid #ffe684;
+    border-top: 4px solid $color-warning;
     bottom: -4px;
-    content: '';
+    content: "";
     left: 50%;
     margin-left: -4px;
     position: absolute;

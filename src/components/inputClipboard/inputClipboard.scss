@@ -1,9 +1,10 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .input-clipboard-container {
-    background: $color-text-light-7;
-    color: $color-dark-blip;
+    background: $color-surface-2;
+    color: $color-brand;
     padding: 5px 20px;
     font-size: $bp-fs-6;
     border-radius: 100px;
@@ -14,7 +15,7 @@
     input {
         background: transparent;
         border: 0;
-        color: $color-dark-blip;
+        color: $color-brand;
         font-weight: 700;
         margin-right: 10px;
         width: 85%;

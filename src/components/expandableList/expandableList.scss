@@ -1,4 +1,5 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 expandable-item {
     display: flex;
@@ -10,11 +11,11 @@ expandable-item {
     }
 
     &:nth-child(even) {
-        background-color: $color-white;
+        background-color: $color-surface-1;
     }
 
     &:nth-child(odd) {
-        background-color: #f5f8f9;
+        background-color: $color-surface-2;
     }
 
     .item-header {
@@ -34,14 +35,14 @@ expandable-item {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            color: #7e94aa;
+            color: $color-content-ghost;
         }
     }
 
     .item-body {
         width: 100%;
         display: none;
-        background-color: #ecf1f3;
+        background-color: $color-surface-2;
         z-index: 1;
 
         &.active {

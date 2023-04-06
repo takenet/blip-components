@@ -1,10 +1,11 @@
-@import '~blip-toolkit/dist/scss/variables/module';
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .file_upload {
-    padding: 3*$m;
+    padding: 3 * $m;
     position: relative;
-    background-color: $bp-color-whisper;
-    border: dashed 0.15*$m $bp-color-offwhite;
+    background-color: $color-surface-2;
+    border: dashed 0.15 * $m $color-surface-3;
 }
 
 .file_upload__input {
@@ -18,8 +19,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: $bp-color-silver;
-    min-height: 10*$m;
+    color: $color-content-ghost;
+    min-height: 10 * $m;
 }
 
 .file_upload__content__icon {

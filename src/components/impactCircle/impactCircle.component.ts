@@ -14,10 +14,10 @@ class ImpactCircleController {
                 const element = this.$element[0] as HTMLElement;
 
                 const circle = element.querySelector(
-                    '.users-graph-outer',
+                    '.users-graph-outer'
                 ) as HTMLDivElement;
                 const ring = element.querySelector(
-                    '.users-graph-outer .color-ring',
+                    '.users-graph-outer .color-ring'
                 ) as HTMLDivElement;
 
                 if (!circle || !ring) {
@@ -25,7 +25,7 @@ class ImpactCircleController {
                 }
                 if (this.percentage === 0) {
                     ring.style.opacity = '0';
-                    circle.style.background = '#efefef';
+                    circle.style.background = '$color-surface-2';
                 } else if (this.percentage === 100) {
                     ring.style.opacity = '0';
                     circle.style.background = '#0cc8cc';
@@ -33,7 +33,8 @@ class ImpactCircleController {
                     circle.style.background = 'transparent';
                     ring.style.opacity = '1';
                     ring.style.background = `linear-gradient(90deg,#0cc8cc ${this
-                        .percentage - 10}%, #efefef ${this.percentage}%)`;
+                        .percentage - 10}%, $color-surface-2 ${this.percentage
+                        }%)`;
                 }
             }
         });
@@ -97,7 +98,6 @@ export const ImpactCircleComponent = angular
         bindings: {
             impactEvaluation: '<?',
             total: '<?',
-            description: '@',
-        },
-    })
-    .name;
+            description: '@'
+        }
+    }).name;

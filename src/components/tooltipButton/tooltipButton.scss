@@ -1,4 +1,5 @@
 @import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .tooltip-button {
     z-index: 9;
@@ -17,17 +18,17 @@
         }
 
         button {
-            color: $bp-color-bot;
+            color: $color-primary;
         }
     }
 
     .text-container {
         width: 0;
-        background-color: #202631;
+        background-color: $color-content-default;
         border-radius: 40px;
         padding: 8px 0 0 25px;
         height: 40px;
-        color: #fff;
+        color: $color-surface-1;
         z-index: 1;
         opacity: 0;
         transition: 500ms opacity;
@@ -46,12 +47,12 @@
         vertical-align: top;
         border: none;
         min-width: 0;
-        color: $bp-color-breeze;
+        color: $color-surface-1;
         float: left;
         position: relative;
         width: 40px;
         height: 40px;
-        background-color: #202631;
+        background-color: $color-content-default;
         opacity: 0.9;
         border-radius: 40px;
         z-index: 2;

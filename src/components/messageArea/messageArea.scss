@@ -1,3 +1,6 @@
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
+
 .message-input {
     display: flex;
     flex-direction: row;
@@ -6,7 +9,7 @@
     height: 57px;
     min-height: 57px;
     width: 100%;
-    background-color: #FFF;
+    background-color: $color-surface-1;
     -webkit-box-shadow: 0 -1px 12px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 -1px 12px 0 rgba(0, 0, 0, 0.2);
     border-radius: 0 0 3px 3px;
@@ -25,7 +28,7 @@
         border: none;
 
         & ::placeholder {
-            color: #e4e4e4;
+            color: $color-surface-2;
         }
     }
 

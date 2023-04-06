@@ -1,16 +1,17 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 card,
 .card {
     display: block;
-    background-color: $color-white;
+    background-color: $color-surface-1;
     border-radius: 8px;
-    margin-top: 1.5*$u;
-    margin-bottom: 1.5*$u;
-    transition: box-shadow .15s ease-in-out,transform .15s ease-in-out;
-    -ms-box-shadow: 0 2px 12px 0 #e1e7ee;
-    -o-box-shadow: 0 2px 12px 0 #e1e7ee;
-    box-shadow: 0 2px 12px 0 #e1e7ee;
+    margin-top: 1.5 * $u;
+    margin-bottom: 1.5 * $u;
+    transition: box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
+    -ms-box-shadow: 0 2px 12px 0 $color-surface-2;
+    -o-box-shadow: 0 2px 12px 0 $color-surface-2;
+    box-shadow: 0 2px 12px 0 $color-surface-2;
     z-index: 1;
 
     &[ng-click]:hover {
@@ -18,52 +19,60 @@ card,
         transform: scale(1.03);
     }
 
-    &.with-autocomplete { z-index: auto; }
+    &.with-autocomplete {
+        z-index: auto;
+    }
 
     card-footer {
-        border-top: 1px solid lighten(#CADAE5, 5%);
+        border-top: 1px solid $color-surface-2;
         width: 100%;
         display: block;
     }
 
     + card,
     + .card {
-        margin-top: 3*$u;
+        margin-top: 3 * $u;
         &.column,
         &.columns {
-            margin-top: 1.5*$u;
+            margin-top: 1.5 * $u;
         }
     }
 
     .card-header {
-        padding: 2.5*$u 2.5*$u 0;
+        padding: 2.5 * $u 2.5 * $u 0;
 
-        span { margin-right: 15px; }
-        &:focus { outline: 0; }
-        icon { color: $color-disabled; }
+        span {
+            margin-right: 15px;
+        }
+        &:focus {
+            outline: 0;
+        }
+        icon {
+            color: $color-content-disable;
+        }
     }
 
     .card-title {
         font-weight: $bold;
-        color: $color-text-dark;
+        color: $color-content-default;
         margin: 0;
         text-align: left;
     }
 
     .card-divider {
-        background-color: $color-disabled;
-        margin: .5*$u 1.5rem 1.5*$u 1.5rem;
-        max-width: 9*$u;
+        background-color: $color-content-disable;
+        margin: 0.5 * $u 1.5rem 1.5 * $u 1.5rem;
+        max-width: 9 * $u;
         height: 1px;
         display: block;
     }
 
     .card-title + .card-content {
-        padding-top: 1.5*$u;
+        padding-top: 1.5 * $u;
     }
 
     .card-content {
-        padding: 2.5*$u;
+        padding: 2.5 * $u;
         margin: 0;
 
         &:after {
@@ -74,11 +83,11 @@ card,
     }
 
     .card-actions {
-        padding-top: 2.5*$u;
+        padding-top: 2.5 * $u;
         text-align: right;
 
         > button + button {
-            margin-left: 1.5*$u;
+            margin-left: 1.5 * $u;
         }
 
         @media (max-width: 749px) {
@@ -88,29 +97,29 @@ card,
             }
             > button + button {
                 margin-left: 0;
-                margin-top: 1.5*$u;
+                margin-top: 1.5 * $u;
             }
         }
     }
 
     .card-image {
         &.card-image-left {
-            margin-right: 1.5*$u;
+            margin-right: 1.5 * $u;
             float: left;
         }
         &.card-image-right {
-            margin-left: 1.5*$u;
+            margin-left: 1.5 * $u;
             float: right;
         }
     }
 
     &.card-dashed {
-        border: 2px $color-text-light dashed;
+        border: 2px $color-content-ghost dashed;
     }
 
     &.card-template {
         border-radius: 0;
-        height: 12.0rem;
+        height: 12rem;
         -webkit-transition: box-shadow 0.15s ease-in-out;
         -moz-transition: box-shadow 0.15s ease-in-out;
         -ms-transition: box-shadow 0.15s ease-in-out;
@@ -140,45 +149,42 @@ card,
     }
 
     &--with-hover {
-        box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
-        transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
-        transition-delay: .1s;
+        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.3s ease-out, transform 0.3s ease-out,
+            opacity 0.2s ease-out;
+        transition-delay: 0.1s;
         transform: translateZ(0);
 
         &:hover {
             opacity: 1 !important;
-            box-shadow:
-                0 4px 4px rgb(219, 227, 239),
-                0 16px 16px rgb(222, 228, 240),
-                0 32px 20px rgb(228, 234, 241);
+            box-shadow: 0 4px 4px rgb(219, 227, 239),
+                0 16px 16px rgb(222, 228, 240), 0 32px 20px rgb(228, 234, 241);
             transform: translate(0, -4px);
         }
     }
 
     &--mini-card {
-
-        box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
-        transition: box-shadow .3s ease-out, top .3s ease-out;
-        transition-delay: .1s;
+        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.3s ease-out, top 0.3s ease-out;
+        transition-delay: 0.1s;
         padding: 20px 50px 20px 60px;
         margin: 0 0 10px 0;
 
         &:hover {
-            box-shadow:
-                0 0 4px 0 rgb(169, 194, 215),
+            box-shadow: 0 0 4px 0 rgb(169, 194, 215),
                 0 13px 20px 0 rgb(213, 222, 235);
         }
 
         .input-auto-expand input {
             padding: 5px;
-            margin-right: 1*$m;
+            margin-right: 1 * $m;
             border: none;
             background: transparent;
             outline: none;
 
             &:focus,
             &:hover:not([disabled="disabled"]) {
-                border: 1px solid $color-gray;
+                border: 1px solid $color-content-disable;
             }
         }
 
@@ -225,7 +231,7 @@ card,
                 }
 
                 label {
-                    color: #8491a8;
+                    color: $color-content-ghost;
                     margin: 0;
                     font-size: $bp-fs-7;
                     font-weight: 500;
@@ -237,19 +243,19 @@ card,
             .divider {
                 width: 1px;
                 min-height: 40px;
-                background-color: #e3e9ec;
+                background-color: $color-surface-3;
                 margin: 0 15px;
             }
 
             .card-icons {
-                color: #8F9CB5;
+                color: $color-content-ghost;
                 font-size: $bp-fs-4;
                 display: flex;
                 align-items: baseline;
                 justify-content: flex-end;
 
                 > * {
-                    margin-left: 1.5*$m;
+                    margin-left: 1.5 * $m;
                     cursor: pointer;
                 }
 

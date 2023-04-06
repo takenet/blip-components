@@ -1,15 +1,16 @@
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .input-file {
-    background-color: $color-white-dark;
-    border: 1px $color-disabled dashed;
+    background-color: $color-surface-2;
+    border: 1px $color-content-disable dashed;
     border-radius: 0;
-    color: $bp-color-city;
+    color: $color-content-ghost;
     text-align: center;
     overflow: hidden;
     > label {
-        line-height: 6.8*$m;
+        line-height: 6.8 * $m;
         margin: 0;
         pointer-events: none;
         button {
@@ -26,13 +27,13 @@
         z-index: -1;
     }
     > img {
-        margin-top: 0.6*$m;
+        margin-top: 0.6 * $m;
         max-width: 100%;
     }
 
     &.drag-over {
-        background-color: darken($color-gray-light, 6%);
-        color: $color-text-dark;
+        background-color: $color-surface-3;
+        color: $color-content-default;
         button {
             display: none;
         }

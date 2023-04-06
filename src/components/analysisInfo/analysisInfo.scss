@@ -1,6 +1,8 @@
-.analysis-response {
+@import "~assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
-    background-color: #edf3f4;    
+.analysis-response {
+    background-color: $color-surface-2;
 
     margin-bottom: 15px;
     border-radius: 15px;
@@ -11,7 +13,6 @@
     }
 
     & > .expand {
-
         padding: 5px 0;
 
         & > i {
@@ -20,7 +21,6 @@
             transform: translate(-50%);
             font-size: 0.625rem;
         }
-
     }
 
     & .intention {
@@ -31,13 +31,12 @@
         display: flex;
         justify-content: center;
     }
-
 }
 
 .hidden-content {
     height: 0;
     overflow: hidden;
-    border-top: #dde3e3 dashed 1.5px;
+    border-top: $color-content-ghost dashed 1.5px;
 
     &.display {
         height: auto;

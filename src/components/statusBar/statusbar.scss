@@ -1,4 +1,5 @@
 @import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .status-bar-wrapper {
     display: flex;
@@ -8,12 +9,13 @@
         text-align: left;
         font-size: $bp-fs-7;
 
-        .icon-false, .icon-true {
+        .icon-false,
+        .icon-true {
             font-size: 12px !important;
         }
 
         span {
-            border: none!important;
+            border: none !important;
             font-size: $bp-fs-7;
         }
     }
@@ -24,7 +26,7 @@
         span {
             height: 9px;
             width: 22px;
-            border: 1px solid #a0a0a0;
+            border: 1px solid $color-content-disable;
             border-radius: 100px;
             margin-right: 1px;
         }

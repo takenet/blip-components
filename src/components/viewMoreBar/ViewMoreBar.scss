@@ -1,11 +1,12 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .load-more {
     padding: 20px 0;
-    background-color: #DEE8EC;
+    background-color: #dee8ec;
 
     > div {
-        color: $bp-color-bot;
+        color: $color-primary;
         min-height: 40px;
     }
 }

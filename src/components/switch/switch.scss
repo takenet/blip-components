@@ -1,6 +1,7 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
-switch {  
+switch {
     input[type="checkbox"] {
         position: absolute;
         top: 0;
@@ -10,9 +11,8 @@ switch {
         margin: 0;
 
         + label {
-            
             position: relative;
-            background: $bp-color-switch-disabled;
+            background: $color-surface-3;
             transition: background-color 0.33s ease;
             padding: 0;
             width: 43px;
@@ -20,7 +20,7 @@ switch {
             line-height: 1.5em;
             vertical-align: top;
             border-radius: 36px;
-            margin: 0 0 -0.3*$m 0;
+            margin: 0 0 -0.3 * $m 0;
             cursor: pointer;
             display: inline-block;
 
@@ -31,10 +31,9 @@ switch {
                 position: absolute;
                 top: 2px;
                 left: 2px;
-                background: $color-white;
+                background: $color-surface-1;
                 border-radius: 50%;
                 transition: left 0.33s ease;
-                
             }
         }
 
@@ -45,14 +44,14 @@ switch {
             }
         }
         &:disabled + label {
-            background: $color-primary-light;
-        }        
+            background: $color-brand;
+        }
     }
 }
-.label{
+.label {
     font-weight: 700;
-    color: #52636c;
-    letter-spacing: .00625rem;
+    color: $color-content-default;
+    letter-spacing: 0.00625rem;
     margin: 0;
     vertical-align: middle;
 }

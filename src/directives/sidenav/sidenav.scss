@@ -1,5 +1,6 @@
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 $sidenav-width: 318px;
 $sidenav-max-width: 318px;
@@ -12,32 +13,34 @@ $sidenav-max-width: 318px;
     overflow-x: hidden;
     overflow-y: auto;
 
-    @include scrollbar($bp-color-city);
+    @include scrollbar($color-content-default);
 
     &.collapsed {
         max-width: 36px;
     }
 
-    &:focus { outline: none; }
+    &:focus {
+        outline: none;
+    }
 
     header {
-        padding: 0 0.6*$m;
-        margin-bottom: 0.6*$m;
+        padding: 0 0.6 * $m;
+        margin-bottom: 0.6 * $m;
 
         width: $sidenav-width;
         max-width: $sidenav-width;
 
-        height: 4.8*$m;
-        line-height: 4.8*$m;
+        height: 4.8 * $m;
+        line-height: 4.8 * $m;
 
         display: table;
 
         &[href]:hover {
-            background-color: $bp-color-suit;
+            background-color: $color-content-disable;
         }
 
         > div {
-            padding-right: 1.2*$m;
+            padding-right: 1.2 * $m;
             display: table-cell;
             vertical-align: middle;
             > span,
@@ -52,15 +55,15 @@ $sidenav-max-width: 318px;
     }
 
     .subheader {
-        margin-bottom: 1.5*$m;
+        margin-bottom: 1.5 * $m;
 
         [href]:first-child {
-            padding: 0.6*$m 0 0.6*$m 4.2*$m;
+            padding: 0.6 * $m 0 0.6 * $m 4.2 * $m;
             display: block;
             text-decoration: none;
 
             &:hover {
-                background-color: $bp-color-suit;
+                background-color: $color-content-disable;
             }
         }
     }
@@ -76,19 +79,21 @@ $sidenav-max-width: 318px;
     }
 
     li {
-        color:inherit;
+        color: inherit;
         max-width: $sidenav-max-width;
         margin: 0;
-        border-bottom: 1px solid $color-gray-light-2;
+        border-bottom: 1px solid $color-surface-2;
 
         a {
             padding: 19px 44px 15px 35px;
             border-left: 3px transparent solid;
             color: inherit;
             display: block;
-            text-decoration:none;
+            text-decoration: none;
             min-height: inherit;
-            &:hover { cursor: pointer; }
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         .icon {
@@ -100,17 +105,16 @@ $sidenav-max-width: 318px;
         }
 
         .sidebar-title {
-            color: $bp-color-city;
+            color: $color-content-ghost;
             font-size: $bp-fs-5;
             line-height: 1.5;
         }
 
         .sidebar-subtitle {
-            color: $bp-color-city;
+            color: $color-content-ghost;
             font-size: $bp-fs-7;
         }
     }
-
 
     ol.ordered {
         counter-reset: listCounter;
@@ -121,49 +125,54 @@ $sidenav-max-width: 318px;
 
     ol.ordered li a:before {
         content: counter(listCounter) " ";
-        padding-left: 0.3*$m;
-        padding-right: 1.2*$m;
+        padding-left: 0.3 * $m;
+        padding-right: 1.2 * $m;
         display: inline;
     }
 
     // first level list
     li:hover {
-        .sidebar-title, .sidebar-subtitle {
-            color: $bp-color-suit;
+        .sidebar-title,
+        .sidebar-subtitle {
+            color: $color-content-disable;
         }
     }
     li.active > a,
     li > a.active {
-        background-color: $color-gray-light-2;
+        background-color: $color-surface-2;
 
-        .sidebar-title, .sidebar-subtitle {
-            color: $bp-color-suit;
+        .sidebar-title,
+        .sidebar-subtitle {
+            color: $color-content-disable;
         }
     }
 
     // second level list
-    li.active > ul, ol {
+    li.active > ul,
+    ol {
         display: block;
     }
     ul.nav-second-level,
     ol.nav-second-level {
-        background-color: $bp-color-obsidian;
+        background-color: $color-content-default;
         padding: 0;
         overflow: hidden;
         max-height: 0;
         transition: max-height 500ms, padding 500ms;
 
         &.expanded {
-            border-top: 2px $bp-color-obsidian solid;
-            padding: 0.9*$m 0 0.3*$m 2.4*$m;
+            border-top: 2px $color-content-default solid;
+            padding: 0.9 * $m 0 0.3 * $m 2.4 * $m;
             max-height: 9999px;
             transition: 500ms;
         }
 
-        li { width: auto; }
+        li {
+            width: auto;
+        }
 
         li > a {
-            padding-left: 0.9*$m;
+            padding-left: 0.9 * $m;
             font-weight: $regular;
             width: 92%;
         }

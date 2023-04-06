@@ -1,5 +1,6 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .saving-component {
     border-radius: 8px;
@@ -20,19 +21,19 @@
     span {
         margin-left: 5px;
         font-size: $bp-fs-6;
-        color: $bp-color-cloud;
+        color: $color-content-ghost;
         line-height: 1;
         font-weight: bold;
     }
 
     i {
         align-self: center;
-        border: 2px solid $bp-color-cloud;
+        border: 2px solid $color-content-ghost;
         font-size: 0.6rem;
         margin-left: 8px;
         border-radius: 100%;
         padding: 0 2.5px;
-        color: $bp-color-cloud;
+        color: $color-content-ghost;
     }
 
     .spin {

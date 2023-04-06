@@ -1,20 +1,23 @@
+@import "~assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
+
 .avatar-array {
     tooltip {
         width: 55px;
         height: 55px;
         position: absolute;
         cursor: default;
-        background: white;
+        background: $color-surface-1;
         border-radius: 50%;
         left: 0;
         transition: left 1s linear;
 
-        &>tip-cont>span {
+        & > tip-cont > span {
             position: absolute;
             width: 55px;
             height: 55px;
             padding: 2px;
-            background: white;
+            background: $color-surface-1;
             border-radius: 50%;
         }
 
@@ -28,5 +31,4 @@
         height: 50px;
         width: 50px;
     }
-
 }

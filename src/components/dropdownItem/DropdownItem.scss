@@ -1,5 +1,6 @@
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 $dropdown-padding: 10px;
 
@@ -24,15 +25,18 @@ $dropdown-padding: 10px;
     position: absolute;
     min-width: 50px;
     display: inline-block;
-    background: #fff;
+    background: $color-surface-1;
     border-radius: 8px;
     padding: $dropdown-padding 0;
     margin-top: 5px;
     transition: 400ms;
-    opacity:0;
+    opacity: 0;
     visibility: hidden;
-    @include box-shadow(0 1px 6px rgba(0, 60, 128, 0.14), 0 2px 32px rgba(70, 67, 103, 0.1));
-    @include scrollbar($color-gray-light);
+    @include box-shadow(
+        0 1px 6px rgba(0, 60, 128, 0.14),
+        0 2px 32px rgba(70, 67, 103, 0.1)
+    );
+    @include scrollbar($color-surface-2);
 
     &.hide-dropdown {
         opacity: 0;
@@ -44,13 +48,14 @@ $dropdown-padding: 10px;
         visibility: visible;
     }
 
-    > span, span[ng-click] {
-        cursor:pointer;
+    > span,
+    span[ng-click] {
+        cursor: pointer;
         display: inline-block;
         text-align: center;
 
         &:hover {
-            color: $color-text-dark-5;
+            color: $color-content-default;
         }
     }
 
@@ -64,67 +69,72 @@ $dropdown-padding: 10px;
         }
 
         &:hover {
-            color: $color-text-dark-5;
+            color: $color-content-default;
         }
     }
 
     &:before {
         content: " ";
-        width: 17px; height: 17px;
+        width: 17px;
+        height: 17px;
         position: absolute;
         bottom: -8px;
-        background: #fff;
+        background: $color-surface-1;
         transform: rotate(45deg);
         border-radius: 6px 0;
     }
 
     a:hover {
-        color: $color-text-dark-5;
+        color: $color-content-default;
     }
 
     .dropdown-item {
         font-size: $bp-fs-6;
         font-weight: 300;
-        color: $color-text;
+        color: $color-content-default;
 
         &:hover {
-            color: $color-text-dark-5;
+            color: $color-content-default;
         }
 
         &.delete {
             color: $color-delete;
 
             &:hover {
-                color: $color-danger;
+                color: $color-error;
             }
         }
     }
 }
 
 .dropdown-align-right {
-    right: -$dropdown-padding*2.5;
+    right: -$dropdown-padding * 2.5;
 
-    &:before { right: $dropdown-padding; }
+    &:before {
+        right: $dropdown-padding;
+    }
 }
 
 .dropdown-align-left {
     left: -$dropdown-padding;
 
-    &:before { left: $dropdown-padding; }
+    &:before {
+        left: $dropdown-padding;
+    }
 }
 
 .dropdown-item-content {
     &.dropdown-align-center {
         -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-                transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
 
         &:before {
             left: 50%;
             top: -13px;
             -webkit-transform: rotate(45deg) translateX(50%);
-                -ms-transform: rotate(45deg) translateX(50%);
-                    transform: rotate(45deg) translateX(50%);
+            -ms-transform: rotate(45deg) translateX(50%);
+            transform: rotate(45deg) translateX(50%);
         }
     }
 }
@@ -144,5 +154,7 @@ $dropdown-padding: 10px;
 
 .dropdown-hide-up-icon {
     margin-top: 0;
-    &:before { display: none; }
+    &:before {
+        display: none;
+    }
 }

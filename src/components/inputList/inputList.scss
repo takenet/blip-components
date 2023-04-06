@@ -1,12 +1,16 @@
 @import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 input-list {
-
-    margin-bottom: 3*$u;
+    margin-bottom: 3 * $u;
     display: block;
 
-    .input-list-textarea { max-height: 130px; }
-    .card-header { display: none; }
+    .input-list-textarea {
+        max-height: 130px;
+    }
+    .card-header {
+        display: none;
+    }
 
     .table {
         width: 100%;
@@ -16,7 +20,7 @@ input-list {
     ul {
         position: relative;
         list-style: none;
-        margin: 0 0 0.5*$u;
+        margin: 0 0 0.5 * $u;
 
         card {
             margin: 0;
@@ -28,18 +32,18 @@ input-list {
             margin: 0;
 
             + li {
-                margin-top: 1.5*$u;
+                margin-top: 1.5 * $u;
             }
 
             input[type="text"] {
-                margin: -0.5*$u 0;
-                height: 5*$u;
+                margin: -0.5 * $u 0;
+                height: 5 * $u;
             }
         }
 
         .dndPlaceholder + li {
             card {
-                background-color: $color-accent;
+                background-color: $color-surface-3;
             }
         }
 
