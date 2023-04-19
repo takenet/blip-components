@@ -1,11 +1,12 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .upload-container {
     position: relative;
     background: none;
     color: $color-primary;
 
-    input[type='file'] {
+    input[type="file"] {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -18,7 +19,7 @@
         &:hover {
             & ~ span {
                 opacity: 1;
-                background-color: rgba(66, 77, 95, 0.8);
+                background-color: $color-content-ghost;
             }
         }
     }
@@ -42,7 +43,7 @@
         width: 100%;
         z-index: 1;
         opacity: 0;
-        border-color: black;
+        border-color: $color-content-default;
         border-width: 2px;
         border-style: dashed;
 

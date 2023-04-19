@@ -1,4 +1,10 @@
+@import "~assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
+
 .actions-bar-trigger {
+    background-color: $color-primary;
+    color: $color-content-bright;
+
     i {
         position: absolute;
         transition: all 0.4s;

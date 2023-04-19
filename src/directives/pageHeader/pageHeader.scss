@@ -1,28 +1,29 @@
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 page-header {
     .icon-back {
-        color: $color-text-light-5;
+        color: $color-content-ghost;
         cursor: pointer;
     }
 
-    .return-icon{
-        color: black;
+    .return-icon {
+        color: $color-content-default;
         text-decoration: none;
     }
 
-    .return-icon:hover{
-        color: black;
+    .return-icon:hover {
+        color: $color-content-default;
     }
 }
 
 .custom-header-content {
     custom-content {
-        display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-        display: -ms-flexbox;  /* TWEENER - IE 10 */
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
         display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-        display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+        display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
         justify-content: flex-end;
     }
 
@@ -37,10 +38,10 @@ page-header {
             i {
                 line-height: 1;
                 font-size: $bp-fs-4;
-                color: $bp-c-cloud;
+                color: $color-surface-2;
 
                 &:hover {
-                    color: $color-primary-light;
+                    color: $color-primary;
                 }
             }
         }
@@ -48,21 +49,22 @@ page-header {
 }
 
 .full-initial-section {
-    border-bottom: 1px solid $color-text-light-6;
-    margin: 1.5*$m 0;
-    padding: 1.5*$m 0;
+    border-bottom: 1px solid $color-surface-3;
+    margin: 1.5 * $m 0;
+    padding: 1.5 * $m 0;
 
     .page-header-content {
-        height: 4.2*$m;
+        height: 4.2 * $m;
     }
 
     h1 {
         color: $color-secondary;
-        font-size: 2.4*$m;
+        font-size: 2.4 * $m;
         font-weight: 400;
     }
 }
 
-#helper, #info-icon.fadeOut {
+#helper,
+#info-icon.fadeOut {
     display: none;
 }

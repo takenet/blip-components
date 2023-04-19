@@ -1,12 +1,13 @@
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .content-boxes {
     margin-top: 60px;
 
     .content-boxes__list {
         li {
-            background: lighten($color-gray, 20%);
+            background: $color-content-ghost;
             display: block;
             padding: 5px;
             min-height: 60px;
@@ -17,7 +18,7 @@
             .add-option-box {
                 position: relative;
                 padding: 15px;
-                background: #e1e5e8;
+                background: $color-surface-2;
 
                 &:hover {
                     .content-boxes__list__options {
@@ -52,7 +53,9 @@
 
             > div {
                 margin-right: 30px;
-                &:focus { outline: none; }
+                &:focus {
+                    outline: none;
+                }
             }
         }
     }
@@ -69,10 +72,14 @@
             }
         }
 
-        icon:focus { outline: none; }
+        icon:focus {
+            outline: none;
+        }
 
         .card-aditional-info,
-        .card-collapse-icon { float: right; }
+        .card-collapse-icon {
+            float: right;
+        }
     }
 
     .card-handleable-content {
@@ -86,10 +93,14 @@
 }
 
 .content-boxes-expandable-content {
-    input-list { margin-bottom: 0; }
+    input-list {
+        margin-bottom: 0;
+    }
 
     card.content-boxes-expandable-content {
-        .card-divider { display: none; }
+        .card-divider {
+            display: none;
+        }
     }
 }
 
@@ -99,10 +110,11 @@
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     display: block;
-    color: $color-gray;
+    color: $color-content-disable;
 
     i.icon-material {
         font-size: $bp-font-large-1;
-        width: auto; height: auto;
+        width: auto;
+        height: auto;
     }
 }

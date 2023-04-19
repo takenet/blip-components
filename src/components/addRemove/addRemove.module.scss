@@ -1,14 +1,18 @@
-@import '../../assets/scss/mixins';
+@import "~assets/scss/variables";
+@import "../../assets/scss/mixins";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .button {
-    color: #fff;
-    width: 28px; height: 28px;
+    color: $color-content-bright;
+    background-color: $color-info;
+    width: 28px;
+    height: 28px;
     line-height: 28px;
     text-align: center;
     font-weight: 700;
     display: inline-block;
     margin-right: 7px;
-    @include box-shadow(0 2px 4px 0 rgba(0,0,0,0.22));
+    @include box-shadow(0 2px 4px 0 rgba(0, 0, 0, 0.22));
 }
 
 :global {
@@ -24,9 +28,13 @@
     }
 
     .add-remove-container {
-        add-remove { visibility: hidden; }
+        add-remove {
+            visibility: hidden;
+        }
         &:hover {
-            add-remove { visibility: visible; }
+            add-remove {
+                visibility: visible;
+            }
         }
     }
 }

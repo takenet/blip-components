@@ -1,10 +1,11 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .content-tabs {
     .content-tabs-items {
         display: inline-block;
         justify-content: space-around;
-        border-bottom: 2px solid #ebf0f4;
+        border-bottom: 2px solid $color-surface-2;
         width: 100%;
 
         li {
@@ -29,20 +30,20 @@
             }
 
             &.active {
-                border-bottom: 4px solid $bp-color-bot; //#2cc3d5
-                color: $bp-color-bot; //#2cc3d5
+                border-bottom: 4px solid $color-primary; //$color-brand
+                color: $color-primary; //$color-brand
 
                 a {
-                    color: $bp-color-bot;
+                    color: $color-primary;
                 }
             }
 
             &.tab-disabled {
-                color: #ebf0f4;
+                color: $color-surface-2;
             }
 
             .tab-href {
-                color: #52636c;
+                color: $color-content-disable;
             }
         }
     }

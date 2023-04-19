@@ -1,4 +1,5 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .upload-button {
     border-radius: 50%;
@@ -7,10 +8,10 @@
     position: relative;
     display: flex;
     align-items: center;
-    background-color: #414D5E;
+    background-color: $color-content-disable;
 
     &.dashed-border {
-        border: 3px dashed #1F2735;
+        border: 3px dashed $color-content-default;
     }
 
     .upload-items {
@@ -34,11 +35,11 @@
             padding: 8px 28px 0;
             line-height: 1.5;
             text-align: center;
-            color: $color-white;
+            color: $color-surface-1;
         }
 
         local-loading {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: $color-content-ghost;
             width: 100%;
             height: 100%;
             border-radius: 50%;
@@ -48,15 +49,15 @@
         }
     }
 
-    input[type='file'] {
+    input[type="file"] {
         position: absolute;
         height: 100%;
         width: 100%;
         z-index: 2;
-        top:0;
-        left:0;
-        opacity:0;
-        cursor:pointer;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        cursor: pointer;
     }
 
     .uploaded-img {
@@ -64,5 +65,4 @@
         height: 100%;
         border-radius: 50%;
     }
-
 }

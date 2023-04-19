@@ -1,3 +1,6 @@
+@import "~assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
+
 .blip-tags {
     .blip-select.bp-input-wrapper {
         background-color: transparent !important;
@@ -5,7 +8,7 @@
 
     button {
         &:hover {
-            color: #fff;
+            color: $color-surface-1;
         }
     }
 }

@@ -1,9 +1,10 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .scroll-content {
     overflow-y: auto;
     padding: 0 5px;
     margin-bottom: 20px;
-    @include scrollbar($color-gray-light);
+    @include scrollbar($color-surface-2);
 }

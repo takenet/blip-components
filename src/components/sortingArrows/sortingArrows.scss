@@ -1,4 +1,5 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .sorting-label {
     margin-left: 1.0125em;
@@ -6,7 +7,7 @@
 }
 
 .sorting-arrows {
-    width: 0.70em;
+    width: 0.7em;
     height: 1.5em;
 
     &.sorting-arrows--absolute {
@@ -31,9 +32,9 @@
         display: block;
 
         border-top-width: 0.325em;
-        border-right-width: 0.350em;
+        border-right-width: 0.35em;
         border-bottom-width: 0.325em;
-        border-left-width: 0.350em;
+        border-left-width: 0.35em;
 
         border-style: solid;
         border-color: transparent;
@@ -41,22 +42,21 @@
 
     .arrow-up {
         &:not(.arrow--selected) {
-            border-bottom-color:  $bp-color-time;
+            border-bottom-color: $color-surface-3;
         }
 
         &.arrow--selected {
-            border-bottom-color:  $bp-color-rooftop;
+            border-bottom-color: $color-content-disable;
         }
     }
 
     .arrow-down {
         &:not(.arrow--selected) {
-            border-top-color:  $bp-color-time;
+            border-top-color: $color-surface-3;
         }
 
         &.arrow--selected {
-            border-top-color:  $bp-color-rooftop;
+            border-top-color: $color-content-disable;
         }
     }
-
 }

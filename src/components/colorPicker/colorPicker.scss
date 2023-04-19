@@ -1,3 +1,6 @@
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
+
 .date-picker-wrapper {
     position: relative;
     display: flex;
@@ -9,13 +12,13 @@
         display: none;
     }
     .color-label {
-        background-color: black;
-        border: 1px solid #C7D0E1;
+        background-color: $color-content-din;
+        border: 1px solid $color-content-ghost;
         border-radius: 50%;
         margin: 0;
         width: 30px;
         height: 30px;
-        border: 1px solid lightgray;
+        border: 1px solid $color-surface-3;
     }
 
     .color-picker {
@@ -24,15 +27,15 @@
         flex-direction: column;
         z-index: 100;
         left: 39px;
-        background-color: white;
+        background-color: $color-surface-1;
         height: 180px;
         width: 205px;
-        border: solid 1px #ccc;
+        border: solid 1px $color-surface-3;
         visibility: hidden;
         padding: 15px 10px;
         border: none;
         border-radius: 5px;
-        box-shadow: 0 1px 20px 0 rgba(199,207,209,.7);
+        box-shadow: 0 1px 20px 0 rgba(199, 207, 209, 0.7);
 
         &.show-picker {
             visibility: visible;
@@ -48,17 +51,15 @@
             width: 100%;
             border: none;
             outline: none;
-            border-bottom: 1px solid #e1e1e1!important;
+            border-bottom: 1px solid $color-surface-2;
             margin-top: 5px;
 
-            &:focus{
-
-                border-bottom: 1px solid #e1e1e1!important;
+            &:focus {
+                border-bottom: 1px solid $color-surface-2;
             }
             &.invalid-input {
-
                 &:focus {
-                    border-bottom: 1px solid red!important;
+                    border-bottom: 1px solid $color-error;
                 }
             }
         }

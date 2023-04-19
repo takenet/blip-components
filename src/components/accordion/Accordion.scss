@@ -1,24 +1,26 @@
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 .accordion {
-    padding: 0.6*$m 0;
-    margin: 0.9*$m 0;
+    padding: 0.6 * $m 0;
+    margin: 0.9 * $m 0;
 
-    border-bottom: 1px $color-disabled dotted;
+    border-bottom: 1px $color-content-disable dotted;
 
     .accordion-title {
-        margin-bottom: 1.5*$m;
+        margin-bottom: 1.5 * $m;
         @include transition(margin-bottom 0.3s ease-in-out);
+        color: $color-content-default;
     }
 
     .accordion-chevron {
-        margin: 0.6*$m 0.3*$m 0;
+        margin: 0.6 * $m 0.3 * $m 0;
         content: "";
         width: 8px;
         height: 8px;
-        border-right: 3px $color-text solid;
-        border-bottom: 3px $color-text solid;
+        border-right: 3px $color-content-default solid;
+        border-bottom: 3px $color-content-default solid;
 
         @include transition(transform 0.3s ease-in-out);
 
@@ -32,14 +34,14 @@
         @include transition(
             max-height 0.3s ease-in-out,
             opacity 0.3s ease-in-out
-            );
+        );
     }
 
-    &-icon{
+    &-icon {
         position: absolute;
         top: 10px;
         left: 15px;
-        color: $bp-color-warning-yellow;
+        color: $color-warning;
     }
 
     > input[type="checkbox"] {
@@ -52,7 +54,7 @@
         z-index: 1;
         opacity: 0;
 
-        &.hasRouterChild{
+        &.hasRouterChild {
             opacity: 0;
         }
 
@@ -65,7 +67,9 @@
                 padding-top: 0;
                 opacity: 0;
             }
-            ~ .accordion-chevron { transform: rotate(45deg); }
+            ~ .accordion-chevron {
+                transform: rotate(45deg);
+            }
         }
     }
 }

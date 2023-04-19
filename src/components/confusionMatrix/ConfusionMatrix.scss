@@ -1,15 +1,16 @@
-@import '../../assets/scss/mixins';
-@import '../../assets/scss/variables';
+@import "../../assets/scss/mixins";
+@import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
-$row-color1: #e7ebf0;
-$row-color2: #f0f3f5;
-$white: #fff;
-$hover-color: #b5bcc0;
-$main-diagonal-border-color: #2C2A46;
+$row-color1: $color-surface-1;
+$row-color2: $color-surface-2;
+$white: $color-surface-1;
+$hover-color: $color-surface-3;
+$main-diagonal-border-color: $color-content-din;
 
 .matrix-table {
     height: 100%;
-    color: $color-text;
+    color: $color-content-default;
     overflow: hidden;
     border-spacing: 0;
 
@@ -18,7 +19,7 @@ $main-diagonal-border-color: #2C2A46;
         th {
             z-index: -2;
             position: relative;
-            color: $color-text;
+            color: $color-content-default;
             border: none;
             font-weight: 300;
 
@@ -65,7 +66,7 @@ $main-diagonal-border-color: #2C2A46;
                     display: flex;
                 }
 
-                &.white{
+                &.white {
                     color: $white;
                 }
 
@@ -74,7 +75,7 @@ $main-diagonal-border-color: #2C2A46;
                 }
 
                 &.header {
-                    color: $color-text;
+                    color: $color-content-default;
                     width: 160px;
                     padding-left: 20px;
                 }

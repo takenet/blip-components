@@ -1,7 +1,7 @@
 @import "../../assets/scss/variables";
+@import "~blip-ds/dist/collection/styles/_colors.scss";
 
 icon-button {
-
     width: auto;
 
     .large {
@@ -22,25 +22,47 @@ icon-button {
             line-height: 1;
         }
 
-        &.button-primary { padding: 3px 4px; }
+        &.button-primary {
+            padding: 3px 4px;
+        }
 
-        &.text-primary:hover { color: $color-primary-light; }
-        &.text-primary:focus { color: $color-primary; }
+        &.text-primary:hover {
+            color: $color-brand;
+        }
+        &.text-primary:focus {
+            color: $color-primary;
+        }
 
-        &.text-secondary:hover { color: $color-secondary-light; }
-        &.text-secondary:focus { color: $color-secondary; }
+        &.text-secondary:hover {
+            color: $color-content-disable;
+        }
+        &.text-secondary:focus {
+            color: $color-content-default;
+        }
 
-        &.text-disabled:hover { color: $color-gray; }
-        &.text-disabled:focus { color: $color-disabled; }
+        &.text-disabled:hover {
+            color: $color-content-disable;
+        }
+        &.text-disabled:focus {
+            color: $color-content-disable;
+        }
 
-        &.text:hover { color: $color-text-dark; }
-        &.text:focus { color: $color-text; }
+        &.text:hover {
+            color: $color-content-default;
+        }
+        &.text:focus {
+            color: $color-content-default;
+        }
 
-        &.text-facebook:hover { color: $color-facebook-dark; }
-        &.text-facebook:focus { color: $color-facebook; }
+        &.text-facebook:hover {
+            color: $color-facebook-dark;
+        }
+        &.text-facebook:focus {
+            color: $color-facebook;
+        }
     }
 
     + icon-button {
-        margin-left: 1.5*$u;
+        margin-left: 1.5 * $u;
     }
 }
