@@ -10,7 +10,7 @@ export const sidenavMenuItem = angular
         template: template,
         controller: class {
             title: any;
-            text: any
+            text: any;
             sparams: any;
             sref: any;
             icon: any;
