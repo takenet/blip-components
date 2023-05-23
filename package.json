@@ -94,6 +94,7 @@
     }
   },
   "release": {
+    "branch": "9.67.6",
     "analyzeCommits": {
       "releaseRules": [
         {
