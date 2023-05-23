@@ -9,6 +9,8 @@ export const sidenavMenuItem = angular
     .component('sidenavMenuItem', {
         template: template,
         controller: class {
+            title: any;
+            text: any
             sparams: any;
             sref: any;
             icon: any;
@@ -26,13 +28,11 @@ export const sidenavMenuItem = angular
                 private $state,
                 private $element,
                 private $rootScope,
-                private AccountService,
             ) {
                 'ngInject';
                 this.$rootScope = $rootScope;
                 this.$state = $state;
                 this.$element = $element;
-                this.AccountService = AccountService;
                 this.hasChildren = this.hasChildren || false;
                 this.preventDefault = this.preventDefault == false ? false : true;
                 this._isNewChildren = false;
