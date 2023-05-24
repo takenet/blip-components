@@ -14,7 +14,7 @@
         parent-form="$ctrl.formReference"
         field-name="key"
         type="text"
-        class="w-45"
+        class="input-text"
         required></blip-input-dpr>
     <blip-input-dpr
         ng-model="$ctrl.value"
@@ -22,7 +22,13 @@
         parent-form="$ctrl.formReference"
         field-name="value"
         type="text"
-        class="w-45"
+        class="input-text"
         required></blip-input-dpr>
-    <i ng-click="$ctrl.delete()" class="self-center icon-close lh-solid"></i>
+    <bds-button-icon 
+        variant="secondary" 
+        icon="trash" 
+        size="short" 
+        class="fr mt3 remove-item" 
+        ng-click="$ctrl.delete()">
+    </bds-button-icon>
 </div>
