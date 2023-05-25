@@ -24,4 +24,15 @@
             left: -12px;
         }
     }
+
+    .remove-item {
+        &:hover{
+            color: $color-content-default;
+            background: transparent;
+        }
+    }
+
+    .input-text {
+        width: 43%;
+    }
 }

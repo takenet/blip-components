@@ -33,11 +33,15 @@
             autocomplete="{{$ctrl.inputAutocomplete}}"
             placeholder="{{$ctrl.placeholder}}"
             id="{{$ctrl.fieldId}}" />
-        <i ng-if="!($ctrl.unmaskablePassword && $ctrl.type === 'password')"
-            class="dib fr mh2 icon icon-material bp-c-true-dark bp-input-check"
-            ng-class="{ 'invisible': $ctrl.disabled || focused || !$ctrl.parentForm[$ctrl.fieldName].$viewValue || !$ctrl.parentForm[$ctrl.fieldName].$valid }">
-            &#xE5CA;
-        </i>
+
+        <bds-icon
+            ng-if="!($ctrl.unmaskablePassword && $ctrl.type === 'password')"
+            name="checkball"
+            theme="solid"
+            class="dib fr mh2 icon-check"
+            ng-class="{ 'invisible': $ctrl.disabled || focused || !$ctrl.parentForm[$ctrl.fieldName].$viewValue || !$ctrl.parentForm[$ctrl.fieldName].$valid }"
+        >
+        </bds-icon>
         <img
             icon-src="EyePassword"
             class="mh2 bp-input-check pb2"

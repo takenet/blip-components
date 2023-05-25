@@ -16,6 +16,10 @@
     input::-ms-reveal {
         display: none;
     }
+
+    .icon-check {
+        color: $color-success;
+    }
 }
 
 // Needed to force padding despite icon class
