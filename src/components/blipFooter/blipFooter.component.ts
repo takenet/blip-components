@@ -7,7 +7,7 @@ import { IComponentController, IComponentOptions } from 'angular';
     template: `
     <footer class="{{$ctrl.areaClass}}">
         <div class="w-100 tc">
-            <span class="bp-c-city" translate-compile>&copy; {{$ctrl.copyrightYear}} Blip - Powered by Take | {{'footer.copyRight' | translate}} |</span><span class="pl1" translate="footer.terms" translate-compile></span>
+            <span class="bp-c-city" translate-compile>&copy; {{$ctrl.copyrightYear}} Blip - Powered by Blip | {{'footer.copyRight' | translate}} |</span><span class="pl1" translate="footer.terms" translate-compile></span>
         </div>
     </footer>`,
     bindings: {
