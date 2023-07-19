@@ -9,6 +9,7 @@ class ThreadMessages implements IComponentController {
     private scrollToBottomTimeout: any;
     private scrollTimeout: any;
     private isLoadingThread: boolean = true; //True so placeholder appears first
+    private loadMoreBottom: boolean = false;
     private debouncedScroll: any;
     loadMore: (obj: any) => void;
     wrapper: HTMLDivElement;
@@ -40,7 +41,15 @@ class ThreadMessages implements IComponentController {
             const scroll = async (event) => {
                 if (event.srcElement.scrollTop === 0) {
                     if (this.loadMore) {
-                        this.loadMore(EventEmitter({ wrapper: this.wrapper }));
+                        console.log('call loadMore old');
+                        this.loadMore(EventEmitter({ wrapper: this.wrapper, recent: false }));
+                    }
+                }
+                if (this.loadMoreBottom && 
+                    event.srcElement.scrollHeight - event.target.clientHeight - event.srcElement.scrollTop < 1) {
+                    if (this.loadMore) {
+                        console.log('call loadMore recent');
+                        this.loadMore(EventEmitter({ wrapper: this.wrapper, recent: true }));
                     }
                 }
             };
@@ -66,7 +75,7 @@ class ThreadMessages implements IComponentController {
 
     scrollViewToBottom() {
         if (this.scrollToBottom) {
-            this.wrapper.scrollTop = this.wrapper.scrollHeight;
+            this.wrapper.scrollTop = this.wrapper.scrollHeight - 1;
         }
     }
 }
@@ -81,7 +90,8 @@ export const ThreadMessagesComponent = angular
             messages: '<',
             loadMore: '&',
             scrollToBottom: '<',
-            isLoadingThread: '<'
+            isLoadingThread: '<',
+            loadMoreBottom: '<'
         },
     })
     .name;
