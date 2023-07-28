@@ -4,7 +4,7 @@
             class="w-100 flex flex-column"
             ng-repeat="message in $ctrl.messages"
             on-finish-render="$ctrl.scrollViewToBottom()">
-            <div id="{{message.ticket}}" class="history-message">
+            <div id="{{message.document.id}}" class="history-message">
                 <vue-component name="blipCard" vprops="message"></vue-component>
             </div>
         </div>
