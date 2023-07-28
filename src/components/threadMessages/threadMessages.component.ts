@@ -44,8 +44,8 @@ class ThreadMessages implements IComponentController {
                         this.loadMore(EventEmitter({ wrapper: this.wrapper }));
                     }
                 }
-                if (this.loadMoreBottom && 
-                (event.srcElement.scrollHeight - event.target.clientHeight - event.srcElement.scrollTop) < 1) {
+                if (this.loadMoreBottom &&
+                    (event.srcElement.scrollHeight - event.target.clientHeight - event.srcElement.scrollTop) < 1) {
                     this.loadMoreBottom(EventEmitter({ wrapper: this.wrapper }));
                 }
             };
