@@ -11,6 +11,7 @@ class ThreadMessages implements IComponentController {
     private isLoadingThread: boolean = true; //True so placeholder appears first
     private debouncedScroll: any;
     loadMore: (obj: any) => void;
+    loadMoreBottom: (obj: any) => void;
     wrapper: HTMLDivElement;
     constructor(
         private $element
@@ -42,6 +43,10 @@ class ThreadMessages implements IComponentController {
                     if (this.loadMore) {
                         this.loadMore(EventEmitter({ wrapper: this.wrapper }));
                     }
+                }
+                if (this.loadMoreBottom && 
+                (event.srcElement.scrollHeight - event.target.clientHeight - event.srcElement.scrollTop) < 1) {
+                    this.loadMoreBottom(EventEmitter({ wrapper: this.wrapper }));
                 }
             };
             this.debouncedScroll = debounce(scroll);
@@ -80,6 +85,7 @@ export const ThreadMessagesComponent = angular
         bindings: {
             messages: '<',
             loadMore: '&',
+            loadMoreBottom: '&',
             scrollToBottom: '<',
             isLoadingThread: '<'
         },
