@@ -8,6 +8,7 @@ const HIGHLIGHT_START = '<span class="highlight">';
 const HIGHLIGHT_END = '</span>';
 const DEFAULT_INTENTS_LABEL = 'Intents';
 const DEFAULT_ENTITIES_LABEL = 'Entities';
+const DEFAULT_CONTENTS_LABEL = 'Contents';
 const DEFAULT_INTENT_NAME = 'None';
 
 class AnalysisInfoController extends ComponentController {
@@ -16,8 +17,10 @@ class AnalysisInfoController extends ComponentController {
 
     public intentsLabel: string;
     public entitiesLabel: string;
+    public contentsLabel: string;
     public entities: Entity[];
     public intents: Intent[];
+    public contents: Content[];
     public analysis: { id: string, content: string, promise: Promise<any> };
     public selectedIntention: string;
     public structuredEntities: { [id: string]: string[] } = {};
@@ -37,6 +40,7 @@ class AnalysisInfoController extends ComponentController {
         super();
         this.intentsLabel = this.intentsLabel || DEFAULT_INTENTS_LABEL;
         this.entitiesLabel = this.entitiesLabel || DEFAULT_ENTITIES_LABEL;
+        this.contentsLabel = this.contentsLabel || DEFAULT_CONTENTS_LABEL;
     }
 
     async $onInit() {
