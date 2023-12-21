@@ -15,13 +15,26 @@
         </div>
     </div>
     <div class="hidden-content" ng-class="{ 'display': $ctrl.displayHiddencontent }" ng-if="$ctrl.displayEntityContent">
-        <div class="title">{{ $ctrl.entitiesLabel }}</div>
+        <bds-typo class="title">{{ $ctrl.entitiesLabel }}</bds-typo>
         <div ng-repeat="(name, values) in $ctrl.structuredEntities" class="entity">
             <div class="name">
                 {{ name }}
             </div>
             <div ng-repeat="value in values" class="value">
                 {{ value }}
+            </div>
+        </div>
+    </div>
+    <div class="hidden-content divisor" ng-class="{ 'display': $ctrl.displayHiddencontent }" ng-if="$ctrl.displayEntityContent && $ctrl.displayHiddencontent && $ctrl.analysisResult.contents.length > 0">
+        <bds-typo class="title">
+            {{ $ctrl.contentsLabel }}
+        </bds-typo>
+        <div ng-repeat="content in $ctrl.analysisResult.contents" class="entity">
+            <div class="name">
+                {{ content.name }}
+            </div>
+            <div class="value">
+                {{ content.result.content }}
             </div>
         </div>
     </div>

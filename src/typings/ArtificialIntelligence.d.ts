@@ -3,6 +3,7 @@ interface Analysis {
     text:            string;
     intentions:      AnalysisIntent[];
     entities:        AnalysisEntity[];
+    contents:        Content[];
     provider:        string;
     modelId:         string;
 }
@@ -28,6 +29,17 @@ interface Entity {
     id?: string;
     name: string;
     values: EntityValue[];
+}
+
+interface Content {
+    id: string
+    name: string
+    result: Result
+}
+  
+interface Result {
+    type: string
+    content: string
 }
 
 interface Intent {
