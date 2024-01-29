@@ -7,7 +7,7 @@ class PageHelp {
     public docLink: any;
     public helpConfirm: string;
 
-    constructor(private $translate: any) {
+    constructor(private $translate) {
         this.setDocLink();
     }
 
