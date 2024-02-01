@@ -13,11 +13,7 @@ class PageHelp {
 
     async setDocLink() {
         if (!this.docLink) {
-            const text = await this.$translate(
-                'modules.application.detail.ai.intentions.helperLink.title',
-            );
             this.docLink = {
-                text,
                 link: 'https://help.blip.ai/hc/pt-br',
             };
         }
