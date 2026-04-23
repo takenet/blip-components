@@ -94,6 +94,10 @@
       "commit-msg": "cz-customizable-ghooks $2"
     }
   },
+  "overrides": {
+    "tar": "^6.2.1",
+    "ejs": "^3.1.10"
+  },
   "release": {
     "analyzeCommits": {
       "releaseRules": [
