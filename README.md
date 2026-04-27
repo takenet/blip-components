@@ -6,15 +6,6 @@
 
 A library of shared UI components built for AngularJS (1.x) applications used across the BLiP portal. It wraps and extends components from [blip-toolkit](https://github.com/takenet/blip-toolkit) and [blip-ds](https://github.com/takenet/blip-ds) in Angular-compatible wrappers.
 
-## Running locally
-
-To run blip-components on your machine:
-
-```sh
-npm link
-npm run build
-```
-
 Then, in the project that consumes this library:
 
 ```sh
