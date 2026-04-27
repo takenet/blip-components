@@ -1,7 +1,7 @@
 {
   "name": "blip-components",
   "version": "7.12.0",
-  "description": "Shared components used in portal.blip.ai",
+  "description": "Legacy AngularJS 1.x component library for BLiP applications. Deprecated — security maintenance only.",
   "main": "./dist/components.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --port 3000",
