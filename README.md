@@ -2,28 +2,29 @@
 
 # (DEPRECATED) blip-components
 
-BLiP components to use in AngularJS (1.x) applications. 
+> **This library is deprecated.** No new features will be added. The repository is maintained solely for security patches and critical bug fixes in applications that still depend on it. New projects should not use this library.
 
+A library of shared UI components built for AngularJS (1.x) applications used across the BLiP portal. It wraps and extends components from [blip-toolkit](https://github.com/takenet/blip-toolkit) and [blip-ds](https://github.com/takenet/blip-ds) in Angular-compatible wrappers.
 
-## How run components in local machine
+Then, in the project that consumes this library:
 
-To run blip-components on your machine, you need to follow these steps:
-`npm link` - this command will run npm install and also generate the local library on your machine.
-After that, it is necessary to run the command `npm run build` a first time and for each change that is made.
+```sh
+npm link blip-components
+```
 
-In the project where this library is being used, it's necessary to run the command `npm link blip-components` and then run the project normally.
+Re-run `npm run build` after any change to this library.
 
 ## Usage
 
-Install blip-components via npm:
+Install via npm:
 
-```
-$ npm install blip-components
+```sh
+npm install blip-components
 ```
 
-Then, use it as module on your angularjs application
+Import the full module in your AngularJS application:
 
-```
+```js
 import * as blipComponents from 'blip-components';
 import 'blip-components/dist/blip-components.css';
 
@@ -33,39 +34,52 @@ const componentNames = components =>
 const app = angular
     .module('myApp', [
         ...componentNames(blipComponents)
-    ])
-    ...
+    ]);
 ```
 
-You can also use each component separately
+Or import individual components:
 
-```
+```js
 import { BlipInputComponent } from 'blip-components';
 import 'blip-components/dist/blip-components.css';
 
 const app = angular
     .module('myApp', [
         BlipInputComponent
-    ])
-    ...
+    ]);
 ```
 
-Remeber to import the css file to style your components
+Remember to import the CSS file to style your components.
 
 ## Building
 
-If you want to contribute to our project, clone this project and, on root directory, run `npm start`. A new process will be started
-on port `3000`, and all changes will be tracked. 
+Clone the repository and, from the root directory, run:
 
-To finish a build, run `npm run build`.
+```sh
+npm start
+```
 
-## Want to contribute?
+This starts a development server on port `3000` with file watching enabled.
 
-If you want to do a commit, all you need to do is run `npm run commit` and you will get the prompts needed to start a commit!
+To produce a production build:
 
-Follow contributing guidelines as [described here](CONTRIBUTING.md)
+```sh
+npm run build
+```
+
+## Committing
+
+This project uses [Commitizen](https://github.com/commitizen/cz-cli) and conventional commits. Run:
+
+```sh
+npm run commit
+```
+
+This guides you through the commit message format interactively.
+
+To report a bug or security issue, please open a [GitHub issue](https://github.com/takenet/blip-components/issues).
 
 ## License
-`blip-components` is under the [ISC license](https://opensource.org/licenses/ISC).
 
+`blip-components` is under the [ISC license](https://opensource.org/licenses/ISC).
 
