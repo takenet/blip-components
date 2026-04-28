@@ -1,11 +1,12 @@
-name: Publish
+name: CI
 
 on:
   push:
-    branches:
-      - master
+  pull_request:
+
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,9 +26,36 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+          retention-days: 1
+
+  publish:
+    name: Publish
+    needs: build
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v6
-        id: semantic
         with:
           branch: master
         env:
